@@ -9,6 +9,12 @@
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 	<script src="https://cdn.tailwindcss.com"></script>
+	<script>
+		function showhide(id) {
+			var e = document.getElementById(id);
+			e.style.display = (e.style.display == 'block') ? 'none' : 'block';
+		}
+	</script>
 
 	<title>BV Aachen 09</title>
 
@@ -17,36 +23,41 @@
 </head>
 
 <body class="antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900 text-center">
-	<nav class="bg-gray-800">
-		<div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-			<div class="relative flex h-16 items-center justify-between">
-				<div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-					<div class="flex flex-shrink-0 items-center bg-gray-100">
-						<img class="h-8 w-auto" src="images/Logo.png" alt="Your Company">
-					</div>
-					<div class="hidden sm:ml-6 sm:block">
-						<div class="flex space-x-4">
-							<a href="./index.html"
-								class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
-								aria-current="page">Start</a>
-							<a href="./alemannencup.html"
-								class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Alemannen
-								Cup</a>
-							<a href="./teams.html"
-								class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Teams</a>
-							<a href="./training.html"
-								class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Training</a>
-							<a href="./verein.html"
-								class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Mitglied
-								werden</a>
-							<a href="./kontakt.html"
-								class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
-								aria-current="page">Kontakt</a>
-							<a href="./FAQ.html"
-								class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">FAQ</a>
-						</div>
-					</div>
-				</div>
+	<nav class="flex items-center justify-between flex-wrap bg-gray-800 p-6">
+		<div class="flex items-center flex-shrink-0 text-white mr-6">
+			<div class="flex flex-shrink-0 items-center bg-gray-100 p-1">
+				<img class="h-8 w-auto" src="images/Logo.png" alt="BV Aachen">
+			</div>
+		</div>
+		<div class="block md:hidden lg:hidden">
+			<button
+				class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400 hover:text-white hover:border-white"
+				onclick="showhide('navigation')">
+				<svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+					<title>Menu</title>
+					<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+				</svg>
+			</button>
+		</div>
+		<div class="w-full flex-grow lg:flex lg:items-center lg:w-auto md:flex md:items-center md:w-auto">
+			<div id="navigation" class="text-sm lg:flex-grow md:flex-grow" style="display: block;">
+				<a href="./index.html"
+					class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">
+					Start</a>
+				<a href="./alemannencup.html"
+					class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Alemannen
+					Cup</a>
+				<a href="./teams.html"
+					class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Teams</a>
+				<a href="./training.html"
+					class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Training</a>
+				<a href="./verein.html"
+					class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Mitglied
+					werden</a>
+				<a href="./kontakt.html" aria-current="page"
+					class="block mt-4 rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Kontakt</a>
+				<a href="./FAQ.html"
+					class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">FAQ</a>
 			</div>
 		</div>
 	</nav>
