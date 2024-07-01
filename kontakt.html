@@ -16,7 +16,7 @@
 
 </head>
 
-<body class="bg-gray-100">
+<body class="antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900 text-center">
 	<nav class="bg-gray-800">
 		<div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
 			<div class="relative flex h-16 items-center justify-between">
@@ -27,7 +27,7 @@
 					<div class="hidden sm:ml-6 sm:block">
 						<div class="flex space-x-4">
 							<a href="./index.html"
-								class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
+								class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
 								aria-current="page">Start</a>
 							<a href="./alemannencup.html"
 								class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Alemannen
@@ -40,7 +40,8 @@
 								class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Mitglied
 								werden</a>
 							<a href="./kontakt.html"
-								class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Kontakt</a>
+								class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
+								aria-current="page">Kontakt</a>
 							<a href="./FAQ.html"
 								class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">FAQ</a>
 						</div>
@@ -50,48 +51,52 @@
 		</div>
 	</nav>
 
-	<div id="page-wrapper">
-		<div id="page">
-			<div id="content-wrapper">
-				<div id="content">
-					<div class="content-block">
-						<img src="images/bild1.jpg" alt="Badmintonball" width="600" height="230">
-						<h1>Kontakt</h1>
-						Wenn du uns kennenlernen möchtest, schreib uns doch einfach eine Mail:
-					</div>
-
-					<div class="content-block">
-						<li>Für allgemeine Fragen: <a href="mailto: vorsitz@bv-aachen.de"> vorsitz@bv-aachen.de</a>.
-						</li>
-						<li>Für Fragen bezüglich der Mitgliedschaft: <a href="mailto:   kassenwart@bv-aachen.de">
-								kassenwart@bv-aachen.de</a>.</li>
-						<li>Für Fragen bezüglich des Seniorentrainings: <a
-								href="mailto:   seniorentraining@bv-aachen.de"> seniorentraining@bv-aachen.de</a>.</li>
-						<li>Für Fragen bezüglich des Kinder- und Jugendtrainings: <a
-								href="mailto:    jugendwart@bv-aachen.de"> jugendwart@bv-aachen.de</a>.</li>
-					</div>
-
-
-				</div>
-
-			</div>
-			<br>
-			<div id="footer-wrapper">
-				<div id="footer">
-					<div id="adresse">
-						<p>
-							<a href="./impressum.html">Impressum</a> <b>|</b>
-							<a href="./datenschutz.html">Informationen zum Datenschutz.</a>
-
-						</p>
-					</div>
-				</div>
-			</div>
-
+	<div class="mx-auto px-2 sm:px-6 lg:px-8 content-center">
+		<div>
+			<img class="inline" src="images/bild1.jpg" alt="Badmintonball" width="600" height="230">
 		</div>
+		<div>
+
+			<div>
+				<p class="mt-10 text-3xl sm:text-4xl text-slate-900 font-extrabold tracking-tight dark:text-slate-50 ">
+					Kontakt
+				</p>
+				<p class="mt-4 space-y-6 ">
+					Wenn du uns kennenlernen möchtest, schreib uns doch einfach eine Mail:
+					<br />
+				<p class="mt-4 space-y-6 ">
+					<li>Für allgemeine Fragen: <a href="mailto: vorsitz@bv-aachen.de"
+							class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+							vorsitz@bv-aachen.de</a>.
+					</li>
+					<li>Für Fragen bezüglich der Mitgliedschaft: <a href="mailto: kassenwart@bv-aachen.de"
+							class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+							kassenwart@bv-aachen.de</a>.</li>
+					<li>Für Fragen bezüglich des Seniorentrainings: <a href="mailto: seniorentraining@bv-aachen.de"
+							class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+							seniorentraining@bv-aachen.de</a>.
+					</li>
+					<li>Für Fragen bezüglich des Kinder- und Jugendtrainings: <a href="mailto: jugendwart@bv-aachen.de"
+							class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+							jugendwart@bv-aachen.de</a>.</li>
+				</p>
+				</p>
+			</div>
+		</div>
+	</div>
 
 
+	<br>
+	<div id="footer-wrapper" class="mt-20">
+        <div id="footer" class="text-center">
+			<div id="adresse">
+				<p>
+					<a href="./impressum.html">Impressum</a> <b>|</b>
+					<a href="./datenschutz.html">Informationen zum Datenschutz.</a>
 
+				</p>
+			</div>
+		</div>
 	</div>
 </body>
 
