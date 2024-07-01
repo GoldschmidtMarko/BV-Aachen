@@ -10,8 +10,7 @@
         /* Add custom styles here */
     </style>
 </head>
-
-<body class="antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900">
+<body class="antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900"></body>
     <nav class="bg-gray-800">
         <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
             <div class="relative flex h-16 items-center justify-between">
@@ -44,160 +43,163 @@
             </div>
         </div>
     </nav>
-    <div id="page-wrapper" class="container mx-auto px-4">
-        <div id="page">
+    <!-- <div id="page-wrapper" class="container mx-auto px-4"> -->
+    <div id="page">
 
-            <div id="content-wrapper" class="py-4">
-                <div class="content-logo">
-                    <img src="images/bild1.jpg" alt="Badmintonball" width="100%" class="mx-auto">
+        <div id="content-wrapper">
+
+            <div class="relative w-full h-auto">
+                <video class="hidden md:block lg:block relative w-full z-10 brightness-50" autoplay loop muted> <source src="videos/startpage.MOV"> </video>
+                <!-- <div class="absolute w-full h-full top-0 left-0 bg-gray-900 opacity-40 z-20"></div> -->
+                <div class="sm:relative md:absolute lg:absolute w-full h-full flex flex-col align-start p-8 top-0 left-0 z-30">
+                    <section class="text-center px-8 mt-1 sm:mt-0 md:mt-1">
+                        <h2 class="text-slate-900 text-4xl tracking-tight font-extrabold sm:text-5xl dark:text-white">
+                            Über uns
+                        </h2>
+                        <figure>
+                            <blockquote>
+                                <p class="mt-6 max-w-3xl mx-auto text-lg dark:text-blue-100">Der<!-- -->
+                                    <a href="https://bv-aachen.de/" class="text-sky-500 font-semibold dark:text-sky-400">BV
+                                        Aachen 2009 e.V.</a>
+                                    <!-- -->ist als Abspaltung von Alemannia Aachen entstanden. Seit dem hat er
+                                    sich erfolgreich entwickelt und ist mit 170 Mitgliedern der größte Badmintonverein
+                                    Aachens
+                                    und der Region. Vor allem für Studierende bietet der Verein ein attraktives Angebot. In
+                                    den
+                                    letzten Jahren hat sich zusätzlich eine große Kinder- und Jugendabteilung entwickelt.
+                                    In dieser Saison nimmt der Verein mit fünf Seniorenmannschaften am Spielbetrieb in den
+                                    Klassen von Verbandsliga bis Bezirksklasse teil. Weiterhin spielen für den BV Aachen
+                                    zwei
+                                    Schüler- bzw. Jugendmannschaften um die Meisterschaft.
+                                    Der BV Aachen ist ein eingetragener, gemeinnütziger Verein.
+                                </p>
+                            </blockquote>
+                            <figcaption class="mt-6 flex items-center justify-center space-x-4 text-left"><img
+                                    src="images/man4.jpg" alt="" class="w-14 h-14 rounded-full" loading="lazy" decoding="async">
+                                <div>
+                                    <div class="text-slate-900 font-semibold dark:text-white">Matthias Böing</div>
+                                    <div class="mt-0.5 text-sm leading-6 dark:text-blue-200">side hustle Entwickler</div>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </section>
                 </div>
+            </div>
 
-                <section class="text-center px-8 mt-20 sm:mt-32 md:mt-20">
-                    <h2 class="text-slate-900 text-4xl tracking-tight font-extrabold sm:text-5xl dark:text-white">
-                        Über uns
-                    </h2>
-                    <figure>
-                        <blockquote>
-                            <p class="mt-6 max-w-3xl mx-auto text-lg">Der<!-- -->
-                                <a href="https://bv-aachen.de/" class="text-sky-500 font-semibold dark:text-sky-400">BV
-                                    Aachen 2009 e.V.</a>
-                                <!-- -->ist als Abspaltung von Alemannia Aachen entstanden. Seit dem hat er
-                                sich erfolgreich entwickelt und ist mit 170 Mitgliedern der größte Badmintonverein
-                                Aachens
-                                und der Region. Vor allem für Studierende bietet der Verein ein attraktives Angebot. In
-                                den
-                                letzten Jahren hat sich zusätzlich eine große Kinder- und Jugendabteilung entwickelt.
-                                In dieser Saison nimmt der Verein mit fünf Seniorenmannschaften am Spielbetrieb in den
-                                Klassen von Verbandsliga bis Bezirksklasse teil. Weiterhin spielen für den BV Aachen
-                                zwei
-                                Schüler- bzw. Jugendmannschaften um die Meisterschaft.
-                                Der BV Aachen ist ein eingetragener, gemeinnütziger Verein.
-                            </p>
-                        </blockquote>
-                        <figcaption class="mt-6 flex items-center justify-center space-x-4 text-left"><img
-                                src="images/man4.jpg" alt="" class="w-14 h-14 rounded-full" loading="lazy"
-                                decoding="async">
-                            <div>
-                                <div class="text-slate-900 font-semibold dark:text-white">Matthias Böing</div>
-                                <div class="mt-0.5 text-sm leading-6">side hustle Entwickler</div>
-                            </div>
-                        </figcaption>
+
+            
+
+            <section class="text-center px-8 mt-20 sm:mt-32 md:mt-20">
+                <h2 class="text-slate-900 text-4xl tracking-tight font-extrabold sm:text-5xl dark:text-white">
+                    Vorstand
+                </h2>
+
+                <div class="grid grid-cols-1 gap-6 lg:gap-8 sm:grid-cols-2 lg:grid-cols-4 mt-6">
+                    <figure class="bg-slate-100 rounded-xl p-8 dark:bg-slate-800">
+                        <img class="w-24 h-24 rounded-full mx-auto" src="images/man1.jpg" alt="" width="384"
+                            height="512">
+                        <div class="pt-6 text-center space-y-4">
+                            <blockquote>
+                                <p class="text-lg font-medium text-slate-700 dark:text-slate-300">
+                                    “Ich will nicht in Team 1 spielen.” - spielt in Team 1
+                                </p>
+                            </blockquote>
+                            <figcaption class="font-medium">
+                                <div class="text-sky-500 dark:text-sky-400">
+                                    Jochen Abele
+                                </div>
+                                <div class="text-slate-700 dark:text-slate-500">
+                                    Vorsitzender
+                                </div>
+                            </figcaption>
+                        </div>
                     </figure>
-                </section>
 
-                <section class="text-center px-8 mt-20 sm:mt-32 md:mt-20">
-                    <h2 class="text-slate-900 text-4xl tracking-tight font-extrabold sm:text-5xl dark:text-white">
-                        Vorstand
-                    </h2>
+                    <figure class="bg-slate-100 rounded-xl p-8 dark:bg-slate-800">
+                        <img class="w-24 h-24 rounded-full mx-auto" src="images/man2.jpg" alt="" width="384"
+                            height="512">
+                        <div class="pt-6 text-center space-y-4">
+                            <blockquote>
+                                <p class="text-lg font-medium text-slate-700 dark:text-slate-300">
+                                    “irgendwas mit Bier”
+                                </p>
+                            </blockquote>
+                            <figcaption class="font-medium">
+                                <div class="text-sky-500 dark:text-sky-400">
+                                    Felix Flammer
+                                </div>
+                                <div class="text-slate-700 dark:text-slate-500">
+                                    Stellvertretender Vorsitzender
+                                </div>
+                            </figcaption>
+                        </div>
+                    </figure>
 
-                    <div class="grid grid-cols-1 gap-6 lg:gap-8 sm:grid-cols-2 lg:grid-cols-4 mt-6">
-                        <figure class="bg-slate-100 rounded-xl p-8 dark:bg-slate-800">
-                            <img class="w-24 h-24 rounded-full mx-auto" src="images/man1.jpg" alt="" width="384"
-                                height="512">
-                            <div class="pt-6 text-center space-y-4">
-                                <blockquote>
-                                    <p class="text-lg font-medium text-slate-700 dark:text-slate-300">
-                                        “Ich will nicht in Team 1 spielen.” - spielt in Team 1
-                                    </p>
-                                </blockquote>
-                                <figcaption class="font-medium">
-                                    <div class="text-sky-500 dark:text-sky-400">
-                                        Jochen Abele
-                                    </div>
-                                    <div class="text-slate-700 dark:text-slate-500">
-                                        Vorsitzender
-                                    </div>
-                                </figcaption>
-                            </div>
-                        </figure>
+                    <figure class="bg-slate-100 rounded-xl p-8 dark:bg-slate-800">
+                        <img class="w-24 h-24 rounded-full mx-auto" src="images/man3.jpg" alt="" width="384"
+                            height="512">
+                        <div class="pt-6 text-center space-y-4">
+                            <blockquote>
+                                <p class="text-lg font-medium text-slate-700 dark:text-slate-300">
+                                    “Der Posten wurde mir angedreht.”
+                                </p>
+                            </blockquote>
+                            <figcaption class="font-medium">
+                                <div class="text-sky-500 dark:text-sky-400">
+                                    Simon Vaupel
+                                </div>
+                                <div class="text-slate-700 dark:text-slate-500">
+                                    Kassenwart
+                                </div>
+                            </figcaption>
+                        </div>
+                    </figure>
 
-                        <figure class="bg-slate-100 rounded-xl p-8 dark:bg-slate-800">
-                            <img class="w-24 h-24 rounded-full mx-auto" src="images/man2.jpg" alt="" width="384"
-                                height="512">
-                            <div class="pt-6 text-center space-y-4">
-                                <blockquote>
-                                    <p class="text-lg font-medium text-slate-700 dark:text-slate-300">
-                                        “irgendwas mit Bier”
-                                    </p>
-                                </blockquote>
-                                <figcaption class="font-medium">
-                                    <div class="text-sky-500 dark:text-sky-400">
-                                        Felix Flammer
-                                    </div>
-                                    <div class="text-slate-700 dark:text-slate-500">
-                                        Stellvertretender Vorsitzender
-                                    </div>
-                                </figcaption>
-                            </div>
-                        </figure>
-
-                        <figure class="bg-slate-100 rounded-xl p-8 dark:bg-slate-800">
-                            <img class="w-24 h-24 rounded-full mx-auto" src="images/man3.jpg" alt="" width="384"
-                                height="512">
-                            <div class="pt-6 text-center space-y-4">
-                                <blockquote>
-                                    <p class="text-lg font-medium text-slate-700 dark:text-slate-300">
-                                        “Der Posten wurde mir angedreht.”
-                                    </p>
-                                </blockquote>
-                                <figcaption class="font-medium">
-                                    <div class="text-sky-500 dark:text-sky-400">
-                                        Simon Vaupel
-                                    </div>
-                                    <div class="text-slate-700 dark:text-slate-500">
-                                        Kassenwart
-                                    </div>
-                                </figcaption>
-                            </div>
-                        </figure>
-
-                        <figure class="bg-slate-100 rounded-xl p-8 dark:bg-slate-800">
-                            <img class="w-24 h-24 rounded-full mx-auto" src="images/woman1.jpg" alt="" width="384"
-                                height="512">
-                            <div class="pt-6 text-center space-y-4">
-                                <blockquote>
-                                    <p class="text-lg font-medium text-slate-700 dark:text-slate-300">
-                                        “Ich coache gern die Jugend.”
-                                    </p>
-                                </blockquote>
-                                <figcaption class="font-medium">
-                                    <div class="text-sky-500 dark:text-sky-400">
-                                        Lina Köllmann
-                                    </div>
-                                    <div class="text-slate-700 dark:text-slate-500">
-                                        Jugendwärtin
-                                    </div>
-                                </figcaption>
-                            </div>
-                        </figure>
-                    </div>
-
-                </section>
-
-                <section class="text-center px-8 mt-20 sm:mt-32 md:mt-20">
-                    <div class="content-block">
-                        Anbei weitere Informationen zu unserer
-                        <a href="files/Satzung BV Aachen 2009 Stand 2015.pdf" target="_blank">Satzung</a>,
-                        <a href="files/Geschaeftsordnung Stand 2015.pdf" target="_blank">Geschäftsordnung</a> und
-                        <a href="files/Finanzordnung Stand 2015.pdf" target="_blank">Finanzordnung</a>.
-                    </div>
-                </section>
-            </div>
-        </div>
-
-        <div id="footer-wrapper" class="py-4">
-            <div id="footer" class="text-center">
-                <div id="adresse">
-                    <p>
-                        <a href="./impressum.html">Impressum</a> <b>|</b>
-                        <a href="./datenschutz.html">Informationen zum Datenschutz.</a>
-                    </p>
+                    <figure class="bg-slate-100 rounded-xl p-8 dark:bg-slate-800">
+                        <img class="w-24 h-24 rounded-full mx-auto" src="images/woman1.jpg" alt="" width="384"
+                            height="512">
+                        <div class="pt-6 text-center space-y-4">
+                            <blockquote>
+                                <p class="text-lg font-medium text-slate-700 dark:text-slate-300">
+                                    “Ich coache gern die Jugend.”
+                                </p>
+                            </blockquote>
+                            <figcaption class="font-medium">
+                                <div class="text-sky-500 dark:text-sky-400">
+                                    Lina Köllmann
+                                </div>
+                                <div class="text-slate-700 dark:text-slate-500">
+                                    Jugendwärtin
+                                </div>
+                            </figcaption>
+                        </div>
+                    </figure>
                 </div>
+
+            </section>
+
+            <section class="text-center px-8 mt-20 sm:mt-32 md:mt-20">
+                <div class="content-block">
+                    Anbei weitere Informationen zu unserer
+                    <a href="files/Satzung BV Aachen 2009 Stand 2015.pdf" target="_blank">Satzung</a>,
+                    <a href="files/Geschaeftsordnung Stand 2015.pdf" target="_blank">Geschäftsordnung</a> und
+                    <a href="files/Finanzordnung Stand 2015.pdf" target="_blank">Finanzordnung</a>.
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div id="footer-wrapper" class="mt-10">
+        <div id="footer" class="text-center">
+            <div id="adresse">
+                <p>
+                    <a href="./impressum.html">Impressum</a> <b>|</b>
+                    <a href="./datenschutz.html">Informationen zum Datenschutz.</a>
+                </p>
             </div>
         </div>
     </div>
-    </div>
-    </div>
+    <!-- </div> -->
 </body>
 
 </html>
