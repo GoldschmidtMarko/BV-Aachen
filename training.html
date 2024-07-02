@@ -4,123 +4,147 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
 
 <head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <meta name="keywords" content="BV Aachen, Badminton, Aachen">
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    function showhide(id) {
-        var e = document.getElementById(id);
-        e.style.display = (e.style.display == 'block') ? 'none' : 'block';
-    }
-</script>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="keywords" content="BV Aachen, Badminton, Aachen">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function showhide(id) {
+            var e = document.getElementById(id);
+            e.style.display = (e.style.display == 'block') ? 'none' : 'block';
+        }
+    </script>
 
-  <title>BV Aachen 09</title>
+    <title>BV Aachen 09</title>
 
-  <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/layout.css">
 
 </head>
 
 <body class="antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900 text-center">
-  <nav class="flex items-center justify-between flex-wrap bg-gray-800 p-6">
-    <div class="flex items-center flex-shrink-0 text-white mr-6">
-      <div class="flex flex-shrink-0 items-center bg-gray-100 p-1">
-        <img class="h-8 w-auto" src="images/Logo.png" alt="BV Aachen">
-      </div>
-    </div>
-    <div class="block md:hidden lg:hidden">
-      <button
-        class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400 hover:text-white hover:border-white"
-        onclick="showhide('navigation')">
+    <nav class="flex items-center justify-between flex-wrap bg-gray-800 p-6">
+        <div class="flex items-center flex-shrink-0 text-white mr-6">
+            <div class="flex flex-shrink-0 items-center bg-gray-100 p-1">
+                <img class="h-8 w-auto" src="images/Logo.png" alt="BV Aachen">
+            </div>
+        </div>
+        <div class="block md:hidden lg:hidden">
+            <button class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400 hover:text-white hover:border-white" onclick="showhide('navigation')">
         <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <title>Menu</title>
           <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
         </svg>
       </button>
-    </div>
-    <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto md:flex md:items-center md:w-auto">
-      <div id="navigation" class="text-sm lg:flex-grow md:flex-grow" style="display: block;">
-        <a href="./index.html"
-          class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">
+        </div>
+        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto md:flex md:items-center md:w-auto">
+            <div id="navigation" class="text-sm lg:flex-grow md:flex-grow" style="display: block;">
+                <a href="./index.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">
           Start</a>
-        <a href="./alemannencup.html"
-          class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Alemannen
+                <a href="./alemannencup.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Alemannen
           Cup</a>
-        <a href="./teams.html"
-          class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Teams</a>
-        <a href="./training.html" aria-current="page"
-          class="block mt-4 rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Training</a>
-        <a href="./verein.html"
-          class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Mitglied
+                <a href="./teams.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Teams</a>
+                <a href="./training.html" aria-current="page" class="block mt-4 rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Training</a>
+                <a href="./verein.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Mitglied
           werden</a>
-        <a href="./kontakt.html"
-          class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Kontakt</a>
-        <a href="./FAQ.html"
-          class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">FAQ</a>
-      </div>
-    </div>
-  </nav>
+                <a href="./kontakt.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Kontakt</a>
+                <a href="./FAQ.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">FAQ</a>
+            </div>
+        </div>
+    </nav>
 
-  <div class="mx-auto px-2 sm:px-6 lg:px-8 content-center">
-    <div>
-      <img class="inline" src="images/bild1.jpg" alt="Badmintonball" width="600" height="230">
-      <br />
-      <div id="pagetitle">Badmintonverein Aachen 2009 e.V.</div>
-    </div>
-    <div>
-      <p class="mt-10 text-3xl sm:text-4xl text-slate-900 font-extrabold tracking-tight dark:text-slate-50 ">
-        Training
-      </p>
-      <p class="mt-4 space-y-6 ">
-        BV Aachen bietet Spiel und Trainingsspaß für ambitionierte
-        Spieler:innen und fortgeschrittene Hobbyspieler:innen.
-        Hobbyspieler:innen können bei unserem Trainer Felix die grundlegenden
-        Schlag- und Lauftechniken lernen.
-        Ambitionierte Spieler:innen können direkt an unseren freien
-        Spielzeiten teilnehmen und haben auch die Möglichkeit, in einer unserer
-        Mannschaften zu spielen. Wenn du uns kennenlernen möchtest, schreib uns
-        doch einfach eine Mail: <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-          href="mailto: vorsitz@bv-aachen.de"> vorsitz@bv-aachen.de</a>.
-        Ebenso dürfen Kinder und Jugendliche, die sich für den Sport
-        interessieren oder trainieren wollen bei unserem Kinder- und
-        Jugendtraining vorbeischauen. Wir bieten Training für alle
-        Leistungsklassen sowie Spiel und Spaß.
-        <br />
-        <i> Stand: Juli 2024</i>
-        <br />
-        <br />
-        Weitere Informationen dazu gibt es hier:
-        <br />
-        <a class="group inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-pink-50 text-pink-600 hover:bg-pink-100 hover:text-pink-700 focus:ring-pink-600 dark:bg-slate-700 dark:text-slate-100 dark:hover:bg-slate-600 dark:hover:text-white dark:focus:ring-slate-500 mt-8"
-          href="https://bv-aachen.de/files/BVAachen-Trainingsorganisation_Stand_01-Mai-2022.pdf">Trainingsorganisation
+    <div class="mx-auto px-2 sm:px-6 lg:px-8 content-center">
+        <div>
+            <img class="inline" src="images/bild1.jpg" alt="Badmintonball" width="600" height="230">
+            <br />
+            <div id="pagetitle">Badmintonverein Aachen 2009 e.V.</div>
+        </div>
+        <div>
+            <p class="mt-10 text-3xl sm:text-4xl text-slate-900 font-extrabold tracking-tight dark:text-slate-50 ">
+                Training
+            </p>
+            <p class="mt-4 space-y-6 ">
+                BV Aachen bietet Spiel und Trainingsspaß für ambitionierte Spieler:innen und fortgeschrittene Hobbyspieler:innen. Hobbyspieler:innen können bei unserem Trainer Felix die grundlegenden Schlag- und Lauftechniken lernen. Ambitionierte Spieler:innen können
+                direkt an unseren freien Spielzeiten teilnehmen und haben auch die Möglichkeit, in einer unserer Mannschaften zu spielen. Wenn du uns kennenlernen möchtest, schreib uns doch einfach eine Mail: <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                    href="mailto: vorsitz@bv-aachen.de"> vorsitz@bv-aachen.de</a>. Ebenso dürfen Kinder und Jugendliche, die sich für den Sport interessieren oder trainieren wollen bei unserem Kinder- und Jugendtraining vorbeischauen. Wir bieten Training
+                für alle Leistungsklassen sowie Spiel und Spaß.
+                <br />
+                <i> Stand: Juli 2024</i>
+                <br />
+                <br /> Weitere Informationen dazu gibt es hier:
+                <br />
+                <a class="group inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-pink-50 text-pink-600 hover:bg-pink-100 hover:text-pink-700 focus:ring-pink-600 dark:bg-slate-700 dark:text-slate-100 dark:hover:bg-slate-600 dark:hover:text-white dark:focus:ring-slate-500 mt-8"
+                    href="https://bv-aachen.de/files/BVAachen-Trainingsorganisation_Stand_01-Mai-2022.pdf">Trainingsorganisation
           <svg
             class="overflow-visible ml-3 text-pink-300 group-hover:text-pink-400 dark:text-slate-500 dark:group-hover:text-slate-400"
             width="3" height="6" viewBox="0 0 3 6" fill="none" stroke="currentColor" stroke-width="2"
             stroke-linecap="round" stroke-linejoin="round">
             <path d="M0 0L3 3L0 6"></path>
           </svg></a>
-      </p>
+            </p>
+
+            <div class="container mx-auto p-4">
+                <div class="grid grid-cols-6 gap-1">
+                    <!-- Empty top-left cell -->
+                    <div></div>
+                    <!-- Header Row for Days -->
+                    <div class="text-center font-bold p-2 bg-gray-200 text-black">Montag</div>
+                    <div class="text-center font-bold p-2 bg-gray-200 text-black">Dienstag</div>
+                    <div class="text-center font-bold p-2 bg-gray-200 text-black">Mittwoch</div>
+                    <div class="text-center font-bold p-2 bg-gray-200 text-black">Donnerstag</div>
+                    <div class="text-center font-bold p-2 bg-gray-200 text-black">Freitag</div>
+
+                    <!-- Time slots and events -->
+                    <!-- 18:00 - 19:00 Row -->
+                    <div class="text-right font-bold p-2 bg-gray-200 text-black row-span-2">18:00 - 19:00</div>
+                    <div class="p-2 bg-white border text-black row-span-2"></div>
+                    <div class="p-2 border-yellow-600 bg-yellow-400  rounded border text-black row-span-4 whitespace-normal h-auto"> Kinder & Jugend-training</div>
+                    <div class="p-2 bg-white border text-black row-span-2"></div>
+                    <div class="p-2 bg-white border text-black row-span-1"></div>
+                    <div class="p-2 border-yellow-600 bg-yellow-400  rounded border text-black row-span-4 whitespace-normal h-auto">Kinder & Jugend-training</div>
+                    <div class="p-2 border-green-600 bg-green-400 rounded border text-black row-span-3">Anfänger Training</div>
+
+                    <!-- 19:00 - 20:00 Row -->
+                    <div class="text-right font-bold p-2 bg-gray-200 text-black row-span-2">19:00 - 20:00</div>
+                    <div class="p-2 border-red-600 bg-red-400  rounded border text-black whitespace-normal h-auto row-span-3">Profi Training</div>
+                    <div class="p-2 bg-white border text-black row-span-2"></div>
 
 
-      <div class="mt-10">
-        <h2 class="text-xl font-extrabold dark:text-white mt-10">Freies Spiel Senioren</h2>
-        <ul>
-          <!--              <li>Montags: 20:30 - 23 Uhr in Burtscheid</li><!--Sommer-->
-          <li>Montags: 20:30 - 23 Uhr in Burtscheid </li>
-          <!--Winter->
-<!--              <li>Dienstags: 18 - 20 Uhr (falls der Platz nicht für das Kindertraining benötigt wird; zurzeit KEIN Seniorentraining) in Laurensberg </li>-->
-          <li>Mittwochs: 20 – 23 Uhr in Burtscheid</li>
-          <li>Donnerstags: 20 – 22 Uhr in Laurensberg</li>
+                    <!-- 20:00 - 21:00 Row -->
+                    <div class="text-right font-bold p-2 bg-gray-200 text-black row-span-2">20:00 - 21:00</div>
+                    <div class="p-2 bg-white border text-black row-span-2"></div>
+                    <div class="p-2 bg-white rounded border text-black row-span-6 bg-black-400 border-black-600">Freies Spiel Senioren</div>
+                    <div class="p-2 bg-white  rounded border text-black row-span-4 bg-blue-400 border-blue-600">Freies Spiel Senioren</div>
+                    <div class="p-2 bg-white border text-black row-span-2"></div>
+                    <div class="p-2 bg-white rounded border text-black row-span-5 bg-blue-400 border-blue-600">Freies Spiel Senioren</div>
 
-        </ul>
-        <p class="mt-4 space-y-6 ">
-          Für die Teilnahme an den freien Spielzeiten ist aktuell keine Voranmeldung erforderlich.
-        </p>
-      </div>
-      <div class="mt-10">
-        <h2 class="text-l font-extrabold dark:text-white mt-10">Hinweise:</h2>
-        <i>Während der <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                    <!-- 21:00 - 22:00 Row -->
+                    <div class="text-right font-bold p-2 bg-gray-200 text-black row-span-2">21:00 - 22:00</div>
+                    <div class="p-2 bg-white border text-black row-span-2"></div>
+                    <div class="p-2 bg-white border text-black row-span-2"></div>
+
+                    <!-- 22:00 - 23:00 Row -->
+                    <div class="text-right font-bold p-2 bg-gray-200 text-black row-span-2">22:00 - 23:00</div>
+                    <div class="p-2 bg-white border text-black row-span-2"></div>
+                    <div class="p-2 bg-white border text-black row-span-2"></div>
+                    <div class="p-2 bg-white border text-black row-span-2"></div>
+                </div>
+            </div>
+
+            <div class="mt-10">
+                <h2 class="text-xl font-extrabold dark:text-white mt-10">Freies Spiel Senioren</h2>
+                <ul>
+                    <li>Montags: 20:30 - 23 Uhr in Burtscheid </li>
+                    <li>Mittwochs: 20 – 23 Uhr in Burtscheid</li>
+                    <li>Donnerstags: 20 – 22 Uhr in Laurensberg</li>
+                </ul>
+                <p class="mt-4 space-y-6 ">
+                    Für die Teilnahme an den freien Spielzeiten ist aktuell keine Voranmeldung erforderlich.
+                </p>
+            </div>
+            <div class="mt-10">
+                <h2 class="text-l font-extrabold dark:text-white mt-10">Hinweise:</h2>
+                <i>Während der <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
             href="https://www.schulferien.org/deutschland/ferien/nordrhein-westfalen/"> Schulferien</a> in NRW ist die
           Halle
           in Burtscheid
@@ -131,85 +155,78 @@
             class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="mailto:    vorsitz@bv-aachen.de">
             vorsitz@bv-aachen.de</a> erfragt werden.</i>
 
-      </div>
-      <div class="mt-10">
-        <h2 class="text-xl font-extrabold dark:text-white mt-10">Angeleitetes Training</h2>
-        <h2 class="text-l font-extrabold dark:text-white mt-10">Kinder- und Jugendtraining:</h2>
-        <ul>
-          <li>Dienstags: 18 – 20 Uhr in Laurensberg</li>
-          <li>Freitags: 18 – 20 Uhr in Laurensberg</li>
-        </ul>
+            </div>
+            <div class="mt-10">
+                <h2 class="text-xl font-extrabold dark:text-white mt-10">Angeleitetes Training</h2>
+                <h2 class="text-l font-extrabold dark:text-white mt-10">Kinder- und Jugendtraining:</h2>
+                <ul>
+                    <li>Dienstags: 18 – 20 Uhr in Laurensberg</li>
+                    <li>Freitags: 18 – 20 Uhr in Laurensberg</li>
+                </ul>
 
 
-      </div>
-      <div class="mt-10">
-        Hinweis: Bei Fragen zum Kinder- und Jugendtraining bitte an Lina Köllmann (<a
-          class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="mailto: jugendwart@bv-aachen.de">
-          jugendwart@bv-aachen.de</a> ) wenden.<br>
-        Bitte meldet euch bei Lina um ein Probetraining zu vereinbaren.
-        <p></p>
-        <h2 class="text-l font-extrabold dark:text-white mt-10">Seniorentraining:</h2>
-        <ul>
-          <!--              <li> Montag: 20:00 - 21:30 Uhr in Burtscheid bei Ansgar <!-- Winter -->
-          <li> Montag: 19:00 - 20:30 Uhr in Burtscheid bei Ansgar<!-- Sommer-->
-            <!--(Vornehmlich für die Mannschaftsspieler des Vereins)-->
-            (ab mittlerem Bezirksklassenniveau)
-          </li>
-          <li>Donnerstag: 18:30 – 20:15 Uhr in Laurensberg bei Felix
-            <!--(Training für alle Engagierten)-->
-            (Anfänger*innen und Spieler*innen bis zu unterem Bezirksklassenniveau)
-          </li>
-          <!--                Hinweis: Bei Fragen zum Seniorentraining bitte an Felix Flammer  (<a href="mailto:    seniorentraining@bv-aachen.de">  seniorentraining@bv-aachen.de</a> ) wenden.-->
-          Für die Teilnahme am angeleitenen Training montags bei Ansgar
-          ist eine vorherige Absprache mit dem Trainer sowie eine
-          Mindestspielstärke erforderlich. Am Training donnerstags bei Felix kann
-          ohne Voranmeldung aufgesucht werden. Die Kontaktaufnahme mit beiden
-          Trainern ist über die Adresse <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-            href="mailto:    seniorentraining@bv-aachen.de">
+            </div>
+            <div class="mt-10">
+                Hinweis: Bei Fragen zum Kinder- und Jugendtraining bitte an Lina Köllmann (<a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="mailto: jugendwart@bv-aachen.de">
+          jugendwart@bv-aachen.de</a> ) wenden.<br> Bitte meldet euch bei Lina um ein Probetraining zu vereinbaren.
+                <p></p>
+                <h2 class="text-l font-extrabold dark:text-white mt-10">Seniorentraining:</h2>
+                <ul>
+                    <!--              <li> Montag: 20:00 - 21:30 Uhr in Burtscheid bei Ansgar <!-- Winter -->
+                    <li> Montag: 19:00 - 20:30 Uhr in Burtscheid bei Ansgar
+                        <!-- Sommer-->
+                        <!--(Vornehmlich für die Mannschaftsspieler des Vereins)-->
+                        (ab mittlerem Bezirksklassenniveau)
+                    </li>
+                    <li>Donnerstag: 18:30 – 20:15 Uhr in Laurensberg bei Felix
+                        <!--(Training für alle Engagierten)-->
+                        (Anfänger*innen und Spieler*innen bis zu unterem Bezirksklassenniveau)
+                    </li>
+                    <!--                Hinweis: Bei Fragen zum Seniorentraining bitte an Felix Flammer  (<a href="mailto:    seniorentraining@bv-aachen.de">  seniorentraining@bv-aachen.de</a> ) wenden.-->
+                    Für die Teilnahme am angeleitenen Training montags bei Ansgar ist eine vorherige Absprache mit dem Trainer sowie eine Mindestspielstärke erforderlich. Am Training donnerstags bei Felix kann ohne Voranmeldung aufgesucht werden. Die Kontaktaufnahme mit
+                    beiden Trainern ist über die Adresse <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="mailto:    seniorentraining@bv-aachen.de">
             seniorentraining@bv-aachen.de</a> möglich.
 
-          <div class="mt-10">
-          </div>
-        </ul>
-      </div>
+                    <div class="mt-10">
+                    </div>
+                </ul>
+            </div>
 
-      <h2 class="text-xl font-extrabold dark:text-white mt-10">Hallen</h2>
-      <div class="mt-10 grid grid-cols-2 gap-2">
-        <div class="floatleft">
-          <p>
-          <h2 class="text-l font-extrabold dark:text-white mt-10">Burtscheid:</h2><br> Einhard-Gymnasium TH II<br>
-          Robert-Schumann-Str. 2<br> <b>Eingang
+            <h2 class="text-xl font-extrabold dark:text-white mt-10">Hallen</h2>
+            <div class="mt-10 grid grid-cols-2 gap-2">
+                <div class="floatleft">
+                    <p>
+                        <h2 class="text-l font-extrabold dark:text-white mt-10">Burtscheid:</h2><br> Einhard-Gymnasium TH II<br> Robert-Schumann-Str. 2<br> <b>Eingang
             über Malmedyer Str.!</b> <br> 52066 Aachen-Burtscheid</p>
-          <!-- <iframe src="training-Dateien/embed.htm" width="250" height="350" frameboarder="0" style="border:0"
+                    <!-- <iframe src="training-Dateien/embed.htm" width="250" height="350" frameboarder="0" style="border:0"
                 allowfullscreen=""></iframe> -->
-        </div>
-        <div class="floatleft">
-          <p>
-          <h2 class="text-l font-extrabold dark:text-white mt-10">Laurensberg:</h2><br> Anne-Frank-Gymnasium Halle
-          II<br>
-          Hander Weg 89<br><br>52072
-          Aachen-Laurensberg<br> </p>
-          <!-- <iframe src="training-Dateien/embed_002.htm" width="250" height="350" frameborder="0" style="border:0"
+                </div>
+                <div class="floatleft">
+                    <p>
+                        <h2 class="text-l font-extrabold dark:text-white mt-10">Laurensberg:</h2><br> Anne-Frank-Gymnasium Halle II
+                        <br> Hander Weg 89<br><br>52072 Aachen-Laurensberg
+                        <br> </p>
+                    <!-- <iframe src="training-Dateien/embed_002.htm" width="250" height="350" frameborder="0" style="border:0"
                 allowfullscreen=""></iframe> -->
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 
-  <br />
-  <div id="footer-wrapper" class="mt-20">
-    <div id="footer" class="text-center">
-      <div id="adresse">
-        <p>
-          <a href="./impressum.html">Impressum</a> <b>|</b>
-          <a href="./datenschutz.html">Informationen zum Datenschutz.</a>
+    <br />
+    <div id="footer-wrapper" class="mt-20">
+        <div id="footer" class="text-center">
+            <div id="adresse">
+                <p>
+                    <a href="./impressum.html">Impressum</a> <b>|</b>
+                    <a href="./datenschutz.html">Informationen zum Datenschutz.</a>
 
-        </p>
-      </div>
+                </p>
+            </div>
+        </div>
     </div>
-  </div>
-  </div>
-  </div>
+    </div>
+    </div>
 
 
 
