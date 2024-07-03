@@ -54,11 +54,13 @@
     </nav>
 
     <div class="mx-auto px-2 sm:px-6 lg:px-8 content-center">
+        <!--
         <div>
             <img class="inline" src="images/bild1.jpg" alt="Badmintonball" width="600" height="230">
             <br />
             <div id="pagetitle">Badmintonverein Aachen 2009 e.V.</div>
         </div>
+        -->
         <div>
             <p class="mt-10 text-3xl sm:text-4xl text-slate-900 font-extrabold tracking-tight dark:text-slate-50 ">
                 Training
@@ -70,25 +72,19 @@
                 für alle Leistungsklassen sowie Spiel und Spaß.
                 <br />
                 <i> Stand: Juli 2024</i>
-                <br />
-                <br /> Weitere Informationen dazu gibt es hier:
-                <br />
-                <a class="group inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-pink-50 text-pink-600 hover:bg-pink-100 hover:text-pink-700 focus:ring-pink-600 dark:bg-slate-700 dark:text-slate-100 dark:hover:bg-slate-600 dark:hover:text-white dark:focus:ring-slate-500 mt-8"
-                    href="https://bv-aachen.de/files/BVAachen-Trainingsorganisation_Stand_01-Mai-2022.pdf">Trainingsorganisation
-          <svg
-            class="overflow-visible ml-3 text-pink-300 group-hover:text-pink-400 dark:text-slate-500 dark:group-hover:text-slate-400"
-            width="3" height="6" viewBox="0 0 3 6" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path d="M0 0L3 3L0 6"></path>
-          </svg></a>
+            </p>
+
+            <p class="mt-10 text-3xl sm:text-4xl text-slate-900 font-extrabold tracking-tight dark:text-slate-50 ">
+                Trainingszeiten
             </p>
 
             <div class="container mx-auto p-4">
-                <div class="grid grid-cols-6 gap-1">
+                <div class="grid grid-cols-7 gap-1">
                     <!-- Empty top-left cell -->
                     <div></div>
                     <!-- Header Row for Days -->
-                    <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">Montag</div>
+                    <div id="monday1" data-column="monday1" class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">Montag<sup>1</sup></div>
+                    <div id="monday2" data-column="monday2" class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">Montag<sup>2</sup></div>
                     <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">Dienstag</div>
                     <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">Mittwoch</div>
                     <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">Donnerstag</div>
@@ -98,6 +94,7 @@
                     <!-- 18:00 - 19:00 Row -->
                     <div class="text-right font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-2">18:00 - 19:00</div>
                     <div class="p-2 bg-white border text-black dark:bg-gray-700 dark:border-gray-600 row-span-2 dark:text-gray-200"></div>
+                    <div class="p-2 bg-white border text-black dark:bg-gray-700 dark:border-gray-600 row-span-2 dark:text-gray-200"></div>
                     <div class="p-2 font-bold border-yellow-600 bg-yellow-400 rounded border text-black dark:bg-yellow-600 dark:border-yellow-800 row-span-4 whitespace-normal h-auto dark:text-gray-200">Kinder & Jugend-training</div>
                     <div class="p-2 bg-white border text-black dark:bg-gray-700 dark:border-gray-600 row-span-2 dark:text-gray-200"></div>
                     <div class="p-2 bg-white border text-black dark:bg-gray-700 dark:border-gray-600 row-span-1 dark:text-gray-200"></div>
@@ -106,21 +103,24 @@
 
                     <!-- 19:00 - 20:00 Row -->
                     <div class="text-right font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-2">19:00 - 20:00</div>
-                    <div class="p-2 font-bold border-red-600 bg-red-400 rounded border text-black dark:bg-red-600 dark:border-red-800 whitespace-normal h-auto row-span-3 dark:text-gray-200">Profi Training</div>
+                    <div data-column="monday1" class="p-2 font-bold border-red-600 bg-red-400 rounded border text-black dark:bg-red-600 dark:border-red-800 whitespace-normal h-auto row-span-3 dark:text-gray-200">Profi Training</div>
+                    <div class="p-2 bg-white border text-black dark:bg-gray-700 dark:border-gray-600 row-span-2 dark:text-gray-200"></div>
                     <div class="p-2 bg-white border text-black dark:bg-gray-700 dark:border-gray-600 row-span-2 dark:text-gray-200"></div>
 
                     <!-- 20:00 - 21:00 Row -->
                     <div class="text-right font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-2">20:00 - 21:00</div>
+                    <div data-column="monday2" class="p-2 font-bold border-red-600 bg-red-400 rounded border text-black dark:bg-red-600 dark:border-red-800 whitespace-normal h-auto row-span-3 dark:text-gray-200">Profi Training</div>
                     <div class="p-2 bg-white border text-black dark:bg-gray-700 dark:border-gray-600 row-span-2 dark:text-gray-200"></div>
                     <div class="p-2 bg-white font-bold rounded border text-black dark:bg-blue-500 dark:border-black row-span-6 bg-black-400 border-black-600 dark:text-gray-200">Freies Spiel Senioren</div>
                     <div class="p-2 bg-white font-bold rounded border text-black dark:bg-blue-500 dark:border-blue-600 row-span-4 bg-blue-400 border-blue-600 dark:text-gray-200">Freies Spiel Senioren</div>
                     <div class="p-2 bg-white border text-black dark:bg-gray-700 dark:border-gray-600 row-span-2 dark:text-gray-200"></div>
-                    <div class="p-2 bg-white font-bold rounded border text-black dark:bg-blue-500 dark:border-blue-600 row-span-5 bg-blue-400 border-blue-600 dark:text-gray-200">Freies Spiel Senioren</div>
+                    <div data-column="monday1" class="p-2 bg-white font-bold rounded border text-black dark:bg-blue-500 dark:border-blue-600 row-span-5 bg-blue-400 border-blue-600 dark:text-gray-200">Freies Spiel Senioren</div>
 
                     <!-- 21:00 - 22:00 Row -->
                     <div class="text-right font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-2">21:00 - 22:00</div>
                     <div class="p-2 bg-white border text-black dark:bg-gray-700 dark:border-gray-600 row-span-2 dark:text-gray-200"></div>
                     <div class="p-2 bg-white border text-black dark:bg-gray-700 dark:border-gray-600 row-span-2 dark:text-gray-200"></div>
+                    <div data-column="monday2" class="p-2 bg-white font-bold rounded border text-black dark:bg-blue-500 dark:border-blue-600 row-span-3 bg-blue-400 border-blue-600 dark:text-gray-200">Freies Spiel Senioren</div>
 
                     <!-- 22:00 - 23:00 Row -->
                     <div class="text-right font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-2">22:00 - 23:00</div>
@@ -209,6 +209,21 @@
                 allowfullscreen=""></iframe> -->
                 </div>
             </div>
+            <p class="mt-4 space-y-6 ">
+                <br />
+                <br />
+                <br /> Weitere Informationen zum Training und zur Trainingsorganisation finden Sie hier:
+                <br />
+                <a class="group inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-pink-50 text-pink-600 hover:bg-pink-100 hover:text-pink-700 focus:ring-pink-600 dark:bg-slate-700 dark:text-slate-100 dark:hover:bg-slate-600 dark:hover:text-white dark:focus:ring-slate-500 mt-8"
+                    href="https://bv-aachen.de/files/BVAachen-Trainingsorganisation_Stand_01-Mai-2022.pdf">Trainingsorganisation
+                    <svg
+                        class="overflow-visible ml-3 text-pink-300 group-hover:text-pink-400 dark:text-slate-500 dark:group-hover:text-slate-400"
+                        width="3" height="6" viewBox="0 0 3 6" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M0 0L3 3L0 6"></path>
+                    </svg>
+                </a>
+            </p>
         </div>
     </div>
 
@@ -219,7 +234,6 @@
                 <p>
                     <a href="./impressum.html">Impressum</a> <b>|</b>
                     <a href="./datenschutz.html">Informationen zum Datenschutz.</a>
-
                 </p>
             </div>
         </div>
@@ -228,7 +242,27 @@
     </div>
 
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const today = new Date();
+            const month = today.getMonth(); // 0: January, 1: February, ..., 11: December
 
+            let columnsToFade = [];
+
+            if (month >= 3 && month <= 8) { // April (3) to September (8)
+                columnsToFade = document.querySelectorAll('[data-column="monday2"]');
+            } else {
+                columnsToFade = document.querySelectorAll('[data-column="monday1"]');
+            }
+
+            columnsToFade.forEach(element => {
+                element.style.backgroundColor = '#374151 '; // Tailwind bg-gray-300
+                element.style.color = '#6B7280'; // Tailwind text-gray-500
+                element.style.borderColor = '#374151'; // Tailwind border-gray-400 (light mode)
+                // element.classList.add('bg-gray-300', 'text-gray-500', 'dark:bg-gray-700', 'dark:text-gray-400');
+            });
+        });
+    </script>
 
 
 </body>
