@@ -4,130 +4,153 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
 
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-	<meta name="keywords" content="BV Aachen, Badminton, Aachen">
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-	<script src="https://cdn.tailwindcss.com"></script>
-	<script>
-		function showhide(id) {
-			var e = document.getElementById(id);
-			e.style.display = (e.style.display == 'block') ? 'none' : 'block';
-		}
-	</script>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="keywords" content="BV Aachen, Badminton, Aachen">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function showhide(id) {
+            var e = document.getElementById(id);
+            e.style.display = (e.style.display == 'block') ? 'none' : 'block';
+        }
+    </script>
+    <script src="javascripts/language-toggle.js"></script>
 
-	<title>BV Aachen 09</title>
+    <title>BV Aachen 09</title>
 
-	<link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/layout.css">
 
 </head>
 
 <body class="antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900 text-center">
-	<nav class="flex items-center justify-between flex-wrap bg-gray-800 p-6">
-		<div class="flex items-center flex-shrink-0 text-white mr-6">
-			<div class="flex flex-shrink-0 items-center bg-gray-100 p-1">
-				<img class="h-8 w-auto" src="images/Logo.png" alt="BV Aachen">
-			</div>
-		</div>
-		<div class="block md:hidden lg:hidden">
-			<button
-				class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400 hover:text-white hover:border-white"
-				onclick="showhide('navigation')">
+    <nav class="flex items-center justify-between flex-wrap bg-gray-800 p-6">
+        <div class="flex items-center flex-shrink-0 text-white mr-6">
+            <div class="flex flex-shrink-0 items-center bg-gray-100 p-1">
+                <img class="h-8 w-auto" src="images/Logo.png" alt="BV Aachen">
+            </div>
+        </div>
+        <div class="block md:hidden lg:hidden">
+            <button class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400 hover:text-white hover:border-white" onclick="showhide('navigation')">
 				<svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
 					<title>Menu</title>
 					<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
 				</svg>
 			</button>
-		</div>
-		<div class="w-full flex-grow lg:flex lg:items-center lg:w-auto md:flex md:items-center md:w-auto">
-			<div id="navigation" class="text-sm lg:flex-grow md:flex-grow" style="display: block;">
-				<a href="./index.html"
-					class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">
+        </div>
+        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto md:flex md:items-center md:w-auto">
+            <div id="navigation" class="text-sm lg:flex-grow md:flex-grow" style="display: block;">
+                <a href="./index.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">
 					Start</a>
-				<a href="./alemannencup.html"
-					class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Alemannen
+                <a href="./alemannencup.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Alemannen
 					Cup</a>
-				<a href="./teams.html"
-					class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Teams</a>
-				<a href="./training.html"
-					class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Training</a>
-				<a href="./verein.html"
-					class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Mitglied
-					werden</a>
-				<a href="./kontakt.html" aria-current="page"
-					class="block mt-4 rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Kontakt</a>
-				<a href="./FAQ.html"
-					class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">FAQ</a>
-			</div>
-		</div>
-	</nav>
+                <a href="./teams.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">
+                    <span data-lang="en" class="hidden">Teams</span>
+                    <span data-lang="de">Mannschaften</span>
+                </a>
+                <a href="./training.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Training</a>
+                <a href="./verein.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">
+                    <span data-lang="en" class="hidden">Become a Member</span>
+                    <span data-lang="de">Mitglied werden</span>
+                </a>
+                <a href="./kontakt.html" aria-current="page" class="block mt-4 rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">
+                    <span data-lang="en" class="hidden">Contact</span>
+                    <span data-lang="de">Kontakt</span>
+                </a>
+                <a href="./FAQ.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">FAQ</a>
+            </div>
+            <button id="languageToggle" class="ml-4 bg-white text-blue-500 w-8 h-8 rounded-full flex items-center justify-center">
+                <span id="languageIcon">EN</span>
+            </button>
+        </div>
+    </nav>
 
-	<div class="mx-auto px-2 sm:px-6 lg:px-8 content-center">
-		<div>
-			<img class="inline" src="images/bild1.jpg" alt="Badmintonball" width="600" height="230">
-		</div>
-		<div>
+    <div class="mx-auto px-2 sm:px-6 lg:px-8 content-center">
+        <div>
+            <img class="inline" src="images/bild1.jpg" alt="Badmintonball" width="600" height="230">
+        </div>
+        <div>
 
-			<div>
-				<p class="mt-10 text-3xl sm:text-4xl text-slate-900 font-extrabold tracking-tight dark:text-slate-50 ">
-					Kontakt
-				</p>
-				<p class="mt-4 space-y-6 ">
-					Wenn du uns kennenlernen möchtest, schreib uns doch einfach eine Mail:
-					<br />
-				</p>
-				<p class="mt-4 space-y-6 ">
-				<ul>
-					<li>Für allgemeine Fragen: <a href="mailto: vorsitz@bv-aachen.de"
-							class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+            <div>
+                <p class="mt-10 text-3xl sm:text-4xl text-slate-900 font-extrabold tracking-tight dark:text-slate-50 ">
+                    Kontakt
+                </p>
+                <p class="mt-4 space-y-6 ">
+                    Wenn du uns kennenlernen möchtest, schreib uns doch einfach eine Mail:
+                    <br />
+                </p>
+                <p class="mt-4 space-y-6 ">
+                    <ul>
+                        <li>Für allgemeine Fragen: <a href="mailto: vorsitz@bv-aachen.de" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
 							vorsitz@bv-aachen.de</a>.
-					</li>
-					<li>Für Fragen bezüglich der Mitgliedschaft: <a href="mailto: kassenwart@bv-aachen.de"
-							class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                        </li>
+                        <li>Für Fragen bezüglich der Mitgliedschaft: <a href="mailto: kassenwart@bv-aachen.de" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
 							kassenwart@bv-aachen.de</a>.</li>
-					<li>Für Fragen bezüglich des Seniorentrainings: <a href="mailto: seniorentraining@bv-aachen.de"
-							class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                        <li>Für Fragen bezüglich des Seniorentrainings: <a href="mailto: seniorentraining@bv-aachen.de" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
 							seniorentraining@bv-aachen.de</a>.
-					</li>
-					<li>Für Fragen bezüglich des Kinder- und Jugendtrainings: <a href="mailto: jugendwart@bv-aachen.de"
-							class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                        </li>
+                        <li>Für Fragen bezüglich des Kinder- und Jugendtrainings: <a href="mailto: jugendwart@bv-aachen.de" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
 							jugendwart@bv-aachen.de</a>.
-					</li>
-					<br />
-					<li>
-						Für Fragen und Anmerkungen bezüglich dieser Webseite:
-						<br />
-						<a href="https://www.xing.com/profile/Valentin_Himmel">
-							<figcaption class="mt-6 flex items-center justify-center space-x-4 text-left"><img
-									src="images/man4.jpg" alt="" class="w-14 h-14 rounded-full" loading="lazy"
-									decoding="async">
-								<div>
-									<div class="text-slate-900 font-semibold dark:text-white">Valentin Himmel</div>
-									<div class="mt-0.5 text-sm leading-6 dark:text-blue-200">Softwareentwickler
-									</div>
-								</div>
-							</figcaption>
-						</a>
-					</li>
-				</ul>
-				</p>
-			</div>
-		</div>
-	</div>
+                        </li>
+                        <br />
+                        <li>
+                            Für Fragen und Anmerkungen bezüglich dieser Webseite:
+                            <br />
+                            <div class="max-w-4xl mx-auto grid grid-cols-3 gap-2">
+                                <div>
+                                    <a href="https://www.xing.com/profile/Valentin_Himmel">
+                                        <figcaption class="mt-6 flex items-center justify-center space-x-4 text-left"><img src="images/man4.jpg" alt="" class="w-14 h-14 rounded-full" loading="lazy" decoding="async">
+                                            <div>
+                                                <div class="text-slate-900 font-semibold dark:text-white">Valentin Himmel</div>
+                                                <div class="mt-0.5 text-sm leading-6 dark:text-blue-200">Softwareentwickler
+                                                </div>
+                                            </div>
+                                        </figcaption>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="https://www.linkedin.com/in/marko-goldschmidt-05b002235/">
+                                        <figcaption class="mt-6 flex items-center justify-center space-x-4 text-left"><img src="images/marko_cartoon.png" alt="" class="w-14 h-14 rounded-full" loading="lazy" decoding="async">
+                                            <div>
+                                                <div class="text-slate-900 font-semibold dark:text-white">Marko Goldschmidt</div>
+                                                <div class="mt-0.5 text-sm leading-6 dark:text-blue-200">Softwareentwickler
+                                                </div>
+                                            </div>
+                                        </figcaption>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="">
+                                        <figcaption class="mt-6 flex items-center justify-center space-x-4 text-left"><img src="images/man1.jpg" alt="" class="w-14 h-14 rounded-full" loading="lazy" decoding="async">
+                                            <div>
+                                                <div class="text-slate-900 font-semibold dark:text-white">Matthias Böing</div>
+                                                <div class="mt-0.5 text-sm leading-6 dark:text-blue-200">UI Designer
+                                                </div>
+                                            </div>
+                                        </figcaption>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </div>
 
 
-	<br>
-	<div id="footer-wrapper" class="mt-20">
-		<div id="footer" class="text-center">
-			<div id="adresse">
-				<p>
-					<a href="./impressum.html">Impressum</a> <b>|</b>
-					<a href="./datenschutz.html">Informationen zum Datenschutz.</a>
+    <br>
+    <div id="footer-wrapper" class="mt-20">
+        <div id="footer" class="text-center">
+            <div id="adresse">
+                <p>
+                    <a href="./impressum.html">Impressum</a> <b>|</b>
+                    <a href="./datenschutz.html">Informationen zum Datenschutz.</a>
 
-				</p>
-			</div>
-		</div>
-	</div>
+                </p>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>

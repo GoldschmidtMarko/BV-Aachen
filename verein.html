@@ -15,6 +15,7 @@
             e.style.display = (e.style.display == 'block') ? 'none' : 'block';
         }
     </script>
+    <script src="javascripts/language-toggle.js"></script>
 
     <title>BV Aachen 09</title>
 
@@ -30,9 +31,7 @@
             </div>
         </div>
         <div class="block md:hidden lg:hidden">
-            <button
-                class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400 hover:text-white hover:border-white"
-                onclick="showhide('navigation')">
+            <button class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400 hover:text-white hover:border-white" onclick="showhide('navigation')">
                 <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <title>Menu</title>
                     <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
@@ -41,24 +40,28 @@
         </div>
         <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto md:flex md:items-center md:w-auto">
             <div id="navigation" class="text-sm lg:flex-grow md:flex-grow" style="display: block;">
-                <a href="./index.html"
-                    class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">
+                <a href="./index.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">
                     Start</a>
-                <a href="./alemannencup.html"
-                    class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Alemannen
+                <a href="./alemannencup.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Alemannen
                     Cup</a>
-                <a href="./teams.html"
-                    class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Teams</a>
-                <a href="./training.html"
-                    class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Training</a>
-                <a href="./verein.html" aria-current="page"
-                    class="block mt-4 rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Mitglied
-                    werden</a>
-                <a href="./kontakt.html"
-                    class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Kontakt</a>
-                <a href="./FAQ.html"
-                    class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">FAQ</a>
+                <a href="./teams.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">
+                    <span data-lang="en" class="hidden">Teams</span>
+                    <span data-lang="de">Mannschaften</span>
+                </a>
+                <a href="./training.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Training</a>
+                <a href="./verein.html" aria-current="page" class="block mt-4 rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">
+                    <span data-lang="en" class="hidden">Become a Member</span>
+                    <span data-lang="de">Mitglied werden</span>
+                </a>
+                <a href="./kontakt.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">
+                    <span data-lang="en" class="hidden">Contact</span>
+                    <span data-lang="de">Kontakt</span>
+                </a>
+                <a href="./FAQ.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">FAQ</a>
             </div>
+            <button id="languageToggle" class="ml-4 bg-white text-blue-500 w-8 h-8 rounded-full flex items-center justify-center">
+                <span id="languageIcon">EN</span>
+            </button>
         </div>
     </nav>
 
@@ -101,8 +104,7 @@
                     </figcaption>
                     <blockquote>
                         <p class="text-lg font-medium text-slate-700 dark:text-slate-300">
-                            Bei Fragen zur An-/Abmeldung wende dich bitte an <a href="mailto:kassenwart@bv-aachen.de"
-                                class="font-medium text-blue-600 dark:text-blue-500 hover:underline">kassenwart@bv-aachen.de</a>.
+                            Bei Fragen zur An-/Abmeldung wende dich bitte an <a href="mailto:kassenwart@bv-aachen.de" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">kassenwart@bv-aachen.de</a>.
                         </p>
                     </blockquote>
                 </div>

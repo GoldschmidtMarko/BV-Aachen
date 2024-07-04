@@ -4,263 +4,219 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
 
 <head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <meta name="keywords" content="BV Aachen, Badminton, Aachen">
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    function showhide(id) {
-      var e = document.getElementById(id);
-      e.style.display = (e.style.display == 'block') ? 'none' : 'block';
-    }
-  </script>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="keywords" content="BV Aachen, Badminton, Aachen">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function showhide(id) {
+            var e = document.getElementById(id);
+            e.style.display = (e.style.display == 'block') ? 'none' : 'block';
+        }
+    </script>
+    <script src="javascripts/language-toggle.js"></script>
 
-  <title>BV Aachen 09</title>
+    <title>BV Aachen 09</title>
 
-  <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/layout.css">
 </head>
 
 <body class="antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900 text-justify">
-  <nav class="flex items-center justify-between flex-wrap bg-gray-800 p-6">
-    <div class="flex items-center flex-shrink-0 text-white mr-6">
-      <div class="flex flex-shrink-0 items-center bg-gray-100 p-1">
-        <img class="h-8 w-auto" src="images/Logo.png" alt="BV Aachen">
-      </div>
-    </div>
-    <div class="block md:hidden lg:hidden">
-      <button
-        class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400 hover:text-white hover:border-white"
-        onclick="showhide('navigation')">
+    <nav class="flex items-center justify-between flex-wrap bg-gray-800 p-6">
+        <div class="flex items-center flex-shrink-0 text-white mr-6">
+            <div class="flex flex-shrink-0 items-center bg-gray-100 p-1">
+                <img class="h-8 w-auto" src="images/Logo.png" alt="BV Aachen">
+            </div>
+        </div>
+        <div class="block md:hidden lg:hidden">
+            <button class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400 hover:text-white hover:border-white" onclick="showhide('navigation')">
         <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
           <title>Menu</title>
           <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
         </svg>
       </button>
-    </div>
-    <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto md:flex md:items-center md:w-auto text-center">
-      <div id="navigation" class="text-sm lg:flex-grow md:flex-grow" style="display: block;">
-        <a href="./index.html"
-          class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">
-          Start</a>
-        <a href="./alemannencup.html" aria-current="page"
-          class="block mt-4 rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Alemannen
-          Cup</a>
-        <a href="./teams.html"
-          class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Teams</a>
-        <a href="./training.html"
-          class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Training</a>
-        <a href="./verein.html"
-          class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Mitglied
-          werden</a>
-        <a href="./kontakt.html"
-          class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Kontakt</a>
-        <a href="./FAQ.html"
-          class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">FAQ</a>
-      </div>
-    </div>
-  </nav>
+        </div>
+        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto md:flex md:items-center md:w-auto text-center">
+            <div id="navigation" class="text-sm lg:flex-grow md:flex-grow" style="display: block;">
+                <a href="./index.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">
+                Start</a>
+                <a href="./alemannencup.html" aria-current="page" class="block mt-4 rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Alemannen
+                Cup</a>
+                <a href="./teams.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">
+                    <span data-lang="en" class="hidden">Teams</span>
+                    <span data-lang="de">Mannschaften</span>
+                </a>
+                <a href="./training.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Training</a>
+                <a href="./verein.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">
+                    <span data-lang="en" class="hidden">Become a Member</span>
+                    <span data-lang="de">Mitglied werden</span>
+                </a>
+                <a href="./kontakt.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">
+                    <span data-lang="en" class="hidden">Contact</span>
+                    <span data-lang="de">Kontakt</span>
+                </a>
+                <a href="./FAQ.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">FAQ</a>
+            </div>
+            <button id="languageToggle" class="ml-4 bg-white text-blue-500 w-8 h-8 rounded-full flex items-center justify-center">
+                <span id="languageIcon">DE</span>
+            </button>
+        </div>
+    </nav>
 
-  <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto">
-      <p class="mt-10 text-3xl sm:text-4xl text-slate-900 font-extrabold tracking-tight dark:text-slate-50 ">
-        Wir bedanken uns bei allen Teilnehmern und Helfern für ein tolles Turnier 2024!
-      </p>
-      <p class="mt-4 space-y-6 ">Vielen Dank für eure Teilnahme, wir hoffen es hat euch trotz der nicht ganz
-        optimalen Zeitplanung am Sonntag gut gefallen. Es wurden einige Sachen gefunden, wer etwas vermisst meldet sich
-        bitter unter <a href="mailto:anmeldung@alemannen-cup.de"
-          class="font-medium text-blue-600 dark:text-blue-500 hover:underline">anmeldung@alemannen-cup.de </a>. Dorthin
-        könnt ihr auch gerne Feedback zum Turnier schicken.</p>
-      <br />
-      <a href="https://www.turnier.de/tournament/500faf3c-80b0-43d6-967f-ff31d7517de7"
-        class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Hier sind die
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <p class="mt-10 text-3xl sm:text-4xl text-slate-900 font-extrabold tracking-tight dark:text-slate-50 ">
+                Wir bedanken uns bei allen Teilnehmern und Helfern für ein tolles Turnier 2024!
+            </p>
+            <p class="mt-4 space-y-6 ">Vielen Dank für eure Teilnahme, wir hoffen es hat euch trotz der nicht ganz optimalen Zeitplanung am Sonntag gut gefallen. Es wurden einige Sachen gefunden, wer etwas vermisst meldet sich bitter unter <a href="mailto:anmeldung@alemannen-cup.de"
+                    class="font-medium text-blue-600 dark:text-blue-500 hover:underline">anmeldung@alemannen-cup.de </a>. Dorthin könnt ihr auch gerne Feedback zum Turnier schicken.</p>
+            <br />
+            <a href="https://www.turnier.de/tournament/500faf3c-80b0-43d6-967f-ff31d7517de7" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">Hier sind die
         Ergebnisse</a> vom 18. Alemanen Cup zu finden.
-    </div>
+        </div>
 
-    <h2 class="text-xl font-extrabold dark:text-white mt-40">
-      Impressionen vom Alemannen Cup 2024
-    </h2>
+        <h2 class="text-xl font-extrabold dark:text-white mt-40">
+            Impressionen vom Alemannen Cup 2024
+        </h2>
 
-    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
-      <div>
-        <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/bild1.jpg"
-          alt="gallery-photo" />
-      </div>
-      <div>
-        <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/bild1.jpg"
-          alt="gallery-photo" />
-      </div>
-      <div>
-        <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/bild1.jpg"
-          alt="gallery-photo" />
-      </div>
-      <div>
-        <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/bild1.jpg"
-          alt="gallery-photo" />
-      </div>
-      <div>
-        <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/bild1.jpg"
-          alt="gallery-photo" />
-      </div>
-      <div>
-        <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/bild1.jpg"
-          alt="gallery-photo" />
-      </div>
-      <div>
-        <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/bild1.jpg"
-          alt="gallery-photo" />
-      </div>
-      <div>
-        <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/bild1.jpg"
-          alt="gallery-photo" />
-      </div>
-      <div>
-        <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/bild1.jpg"
-          alt="gallery-photo" />
-      </div>
-    </div>
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
+            <div>
+                <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/bild1.jpg" alt="gallery-photo" />
+            </div>
+            <div>
+                <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/bild1.jpg" alt="gallery-photo" />
+            </div>
+            <div>
+                <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/bild1.jpg" alt="gallery-photo" />
+            </div>
+            <div>
+                <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/bild1.jpg" alt="gallery-photo" />
+            </div>
+            <div>
+                <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/bild1.jpg" alt="gallery-photo" />
+            </div>
+            <div>
+                <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/bild1.jpg" alt="gallery-photo" />
+            </div>
+            <div>
+                <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/bild1.jpg" alt="gallery-photo" />
+            </div>
+            <div>
+                <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/bild1.jpg" alt="gallery-photo" />
+            </div>
+            <div>
+                <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/bild1.jpg" alt="gallery-photo" />
+            </div>
+        </div>
 
-    <h2 class="text-xl font-extrabold dark:text-white mt-40">
-      Im Juni ist es wieder soweit! Der 19. Alemannen Cup steht vor der Tür.
-    </h2>
+        <h2 class="text-xl font-extrabold dark:text-white mt-40">
+            Im Juni ist es wieder soweit! Der 19. Alemannen Cup steht vor der Tür.
+        </h2>
 
-    Natürlich starten wir auch 2025 mit euch unseren Alemannen Cup.
-    <br>
-    <br>
-    Am XX. und XY. Juni 2025 begrüßen wir euch hoffentlich wieder
-    zahlreich im "Hexenkessel" an der Neuköllner Straße. Auch in diesem Jahr
-    sind die Spielklassen Elite und Fun bei ausreichend Meldungen wieder
-    verfügbar. Weitere Informationen entnehmt ihr bitte der Ausschreibung
-    oben im Titelbild.
-    <br>
-    <br>
+        Natürlich starten wir auch 2025 mit euch unseren Alemannen Cup.
+        <br>
+        <br> Am XX. und XY. Juni 2025 begrüßen wir euch hoffentlich wieder zahlreich im "Hexenkessel" an der Neuköllner Straße. Auch in diesem Jahr sind die Spielklassen Elite und Fun bei ausreichend Meldungen wieder verfügbar. Weitere Informationen entnehmt
+        ihr bitte der Ausschreibung oben im Titelbild.
+        <br>
+        <br> Der ganze BV Aachen freut sich auf zahlreiche Meldungen!
+        <br> Bitte direkt an
+        <a href="mailto:anmeldung@alemannen-cup.de" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">anmeldung@alemannen-cup.de </a>
+        <br>
+        <br>
+        <h2 class="text-xl font-extrabold dark:text-white mt-10">Meldeliste</h2>
 
-    Der ganze BV Aachen freut sich auf zahlreiche Meldungen!
-    <br>
-    Bitte direkt an
-    <a href="mailto:anmeldung@alemannen-cup.de"
-      class="font-medium text-blue-600 dark:text-blue-500 hover:underline">anmeldung@alemannen-cup.de </a>
-    <br>
-    <br>
-    <h2 class="text-xl font-extrabold dark:text-white mt-10">Meldeliste</h2>
+        <!-- TODO: URL des Stands der Meldungen aktualisieren (von 2025)-->
 
-    <!-- TODO: URL des Stands der Meldungen aktualisieren (von 2025)-->
-
-    Falls Ihr schonmal sehen wollt wer eure Konkurrenten sind und auch um eure Meldung zu überprüfen findet ihr hier <a
-      href="https://dbv.turnier.de/sport/events.aspx?id=500faf3c-80b0-43d6-967f-ff31d7517de7"
-      class="font-medium text-blue-600 dark:text-blue-500 hover:underline"><b>den aktuellen
+        Falls Ihr schonmal sehen wollt wer eure Konkurrenten sind und auch um eure Meldung zu überprüfen findet ihr hier <a href="https://dbv.turnier.de/sport/events.aspx?id=500faf3c-80b0-43d6-967f-ff31d7517de7" class="font-medium text-blue-600 dark:text-blue-500 hover:underline"><b>den aktuellen
         Stand der Meldungen</b></a>. <br>
-    <p class="mt-2">
-      <i>Gebt uns bitte einen Tag Zeit, nachdem eure Meldung bestätigt
+        <p class="mt-2">
+            <i>Gebt uns bitte einen Tag Zeit, nachdem eure Meldung bestätigt
         wurde und meldet euch danach bei etwaiger fehlerhafter oder fehlender
         Meldung bei uns.</i>
-    </p>
+        </p>
 
 
-    <br>
-    <div class="content-block">
-      <h2 class="text-xl font-extrabold dark:text-white mt-10">Der Alemannen Cup</h2>
+        <br>
+        <div class="content-block">
+            <h2 class="text-xl font-extrabold dark:text-white mt-10">Der Alemannen Cup</h2>
 
-      Der Alemannen Cup ist ein großes, überregionales
-      Badmintonturnier, das jährlich viele Sportlerinnen und Sportler aus
-      Deutschland, Belgien und den Niederlanden
-      nach Aachen lockt. Im letzten Jahr kamen rund
-      300 Spielerinnen und Spieler mit Freunden und Familie, um an dem
-      sportlichen Event teilzunehmen.
-      <br />
-      <br />
-      Es gibt fünf Disziplinen (Mixed,
-      Damendoppel, Herrendoppel, Herreneinzel, Dameneinzel) mit bis zu 5
-      Leistungsklassen:
+            Der Alemannen Cup ist ein großes, überregionales Badmintonturnier, das jährlich viele Sportlerinnen und Sportler aus Deutschland, Belgien und den Niederlanden nach Aachen lockt. Im letzten Jahr kamen rund 300 Spielerinnen und Spieler mit Freunden und
+            Familie, um an dem sportlichen Event teilzunehmen.
+            <br />
+            <br /> Es gibt fünf Disziplinen (Mixed, Damendoppel, Herrendoppel, Herreneinzel, Dameneinzel) mit bis zu 5 Leistungsklassen:
 
-      <div
-        class="mt-10 grid grid-cols-1 gap-6 lg:gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-5 max-h-[33rem] overflow-hidden">
-        <figure
-          class="relative flex flex-col-inherit bg-slate-50 rounded-lg p-6 dark:bg-slate-800 dark:highlight-white/5">
-          <figcaption class="flex items-center space-x-4">
-            <svg class="bg-blue-300 rounded-full" height="42px" style="min-width: 45px;max-width: 45px;"
-              xmlns="http://www.w3.org/2000/svg">
+            <div class="mt-10 grid grid-cols-1 gap-6 lg:gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-5 max-h-[33rem] overflow-hidden">
+                <figure class="relative flex flex-col-inherit bg-slate-50 rounded-lg p-6 dark:bg-slate-800 dark:highlight-white/5">
+                    <figcaption class="flex items-center space-x-4">
+                        <svg class="bg-blue-300 rounded-full" height="42px" style="min-width: 45px;max-width: 45px;" xmlns="http://www.w3.org/2000/svg">
               <text x="5" y="30" fill="blue" stroke="black" font-size="35">VL</text>
             </svg>
-            <div class="flex-auto">
-              <div class="text-base text-slate-900 font-semibold dark:text-slate-300"><a href="" tabindex="0"
-                  class=""><span class="absolute inset-0"></span>Elite</a></div>
-              <div class="mt-0.5">Verbandsliga und höher</div>
-            </div>
-          </figcaption>
-        </figure>
+                        <div class="flex-auto">
+                            <div class="text-base text-slate-900 font-semibold dark:text-slate-300"><a href="" tabindex="0" class=""><span class="absolute inset-0"></span>Elite</a></div>
+                            <div class="mt-0.5">Verbandsliga und höher</div>
+                        </div>
+                    </figcaption>
+                </figure>
 
-        <figure
-          class="relative flex flex-col-inherit bg-slate-50 rounded-lg p-6 dark:bg-slate-800 dark:highlight-white/5">
-          <figcaption class="flex items-center space-x-4">
-            <svg class="bg-blue-300 rounded-full" height="42" style="min-width: 45px;max-width: 45px;"
-              xmlns="http://www.w3.org/2000/svg">
+                <figure class="relative flex flex-col-inherit bg-slate-50 rounded-lg p-6 dark:bg-slate-800 dark:highlight-white/5">
+                    <figcaption class="flex items-center space-x-4">
+                        <svg class="bg-blue-300 rounded-full" height="42" style="min-width: 45px;max-width: 45px;" xmlns="http://www.w3.org/2000/svg">
               <text x="5" y="30" fill="blue" stroke="black" font-size="35">LL</text>
             </svg>
-            <div class="flex-auto">
-              <div class="text-base text-slate-900 font-semibold dark:text-slate-300"><a href="" tabindex="0"
-                  class=""><span class="absolute inset-0"></span>Premium</a></div>
-              <div class="mt-0.5">max. Landesliga</div>
-            </div>
-          </figcaption>
-        </figure>
+                        <div class="flex-auto">
+                            <div class="text-base text-slate-900 font-semibold dark:text-slate-300"><a href="" tabindex="0" class=""><span class="absolute inset-0"></span>Premium</a></div>
+                            <div class="mt-0.5">max. Landesliga</div>
+                        </div>
+                    </figcaption>
+                </figure>
 
-        <figure
-          class="relative flex flex-col-inherit bg-slate-50 rounded-lg p-6 dark:bg-slate-800 dark:highlight-white/5">
-          <figcaption class="flex items-center space-x-4">
-            <svg class="bg-blue-300 rounded-full" height="42" style="min-width: 45px;max-width: 45px;"
-              xmlns="http://www.w3.org/2000/svg">
+                <figure class="relative flex flex-col-inherit bg-slate-50 rounded-lg p-6 dark:bg-slate-800 dark:highlight-white/5">
+                    <figcaption class="flex items-center space-x-4">
+                        <svg class="bg-blue-300 rounded-full" height="42" style="min-width: 45px;max-width: 45px;" xmlns="http://www.w3.org/2000/svg">
               <text x="5" y="30" fill="blue" stroke="black" font-size="35">BL</text>
             </svg>
-            <div class="flex-auto">
-              <div class="text-base text-slate-900 font-semibold dark:text-slate-300"><a href="" tabindex="0"
-                  class=""><span class="absolute inset-0"></span>Standard</a></div>
-              <div class="mt-0.5">max. Bezirksliga</div>
-            </div>
-          </figcaption>
-        </figure>
+                        <div class="flex-auto">
+                            <div class="text-base text-slate-900 font-semibold dark:text-slate-300"><a href="" tabindex="0" class=""><span class="absolute inset-0"></span>Standard</a></div>
+                            <div class="mt-0.5">max. Bezirksliga</div>
+                        </div>
+                    </figcaption>
+                </figure>
 
-        <figure
-          class="relative flex flex-col-inherit bg-slate-50 rounded-lg p-6 dark:bg-slate-800 dark:highlight-white/5">
-          <figcaption class="flex items-center space-x-4">
-            <svg class="bg-blue-300 rounded-full" height="42" style="min-width: 45px;max-width: 45px;"
-              xmlns="http://www.w3.org/2000/svg">
+                <figure class="relative flex flex-col-inherit bg-slate-50 rounded-lg p-6 dark:bg-slate-800 dark:highlight-white/5">
+                    <figcaption class="flex items-center space-x-4">
+                        <svg class="bg-blue-300 rounded-full" height="42" style="min-width: 45px;max-width: 45px;" xmlns="http://www.w3.org/2000/svg">
               <text x="5" y="30" fill="blue" stroke="black" font-size="35">BK</text>
             </svg>
-            <div class="flex-auto">
-              <div class="text-base text-slate-900 font-semibold dark:text-slate-300"><a href="" tabindex="0"
-                  class=""><span class="absolute inset-0"></span>Basic</a></div>
-              <div class="mt-0.5">max. Bezirksklasse</div>
-            </div>
-          </figcaption>
-        </figure>
+                        <div class="flex-auto">
+                            <div class="text-base text-slate-900 font-semibold dark:text-slate-300"><a href="" tabindex="0" class=""><span class="absolute inset-0"></span>Basic</a></div>
+                            <div class="mt-0.5">max. Bezirksklasse</div>
+                        </div>
+                    </figcaption>
+                </figure>
 
-        <figure
-          class="relative flex flex-col-inherit bg-slate-50 rounded-lg p-6 dark:bg-slate-800 dark:highlight-white/5">
-          <figcaption class="flex items-center space-x-4">
-            <svg class="bg-blue-300 rounded-full" height="42" style="min-width: 45px;max-width: 45px;"
-              xmlns="http://www.w3.org/2000/svg">
+                <figure class="relative flex flex-col-inherit bg-slate-50 rounded-lg p-6 dark:bg-slate-800 dark:highlight-white/5">
+                    <figcaption class="flex items-center space-x-4">
+                        <svg class="bg-blue-300 rounded-full" height="42" style="min-width: 45px;max-width: 45px;" xmlns="http://www.w3.org/2000/svg">
               <text x="5" y="30" fill="blue" stroke="black" font-size="35">KL</text>
             </svg>
-            <div class="flex-auto">
-              <div class="text-base text-slate-900 font-semibold dark:text-slate-300"><a href="" tabindex="0"
-                  class=""><span class="absolute inset-0"></span>Fun</a></div>
-              <div class="mt-0.5">max. Kreisliga</div>
+                        <div class="flex-auto">
+                            <div class="text-base text-slate-900 font-semibold dark:text-slate-300"><a href="" tabindex="0" class=""><span class="absolute inset-0"></span>Fun</a></div>
+                            <div class="mt-0.5">max. Kreisliga</div>
+                        </div>
+                    </figcaption>
+                </figure>
+
             </div>
-          </figcaption>
-        </figure>
+            <div class="mt-2">
+                Falls Elite nicht zustande kommt, ist die Klasse Premium die höchste Klasse und damit vom Spielniveau nach oben offen.
+            </div>
 
-      </div>
-      <div class="mt-2">
-        Falls Elite nicht zustande kommt, ist die Klasse Premium die höchste Klasse und damit vom Spielniveau nach oben
-        offen.
-      </div>
-
-      <br>
-    </div>
-    <div class="text-center">
-      <a class="group inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-pink-50 text-pink-600 hover:bg-pink-100 hover:text-pink-700 focus:ring-pink-600 dark:bg-slate-700 dark:text-slate-100 dark:hover:bg-slate-600 dark:hover:text-white dark:focus:ring-slate-500 mt-8"
-        href="https://bv-aachen.de/files/AL_Cup_2024/Al-Cup%20Ausschreibung%202024%20DE.pdf">Zur Ausschreibung
+            <br>
+        </div>
+        <div class="text-center">
+            <a class="group inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-pink-50 text-pink-600 hover:bg-pink-100 hover:text-pink-700 focus:ring-pink-600 dark:bg-slate-700 dark:text-slate-100 dark:hover:bg-slate-600 dark:hover:text-white dark:focus:ring-slate-500 mt-8"
+                href="https://bv-aachen.de/files/AL_Cup_2024/Al-Cup%20Ausschreibung%202024%20DE.pdf">Zur Ausschreibung
         <svg
           class="overflow-visible ml-3 text-pink-300 group-hover:text-pink-400 dark:text-slate-500 dark:group-hover:text-slate-400"
           width="3" height="6" viewBox="0 0 3 6" fill="none" stroke="currentColor" stroke-width="2"
@@ -269,42 +225,42 @@
         </svg></a>
 
 
-      <h2 class="text-xl font-extrabold dark:text-white mt-10">Halle</h2>
-      <div class="float-none">
-        <p>
-          <strong>Alemannen Cup</strong>
-          <br> Hexenkessel
-          <br> Neuköllner Str. 9
-          <br> 52068 Aachen
-        </p>
+            <h2 class="text-xl font-extrabold dark:text-white mt-10">Halle</h2>
+            <div class="float-none">
+                <p>
+                    <strong>Alemannen Cup</strong>
+                    <br> Hexenkessel
+                    <br> Neuköllner Str. 9
+                    <br> 52068 Aachen
+                </p>
 
-        <!-- TODO: Google Maps einbinden -->
-      </div>
-      <h1 class="mt-20"> Das Alemannen Cup Team und der ganze BVA freut sich auf eure Meldungen!</h1>
+                <!-- TODO: Google Maps einbinden -->
+            </div>
+            <h1 class="mt-20"> Das Alemannen Cup Team und der ganze BVA freut sich auf eure Meldungen!</h1>
+        </div>
     </div>
-  </div>
 
 
-  </div>
-
-  <br>
-  <div id="footer-wrapper" class="mt-20">
-    <div id="footer" class="text-center">
-      <div id="adresse">
-        <p>
-          <a href="./impressum.html">Impressum</a> <b>|</b>
-          <a href="./datenschutz.html">Informationen zum Datenschutz.</a>
-
-        </p>
-      </div>
     </div>
-  </div>
-  </div>
-  </div>
-  </div>
+
+    <br>
+    <div id="footer-wrapper" class="mt-20">
+        <div id="footer" class="text-center">
+            <div id="adresse">
+                <p>
+                    <a href="./impressum.html">Impressum</a> <b>|</b>
+                    <a href="./datenschutz.html">Informationen zum Datenschutz.</a>
+
+                </p>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
 
 
-  </div>
+    </div>
 </body>
 
 </html>
