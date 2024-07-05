@@ -111,29 +111,44 @@
                 Training
             </p>
             <p class="mt-4 space-y-6 ">
-                BV Aachen bietet Spiel und Trainingsspaß für ambitionierte Spieler:innen und fortgeschrittene Hobbyspieler:innen. Hobbyspieler:innen können bei unserem Trainer Felix die grundlegenden Schlag- und Lauftechniken lernen. Ambitionierte Spieler:innen können
-                direkt an unseren freien Spielzeiten teilnehmen und haben auch die Möglichkeit, in einer unserer Mannschaften zu spielen. Wenn du uns kennenlernen möchtest, schreib uns doch einfach eine Mail: <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                    href="mailto: vorsitz@bv-aachen.de"> vorsitz@bv-aachen.de</a>. Ebenso dürfen Kinder und Jugendliche, die sich für den Sport interessieren oder trainieren wollen bei unserem Kinder- und Jugendtraining vorbeischauen. Wir bieten Training
-                für alle Leistungsklassen sowie Spiel und Spaß.
-                <br />
-                <i> Stand: Juli 2024</i>
+                <span data-lang="en" class="hidden">
+                    BV Aachen offers game and training fun for ambitious players and advanced hobbyists. Hobbyists can learn basic stroke and footwork techniques with our trainer Felix. Ambitious players can join our open play sessions and also have the opportunity to play on one of our teams. If you'd like to get to know us, simply send us an email at <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="mailto:vorsitz@bv-aachen.de">vorsitz@bv-aachen.de</a>. Additionally, children and teenagers interested in the sport or looking to train can visit our youth training sessions. We offer training for all skill levels along with games and fun.
+                    <br />
+                    <i>As of July 2024</i>
+                </span>
+                <span data-lang="de">
+                    BV Aachen bietet Spiel und Trainingsspaß für ambitionierte Spieler:innen und fortgeschrittene Hobbyspieler:innen. Hobbyspieler:innen können bei unserem Trainer Felix die grundlegenden Schlag- und Lauftechniken lernen. Ambitionierte Spieler:innen können
+                    direkt an unseren freien Spielzeiten teilnehmen und haben auch die Möglichkeit, in einer unserer Mannschaften zu spielen. Wenn du uns kennenlernen möchtest, schreib uns doch einfach eine Mail: <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                        href="mailto: vorsitz@bv-aachen.de"> vorsitz@bv-aachen.de</a>. Ebenso dürfen Kinder und Jugendliche, die sich für den Sport interessieren oder trainieren wollen bei unserem Kinder- und Jugendtraining vorbeischauen. Wir bieten Training
+                    für alle Leistungsklassen sowie Spiel und Spaß.
+                    <br />
+                    <i> Stand: Juli 2024</i>
+                </span>
             </p>
 
             <p class="mt-10 text-3xl sm:text-4xl text-slate-900 font-extrabold tracking-tight dark:text-slate-50 relative">
-                <span class="inline-block">Trainingszeiten</span>
+                <span class="inline-block">
+                    <span data-lang="en" class="hidden">Training Times</span>
+                <span data-lang="de">Trainingszeiten</span>
+                </span>
                 <br>
                 <br>
                 <div class="flex justify-center space-x-2">
                     <!-- Adjusted space-x for closer buttons -->
                     <button id="summerButton" class="toggle-button active" onclick="toggleSeason('summer')">
-                        <i class="icon fas fa-sun"></i> Sommer
+                        <i class="icon fas fa-sun"></i>
+                        <span data-lang="en" class="hidden">Summer</span>
+                        <span data-lang="de">Sommer</span>
                     </button>
                     <button id="winterButton" class="toggle-button" onclick="toggleSeason('winter')">
-                        <i class="icon fas fa-snowflake"></i> Winter
+                        <i class="icon fas fa-snowflake"></i>
+                        <span data-lang="en" class="hidden">Winter</span>
+                        <span data-lang="de">Winter</span>
                     </button>
                 </div>
-                <div class="toggle-info" id="seasonInfo">
-                    Von 01.04 bis zum 30.09
+                <div class="toggle-info">
+                    <span data-lang="en" class="hidden" id="seasonInfo_Eng">From 01.04 to 30.09</span>
+                    <span data-lang="de" id="seasonInfo_Ger">Von 01.04 bis 30.09</span>
                     <!-- Default text for Summer -->
                 </div>
             </p>
@@ -142,55 +157,97 @@
                     <!-- Empty top-left cell -->
                     <div></div>
                     <!-- Header Row for Days -->
-                    <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">Montag</div>
-                    <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">Dienstag</div>
-                    <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">Mittwoch</div>
-                    <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">Donnerstag</div>
-                    <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">Freitag</div>
+                    <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
+                        <span data-lang="en" class="hidden">Monday</span>
+                        <span data-lang="de">Montag</span>
+                    </div>
+                    <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
+                        <span data-lang="en" class="hidden">Tuesday</span>
+                        <span data-lang="de">Dienstag</span>
+                    </div>
+                    <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
+                        <span data-lang="en" class="hidden">Wednesday</span>
+                        <span data-lang="de">Mittwoch</span>
+                    </div>
+                    <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
+                        <span data-lang="en" class="hidden">Thursday</span>
+                        <span data-lang="de">Donnerstag</span>
+                    </div>
+                    <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
+                        <span data-lang="en" class="hidden">Friday</span>
+                        <span data-lang="de">Freitag</span>
+                    </div>
                     <!-- Time slots and events -->
                     <!-- 18:00 - 19:00 Row -->
                     <div class="text-right font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-2">18:00 - 19:00</div>
 
                     <div data-column="monday1" class="p-2 text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-4 dark:text-gray-200"></div>
                     <div data-column="monday2" class="p-2 text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-2 dark:text-gray-200"></div>
-                    <div class="p-2 font-bold border-yellow-600 bg-yellow-400 rounded dark:border-black text-black dark:bg-yellow-600 dark:border-yellow-800 row-span-4 whitespace-normal h-auto dark:text-gray-200">Kinder & Jugend Training<br>
+                    <div class="p-2 font-bold border-yellow-600 bg-yellow-400 rounded dark:border-black text-black dark:bg-yellow-600 dark:border-yellow-800 row-span-4 whitespace-normal h-auto dark:text-gray-200">
+                        <span data-lang="en" class="hidden">Children & Youth Training</span>
+                        <span data-lang="de">Kinder & Jugend Training</span>
+                        <br>
                         <div class="font-light">18:00 - 20:00</div>
                     </div>
                     <div class="p-2 text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-4 dark:text-gray-200"></div>
                     <div class="p-2 text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-1 dark:text-gray-200"></div>
-                    <div class="p-2 font-bold border-yellow-600 bg-yellow-400 rounded dark:border-black text-black dark:bg-yellow-600 dark:border-yellow-800 row-span-4 whitespace-normal h-auto dark:text-gray-200">Kinder & Jugend Training<br>
+                    <div class="p-2 font-bold border-yellow-600 bg-yellow-400 rounded dark:border-black text-black dark:bg-yellow-600 dark:border-yellow-800 row-span-4 whitespace-normal h-auto dark:text-gray-200">
+                        <span data-lang="en" class="hidden">Children & Youth Training</span>
+                        <span data-lang="de">Kinder & Jugend Training</span>
+                        <br>
                         <div class="font-light">18:00 - 20:00</div>
                     </div>
-                    <div class="p-2 font-bold border-green-600 bg-green-400 rounded dark:border-black text-black dark:bg-green-600 dark:border-green-800 row-span-3 dark:text-gray-200">Anfänger Training<br>
+                    <div class="p-2 font-bold border-green-600 bg-green-400 rounded dark:border-black text-black dark:bg-green-600 dark:border-green-800 row-span-3 dark:text-gray-200">
+                        <span data-lang="en" class="hidden">Beginner Training</span>
+                        <span data-lang="de">Anfänger Training</span>
+                        <br>
                         <div class="font-light">18:30 - 20:00</div>
                     </div>
 
                     <!-- 19:00 - 20:00 Row -->
                     <div class="text-right font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-2">19:00 - 20:00</div>
-                    <div data-column="monday2" class="p-2 font-bold border-red-600 bg-red-400 rounded dark:border-black text-black dark:bg-red-600 dark:border-red-800 whitespace-normal h-auto row-span-3 dark:text-gray-200">Profi Training<br>
+                    <div data-column="monday2" class="p-2 font-bold border-red-600 bg-red-400 rounded dark:border-black text-black dark:bg-red-600 dark:border-red-800 whitespace-normal h-auto row-span-3 dark:text-gray-200">
+                        <span data-lang="en" class="hidden">Team Training</span>
+                        <span data-lang="de">Mannschafts&shytraining</span>
+                        <br>
                         <div class="font-light">19:00 - 20:30</div>
                     </div>
 
                     <!-- 20:00 - 21:00 Row -->
                     <div class="text-right font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-2">20:00 - 21:00</div>
-                    <div data-column="monday1" class="p-2 font-bold border-red-600 bg-red-400 rounded dark:border-black text-black dark:bg-red-600 dark:border-red-800 whitespace-normal h-auto row-span-3 dark:text-gray-200">Profi Training<br>
+                    <div data-column="monday1" class="p-2 font-bold border-red-600 bg-red-400 rounded dark:border-black text-black dark:bg-red-600 dark:border-red-800 whitespace-normal h-auto row-span-3 dark:text-gray-200">
+                        <span data-lang="en" class="hidden">Team Training</span>
+                        <span data-lang="de">Mannschafts&shytraining</span>
+                        <br>
                         <div class="font-light">20:00 - 21:30</div>
                     </div>
                     <div class="p-2 text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-6 dark:text-gray-200"></div>
-                    <div class="p-2 bg-white font-bold rounded border text-black dark:bg-blue-500 dark:border-black row-span-6 bg-black-400 border-black-600 dark:text-gray-200">Freies Spiel Senioren<br>
+                    <div class="p-2 bg-white font-bold rounded border text-black dark:bg-blue-500 dark:border-black row-span-6 bg-black-400 border-black-600 dark:text-gray-200">
+                        <span data-lang="en" class="hidden">Free Play Seniors</span>
+                        <span data-lang="de">Freies Spiel Senioren</span>
+                        <br>
                         <div class="font-light">20:00 - 23:00</div>
                     </div>
-                    <div class="p-2 bg-white font-bold rounded border text-black dark:bg-blue-500 dark:border-black row-span-4 bg-blue-400 border-blue-600 dark:text-gray-200">Freies Spiel Senioren<br>
+                    <div class="p-2 bg-white font-bold rounded border text-black dark:bg-blue-500 dark:border-black row-span-4 bg-blue-400 border-blue-600 dark:text-gray-200">
+                        <span data-lang="en" class="hidden">Free Play Seniors</span>
+                        <span data-lang="de">Freies Spiel Senioren</span>
+                        <br>
                         <div class="font-light">20:00 - 22:00</div>
                     </div>
                     <div class="p-2 text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-6 dark:text-gray-200"></div>
-                    <div data-column="monday2" class="p-2 bg-white font-bold rounded border text-black dark:bg-blue-500 dark:border-black row-span-5 bg-blue-400 border-blue-600 dark:text-gray-200">Freies Spiel Senioren<br>
+                    <div data-column="monday2" class="p-2 bg-white font-bold rounded border text-black dark:bg-blue-500 dark:border-black row-span-5 bg-blue-400 border-blue-600 dark:text-gray-200">
+                        <span data-lang="en" class="hidden">Free Play Seniors</span>
+                        <span data-lang="de">Freies Spiel Senioren</span>
+                        <br>
                         <div class="font-light">20:30 - 23:00</div>
                     </div>
 
                     <!-- 21:00 - 22:00 Row -->
                     <div class="text-right font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-2">21:00 - 22:00</div>
-                    <div data-column="monday1" class="p-2 bg-white font-bold rounded border text-black dark:bg-blue-500 dark:border-black row-span-3 bg-blue-400 border-blue-600 dark:text-gray-200">Freies Spiel Senioren<br>
+                    <div data-column="monday1" class="p-2 bg-white font-bold rounded border text-black dark:bg-blue-500 dark:border-black row-span-3 bg-blue-400 border-blue-600 dark:text-gray-200">
+                        <span data-lang="en" class="hidden">Free Play Seniors</span>
+                        <span data-lang="de">Freies Spiel Senioren</span>
+                        <br>
                         <div class="font-light">21:30 - 23:00</div>
                     </div>
 
@@ -205,7 +262,10 @@
                     <div></div>
                     <div></div>
                     <!-- Empty top-left cell -->
-                    <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-1">Halle</div>
+                    <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-1">
+                        <span data-lang="en" class="hidden">Location</span>
+                        <span data-lang="de">Ort</span>
+                    </div>
                     <!-- Header Row for Days -->
                     <div data-column="monday1" class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">Burtscheid</div>
                     <div data-column="monday2" class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">Burtscheid</div>
@@ -217,49 +277,60 @@
                 </div>
             </div>
             <div class="mt-10">
-                <h2 class="text-xl font-extrabold dark:text-white mt-10">Hinweise:</h2>
+                <h2 class="text-xl font-extrabold dark:text-white mt-10">
+                    <span data-lang="en" class="hidden">Notes</span>
+                    <span data-lang="de">Hinweise</span>
+                </h2>
 
                 <p class="mt-4 space-y-6 ">
-                    Für die Teilnahme an den freien Spielzeiten ist aktuell keine Voranmeldung erforderlich.
+                    <span data-lang="en" class="hidden">For participation in the free play times, no prior registration is required.</span>
+                    <span data-lang="de">Für die Teilnahme an den freien Spielzeiten ist aktuell keine Voranmeldung erforderlich.</span>
+
                 </p>
-                <i>Während der <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                        href="https://www.schulferien.org/deutschland/ferien/nordrhein-westfalen/"> Schulferien</a> in
-                    NRW ist die
-                    Halle
-                    in Burtscheid
-                    grundsätzlich geöffnet und die Halle in Laurensberg grundsätzlich
-                    geschlossen. Ausnahme: In den Weihnachtsferien sind grundsätzlich beide
-                    Hallen geschlossen. Eventuelle Ausnahmen werden über den
-                    vereinsinternen E-Mail-Verteiler bekanntgegeben bzw. können unter <a
-                        class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                        href="mailto:    vorsitz@bv-aachen.de">
+                <span data-lang="en" class="hidden">During the <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="https://www.schulferien.org/deutschland/ferien/nordrhein-westfalen/">school holidays</a> in NRW, the hall in Burtscheid is generally open and the hall in Laurensberg is generally closed. Exception: During the Christmas holidays, both halls are generally closed. Any exceptions will be announced via the internal club email distribution list or can be requested at <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="mailto:vorsitz@bv-aachen.de">
                         vorsitz@bv-aachen.de</a> erfragt werden.</i>
-
+                </span>
+                <span data-lang="de">Während der <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="https://www.schulferien.org/deutschland/ferien/nordrhein-westfalen/"> Schulferien</a> in NRW ist die Halle in Burtscheid grundsätzlich geöffnet und die Halle in Laurensberg grundsätzlich geschlossen. Ausnahme: In den Weihnachtsferien sind grundsätzlich beide Hallen geschlossen. Eventuelle Ausnahmen werden über den vereinsinternen E-Mail-Verteiler bekanntgegeben bzw. können unter <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="mailto:vorsitz@bv-aachen.de">
+                        vorsitz@bv-aachen.de</a> erfragt werden.</i>
+                </span>
             </div>
-
-            <h2 class="text-xl font-extrabold dark:text-white mt-10">Training</h2>
-            <div class="mt-10 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12">
+            <p class="mt-6 text-xl sm:text-xl text-slate-900 font-extrabold tracking-tight dark:text-slate-50 ">
+                <span data-lang="en" class="hidden">Further Information</span>
+                <span data-lang="de">Weitere Informationen</span>
+            </p>
+            <div class="mt-2 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
                 <div class="floatleft">
                     <p>
-                        <h2 class="text-l font-extrabold dark:text-white mt-10">Kinder- und Jugendtraining:</h2>
-                        <br /> Hinweis: Bei Fragen zum Kinder- und Jugendtraining bitte an Lina Köllmann (<a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="mailto: jugendwart@bv-aachen.de">
-                            jugendwart@bv-aachen.de</a> ) wenden.<br> Bitte meldet euch bei Lina um ein Probetraining zu vereinbaren.
+                        <h2 class="text-l font-extrabold dark:text-white mt-10">
+                            <span data-lang="en" class="hidden">Children & Youth Training</span>
+                            <span data-lang="de">Kinder- und Jugendtraining</span>
+                        </h2>
+                        <br />
+                        <span data-lang="en" class="hidden">Note: For questions about children and youth training, please contact Lina Köllmann (<a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="mailto:jugendwart@bv-aachen.de">jugendwart@bv-aachen.de</a>).<br> Please contact Lina to arrange a trial training session.
+                        </span>
+                        <span data-lang="de">Hinweis: Bei Fragen zum Kinder- und Jugendtraining bitte an Lina Köllmann (<a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="mailto:jugendwart@bv-aachen.de">jugendwart@bv-aachen.de</a>) wenden.<br> Bitte meldet euch bei Lina um ein Probetraining zu vereinbaren.
                     </p>
                     <!-- <iframe src="training-Dateien/embed.htm" width="250" height="350" frameboarder="0" style="border:0"
                 allowfullscreen=""></iframe> -->
                 </div>
                 <div class="floatleft">
                     <p>
-                        <h2 class="text-l font-extrabold dark:text-white mt-10">Seniorentraining:</h2>
-                        <br /> Für die Teilnahme am angeleitenen Training montags bei Ansgar ist eine vorherige Absprache mit dem Trainer sowie eine Mindestspielstärke erforderlich (ab mittlerem Bezirksklassenniveau). Am Training donnerstags bei Felix
-                        kann ohne Voranmeldung aufgesucht werden. Die Kontaktaufnahme mit beiden Trainern ist über die Adresse <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="mailto:    seniorentraining@bv-aachen.de">
-                        seniorentraining@bv-aachen.de</a> möglich.
+                        <h2 class="text-l font-extrabold dark:text-white mt-10">
+                            <span data-lang="en" class="hidden">Senior Training</span>
+                        <span data-lang="de">Seniorentraining</span>
+                        </h2>
+                        <br />
+                        <span data-lang="en" class="hidden">For the team training, a prior registration with a trainer is required. Furthermore, the team training requires a minimum playing strength (from middle district class level). The training on Thursdays with Felix can be attended without prior registration. Both trainers can be contacted via the email address <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="mailto:seniorentraining@bv-aachen.de">seniorentraining@bv-aachen.de</a>.</span>
+                        <span data-lang="de">Für die Teilnahme am angeleiteten Training montags bei Ansgar ist eine vorherige Absprache mit dem Trainer sowie eine Mindestspielstärke erforderlich (ab mittlerem Bezirksklassenniveau). Am Training donnerstags bei Felix kann ohne Voranmeldung aufgesucht werden. Die Kontaktaufnahme mit beiden Trainern ist über die Adresse <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="mailto:seniorentraining@bv-aachen.de">seniorentraining@bv-aachen.de</a>.</span>
                     </p>
                 </div>
             </div>
 
-            <h2 class="text-xl font-extrabold dark:text-white mt-10">Hallen</h2>
-            <div class="mt-10 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12">
+            <h2 class="text-xl font-extrabold dark:text-white mt-10">
+                <span data-lang="en" class="hidden">Location</span>
+                <span data-lang="de">Ort</span>
+            </h2>
+            <div class="mt-2 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12">
                 <div class="floatleft">
                     <p>
                         <h2 class="text-l font-extrabold dark:text-white mt-10">Burtscheid:</h2>
@@ -292,17 +363,17 @@
                     </p>
                 </div>
             </div>
-            <p class="mt-4 space-y-6 ">
-                <br />
-                <br />
-                <br /> Weitere Informationen zum Training und zur Trainingsorganisation finden Sie hier:
+            <p class="mt-8 space-y-6 ">
+                <span data-lang="en" class="hidden">Further information on training and training organization can be found here:
+                </span>
+                <span data-lang="de">Weitere Informationen zum Training und zur Trainingsorganisation finden Sie hier:
+                </span>
                 <br />
                 <a class="group inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-pink-50 text-pink-600 hover:bg-pink-100 hover:text-pink-700 focus:ring-pink-600 dark:bg-slate-700 dark:text-slate-100 dark:hover:bg-slate-600 dark:hover:text-white dark:focus:ring-slate-500 mt-8"
-                    href="https://bv-aachen.de/files/BVAachen-Trainingsorganisation_Stand_01-Mai-2022.pdf">Trainingsorganisation
-                    <svg
-                        class="overflow-visible ml-3 text-pink-300 group-hover:text-pink-400 dark:text-slate-500 dark:group-hover:text-slate-400"
-                        width="3" height="6" viewBox="0 0 3 6" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
+                    href="https://bv-aachen.de/files/BVAachen-Trainingsorganisation_Stand_01-Mai-2022.pdf">
+                    <span data-lang="en" class="hidden">Training Organization</span>
+                    <span data-lang="de">Trainingsorganisation</span>
+                    <svg class="overflow-visible ml-3 text-pink-300 group-hover:text-pink-400 dark:text-slate-500 dark:group-hover:text-slate-400" width="3" height="6" viewBox="0 0 3 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M0 0L3 3L0 6"></path>
                     </svg>
                 </a>
@@ -315,13 +386,13 @@
         <div id="footer" class="text-center">
             <div id="adresse">
                 <p>
-                    <a href="./impressum.html">
-                        <span data-lang="en" class="hidden">[Imprint]</span>
-                        <span data-lang="de">[Impressum]</span>
+                    <a href="./impressum.html" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                        <span data-lang="en" class="hidden">Imprint</span>
+                        <span data-lang="de">Impressum</span>
                     </a> <b> | </b>
-                    <a href="./datenschutz.html">
-                        <span data-lang="en" class="hidden">[Privacy Policy]</span>
-                        <span data-lang="de">[Informationen zum Datenschutz]</span>
+                    <a href="./datenschutz.html" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                        <span data-lang="en" class="hidden">Privacy Policy</span>
+                        <span data-lang="de">Informationen zum Datenschutz</span>
                     </a>
                 </p>
             </div>
@@ -342,13 +413,15 @@
             const setSummer = () => {
                 columnsMonday1.forEach(element => element.style.display = 'none');
                 columnsMonday2.forEach(element => element.style.display = 'block');
-                document.getElementById('seasonInfo').textContent = 'Von 01.04 bis 30.09';
+                document.getElementById('seasonInfo_Ger').textContent = 'Von 01.04 bis 30.09';
+                document.getElementById('seasonInfo_Eng').textContent = 'From 01.04 to 30.09';
             };
 
             const setWinter = () => {
                 columnsMonday1.forEach(element => element.style.display = 'block');
                 columnsMonday2.forEach(element => element.style.display = 'none');
-                document.getElementById('seasonInfo').textContent = 'Von 01.10 bis 31.03';
+                document.getElementById('seasonInfo_Ger').textContent = 'Von 01.10 bis 31.03';
+                document.getElementById('seasonInfo_Eng').textContent = 'From 01.10 to 31.03';
             };
 
             document.getElementById('summerButton').addEventListener('click', () => {
