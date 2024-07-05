@@ -72,3 +72,36 @@ nav.fixed-top #languageToggle {
         align-items: flex-start;
     }
 }
+
+
+/* Custom toggle button styles */
+
+.toggle-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    /* Adjust padding for closer buttons */
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    /* Added color transition */
+}
+
+.toggle-button.active {
+    background-color: #3490dc;
+    /* Blue highlight color */
+    border-color: #3490dc;
+    color: white;
+}
+
+.toggle-button:not(.active):hover {
+    background-color: #f0f0f0;
+    color: #3490dc;
+    /* Highlight icon color on hover */
+}
+
+.icon {
+    margin-right: 8px;
+}
