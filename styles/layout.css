@@ -45,6 +45,20 @@ nav.fixed-top .nav-link[aria-current="page"] {
 }
 
 
+/* Flex container to center the language button in mobile view */
+
+nav .w-full.flex-grow .w-full.flex {
+    justify-content: center;
+}
+
+
+/* Margin adjustments for different screen sizes */
+
+nav .w-full.flex-grow .w-full.flex .ml-4 {
+    margin-left: 0;
+}
+
+
 /* Language toggle button */
 
 nav.fixed-top #languageToggle {
