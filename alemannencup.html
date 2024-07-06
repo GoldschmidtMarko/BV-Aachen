@@ -10,15 +10,17 @@
     <meta name="keywords" content="BV Aachen, Badminton, Aachen">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="javascripts/menu-showhide.js"></script>
+    <script src="javascripts/showhide-Modal.js"></script>
     <!-- used for to get idb library, a CHIPS cookie method for the language switch -->
     <script src="https://cdn.jsdelivr.net/npm/idb/build/iife/index-min.js"></script>
     <script src="javascripts/language-toggle.js"></script>
 
     <title>BV Aachen 09</title>
-
     <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/modal.css">
 </head>
 
 <body class="antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900 text-justify">
@@ -63,6 +65,7 @@
         </div>
     </nav>
 
+
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto">
             <p class="mt-10 text-3xl sm:text-4xl text-slate-900 font-extrabold tracking-tight dark:text-slate-50 ">
@@ -90,31 +93,48 @@
 
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
             <div>
-                <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/bild1.jpg" alt="gallery-photo" />
+                <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/alemancup24/IMG_6297.JPG" alt="gallery-photo" onclick="showImage('images/alemancup24/IMG_6297.JPG')" />
             </div>
             <div>
-                <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/bild1.jpg" alt="gallery-photo" />
+                <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/alemancup24/IMG_6327.JPG" alt="gallery-photo" onclick="showImage('images/alemancup24/IMG_6327.JPG')" />
             </div>
             <div>
-                <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/bild1.jpg" alt="gallery-photo" />
+                <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/alemancup24/IMG_6658.JPG" alt="gallery-photo" onclick="showImage('images/alemancup24/IMG_6658.JPG')" />
             </div>
             <div>
-                <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/bild1.jpg" alt="gallery-photo" />
+                <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/alemancup24/IMG_6704.JPG" alt="gallery-photo" onclick="showImage('images/alemancup24/IMG_6704.JPG')" />
             </div>
             <div>
-                <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/bild1.jpg" alt="gallery-photo" />
+                <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/alemancup24/IMG_6713.JPG" alt="gallery-photo" onclick="showImage('images/alemancup24/IMG_6713.JPG')" />
             </div>
             <div>
-                <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/bild1.jpg" alt="gallery-photo" />
+                <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/alemancup24/IMG_6730.JPG" alt="gallery-photo" onclick="showImage('images/alemancup24/IMG_6730.JPG')" />
             </div>
             <div>
-                <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/bild1.jpg" alt="gallery-photo" />
+                <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/alemancup24/IMG_6740.JPG" alt="gallery-photo" onclick="showImage('images/alemancup24/IMG_6740.JPG')" />
             </div>
             <div>
-                <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/bild1.jpg" alt="gallery-photo" />
+                <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/alemancup24/IMG_6751.JPG" alt="gallery-photo" onclick="showImage('images/alemancup24/IMG_6751.JPG')" />
             </div>
-            <div>
-                <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/bild1.jpg" alt="gallery-photo" />
+            <div style="position: relative;">
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
+                    <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/alemancup24/IMG_6775.JPG" alt="gallery-photo" onclick="showImage('images/alemancup24/IMG_6775.JPG')" />
+                </div>
+                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 3; pointer-events: none;">
+                    <div style="width: 40px; height: 40px; display: flex; justify-content: center; align-items: center; background-color: rgba(255, 255, 255, 0);">
+                        <span style="font-size: 62px; color: rgb(255, 255, 255);">+</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for displaying larger image -->
+        <div id="imageModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button" onclick="hideModal()"></span>
+                <button class="modal-arrow modal-left-arrow" onclick="prevImage()">&lt;</button>
+                <img id="modalImage" class="modal-image" src="" alt="modal-image" />
+                <button class="modal-arrow modal-right-arrow" onclick="nextImage()">&gt;</button>
             </div>
         </div>
 
