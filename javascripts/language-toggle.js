@@ -21,6 +21,29 @@ async function setChips(key, value) {
         console.error('Error setting chips:', error);
     }
 }
+// Function to set a cookie with SameSite=None and Secure attributes
+function setCookie(name, value, days) {
+    const date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    const expires = "expires=" + date.toUTCString();
+    document.cookie = `${name}=${value};${expires};path=/;SameSite=None;Secure`;
+}
+
+// Function to get a cookie
+function getCookie(name) {
+    const decodedCookie = decodeURIComponent(document.cookie);
+    const cookieArray = decodedCookie.split(';');
+    for (let i = 0; i < cookieArray.length; i++) {
+        let cookie = cookieArray[i];
+        while (cookie.charAt(0) == ' ') {
+            cookie = cookie.substring(1);
+        }
+        if (cookie.indexOf(name + "=") == 0) {
+            return cookie.substring(name.length + 1, cookie.length);
+        }
+    }
+    return "";
+}
 
 // Function to get a value from IndexedDB
 async function getChips(key) {
@@ -53,9 +76,14 @@ document.addEventListener('DOMContentLoaded', async() => {
 
     // Function to toggle between English and German
     const toggleLanguage = async() => {
-        //    const currentLanguage = localStorage.getItem('language') || 'en';
-        const currentLanguage = await getChips('language') || 'en';
-        console.log(`Current language from chips: ${currentLanguage}`);
+        let currentLanguage;
+        if (window.indexedDB && /Chrome|Edge/.test(navigator.userAgent)) {
+            // Use CHIPS for Chrome and Edge
+            currentLanguage = await getChips('language') || 'en';
+        } else {
+            // Use cookies for Firefox and fallback
+            currentLanguage = getCookie('language') || 'en';
+        }
 
         if (currentLanguage === 'en') {
             languageIcon.textContent = 'DE';
@@ -67,9 +95,12 @@ document.addEventListener('DOMContentLoaded', async() => {
             mainContentDe.forEach(el => el.classList.add('hidden'));
         }
 
-        // Save language preference to localStorage
-        // localStorage.setItem('language', currentLanguage);
-        await setChips('language', currentLanguage);
+        // Save language preference
+        if (window.indexedDB && /Chrome|Edge/.test(navigator.userAgent)) {
+            await setChips('language', currentLanguage);
+        } else {
+            setCookie('language', currentLanguage, 30);
+        }
     };
 
     // Initialize language toggle based on stored language preference
@@ -77,10 +108,14 @@ document.addEventListener('DOMContentLoaded', async() => {
 
     // Add click event listener to language toggle button
     languageToggle.addEventListener('click', async() => {
-        // const currentLanguage = localStorage.getItem('language') || 'en';
-        // localStorage.setItem('language', currentLanguage === 'en' ? 'de' : 'en');
-        const currentLanguage = await getChips('language') || 'en';
-        await setChips('language', currentLanguage === 'en' ? 'de' : 'en');
+        let currentLanguage;
+        if (window.indexedDB && /Chrome|Edge/.test(navigator.userAgent)) {
+            currentLanguage = await getChips('language') || 'en';
+            await setChips('language', currentLanguage === 'en' ? 'de' : 'en');
+        } else {
+            currentLanguage = getCookie('language') || 'en';
+            setCookie('language', currentLanguage === 'en' ? 'de' : 'en', 30);
+        }
         await toggleLanguage();
     });
 });

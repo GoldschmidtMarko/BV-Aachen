@@ -1,7 +1,9 @@
-<!--?xml version="1.0" encoding="UTF-8" ?-->
-<!DOCTYPE html
-    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
+<html lang="en">
+<!--
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
+-->
 
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -15,6 +17,8 @@
             e.style.display = (e.style.display == 'block') ? 'none' : 'block';
         }
     </script>
+    <!-- used for to get idb library, a CHIPS cookie method for the language switch -->
+    <script src="https://cdn.jsdelivr.net/npm/idb/build/iife/index-min.js"></script>
     <script src="javascripts/language-toggle.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>BV Aachen 09</title>
@@ -101,12 +105,12 @@
                 <br>
                 <div class="flex justify-center space-x-2">
                     <!-- Adjusted space-x for closer buttons -->
-                    <button id="summerButton" class="toggle-button active" onclick="toggleSeason('summer')">
+                    <button id="summerButton" class="toggle-button active">
                         <i class="icon fas fa-sun"></i>
                         <span data-lang="en" class="hidden">Summer</span>
                         <span data-lang="de">Sommer</span>
                     </button>
-                    <button id="winterButton" class="toggle-button" onclick="toggleSeason('winter')">
+                    <button id="winterButton" class="toggle-button">
                         <i class="icon fas fa-snowflake"></i>
                         <span data-lang="en" class="hidden">Winter</span>
                         <span data-lang="de">Winter</span>
