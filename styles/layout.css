@@ -45,25 +45,18 @@ nav.fixed-top .nav-link[aria-current="page"] {
 }
 
 
-/* Flex container to center the language button in mobile view */
+/* Flex container for navigation links and language toggle button */
 
-nav .w-full.flex-grow .w-full.flex {
-    justify-content: center;
-}
-
-
-/* Margin adjustments for different screen sizes */
-
-nav .w-full.flex-grow .w-full.flex .ml-4 {
-    margin-left: 0;
+nav .w-full.flex-grow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 
 /* Language toggle button */
 
 nav.fixed-top #languageToggle {
-    margin-left: 16px;
-    /* Adjust the margin as needed */
     background-color: #ffffff;
     /* Button background color */
     color: #3182ce;
@@ -75,47 +68,32 @@ nav.fixed-top #languageToggle {
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    margin-left: 16px;
+    /* Adjust the margin as needed */
 }
 
 
 /* Responsive adjustments */
 
 @media (max-width: 768px) {
-    nav.fixed-top {
+    nav.fixed-top .w-full.flex-grow {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
-}
-
-
-/* Custom toggle button styles */
-
-.toggle-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px 12px;
-    /* Adjust padding for closer buttons */
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
-    /* Added color transition */
-}
-
-.toggle-button.active {
-    background-color: #3490dc;
-    /* Blue highlight color */
-    border-color: #3490dc;
-    color: white;
-}
-
-.toggle-button:not(.active):hover {
-    background-color: #f0f0f0;
-    color: #3490dc;
-    /* Highlight icon color on hover */
-}
-
-.icon {
-    margin-right: 8px;
+    nav.fixed-top #navigation {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    nav.fixed-top .nav-link {
+        margin-bottom: 10px;
+        /* Add spacing between stacked links */
+    }
+    nav.fixed-top #languageToggle {
+        margin-left: 0;
+        /* Remove left margin for language toggle in mobile view */
+        margin-top: 10px;
+        /* Add top margin for spacing in mobile view */
+    }
 }

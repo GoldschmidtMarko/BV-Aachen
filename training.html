@@ -11,12 +11,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        function showhide(id) {
-            var e = document.getElementById(id);
-            e.style.display = (e.style.display == 'block') ? 'none' : 'block';
-        }
-    </script>
+    <script src="javascripts/menu-showhide.js"></script>
     <!-- used for to get idb library, a CHIPS cookie method for the language switch -->
     <script src="https://cdn.jsdelivr.net/npm/idb/build/iife/index-min.js"></script>
     <script src="javascripts/language-toggle.js"></script>
@@ -34,7 +29,7 @@
             </div>
         </div>
         <div class="block md:hidden lg:hidden">
-            <button class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400 hover:text-white hover:border-white" onclick="showhide('navigation')">
+            <button class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400 hover:text-white hover:border-white" onclick="showhide(['navigation', 'languageToggle'])">
                 <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <title>Menu</title>
                     <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
@@ -313,6 +308,7 @@
 
                             <iframe width="100%" height="450" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1262.004932678846!2d6.090378674318797!3d50.756850747421325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c09bc2593b090f%3A0x63586c6bc65fa531!2sMalmedyer%20Str.%2055%2C%2052066%20Aachen!5e0!3m2!1sde!2sde!4v1720025735597!5m2!1sde!2sde"
                                 style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
                         </div>
                     </p>
                     <!-- <iframe src="training-Dateien/embed.htm" width="250" height="350" frameboarder="0" style="border:0"
@@ -327,8 +323,10 @@
                         <br />
                         <br />
                         <div class="flex">
+
                             <iframe width="100%" height="450" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d714.5670695079923!2d6.052033108595938!3d50.80379343567636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c0995da16abadf%3A0x1de42e10144befb9!2sHalle%202!5e0!3m2!1sde!2sde!4v1720024787823!5m2!1sde!2sde"
                                 style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
                         </div>
                     </p>
                 </div>
