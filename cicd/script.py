@@ -27,7 +27,7 @@ uploadable_file_names = ["alemannencup.html",
                           "images",
                           "javascript",
                           "styles",
-                          "startpage.mp4",
+                          "videos",
                           "tailwind.config.js"]
 
 
