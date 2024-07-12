@@ -44,4 +44,4 @@ jobs:
         MODIFIED_FILES: ${{ env.modified_files }}
         DELETED_FILES: ${{ env.deleted_files }}
       run: |
-        python upload_files.py "$MODIFIED_FILES" "$DELETED_FILES"
+        python cicd/script.py "$MODIFIED_FILES" "$DELETED_FILES"

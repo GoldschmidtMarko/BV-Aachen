@@ -48,12 +48,15 @@ def main_script(modified_files, deleted_files):
     for file in files_in_folder:
       ftp.delete(file)
     
+    print("Attempt to upload modified files: ", modified_files)
+
     # Upload modified and added files
     for file in modified_files.split():
       if os.path.isfile(file):
         upload_file(ftp, file)
     
     # Delete removed files
+    print("Attempt to delete files: ", deleted_files)
     for file in deleted_files.split():
       delete_file(ftp, file)
     
