@@ -618,10 +618,6 @@ select {
     grid-row: span 6/span 6
 }
 
-.float-none {
-    float: none
-}
-
 .mx-auto {
     margin-left: auto;
     margin-right: auto
@@ -741,10 +737,6 @@ select {
 
 .h-full {
     height: 100%
-}
-
-.max-h-\[33rem\] {
-    max-height: 33rem
 }
 
 .w-24 {
@@ -1449,6 +1441,11 @@ select {
     .md\:items-center {
         align-items: center
     }
+
+    .md\:text-base {
+        font-size: 1rem;
+        line-height: 1.5rem
+    }
 }
 
 @media (min-width:1024px) {
@@ -1515,6 +1512,11 @@ select {
     .lg\:px-8 {
         padding-left: 2rem;
         padding-right: 2rem
+    }
+
+    .lg\:text-base {
+        font-size: 1rem;
+        line-height: 1.5rem
     }
 }
 
