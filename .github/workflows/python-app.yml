@@ -21,10 +21,20 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
+    - name: Get changed files
+      id: changes
+      run: |
+        # Get modified and added files
+        MODIFIED_FILES=$(git diff --name-status HEAD^ HEAD | grep -E "^[AM]" | cut -f2-)
+        echo "::set-output name=modified_files::$MODIFIED_FILES"
+        # Get deleted files
+        DELETED_FILES=$(git diff --name-status HEAD^ HEAD | grep "^D" | cut -f2-)
+        echo "::set-output name=deleted_files::$DELETED_FILES"
+
     - name: Run script
       env:
           SECRET_HOST_NAME: ${{ secrets.SECRET_HOST_NAME }}
           SECRET_PASSWORD: ${{ secrets.SECRET_PASSWORD }}
           SECRET_USER_NAME: ${{ secrets.SECRET_USER_NAME }}
       run: |
-        python cicd/script.py
+        python cicd/script.py "${{ steps.changes.outputs.modified_files }}" "${{ steps.changes.outputs.deleted_files }}"
