@@ -103,15 +103,13 @@ def main_script():
       print("Folder does not exist")
       print("Existing Folders: ", root_files)
       print("Specified Uploading folder", upload_folder)
-      raise Exception("Folder does not exist")
-
-    print("Deleting files from the FTP server")
-    # Recursively delete files in the upload folder
-    delete_folder_contents(ftp, upload_folder)
+      print("Creating test folder")
+      ftp.mkd(upload_folder)
+    else:
+      print("Deleting files from the FTP server")
+      # Recursively delete files in the upload folder
+      delete_folder_contents(ftp, upload_folder)
     
-    # creating test folder
-    print("Creating test folder")
-    ftp.mkd(upload_folder)
     
     # Upload all files from the Git repository
     try:
