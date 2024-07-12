@@ -75,6 +75,8 @@ def is_ftp_directory(ftp, path):
 # Function to recursively delete files in a folder on FTP
 def delete_folder_contents(ftp, folder_path):
   current_files = ftp.nlst()
+  print(f'Current files: {current_files}')
+  print("Trying to delete: ", folder_path)
   if folder_path not in current_files:
     print(f'Folder {folder_path} does not exist on the FTP server.', current_files)
     return
