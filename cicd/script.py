@@ -109,11 +109,9 @@ def main_script():
     # Recursively delete files in the upload folder
     delete_folder_contents(ftp, upload_folder)
     
-    # close the connection
-    print("Closing the FTP server connection")
-    ftp.quit()
-    sys.exit(0)
-    
+    # creating test folder
+    print("Creating test folder")
+    ftp.mkd(upload_folder)
     
     # Upload all files from the Git repository
     try:
