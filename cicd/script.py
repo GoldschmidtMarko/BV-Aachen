@@ -1,6 +1,7 @@
 import os
 import sys
 from ftplib import FTP
+import subprocess
 
 SECRET_HOST_NAME = os.getenv('SECRET_HOST_NAME')
 SECRET_PASSWORD = os.getenv('SECRET_PASSWORD')
@@ -22,31 +23,77 @@ uploadable_file_names = ["alemannencup.html",
                           "images",
                           "javascript",
                           "styles",
-                          "startpage.mp4"]
+                          "startpage.mp4",
+                          "tailwind.config.js"]
 
 
-def upload_file(ftp, file_path):
-  with open(file_path, "rb") as file:
-    print(f"Uploading {file_path} to the FTP server.")
-    ftp.storbinary(f"STOR {file_path}", file)
+# Function to upload a file
+def upload_file(ftp, local_file_path, remote_file_path):
+    try:
+        with open(local_file_path, 'rb') as file:
+            ftp.storbinary(f'STOR {remote_file_path}', file)
+        print(f'Uploaded {local_file_path} to {remote_file_path}')
+    except Exception as e:
+        print(f'Failed to upload {local_file_path} to {remote_file_path}, Error: {e}')
     
-
+    
+# Function to delete a file
 def delete_file(ftp, file_path):
     try:
-      ftp.delete(file_path)
-      print(f"Deleted {file_path} from the FTP server.")
+        ftp.delete(file_path)
+        print(f'Deleted {file_path} from the FTP server.')
     except Exception as e:
-      print(f"Could not delete {file_path} from the FTP server: {e}")
-      
+        print(f'Could not delete {file_path} from the FTP server: {e}')
+        
+def is_ftp_directory(ftp, path):
+  current_directory = ftp.pwd()  # Get current working directory
+  try:
+    ftp.cwd(path)  # Try to change directory to the given path
+    ftp.cwd(current_directory)  # Move back to the original directory
+    return True
+  except Exception as e:
+    ftp.cwd(current_directory)  # Move back to the original directory
+    return False
+
+# Function to recursively delete files in a folder on FTP
+def delete_folder_contents(ftp, folder_path):
+  current_files = ftp.nlst()
+  if folder_path not in current_files:
+    print(f'Folder {folder_path} does not exist on the FTP server.', current_files)
+    return
+  
+  if folder_path == ".." or folder_path == "." or folder_path == "/":
+    print(f'Cannot delete root folder name {folder_path}.')
+    return
+  
+  if is_ftp_directory(ftp, folder_path) == False:
+    ftp.delete(folder_path)
+    print(f'Deleted file: {folder_path}')
+  else:
+    for file in ftp.nlst(folder_path):
+      current_path = ftp.pwd()
+      ftp.cwd(folder_path)
+      delete_folder_contents(ftp, file)
+      ftp.cwd(current_path)
+    ftp.rmd(folder_path)
+    print(f'Deleted folder: {folder_path}')
+
       
 def can_upload_file(file_name):
   for uploadable_file_name in uploadable_file_names:
     if uploadable_file_name in file_name:
       return True
   return False
+
+def create_ftp_directory(ftp, path):
+    try:
+        ftp.mkd(path)  # Try to create directory
+        print(f'Created directory: {path}')
+    except Exception as e:
+        print(f'Failed to create directory: {path}, Error: {e}')
   
 
-def main_script(modified_files, deleted_files):
+def main_script():
   try:
     # create FTP server
     print("Creating FTP server")
@@ -56,7 +103,10 @@ def main_script(modified_files, deleted_files):
     print("Logging in to the FTP server")
     ftp.login(user=SECRET_USER_NAME, passwd=SECRET_PASSWORD)
     print("Login successful")
-
+    
+    ftp.set_pasv(True)  # Enable passive mode
+    print("Set passive mode")
+    
     # list the files in the current directory
     root_files = ftp.nlst()
     
@@ -65,21 +115,37 @@ def main_script(modified_files, deleted_files):
       print("Folder does not exist")
       print("Existing Folders: ", root_files)
       print("Specified Uploading folder", upload_folder)
-      raise Exception("Folder does not exist")
-
-
-    print("Attempt to upload modified files: ", modified_files)
-    # Upload modified and added files
-    for file in modified_files.split():
-      if os.path.isfile(file):
-        if can_upload_file(file):
-          upload_file(ftp, file)
+      print("Creating test folder")
+      ftp.mkd(upload_folder)
+    else:
+      print("Deleting files from the FTP server")
+      # Recursively delete files in the upload folder
+      delete_folder_contents(ftp, upload_folder)
     
-    # Delete removed files
-    print("Attempt to delete files: ", deleted_files)
-    for file in deleted_files.split():
-      delete_file(ftp, file)
     
+    # Upload all files from the Git repository
+    try:
+      print("Uploading files to the FTP server")
+      repo_root = subprocess.check_output(['git', 'rev-parse', '--show-toplevel']).decode('utf-8').strip()
+      for root, _, files in os.walk(repo_root):
+            for file in files:
+                file_path = os.path.join(root, file)
+                relative_path = os.path.relpath(file_path, repo_root)
+                remote_file_path = os.path.join(upload_folder, relative_path)
+
+                # Check if directory exists on FTP, create if not
+                remote_directory = os.path.dirname(remote_file_path)
+                if remote_directory:
+                    create_ftp_directory(ftp, remote_directory)
+
+                # Check if file can be uploaded
+                if can_upload_file(file):
+                    # Upload the file to FTP
+                    upload_file(ftp, file_path, remote_file_path)
+    except Exception as e:
+        print(f'Error uploading files to FTP server: {e}')
+    
+
 
 
     # close the connection
@@ -95,7 +161,5 @@ print("Script executed")
   
   
 if __name__ == "__main__":
-  modified_files = sys.argv[1]
-  deleted_files = sys.argv[2]
-  main_script(modified_files, deleted_files)
+  main_script()
 

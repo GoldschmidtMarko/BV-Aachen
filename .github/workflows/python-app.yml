@@ -21,27 +21,10 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Get changed files
-      id: changes
-      run: |
-        # Get the SHA of the parent commit
-        PARENT_SHA=$(git log -1 --format=%H --skip 1)
-        
-        # Get modified and added files
-        MODIFIED_FILES=$(git diff --name-only $PARENT_SHA HEAD)
-        echo "modified_files=$MODIFIED_FILES" >> $GITHUB_ENV
-        
-        # Get deleted files (not handled by this approach, see note below)
-        DELETED_FILES=""
-
-        echo "deleted_files=$DELETED_FILES" >> $GITHUB_ENV
-
     - name: Run script
       env:
         SECRET_HOST_NAME: ${{ secrets.SECRET_HOST_NAME }}
         SECRET_PASSWORD: ${{ secrets.SECRET_PASSWORD }}
         SECRET_USER_NAME: ${{ secrets.SECRET_USER_NAME }}
-        MODIFIED_FILES: ${{ env.modified_files }}
-        DELETED_FILES: ${{ env.deleted_files }}
       run: |
-        python cicd/script.py "$MODIFIED_FILES" "$DELETED_FILES"
+        python cicd/script.py 
