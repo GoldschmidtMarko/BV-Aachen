@@ -14,6 +14,7 @@ jobs:
       - name: Get changed and deleted documents from the last commit
         id: get_changes
         run: |
+          set -x  # Enable debug mode
           echo "Extracting changed and deleted files from the last commit..."
 
           # Ensure you are in a Git repository
