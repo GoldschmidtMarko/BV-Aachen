@@ -74,7 +74,10 @@ def main_script():
     print("Logging in to the FTP server")
     ftp.login(user=SECRET_USER_NAME, passwd=SECRET_PASSWORD)
     print("Login successful")
-
+    
+    ftp.set_pasv(True)  # Enable passive mode
+    print("Set passive mode")
+    
     # list the files in the current directory
     root_files = ftp.nlst()
     
@@ -88,6 +91,11 @@ def main_script():
     print("Deleting files from the FTP server")
     # Recursively delete files in the upload folder
     delete_folder_contents(ftp, upload_folder)
+    
+     # close the connection
+    print("Closing the FTP server connection")
+    ftp.quit()
+    sys.exit(0)
 
     # Upload all files from the Git repository
     try:
