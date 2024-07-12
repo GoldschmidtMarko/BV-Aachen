@@ -21,7 +21,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Run script
+    - name: Run script 
       env:
         SECRET_HOST_NAME: ${{ secrets.SECRET_HOST_NAME }}
         SECRET_PASSWORD: ${{ secrets.SECRET_PASSWORD }}
