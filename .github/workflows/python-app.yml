@@ -8,8 +8,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Check if commit message includes #upload
+      id: check_commit_message
+      run: echo ::set-output name=contains_upload::$(if [[ $(git log -1 --pretty=%B) =~ '#upload' ]]; then echo true; else echo false; fi)
+
     - name: Checkout repository
       uses: actions/checkout@v2
+      if: steps.check_commit_message.outputs.contains_upload == 'true'
 
     - name: Set up Python
       uses: actions/setup-python@v2
