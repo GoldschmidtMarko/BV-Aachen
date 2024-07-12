@@ -24,11 +24,16 @@ jobs:
     - name: Get changed files
       id: changes
       run: |
+        # Get the SHA of the parent commit
+        PARENT_SHA=$(git log -1 --format=%H --skip 1)
+        
         # Get modified and added files
-        MODIFIED_FILES=$(git diff --name-status HEAD^ HEAD | grep -E "^[AM]" | cut -f2-)
+        MODIFIED_FILES=$(git diff --name-only $PARENT_SHA HEAD)
         echo "modified_files=$MODIFIED_FILES" >> $GITHUB_ENV
-        # Get deleted files
-        DELETED_FILES=$(git diff --name-status HEAD^ HEAD | grep "^D" | cut -f2-)
+        
+        # Get deleted files (not handled by this approach, see note below)
+        DELETED_FILES=""
+
         echo "deleted_files=$DELETED_FILES" >> $GITHUB_ENV
 
     - name: Run script
