@@ -23,7 +23,8 @@ uploadable_file_names = ["alemannencup.html",
                           "images",
                           "javascript",
                           "styles",
-                          "startpage.mp4"]
+                          "startpage.mp4",
+                          "tailwind.config.js"]
 
 
 # Function to upload a file
@@ -115,6 +116,7 @@ def main_script():
     try:
       print("Uploading files to the FTP server")
       repo_root = subprocess.check_output(['git', 'rev-parse', '--show-toplevel']).decode('utf-8').strip()
+      print(f'Repo root: {repo_root}')
       for root, _, files in os.walk(repo_root):
             for file in files:
                 file_path = os.path.join(root, file)
