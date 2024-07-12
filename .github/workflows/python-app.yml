@@ -37,8 +37,8 @@ jobs:
       - name: Fail if contains_upload is false
         if: env.contains_upload == 'false'
         run: |
-          echo "Commit message contains #upload. Stopping the pipeline."
-          exit 1
+          echo "Commit message does not contains #upload. Stopping the pipeline."
+          exit 0
 
       - name: Set up Python
         uses: actions/setup-python@v2

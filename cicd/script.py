@@ -85,7 +85,8 @@ def delete_folder_contents(ftp, folder_path):
       
 def can_upload_file(file_name):
   for uploadable_file_name in uploadable_file_names:
-    if uploadable_file_name in file_name:
+    split_file_name = file_name.split("/")
+    if uploadable_file_name in split_file_name:
       return True
   return False
   
