@@ -57,7 +57,12 @@ def delete_folder_contents(ftp, folder_path):
                 print(f'Deleted file: {item}')
             except Exception as e:
                 try:
-                    ftp.rmd(item)  # Try to delete directory
+                    # If it's a directory, recursively delete its contents
+                    delete_folder_contents(ftp, f'{folder_path}/{item}')
+                    # After deleting contents, change cwd back to current directory
+                    ftp.cwd(folder_path)
+                    # Delete the directory itself after its contents are deleted
+                    ftp.rmd(item)
                     print(f'Deleted directory: {item}')
                 except Exception as e:
                     print(f'Failed to delete {item}: {e}')
