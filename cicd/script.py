@@ -30,8 +30,25 @@ uploadable_file_names = ["alemannencup.html",
 # Function to upload a file
 def upload_file(ftp, local_file_path, remote_file_path):
     try:
+        # Get current working directory on FTP server
+        current_directory = ftp.pwd()
+
+        # Split remote file path into directory and filename
+        remote_directory = os.path.dirname(remote_file_path)
+        remote_filename = os.path.basename(remote_file_path)
+
+        # Change to the remote directory (create if it doesn't exist)
+        if remote_directory:
+            create_ftp_directory(ftp, remote_directory)
+            ftp.cwd(remote_directory)
+
+        # Upload the file to FTP
         with open(local_file_path, 'rb') as file:
-            ftp.storbinary(f'STOR {remote_file_path}', file)
+            ftp.storbinary(f'STOR {remote_filename}', file)
+
+        # Change back to the original directory
+        ftp.cwd(current_directory)
+
         print(f'Uploaded {local_file_path} to {remote_file_path}')
     except Exception as e:
         print(f'Failed to upload {local_file_path} to {remote_file_path}, Error: {e}')
@@ -128,20 +145,23 @@ def main_script():
       print("Uploading files to the FTP server")
       repo_root = subprocess.check_output(['git', 'rev-parse', '--show-toplevel']).decode('utf-8').strip()
       for root, _, files in os.walk(repo_root):
-            for file in files:
-                file_path = os.path.join(root, file)
-                relative_path = os.path.relpath(file_path, repo_root)
-                remote_file_path = os.path.join(upload_folder, relative_path)
+        for file in files:
+          file_path = os.path.join(root, file)
+          relative_path = os.path.relpath(file_path, repo_root)
+          remote_file_path = os.path.join(upload_folder, relative_path)
+          
+          if not can_upload_file(remote_file_path):
+            continue
 
-                # Check if directory exists on FTP, create if not
-                remote_directory = os.path.dirname(remote_file_path)
-                if remote_directory:
-                    create_ftp_directory(ftp, remote_directory)
+          # Check if directory exists on FTP, create if not
+          remote_directory = os.path.dirname(remote_file_path)
+          if remote_directory:
+            create_ftp_directory(ftp, remote_directory)
 
-                # Check if file can be uploaded
-                if can_upload_file(file):
-                    # Upload the file to FTP
-                    upload_file(ftp, file_path, remote_file_path)
+          # Check if file can be uploaded
+          if can_upload_file(file):
+            # Upload the file to FTP
+            upload_file(ftp, file_path, remote_file_path)
     except Exception as e:
         print(f'Error uploading files to FTP server: {e}')
     
