@@ -39,43 +39,40 @@ def delete_file(ftp, file_path):
         print(f'Deleted {file_path} from the FTP server.')
     except Exception as e:
         print(f'Could not delete {file_path} from the FTP server: {e}')
+        
+def is_ftp_directory(ftp, path):
+  current_directory = ftp.pwd()  # Get current working directory
+  try:
+    ftp.cwd(path)  # Try to change directory to the given path
+    ftp.cwd(current_directory)  # Move back to the original directory
+    return True
+  except Exception as e:
+    ftp.cwd(current_directory)  # Move back to the original directory
+    return False
 
 # Function to recursively delete files in a folder on FTP
 def delete_folder_contents(ftp, folder_path):
-    try:
-        # Change to the upload_folder directory
-        ftp.cwd(folder_path)
+  current_files = ftp.nlst()
+  if folder_path not in current_files:
+    print(f'Folder {folder_path} does not exist on the FTP server.', current_files)
+    return
+  
+  if folder_path == ".." or folder_path == "." or folder_path == "/":
+    print(f'Cannot delete root folder name {folder_path}.')
+    return
+  
+  if is_ftp_directory(ftp, folder_path) == False:
+    ftp.delete(folder_path)
+    print(f'Deleted file: {folder_path}')
+  else:
+    for file in ftp.nlst(folder_path):
+      current_path = ftp.pwd()
+      ftp.cwd(folder_path)
+      delete_folder_contents(ftp, file)
+      ftp.cwd(current_path)
+    ftp.rmd(folder_path)
+    print(f'Deleted folder: {folder_path}')
 
-        # List files and directories in the current directory
-        dir_contents = ftp.nlst()
-
-        # Iterate through each file/directory
-        for item in dir_contents:
-          if item == '.' or item == '..':
-            continue
-          
-          try:
-              # Try to delete the item (file or directory)
-              ftp.delete(item)  # Try to delete file
-              print(f'Deleted file: {item}')
-          except Exception as e:
-              try:
-                  # If it's a directory, recursively delete its contents
-                  delete_folder_contents(ftp, f'{folder_path}/{item}')
-                  # After deleting contents, change cwd back to current directory
-                  ftp.cwd(folder_path)
-                  # Delete the directory itself after its contents are deleted
-                  ftp.rmd(item)
-                  print(f'Deleted directory: {item}')
-              except Exception as e:
-                  print(f'Failed to delete {item}: {e}')
-                  continue
-
-        print(f'All contents in {folder_path} deleted.')
-
-    except Exception as e:
-        print(f'Failed to delete contents in {folder_path}: {e}')
-      
       
 def can_upload_file(file_name):
   for uploadable_file_name in uploadable_file_names:
@@ -111,6 +108,12 @@ def main_script():
     print("Deleting files from the FTP server")
     # Recursively delete files in the upload folder
     delete_folder_contents(ftp, upload_folder)
+    
+    # close the connection
+    print("Closing the FTP server connection")
+    ftp.quit()
+    sys.exit(0)
+    
     
     # Upload all files from the Git repository
     try:
