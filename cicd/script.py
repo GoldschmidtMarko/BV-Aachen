@@ -29,8 +29,12 @@ uploadable_file_names = ["alemannencup.html",
 
 # Function to upload a file
 def upload_file(ftp, local_file_path, remote_file_path):
-    with open(local_file_path, 'rb') as file:
-        ftp.storbinary(f'STOR {remote_file_path}', file)
+    try:
+        with open(local_file_path, 'rb') as file:
+            ftp.storbinary(f'STOR {remote_file_path}', file)
+        print(f'Uploaded {local_file_path} to {remote_file_path}')
+    except Exception as e:
+        print(f'Failed to upload {local_file_path} to {remote_file_path}, Error: {e}')
     
     
 # Function to delete a file
@@ -80,6 +84,13 @@ def can_upload_file(file_name):
     if uploadable_file_name in file_name:
       return True
   return False
+
+def create_ftp_directory(ftp, path):
+    try:
+        ftp.mkd(path)  # Try to create directory
+        print(f'Created directory: {path}')
+    except Exception as e:
+        print(f'Failed to create directory: {path}, Error: {e}')
   
 
 def main_script():
@@ -116,17 +127,21 @@ def main_script():
     try:
       print("Uploading files to the FTP server")
       repo_root = subprocess.check_output(['git', 'rev-parse', '--show-toplevel']).decode('utf-8').strip()
-      print(f'Repo root: {repo_root}')
       for root, _, files in os.walk(repo_root):
             for file in files:
                 file_path = os.path.join(root, file)
-                # Determine the relative path for FTP upload (assuming it starts after the repo root)
                 relative_path = os.path.relpath(file_path, repo_root)
-                
+                remote_file_path = os.path.join(upload_folder, relative_path)
+
+                # Check if directory exists on FTP, create if not
+                remote_directory = os.path.dirname(remote_file_path)
+                if remote_directory:
+                    create_ftp_directory(ftp, remote_directory)
+
+                # Check if file can be uploaded
                 if can_upload_file(file):
                     # Upload the file to FTP
-                    upload_file(ftp, file_path, os.path.join(upload_folder, relative_path))
-                    print(f'Uploaded {file_path} to FTP server.')
+                    upload_file(ftp, file_path, remote_file_path)
     except Exception as e:
         print(f'Error uploading files to FTP server: {e}')
     
