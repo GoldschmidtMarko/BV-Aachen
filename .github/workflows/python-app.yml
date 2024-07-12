@@ -22,5 +22,9 @@ jobs:
         pip install -r requirements.txt
 
     - name: Run script
+      env:
+          SECRET_HOST_NAME: ${{ secrets.SECRET_HOST_NAME }}
+          SECRET_PASSWORD: ${{ secrets.SECRET_PASSWORD }}
+          SECRET_USER_NAME: ${{ secrets.SECRET_USER_NAME }}
       run: |
         python cicd/script.py
