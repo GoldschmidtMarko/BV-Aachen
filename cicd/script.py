@@ -51,22 +51,25 @@ def delete_folder_contents(ftp, folder_path):
 
         # Iterate through each file/directory
         for item in dir_contents:
-            try:
-                # Try to delete the item (file or directory)
-                ftp.delete(item)  # Try to delete file
-                print(f'Deleted file: {item}')
-            except Exception as e:
-                try:
-                    # If it's a directory, recursively delete its contents
-                    delete_folder_contents(ftp, f'{folder_path}/{item}')
-                    # After deleting contents, change cwd back to current directory
-                    ftp.cwd(folder_path)
-                    # Delete the directory itself after its contents are deleted
-                    ftp.rmd(item)
-                    print(f'Deleted directory: {item}')
-                except Exception as e:
-                    print(f'Failed to delete {item}: {e}')
-                    continue
+          if item == '.' or item == '..':
+            continue
+          
+          try:
+              # Try to delete the item (file or directory)
+              ftp.delete(item)  # Try to delete file
+              print(f'Deleted file: {item}')
+          except Exception as e:
+              try:
+                  # If it's a directory, recursively delete its contents
+                  delete_folder_contents(ftp, f'{folder_path}/{item}')
+                  # After deleting contents, change cwd back to current directory
+                  ftp.cwd(folder_path)
+                  # Delete the directory itself after its contents are deleted
+                  ftp.rmd(item)
+                  print(f'Deleted directory: {item}')
+              except Exception as e:
+                  print(f'Failed to delete {item}: {e}')
+                  continue
 
         print(f'All contents in {folder_path} deleted.')
 
@@ -109,11 +112,6 @@ def main_script():
     # Recursively delete files in the upload folder
     delete_folder_contents(ftp, upload_folder)
     
-     # close the connection
-    print("Closing the FTP server connection")
-    ftp.quit()
-    sys.exit(0)
-
     # Upload all files from the Git repository
     try:
       print("Uploading files to the FTP server")
