@@ -83,10 +83,13 @@ def main_script(modified_files, deleted_files):
 
 
     # close the connection
+    print("Closing the FTP server connection")
     ftp.quit()
   except Exception as e:
     print(e)
     print('Error: Unable to connect to the FTP server')
+    
+print("Script executed")
     
     
   
