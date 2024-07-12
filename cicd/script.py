@@ -64,7 +64,7 @@ def can_upload_file(file_name):
   return False
   
 
-def main_script(modified_files, deleted_files):
+def main_script():
   try:
     # create FTP server
     print("Creating FTP server")
