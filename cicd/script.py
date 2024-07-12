@@ -42,19 +42,31 @@ def delete_file(ftp, file_path):
 
 # Function to recursively delete files in a folder on FTP
 def delete_folder_contents(ftp, folder_path):
-    files = []
     try:
-        files = ftp.nlst(folder_path)
+        # Change to the upload_folder directory
+        ftp.cwd(folder_path)
+
+        # List files and directories in the current directory
+        dir_contents = ftp.nlst()
+
+        # Iterate through each file/directory
+        for item in dir_contents:
+            try:
+                # Try to delete the item (file or directory)
+                ftp.delete(item)  # Try to delete file
+                print(f'Deleted file: {item}')
+            except Exception as e:
+                try:
+                    ftp.rmd(item)  # Try to delete directory
+                    print(f'Deleted directory: {item}')
+                except Exception as e:
+                    print(f'Failed to delete {item}: {e}')
+                    continue
+
+        print(f'All contents in {folder_path} deleted.')
+
     except Exception as e:
-        print(f'Could not list files in {folder_path} on the FTP server: {e}')
-        return
-    
-    for file in files:
-        try:
-            ftp.delete(file)
-            print(f'Deleted {file} from the FTP server.')
-        except Exception as e:
-            print(f'Could not delete {file} from the FTP server: {e}')
+        print(f'Failed to delete contents in {folder_path}: {e}')
       
       
 def can_upload_file(file_name):
