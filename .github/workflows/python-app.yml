@@ -10,6 +10,36 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+
+      - name: Get changed and deleted documents from the last commit
+        id: get_changes
+        run: |
+          echo "Extracting changed and deleted files from the last commit..."
+
+          # Ensure you are in a Git repository
+          if [ ! -d ".git" ]; then
+              echo "fatal: not a git repository (or any of the parent directories): .git"
+              exit 1
+          fi
+
+          # Get the last commit hash
+          last_commit=$(git log -1 --pretty=format:%H)
+
+          # Get changed files (excluding deletions)
+          changed_files=$(git diff-tree --no-commit-id --name-only --diff-filter=ACMRT $last_commit)
+
+          # Get deleted files
+          deleted_files=$(git diff-tree --no-commit-id --name-only --diff-filter=D $last_commit)
+
+          # Set the output using Environment Files
+          echo "changed_files=$changed_files" >> $GITHUB_ENV
+          echo "deleted_files=$deleted_files" >> $GITHUB_ENV
+
+      - name: Display changed and deleted files
+        run: |
+          echo "Changed files: ${{ env.changed_files }}"
+          echo "Deleted files: ${{ env.deleted_files }}"
+
       - name: Check if commit message includes #upload
         id: check_commit_message
         run: |
@@ -34,7 +64,7 @@ jobs:
       - name: Display contains_upload output
         run: echo "contains_upload is ${{ env.contains_upload }}"
 
-      - name: Fail if contains_upload is false
+      - name: Skip checks if contains_upload is false
         if: env.contains_upload == 'false'
         run: |
           echo "Commit message does not contains #upload. Stopping the pipeline."
