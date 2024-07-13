@@ -181,7 +181,18 @@ def full_reinstallation(ftp, upload_folder):
 def exchange_modified_data(ftp, upload_folder, changed_files, deleted_files):
   print("###############################################################")
   print("Running exchange modified data")
-  wasdir = False
+  # list the files in the current directory
+  root_files = ftp.nlst()
+  if upload_folder not in root_files:
+    # throw error if the folder does not exist
+    print("Folder does not exist")
+    full_reinstallation(ftp, upload_folder)
+    return
+  changed_files_list = changed_files.split("\n")
+  deleted_files_list = deleted_files.split("\n")
+  print("Changed files list: ", changed_files_list)
+  print("Deleted files list: ", deleted_files_list)
+  
 
 def main_script():
   if len(sys.argv) != 4:
@@ -197,6 +208,7 @@ def main_script():
 
   try:
     # create FTP server
+    print("###############################################################")
     print("Creating FTP server")
     ftp = FTP(SECRET_HOST_NAME)
 
