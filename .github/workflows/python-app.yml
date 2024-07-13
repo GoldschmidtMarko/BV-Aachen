@@ -18,6 +18,12 @@ jobs:
           git log -1
           echo "Repository status:"
           git status
+          
+      - name: Print last 10 commits
+      run: |
+        echo "Printing last 10 commits..."
+        git log -10 --pretty=format:"%H %s"
+
       - name: Find last commit with #upload
         id: find_upload_commit
         run: |
