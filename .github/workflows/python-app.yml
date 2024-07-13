@@ -18,9 +18,9 @@ jobs:
           git log -1
           echo "Repository status:"
           git status
-          
+
       - name: Print last 10 commits
-      run: |
+        run: |
         echo "Printing last 10 commits..."
         git log -10 --pretty=format:"%H %s"
 
