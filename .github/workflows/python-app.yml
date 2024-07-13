@@ -111,16 +111,19 @@ jobs:
           exit 0
 
       - name: Set up Python
+        if: env.contains_upload == 'true'
         uses: actions/setup-python@v2
         with:
           python-version: '3.x'  # Adjust to the version you need
 
       - name: Install dependencies
+        if: env.contains_upload == 'true'
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
       - name: Run script
+        if: env.contains_upload == 'true'
         env:
           SECRET_HOST_NAME: ${{ secrets.SECRET_HOST_NAME }}
           SECRET_PASSWORD: ${{ secrets.SECRET_PASSWORD }}
