@@ -11,23 +11,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
         with:
-          fetch-depth: 30  # Fetch all history for all branches and tags
+          fetch-depth: 50  # Fetch all history for all branches and tags
 
-      - name: Debug repository state
-        run: |
-          echo "Current branch: $(git branch --show-current)"
-          echo "Last commit:"
-          git log -1
-          echo "Repository status:"
-          git status
-
-      - name: Print last 15 commits
-        run: |
-          echo "Printing last 15 commits..."
-          git log -15 --pretty=format:"%H %s"
-
-      - name: Find last commit with #upload
-        id: find_upload_commit
+      - name: Find last commit with upload in the message, and check for force flag
+        id: find_commit_flags
         run: |
           echo "Finding last commit with #upload in the message..."
 
@@ -45,8 +32,36 @@ jobs:
           # Set the output using Environment Files
           echo "upload_commit=$upload_commit" >> $GITHUB_ENV
 
-      - name: Get changed and deleted files since last #upload commit
+
+          # Check the latest commit message for '#upload'
+          if [[ $(git log -1 --pretty=%B) =~ '#upload' ]]; then
+              upload_flag=true
+          else
+              upload_flag=false
+          fi
+
+          # Debug output to verify the upload_flag
+          echo "#upload_flag: $upload_flag"
+
+          # Set the output using Environment Files
+          echo "upload_flag=$upload_flag" >> $GITHUB_ENV
+
+          if [[ $(git log -1 --pretty=%B) =~ '#force' ]]; then
+              force_flag=true
+          else
+              force_flag=false
+          fi
+
+          # Debug output to verify the force_flag
+          echo "#force_flag: $force_flag"
+
+          echo "force_flag=$force_flag" >> $GITHUB_ENV
+
+
+
+      - name: Get changed and deleted files since last upload commit if force_flag is false
         id: get_changes
+        if: env.force_flag == 'false'
         run: |
           echo "Extracting changed and deleted files from ${{ env.upload_commit }} to HEAD..."
 
@@ -80,53 +95,29 @@ jobs:
           echo "Deleted files:"
           echo "${{ env.deleted_files }}"
 
-      - name: Check if commit message includes #upload
-        id: check_commit_message
-        run: |
-          echo "Checking if the latest commit message contains #upload..."
-
-          # Ensure you are in a Git repository
-          if [ ! -d ".git" ]; then
-              echo "fatal: not a git repository (or any of the parent directories): .git"
-              exit 1
-          fi
-
-          # Check the latest commit message for '#upload'
-          if [[ $(git log -1 --pretty=%B) =~ '#upload' ]]; then
-              contains_upload=true
-          else
-              contains_upload=false
-          fi
-
-          # Set the output using Environment Files
-          echo "contains_upload=$contains_upload" >> $GITHUB_ENV
-
-      - name: Display contains_upload output
-        run: echo "contains_upload is ${{ env.contains_upload }}"
-
-      - name: Skip checks if contains_upload is false
-        if: env.contains_upload == 'false'
+      - name: Skip checks if upload_flag is false
+        if: env.upload_flag == 'false' && env.contains_force == 'false'
         run: |
           echo "Commit message does not contains #upload. Stopping the pipeline."
           exit 0
 
       - name: Set up Python
-        if: env.contains_upload == 'true'
+        if: env.upload_flag == 'true' || env.contains_force == 'true'
         uses: actions/setup-python@v2
         with:
           python-version: '3.x'  # Adjust to the version you need
 
       - name: Install dependencies
-        if: env.contains_upload == 'true'
+        if: env.upload_flag == 'true' || env.contains_force == 'true'
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
       - name: Run script
-        if: env.contains_upload == 'true'
+        if: env.upload_flag == 'true' || env.contains_force == 'true'
         env:
           SECRET_HOST_NAME: ${{ secrets.SECRET_HOST_NAME }}
           SECRET_PASSWORD: ${{ secrets.SECRET_PASSWORD }}
           SECRET_USER_NAME: ${{ secrets.SECRET_USER_NAME }}
         run: |
-          python -u cicd/script.py 
+          python -u cicd/script.py "${{ env.changed_files }}" "${{ env.deleted_files }}" "${{ env.contains_force }}"
