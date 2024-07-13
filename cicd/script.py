@@ -188,10 +188,43 @@ def exchange_modified_data(ftp, upload_folder, changed_files, deleted_files):
     print("Folder does not exist")
     full_reinstallation(ftp, upload_folder)
     return
-  changed_files_list = changed_files.split("\n")
-  deleted_files_list = deleted_files.split("\n")
-  print("Changed files list: ", changed_files_list)
-  print("Deleted files list: ", deleted_files_list)
+  
+  changed_files_list = changed_files[0].split("\\n")
+  deleted_files_list = deleted_files[0].split("\\n")
+  changed_files_list_cleaned = [file for file in changed_files_list if file != ""]
+  deleted_files_list_cleaned = [file for file in deleted_files_list if file != ""]
+  
+  print("Changed files list: ", changed_files_list_cleaned)
+  print("Deleted files list: ", deleted_files_list_cleaned)
+  print("###############################################################")
+  print("Deleting files from the FTP server")
+  for file in deleted_files_list_cleaned:
+    if can_upload_file(file):
+      current_path = ftp.pwd()
+      directory_to_file = "".join(file.split("/")[:-1])
+      direct_file_name = file.split("/")[-1]
+      ftp.cwd(directory_to_file)
+      delete_folder_contents(ftp, direct_file_name)
+      ftp.cwd(current_path)
+      
+  print("###############################################################")
+  print("Uploading files to the FTP server")
+  repo_root_path = subprocess.check_output(['git', 'rev-parse', '--show-toplevel']).decode('utf-8').strip()
+  for file in changed_files_list_cleaned:
+    if can_upload_file(file):
+      current_path = ftp.pwd()
+      directory_to_file = "".join(file.split("/")[:-1])
+      direct_file_name = file.split("/")[-1]
+      print("directory_to_file: ", directory_to_file)
+      print("direct_file_name: ", direct_file_name)
+      print("current_path: ", current_path)
+      print("file: ", file)
+      print("repo_root_path: ", repo_root_path)
+      sys.exit()
+      ftp.cwd(directory_to_file)
+      upload_file(ftp, file, direct_file_name)
+      ftp.cwd(current_path)
+      
   
 
 def main_script():
@@ -241,10 +274,8 @@ def main_script():
   print("Script finished")
     
     
-    
-  
-
   
 if __name__ == "__main__":
   main_script()
+  
 
