@@ -8,23 +8,117 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 50  # Fetch all history for all branches and tags
 
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.x'  # Adjust to the version you need
+      - name: Find last commit with upload in the message, and check for force flag
+        id: find_commit_flags
+        run: |
+          echo "Finding last commit with #upload in the message..."
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
+          # Find the last commit with #upload in the message
+          upload_commit=$(git log -F --skip=1 --grep="#upload" --pretty=format:%H | head -n 1) 
 
-    - name: Run script 
-      env:
-        SECRET_HOST_NAME: ${{ secrets.SECRET_HOST_NAME }}
-        SECRET_PASSWORD: ${{ secrets.SECRET_PASSWORD }}
-        SECRET_USER_NAME: ${{ secrets.SECRET_USER_NAME }}
-      run: |
-        python cicd/script.py 
+          if [ -z "$upload_commit" ]; then
+            echo "No commit with #upload found."
+            exit 1
+          fi
+
+          # Debug output to verify the commit SHA
+          echo "Last commit with #upload SHA: $upload_commit"
+
+          # Set the output using Environment Files
+          echo "upload_commit=$upload_commit" >> $GITHUB_ENV
+
+
+          # Check the latest commit message for '#upload'
+          if [[ $(git log -1 --pretty=%B) =~ '#upload' ]]; then
+              upload_flag=true
+          else
+              upload_flag=false
+          fi
+
+          # Debug output to verify the upload_flag
+          echo "#upload_flag: $upload_flag"
+
+          # Set the output using Environment Files
+          echo "upload_flag=$upload_flag" >> $GITHUB_ENV
+
+          if [[ $(git log -1 --pretty=%B) =~ '#force' ]]; then
+              force_flag=true
+          else
+              force_flag=false
+          fi
+
+          # Debug output to verify the force_flag
+          echo "#force_flag: $force_flag"
+
+          echo "force_flag=$force_flag" >> $GITHUB_ENV
+
+
+
+      - name: Get changed and deleted files since last upload commit if force_flag is false
+        id: get_changes
+        if: env.force_flag == 'false'
+        run: |
+          echo "Extracting changed and deleted files from ${{ env.upload_commit }} to HEAD..."
+
+          # Get the last commit SHA from the environment
+          upload_commit=${{ env.upload_commit }}
+
+          # Get changed files (excluding deletions) since the last #upload commit
+          changed_files=$(git diff --name-only --diff-filter=ACMRT $upload_commit..HEAD)
+
+          # Get deleted files since the last #upload commit
+          deleted_files=$(git diff --name-only --diff-filter=D $upload_commit..HEAD)
+
+          # Escape newlines in the file lists
+          changed_files_escaped=$(echo "$changed_files" | awk 1 ORS='\\n')
+          deleted_files_escaped=$(echo "$deleted_files" | awk 1 ORS='\\n')
+
+          # Debug output for changed files
+          echo "Changed files: $changed_files_escaped"
+
+          # Debug output for deleted files
+          echo "Deleted files: $deleted_files_escaped"
+
+          # Set the output using Environment Files
+          echo "changed_files=$changed_files_escaped" >> $GITHUB_ENV
+          echo "deleted_files=$deleted_files_escaped" >> $GITHUB_ENV
+
+      - name: Display changed and deleted env files
+        if: env.force_flag == 'false'
+        run: |
+          echo "Changed files:"
+          echo "${{ env.changed_files }}"
+          echo "Deleted files:"
+          echo "${{ env.deleted_files }}"
+
+      - name: Skip checks if upload_flag is false
+        if: env.upload_flag == 'false' && env.force_flag == 'false'
+        run: |
+          echo "Commit message does not contains #upload. Stopping the pipeline."
+          exit 0
+
+      - name: Set up Python
+        if: env.upload_flag == 'true' || env.force_flag == 'true'
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'  # Adjust to the version you need
+
+      - name: Install dependencies
+        if: env.upload_flag == 'true' || env.force_flag == 'true'
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run script
+        if: env.upload_flag == 'true' || env.force_flag == 'true'
+        env:
+          SECRET_HOST_NAME: ${{ secrets.SECRET_HOST_NAME }}
+          SECRET_PASSWORD: ${{ secrets.SECRET_PASSWORD }}
+          SECRET_USER_NAME: ${{ secrets.SECRET_USER_NAME }}
+        run: |
+          python -u cicd/script.py "${{ env.changed_files }}" "${{ env.deleted_files }}" "${{ env.force_flag }}"
