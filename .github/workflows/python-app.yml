@@ -18,40 +18,55 @@ jobs:
           git log -1
           echo "Repository status:"
           git status
-
-      - name: Get changed and deleted YAML files from the last commit
-        id: get_changes
+      - name: Find last commit with #upload
+        id: find_upload_commit
         run: |
-          echo "Extracting changed and deleted YAML files from the last commit..."
+          echo "Finding last commit with #upload in the message..."
 
-          # Get the last commit SHA
-          last_commit=${GITHUB_SHA}
+          # Find the last commit with #upload in the message
+          upload_commit=$(git log -F --grep="#upload" -1 --pretty=format:%H)
+
+          if [ -z "$upload_commit" ]; then
+            echo "No commit with #upload found."
+            exit 1
+          fi
 
           # Debug output to verify the commit SHA
-          echo "Last commit SHA: $last_commit"
-
-          # Get changed YAML files (excluding deletions)
-          changed_files_yaml=$(git diff-tree --no-commit-id --name-only --diff-filter=ACMRT $last_commit | grep '\.yaml\|\.yml')
-
-          # Debug output for changed files
-          echo "Changed YAML files: $changed_files_yaml"
-
-          # Get deleted YAML files
-          deleted_files_yaml=$(git diff-tree --no-commit-id --name-only --diff-filter=D $last_commit | grep '\.yaml\|\.yml')
-
-          # Debug output for deleted files
-          echo "Deleted YAML files: $deleted_files_yaml"
+          echo "Last commit with #upload SHA: $upload_commit"
 
           # Set the output using Environment Files
-          echo "changed_files_yaml=$changed_files_yaml" >> $GITHUB_ENV
-          echo "deleted_files_yaml=$deleted_files_yaml" >> $GITHUB_ENV
+          echo "upload_commit=$upload_commit" >> $GITHUB_ENV
 
-      - name: Display changed and deleted YAML files
+      - name: Get changed and deleted files since last #upload commit
+        id: get_changes
         run: |
-          echo "Changed YAML files:"
-          echo "${{ env.changed_files_yaml }}"
-          echo "Deleted YAML files:"
-          echo "${{ env.deleted_files_yaml }}"
+          echo "Extracting changed and deleted files from ${{ env.upload_commit }} to HEAD..."
+
+          # Get the last commit SHA from the environment
+          upload_commit=${{ env.upload_commit }}
+
+          # Get changed files (excluding deletions) since the last #upload commit
+          changed_files=$(git diff --name-only --diff-filter=ACMRT $upload_commit..HEAD)
+
+          # Debug output for changed files
+          echo "Changed files: $changed_files"
+
+          # Get deleted files since the last #upload commit
+          deleted_files=$(git diff --name-only --diff-filter=D $upload_commit..HEAD)
+
+          # Debug output for deleted files
+          echo "Deleted files: $deleted_files"
+
+          # Set the output using Environment Files
+          echo "changed_files=$changed_files" >> $GITHUB_ENV
+          echo "deleted_files=$deleted_files" >> $GITHUB_ENV
+
+      - name: Display changed and deleted files
+        run: |
+          echo "Changed files:"
+          echo "${{ env.changed_files }}"
+          echo "Deleted files:"
+          echo "${{ env.deleted_files }}"
 
       - name: Check if commit message includes #upload
         id: check_commit_message
