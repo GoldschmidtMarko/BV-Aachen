@@ -89,6 +89,7 @@ jobs:
           echo "deleted_files=$deleted_files_escaped" >> $GITHUB_ENV
 
       - name: Display changed and deleted env files
+        if: env.force_flag == 'false'
         run: |
           echo "Changed files:"
           echo "${{ env.changed_files }}"
@@ -96,28 +97,28 @@ jobs:
           echo "${{ env.deleted_files }}"
 
       - name: Skip checks if upload_flag is false
-        if: env.upload_flag == 'false' && env.contains_force == 'false'
+        if: env.upload_flag == 'false' && env.force_flag == 'false'
         run: |
           echo "Commit message does not contains #upload. Stopping the pipeline."
           exit 0
 
       - name: Set up Python
-        if: env.upload_flag == 'true' || env.contains_force == 'true'
+        if: env.upload_flag == 'true' || env.force_flag == 'true'
         uses: actions/setup-python@v2
         with:
           python-version: '3.x'  # Adjust to the version you need
 
       - name: Install dependencies
-        if: env.upload_flag == 'true' || env.contains_force == 'true'
+        if: env.upload_flag == 'true' || env.force_flag == 'true'
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
       - name: Run script
-        if: env.upload_flag == 'true' || env.contains_force == 'true'
+        if: env.upload_flag == 'true' || env.force_flag == 'true'
         env:
           SECRET_HOST_NAME: ${{ secrets.SECRET_HOST_NAME }}
           SECRET_PASSWORD: ${{ secrets.SECRET_PASSWORD }}
           SECRET_USER_NAME: ${{ secrets.SECRET_USER_NAME }}
         run: |
-          python -u cicd/script.py "${{ env.changed_files }}" "${{ env.deleted_files }}" "${{ env.contains_force }}"
+          python -u cicd/script.py "${{ env.changed_files }}" "${{ env.deleted_files }}" "${{ env.force_flag }}"
