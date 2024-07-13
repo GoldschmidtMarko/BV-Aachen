@@ -58,6 +58,7 @@ def is_ftp_directory(ftp, path):
 
 # Function to recursively delete files in a folder on FTP
 def delete_folder_contents(ftp, folder_path):
+  global number_deleted_files
   try:
     current_files = ftp.nlst()
     # print(f'Current files: {current_files}')
@@ -94,6 +95,7 @@ def can_upload_file(file_name):
   return False
   
 def upload_files_recursivly(ftp, local_last_directory, local_full_path, remote_folder_path):
+  global number_inserted_files
   # print("local_last_directory: ", local_last_directory + " | local_full_path: ", local_full_path + " | remote_folder_path: ", remote_folder_path)
   # Create the folder on the FTP server
   # print("Current working directory: ", ftp.pwd())
@@ -141,6 +143,8 @@ def upload_files_recursivly(ftp, local_last_directory, local_full_path, remote_f
 
   
 def full_reinstallation(ftp, upload_folder):
+  global number_deleted_files
+  global number_inserted_files
   print("###############################################################")
   print("Running full reinstallation")
   # list the files in the current directory
