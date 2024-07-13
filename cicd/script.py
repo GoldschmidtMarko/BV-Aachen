@@ -23,7 +23,7 @@ uploadable_file_names = ["alemannencup.html",
                           # folders
                           "files",
                           "images",
-                          "javascript",
+                          "javascripts",
                           "styles",
                           "videos",
                           "tailwind.config.js"]
