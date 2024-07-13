@@ -21,6 +21,7 @@ async function setChips(key, value) {
         console.error('Error setting chips:', error);
     }
 }
+
 // Function to set a cookie with SameSite=None and Secure attributes
 function setCookie(name, value, days) {
     const date = new Date();
@@ -65,8 +66,7 @@ async function exampleUsage() {
     console.log('Retrieved value:', retrievedValue);
 }
 
-
-
+// Initialize language toggle
 document.addEventListener('DOMContentLoaded', async() => {
     const languageToggle = document.getElementById('languageToggle');
     const languageIcon = document.getElementById('languageIcon');
