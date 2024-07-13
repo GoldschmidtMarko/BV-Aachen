@@ -21,10 +21,10 @@ jobs:
           echo "Repository status:"
           git status
 
-      - name: Print last 10 commits
+      - name: Print last 15 commits
         run: |
-          echo "Printing last 10 commits..."
-          git log -10 --pretty=format:"%H %s"
+          echo "Printing last 15 commits..."
+          git log -15 --pretty=format:"%H %s"
 
       - name: Find last commit with #upload
         id: find_upload_commit
@@ -56,20 +56,24 @@ jobs:
           # Get changed files (excluding deletions) since the last #upload commit
           changed_files=$(git diff --name-only --diff-filter=ACMRT $upload_commit..HEAD)
 
-          # Debug output for changed files
-          echo "Changed files: $changed_files"
-
           # Get deleted files since the last #upload commit
           deleted_files=$(git diff --name-only --diff-filter=D $upload_commit..HEAD)
 
+          # Escape newlines in the file lists
+          changed_files_escaped=$(echo "$changed_files" | awk 1 ORS='\\n')
+          deleted_files_escaped=$(echo "$deleted_files" | awk 1 ORS='\\n')
+
+          # Debug output for changed files
+          echo "Changed files: $changed_files_escaped"
+
           # Debug output for deleted files
-          echo "Deleted files: $deleted_files"
+          echo "Deleted files: $deleted_files_escaped"
 
           # Set the output using Environment Files
-          echo "changed_files=$changed_files" >> $GITHUB_ENV
-          echo "deleted_files=$deleted_files" >> $GITHUB_ENV
+          echo "changed_files=$changed_files_escaped" >> $GITHUB_ENV
+          echo "deleted_files=$deleted_files_escaped" >> $GITHUB_ENV
 
-      - name: Display changed and deleted files
+      - name: Display changed and deleted env files
         run: |
           echo "Changed files:"
           echo "${{ env.changed_files }}"
