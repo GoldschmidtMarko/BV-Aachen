@@ -10,6 +10,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+        with:
+          fetch-depth: 30  # Fetch all history for all branches and tags
 
       - name: Debug repository state
         run: |
