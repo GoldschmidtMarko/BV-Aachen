@@ -79,7 +79,7 @@ jobs:
           deleted_files_escaped=$(echo "$deleted_files" | awk 1 ORS='\\n')
 
           # Debug output for changed files 
-          echo "Changed files: $changed_files_escaped"
+          echo "Changed files: $changed_files_escaped" 
 
           # Debug output for deleted files
           echo "Deleted files: $deleted_files_escaped"
