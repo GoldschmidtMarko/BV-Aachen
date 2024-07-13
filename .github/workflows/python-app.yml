@@ -19,7 +19,7 @@ jobs:
           echo "Finding last commit with #upload in the message..."
 
           # Find the last commit with #upload in the message
-          upload_commit=$(git log -F --grep="#upload" HEAD^..HEAD~1 --pretty=format:%H)
+          upload_commit=$(git log -F --skip=1 --grep="#upload" --pretty=format:%H)
 
           if [ -z "$upload_commit" ]; then
             echo "No commit with #upload found."
