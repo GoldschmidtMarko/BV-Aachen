@@ -189,8 +189,8 @@ def exchange_modified_data(ftp, upload_folder, changed_files, deleted_files):
     full_reinstallation(ftp, upload_folder)
     return
   
-  changed_files_list = changed_files[0].split("\\n")
-  deleted_files_list = deleted_files[0].split("\\n")
+  changed_files_list = changed_files[0].split("\n")
+  deleted_files_list = deleted_files[0].split("\n")
   changed_files_list_cleaned = [file for file in changed_files_list if file != ""]
   deleted_files_list_cleaned = [file for file in deleted_files_list if file != ""]
   
