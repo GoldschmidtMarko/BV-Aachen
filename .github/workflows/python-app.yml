@@ -13,7 +13,7 @@ jobs:
         with:
           fetch-depth: 50  # Fetch all history for all branches and tags
 
-      - name: Find last commit with upload in the message, and check for force flag
+      - name: Find last commit with upload in the message, and check for |force flag|
         id: find_commit_flags
         run: |
           echo "Finding last commit with #upload in the message..."
@@ -59,7 +59,7 @@ jobs:
 
 
 
-      - name: Get changed and deleted files since last upload commit if force_flag is false
+      - name: Get changed and deleted files since last upload commit if |force_flag| is false
         id: get_changes
         if: env.force_flag == 'false'
         run: |
@@ -96,7 +96,7 @@ jobs:
           echo "Deleted files:"
           echo "${{ env.deleted_files }}"
 
-      - name: Skip checks if upload_flag is false
+      - name: Skip checks if |upload_flag| and |force_flag| is false
         if: env.upload_flag == 'false' && env.force_flag == 'false'
         run: |
           echo "Commit message does not contains #upload. Stopping the pipeline."
