@@ -220,7 +220,7 @@ def exchange_modified_data(ftp, upload_folder, changed_files, deleted_files):
       print("current_path: ", current_path)
       print("file: ", file)
       print("repo_root_path: ", repo_root_path)
-      sys.exit()
+      sys.exit() 
       ftp.cwd(directory_to_file)
       upload_file(ftp, file, direct_file_name)
       ftp.cwd(current_path)
