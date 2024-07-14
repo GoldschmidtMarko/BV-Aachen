@@ -207,11 +207,15 @@ def exchange_modified_data(ftp, upload_folder, changed_files, deleted_files):
   for file in deleted_files_list_cleaned:
     if can_upload_file(file):
       current_path = ftp.pwd()
-      directory_to_file = "".join(file.split("/")[:-1])
-      direct_file_name = file.split("/")[-1]
-      ftp.cwd(directory_to_file)
-      delete_folder_contents(ftp, direct_file_name)
-      ftp.cwd(current_path)
+      splitted_file = file.split("/")
+      if len(splitted_file) == 1:
+        delete_file(ftp, file)
+      else:
+        directory_to_file = "".join(file.split("/")[:-1])
+        direct_file_name = file.split("/")[-1]
+        ftp.cwd(directory_to_file)
+        delete_folder_contents(ftp, direct_file_name)
+        ftp.cwd(current_path)
   print("Number of deleted files: ", number_deleted_files)
       
   print("###############################################################")
@@ -219,15 +223,19 @@ def exchange_modified_data(ftp, upload_folder, changed_files, deleted_files):
   for file in changed_files_list_cleaned:
     if can_upload_file(file):
       current_path = ftp.pwd()
-      directory_to_file = file.split("/")[:-1]
-      directory_to_file = "/".join(directory_to_file)
-      direct_file_name = file.split("/")[-1]
-      for directory in directory_to_file.split("/"):
-        if directory not in ftp.nlst():
-          ftp.mkd(directory)
-        ftp.cwd(directory)
-      upload_file(ftp, file, direct_file_name)
-      ftp.cwd(current_path)
+      splitted_file = file.split("/")
+      if len(splitted_file) == 1:
+        upload_file(ftp, file, file)
+      else:
+        directory_to_file = file.split("/")[:-1]
+        directory_to_file = "/".join(directory_to_file)
+        direct_file_name = file.split("/")[-1]
+        for directory in directory_to_file.split("/"):
+          if directory not in ftp.nlst():
+            ftp.mkd(directory)
+          ftp.cwd(directory)
+        upload_file(ftp, file, direct_file_name)
+        ftp.cwd(current_path)
       
   print("Number of inserted files: ", number_inserted_files)
       
