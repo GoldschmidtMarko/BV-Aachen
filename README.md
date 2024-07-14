@@ -1,7 +1,7 @@
 # BV-Aachen Repository
 This repository is used for the BV-Aachen homepage.
 
-The homepage is available under [www.bv-aachen.de](www.bv-aachen.de).
+The homepage is available under [https://www.bv-aachen.de/](https://www.bv-aachen.de/).
 
 ## CICD
  
