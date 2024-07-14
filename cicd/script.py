@@ -11,8 +11,10 @@ upload_folder = "test"
 number_deleted_files = 0
 number_inserted_files = 0
 
-uploadable_file_names = ["alemannencup.html",
-                         "datenschutz.html",
+uploadable_file_names = [
+                          # files
+                          "alemannencup.html",
+                          "datenschutz.html",
                           "FAQ.html",
                           "impressum.html",
                           "index.html",
@@ -20,13 +22,13 @@ uploadable_file_names = ["alemannencup.html",
                           "teams.html",
                           "training.html",
                           "verein.html",
+                          "tailwind.config.js",
                           # folders
                           "files",
                           "images", 
                           "javascripts",  
                           "styles",
-                          "videos",
-                          "tailwind.config.js"]
+                          "videos"]
 
 
 # Function to upload a file
