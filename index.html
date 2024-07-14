@@ -13,7 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/idb/build/iife/index-min.js"></script>
     <script src="javascripts/language-toggle.js"></script>
     <script>
-        window.addEventListener('DOMContentLoaded', function () {
+        window.addEventListener('DOMContentLoaded', function() {
             if (window.innerWidth < 768) {
                 showhide(['navigation', 'languageToggle']);
             }
@@ -29,9 +29,7 @@
             </div>
         </div>
         <div class="block md:hidden lg:hidden">
-            <button
-                class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400 hover:text-white hover:border-white"
-                onclick="showhide(['navigation', 'languageToggle'])">
+            <button class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400 hover:text-white hover:border-white" onclick="showhide(['navigation', 'languageToggle'])">
                 <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <title>Menu</title>
                     <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
@@ -40,34 +38,26 @@
         </div>
         <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto md:flex md:items-center md:w-auto">
             <div id="navigation" class="text-sm lg:flex-grow md:flex-grow" style="display: block;">
-                <a href="./index.html" aria-current="page"
-                    class="block mt-4 rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Start</a>
-                <a href="./alemannencup.html"
-                    class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Alemannen
+                <a href="./index.html" aria-current="page" class="block mt-4 rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Start</a>
+                <a href="./alemannencup.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Alemannen
                     Cup</a>
-                <a href="./teams.html"
-                    class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">
+                <a href="./teams.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">
                     <span data-lang="en" class="hidden">Teams</span>
                     <span data-lang="de">Mannschaften</span>
                 </a>
-                <a href="./training.html"
-                    class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Training</a>
-                <a href="./verein.html"
-                    class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">
+                <a href="./training.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Training</a>
+                <a href="./verein.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">
                     <span data-lang="en" class="hidden">Become a Member</span>
                     <span data-lang="de">Mitglied werden</span>
                 </a>
-                <a href="./kontakt.html"
-                    class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">
+                <a href="./kontakt.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">
                     <span data-lang="en" class="hidden">Contact</span>
                     <span data-lang="de">Kontakt</span>
                 </a>
-                <a href="./FAQ.html"
-                    class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">FAQ</a>
+                <a href="./FAQ.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">FAQ</a>
             </div>
-            <button id="languageToggle"
-                class="ml-4 bg-white text-blue-500 w-8 h-8 rounded-full flex items-center justify-center">
-                <span id="languageIcon">DE</span>
+            <button id="languageToggle" class="ml-4 bg-white text-blue-500 w-8 h-8 rounded-full flex items-center justify-center">
+                <span id="languageIcon">EN</span>
             </button>
         </div>
     </nav>
@@ -81,8 +71,7 @@
                     <source src="videos/startpage.mp4">
                 </video>
                 <!-- <div class="absolute w-full h-full top-0 left-0 bg-gray-900 opacity-40 z-20"></div> -->
-                <div
-                    class="sm:relative md:absolute lg:absolute w-full h-full flex flex-col align-start p-8 top-0 left-0 z-30">
+                <div class="sm:relative md:absolute lg:absolute w-full h-full flex flex-col align-start p-8 top-0 left-0 z-30">
                     <section class="text-center px-8 mt-1 sm:mt-0 md:mt-1">
                         <h2 class="text-slate-900 text-4xl tracking-tight font-extrabold sm:text-5xl dark:text-white">
                             <span data-lang="en" class="hidden">About us</span>
@@ -133,8 +122,7 @@
 
                 <div class="grid grid-cols-1 gap-6 lg:gap-8 sm:grid-cols-2 lg:grid-cols-4 mt-6">
                     <figure class="bg-slate-100 rounded-xl p-8 dark:bg-slate-800">
-                        <img class="w-auto h-24 rounded-full mx-auto" src="images/man1.jpg" alt="" width="384"
-                            height="512">
+                        <img class="w-auto h-24 rounded-full mx-auto" src="images/man1.jpg" alt="" width="384" height="512">
                         <div class="pt-6 text-center space-y-4">
                             <blockquote>
                                 <p class="text-lg font-medium text-slate-700 dark:text-slate-300">
@@ -155,8 +143,7 @@
                     </figure>
 
                     <figure class="bg-slate-100 rounded-xl p-8 dark:bg-slate-800">
-                        <img class="w-auto h-24 rounded-full mx-auto" src="images/felix.jpg" alt="" width="384"
-                            height="512">
+                        <img class="w-auto h-24 rounded-full mx-auto" src="images/felix.jpg" alt="" width="384" height="512">
                         <div class="pt-6 text-center space-y-4">
                             <blockquote>
                                 <p class="text-lg font-medium text-slate-700 dark:text-slate-300">
@@ -177,8 +164,7 @@
                     </figure>
 
                     <figure class="bg-slate-100 rounded-xl p-8 dark:bg-slate-800">
-                        <img class="w-auto h-24 rounded-full mx-auto" src="images/man3.jpg" alt="" width="384"
-                            height="512">
+                        <img class="w-auto h-24 rounded-full mx-auto" src="images/man3.jpg" alt="" width="384" height="512">
                         <div class="pt-6 text-center space-y-4">
                             <blockquote>
                                 <p class="text-lg font-medium text-slate-700 dark:text-slate-300">
@@ -199,8 +185,7 @@
                     </figure>
 
                     <figure class="bg-slate-100 rounded-xl p-8 dark:bg-slate-800">
-                        <img class="w-auto h-24 rounded-full mx-auto" src="images/lina.jpg" alt="" width="384"
-                            height="512">
+                        <img class="w-auto h-24 rounded-full mx-auto" src="images/lina.jpg" alt="" width="384" height="512">
                         <div class="pt-6 text-center space-y-4">
                             <blockquote>
                                 <p class="text-lg font-medium text-slate-700 dark:text-slate-300">
@@ -227,20 +212,17 @@
                 <div class="content-block">
                     <span data-lang="en" class="hidden">Attached are further information about our</span>
                     <span data-lang="de">Anbei weitere Informationen zu unserer</span>
-                    <a href="files/Satzung BV Aachen 2009 Stand 2015.pdf" target="_blank"
-                        class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                    <a href="files/Satzung BV Aachen 2009 Stand 2015.pdf" target="_blank" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                         <span data-lang="en" class="hidden">Articles of Association</span>
                         <span data-lang="de">Satzung</span>
                     </a>,
-                    <a href="files/Geschaeftsordnung Stand 2015.pdf" target="_blank"
-                        class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                    <a href="files/Geschaeftsordnung Stand 2015.pdf" target="_blank" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                         <span data-lang="en" class="hidden">Rules of Procedure</span>
                         <span data-lang="de">Geschäftsordnung</span>
                     </a>
                     <span data-lang="en" class="hidden">and</span>
                     <span data-lang="de"> und </span>
-                    <a href="files/Finanzordnung Stand 2015.pdf" target="_blank"
-                        class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                    <a href="files/Finanzordnung Stand 2015.pdf" target="_blank" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                         <span data-lang="en" class="hidden">Financial Regulations</span>
                         <span data-lang="de">Finanzordnung</span>
                     </a>.

@@ -18,7 +18,7 @@
     <script src="https://cdn.jsdelivr.net/npm/idb/build/iife/index-min.js"></script>
     <script src="javascripts/language-toggle.js"></script>
     <script>
-        window.addEventListener('DOMContentLoaded', function () {
+        window.addEventListener('DOMContentLoaded', function() {
             if (window.innerWidth < 768) {
                 showhide(['navigation', 'languageToggle']);
             }
@@ -38,9 +38,7 @@
             </div>
         </div>
         <div class="block md:hidden lg:hidden">
-            <button
-                class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400 hover:text-white hover:border-white"
-                onclick="showhide(['navigation', 'languageToggle'])">
+            <button class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400 hover:text-white hover:border-white" onclick="showhide(['navigation', 'languageToggle'])">
                 <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <title>Menu</title>
                     <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
@@ -49,34 +47,26 @@
         </div>
         <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto md:flex md:items-center md:w-auto text-center">
             <div id="navigation" class="text-sm lg:flex-grow md:flex-grow" style="display: block;">
-                <a href="./index.html"
-                    class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">
+                <a href="./index.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">
                     Start</a>
-                <a href="./alemannencup.html" aria-current="page"
-                    class="block mt-4 rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Alemannen
+                <a href="./alemannencup.html" aria-current="page" class="block mt-4 rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Alemannen
                     Cup</a>
-                <a href="./teams.html"
-                    class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">
+                <a href="./teams.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">
                     <span data-lang="en" class="hidden">Teams</span>
                     <span data-lang="de">Mannschaften</span>
                 </a>
-                <a href="./training.html"
-                    class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Training</a>
-                <a href="./verein.html"
-                    class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">
+                <a href="./training.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Training</a>
+                <a href="./verein.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">
                     <span data-lang="en" class="hidden">Become a Member</span>
                     <span data-lang="de">Mitglied werden</span>
                 </a>
-                <a href="./kontakt.html"
-                    class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">
+                <a href="./kontakt.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">
                     <span data-lang="en" class="hidden">Contact</span>
                     <span data-lang="de">Kontakt</span>
                 </a>
-                <a href="./FAQ.html"
-                    class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">FAQ</a>
+                <a href="./FAQ.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">FAQ</a>
             </div>
-            <button id="languageToggle"
-                class="ml-4 bg-white text-blue-500 w-8 h-8 rounded-full flex items-center justify-center">
+            <button id="languageToggle" class="ml-4 bg-white text-blue-500 w-8 h-8 rounded-full flex items-center justify-center">
                 <span id="languageIcon">DE</span>
             </button>
         </div>
@@ -105,8 +95,7 @@
 
             </p>
             <br />
-            <a href="https://www.turnier.de/tournament/500faf3c-80b0-43d6-967f-ff31d7517de7"
-                class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+            <a href="https://www.turnier.de/tournament/500faf3c-80b0-43d6-967f-ff31d7517de7" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                 <span data-lang="en" class="hidden">Here</span>
                 <span data-lang="de">Hier</span>
             </a>
@@ -121,54 +110,36 @@
 
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
             <div>
-                <img class="object-cover object-center w-full h-40 max-w-full rounded-lg"
-                    src="images/alemancup24/IMG_6297.JPG" alt="gallery-photo"
-                    onclick="showImage('images/alemancup24/IMG_6297.JPG')" />
+                <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/alemancup24/IMG_6297.JPG" alt="gallery-photo" onclick="showImage('images/alemancup24/IMG_6297.JPG')" />
             </div>
             <div>
-                <img class="object-cover object-center w-full h-40 max-w-full rounded-lg"
-                    src="images/alemancup24/IMG_6327.JPG" alt="gallery-photo"
-                    onclick="showImage('images/alemancup24/IMG_6327.JPG')" />
+                <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/alemancup24/IMG_6327.JPG" alt="gallery-photo" onclick="showImage('images/alemancup24/IMG_6327.JPG')" />
             </div>
             <div>
-                <img class="object-cover object-center w-full h-40 max-w-full rounded-lg"
-                    src="images/alemancup24/IMG_6385.JPG" alt="gallery-photo"
-                    onclick="showImage('images/alemancup24/IMG_6385.JPG')" />
+                <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/alemancup24/IMG_6385.JPG" alt="gallery-photo" onclick="showImage('images/alemancup24/IMG_6385.JPG')" />
             </div>
             <div>
-                <img class="object-cover object-center w-full h-40 max-w-full rounded-lg"
-                    src="images/alemancup24/IMG_6403.JPG" alt="gallery-photo"
-                    onclick="showImage('images/alemancup24/IMG_6403.JPG')" />
+                <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/alemancup24/IMG_6403.JPG" alt="gallery-photo" onclick="showImage('images/alemancup24/IMG_6403.JPG')" />
             </div>
             <div>
-                <img class="object-cover object-center w-full h-40 max-w-full rounded-lg"
-                    src="images/alemancup24/IMG_6570.JPG" alt="gallery-photo"
-                    onclick="showImage('images/alemancup24/IMG_6570.JPG')" />
+                <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/alemancup24/IMG_6570.JPG" alt="gallery-photo" onclick="showImage('images/alemancup24/IMG_6570.JPG')" />
             </div>
             <div>
-                <img class="object-cover object-center w-full h-40 max-w-full rounded-lg"
-                    src="images/alemancup24/IMG_6658.JPG" alt="gallery-photo"
-                    onclick="showImage('images/alemancup24/IMG_6658.JPG')" />
+                <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/alemancup24/IMG_6658.JPG" alt="gallery-photo" onclick="showImage('images/alemancup24/IMG_6658.JPG')" />
             </div>
             <div>
-                <img class="object-cover object-center w-full h-40 max-w-full rounded-lg"
-                    src="images/alemancup24/IMG_6704.JPG" alt="gallery-photo"
-                    onclick="showImage('images/alemancup24/IMG_6704.JPG')" />
+                <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/alemancup24/IMG_6704.JPG" alt="gallery-photo" onclick="showImage('images/alemancup24/IMG_6704.JPG')" />
             </div>
             <div>
-                <img class="object-cover object-center w-full h-40 max-w-full rounded-lg"
-                    src="images/alemancup24/IMG_6713.JPG" alt="gallery-photo"
-                    onclick="showImage('images/alemancup24/IMG_6713.JPG')" />
+                <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/alemancup24/IMG_6713.JPG" alt="gallery-photo" onclick="showImage('images/alemancup24/IMG_6713.JPG')" />
             </div>
             <div class="relative">
                 <div class="absolute z-10 " style="width: 40px; height: 40px; top: 40%; left: 50%; transform: translate(-50%, -50%); pointer-events: none; display: flex; justify-content: center; align-items: center; background-color: rgba(255, 255, 255, 0);">
-                        <span style="font-size: 84px; color: rgb(255, 255, 255);">+</span>
-                    </div>
+                    <span style="font-size: 84px; color: rgb(255, 255, 255);">+</span>
+                </div>
                 <div style="position: relative; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
-                    <img class="object-cover object-center w-full h-40 max-w-full rounded-lg"
-                        src="images/alemancup24/IMG_6728.JPG" alt="gallery-photo"
-                        onclick="showImage('images/alemancup24/IMG_6728.JPG')" />
-                    
+                    <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/alemancup24/IMG_6728.JPG" alt="gallery-photo" onclick="showImage('images/alemancup24/IMG_6728.JPG')" />
+
                 </div>
             </div>
         </div>
@@ -266,18 +237,14 @@
                 <br> Es gibt fünf Disziplinen (Mixed, Damendoppel, Herrendoppel, Herreneinzel, Dameneinzel) mit bis zu 5
                 Leistungsklassen:
             </span>
-            <div
-                class="mt-10 grid grid-cols-1 gap-6 lg:gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-5 overflow-hidden">
-                <figure
-                    class="relative flex flex-col-inherit bg-slate-50 rounded-lg p-6 dark:bg-slate-800 dark:highlight-white/5">
+            <div class="mt-10 grid grid-cols-1 gap-6 lg:gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-5 overflow-hidden">
+                <figure class="relative flex flex-col-inherit bg-slate-50 rounded-lg p-6 dark:bg-slate-800 dark:highlight-white/5">
                     <figcaption class="flex items-center space-x-4">
-                        <svg class="bg-blue-300 rounded-full" height="42px" style="min-width: 45px;max-width: 45px;"
-                            xmlns="http://www.w3.org/2000/svg">
+                        <svg class="bg-blue-300 rounded-full" height="42px" style="min-width: 45px;max-width: 45px;" xmlns="http://www.w3.org/2000/svg">
                             <text x="5" y="30" fill="blue" stroke="black" font-size="35">VL</text>
                         </svg>
                         <div class="flex-auto">
-                            <div class="text-base text-slate-900 font-semibold dark:text-slate-300"><a href=""
-                                    tabindex="0" class=""><span class="absolute inset-0"></span>Elite</a></div>
+                            <div class="text-base text-slate-900 font-semibold dark:text-slate-300"><a href="" tabindex="0" class=""><span class="absolute inset-0"></span>Elite</a></div>
                             <div class="mt-0.5">
                                 <span data-lang="en" class="hidden">Verbandsliga and higher</span>
                                 <span data-lang="de">Verbandsliga und höher</span>
@@ -286,61 +253,49 @@
                     </figcaption>
                 </figure>
 
-                <figure
-                    class="relative flex flex-col-inherit bg-slate-50 rounded-lg p-6 dark:bg-slate-800 dark:highlight-white/5">
+                <figure class="relative flex flex-col-inherit bg-slate-50 rounded-lg p-6 dark:bg-slate-800 dark:highlight-white/5">
                     <figcaption class="flex items-center space-x-4">
-                        <svg class="bg-blue-300 rounded-full" height="42" style="min-width: 45px;max-width: 45px;"
-                            xmlns="http://www.w3.org/2000/svg">
+                        <svg class="bg-blue-300 rounded-full" height="42" style="min-width: 45px;max-width: 45px;" xmlns="http://www.w3.org/2000/svg">
                             <text x="5" y="30" fill="blue" stroke="black" font-size="35">LL</text>
                         </svg>
                         <div class="flex-auto">
-                            <div class="text-base text-slate-900 font-semibold dark:text-slate-300"><a href=""
-                                    tabindex="0" class=""><span class="absolute inset-0"></span>Premium</a></div>
+                            <div class="text-base text-slate-900 font-semibold dark:text-slate-300"><a href="" tabindex="0" class=""><span class="absolute inset-0"></span>Premium</a></div>
                             <div class="mt-0.5">max. Landesliga</div>
                         </div>
                     </figcaption>
                 </figure>
 
-                <figure
-                    class="relative flex flex-col-inherit bg-slate-50 rounded-lg p-6 dark:bg-slate-800 dark:highlight-white/5">
+                <figure class="relative flex flex-col-inherit bg-slate-50 rounded-lg p-6 dark:bg-slate-800 dark:highlight-white/5">
                     <figcaption class="flex items-center space-x-4">
-                        <svg class="bg-blue-300 rounded-full" height="42" style="min-width: 45px;max-width: 45px;"
-                            xmlns="http://www.w3.org/2000/svg">
+                        <svg class="bg-blue-300 rounded-full" height="42" style="min-width: 45px;max-width: 45px;" xmlns="http://www.w3.org/2000/svg">
                             <text x="5" y="30" fill="blue" stroke="black" font-size="35">BL</text>
                         </svg>
                         <div class="flex-auto">
-                            <div class="text-base text-slate-900 font-semibold dark:text-slate-300"><a href=""
-                                    tabindex="0" class=""><span class="absolute inset-0"></span>Standard</a></div>
+                            <div class="text-base text-slate-900 font-semibold dark:text-slate-300"><a href="" tabindex="0" class=""><span class="absolute inset-0"></span>Standard</a></div>
                             <div class="mt-0.5">max. Bezirksliga</div>
                         </div>
                     </figcaption>
                 </figure>
 
-                <figure
-                    class="relative flex flex-col-inherit bg-slate-50 rounded-lg p-6 dark:bg-slate-800 dark:highlight-white/5">
+                <figure class="relative flex flex-col-inherit bg-slate-50 rounded-lg p-6 dark:bg-slate-800 dark:highlight-white/5">
                     <figcaption class="flex items-center space-x-4">
-                        <svg class="bg-blue-300 rounded-full" height="42" style="min-width: 45px;max-width: 45px;"
-                            xmlns="http://www.w3.org/2000/svg">
+                        <svg class="bg-blue-300 rounded-full" height="42" style="min-width: 45px;max-width: 45px;" xmlns="http://www.w3.org/2000/svg">
                             <text x="5" y="30" fill="blue" stroke="black" font-size="35">BK</text>
                         </svg>
                         <div class="flex-auto">
-                            <div class="text-base text-slate-900 font-semibold dark:text-slate-300"><a href=""
-                                    tabindex="0" class=""><span class="absolute inset-0"></span>Basic</a></div>
+                            <div class="text-base text-slate-900 font-semibold dark:text-slate-300"><a href="" tabindex="0" class=""><span class="absolute inset-0"></span>Basic</a></div>
                             <div class="mt-0.5">max. Bezirksklasse</div>
                         </div>
                     </figcaption>
                 </figure>
 
-                <figure
-                    class="relative flex flex-col-inherit bg-slate-50 rounded-lg p-6 dark:bg-slate-800 dark:highlight-white/5">
+                <figure class="relative flex flex-col-inherit bg-slate-50 rounded-lg p-6 dark:bg-slate-800 dark:highlight-white/5">
                     <figcaption class="flex items-center space-x-4">
-                        <svg class="bg-blue-300 rounded-full" height="42" style="min-width: 45px;max-width: 45px;"
-                            xmlns="http://www.w3.org/2000/svg">
+                        <svg class="bg-blue-300 rounded-full" height="42" style="min-width: 45px;max-width: 45px;" xmlns="http://www.w3.org/2000/svg">
                             <text x="5" y="30" fill="blue" stroke="black" font-size="35">KL</text>
                         </svg>
                         <div class="flex-auto">
-                            <div class="text-base text-slate-900 font-semibold dark:text-slate-300"><a href=""
-                                    tabindex="0" class=""><span class="absolute inset-0"></span>Fun</a></div>
+                            <div class="text-base text-slate-900 font-semibold dark:text-slate-300"><a href="" tabindex="0" class=""><span class="absolute inset-0"></span>Fun</a></div>
                             <div class="mt-0.5">max. Kreisliga</div>
                         </div>
                     </figcaption>
@@ -362,14 +317,15 @@
                 href="https://bv-aachen.de/files/AL_Cup_2024/Al-Cup%20Ausschreibung%202024%20DE.pdf">
                 <span data-lang="en" class="hidden">To the announcement</span>
                 <span data-lang="de">Zur Ausschreibung</span>
-                <svg class="overflow-visible ml-3 text-pink-300 group-hover:text-pink-400 dark:text-slate-500 dark:group-hover:text-slate-400"
-                    width="3" height="6" viewBox="0 0 3 6" fill="none" stroke="currentColor" stroke-width="2"
-                    stroke-linecap="round" stroke-linejoin="round">
+                <svg class="overflow-visible ml-3 text-pink-300 group-hover:text-pink-400 dark:text-slate-500 dark:group-hover:text-slate-400" width="3" height="6" viewBox="0 0 3 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M0 0L3 3L0 6"></path>
                 </svg></a>
 
             <div class="justify-center">
-                <h2 class="text-xl font-extrabold dark:text-white mt-10">Halle</h2>
+                <h2 class="text-xl font-extrabold dark:text-white mt-10">
+                    <span data-lang="en" class="hidden">Location</span>
+                    <span data-lang="de">Ort</span>
+                </h2>
                 <p>
                     <strong>Alemannen Cup</strong>
                     <br> Hexenkessel
@@ -377,10 +333,8 @@
                     <br> 52068 Aachen
                     <br>
                     <br>
-                    <iframe width="100%" height="450"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2522.3481175385423!2d6.123516177362116!3d50.78765677165854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c0994acbb2f2d5%3A0x8fca3b1ef361728b!2sNeuk%C3%B6llner%20Str.%209%2C%2052068%20Aachen!5e0!3m2!1sde!2sde!4v1720806096531!5m2!1sde!2sde"
-                        style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe width="100%" height="450" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2522.3481175385423!2d6.123516177362116!3d50.78765677165854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c0994acbb2f2d5%3A0x8fca3b1ef361728b!2sNeuk%C3%B6llner%20Str.%209%2C%2052068%20Aachen!5e0!3m2!1sde!2sde!4v1720806096531!5m2!1sde!2sde"
+                        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </p>
             </div>
             <h1 class="mt-20"> Das Alemannen Cup Team und der ganze BVA freut sich auf eure Meldungen!</h1>

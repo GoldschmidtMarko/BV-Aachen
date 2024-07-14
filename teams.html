@@ -16,7 +16,7 @@
     <script src="https://cdn.jsdelivr.net/npm/idb/build/iife/index-min.js"></script>
     <script src="javascripts/language-toggle.js"></script>
     <script>
-        window.addEventListener('DOMContentLoaded', function () {
+        window.addEventListener('DOMContentLoaded', function() {
             if (window.innerWidth < 768) {
                 showhide(['navigation', 'languageToggle']);
             }
@@ -95,16 +95,24 @@
                     <!-- TODO: remove temporary warning and replace images and description -->
                     <div class="absolute top-0 left-0 right-0 px-4 py-2">
                         <h3 class="text-3xl text-red-600 dark:text-red-600 font-bold">
-                            Bild aus Saison 2022
+                            <span data-lang="en" class="hidden">Image from season 2022</span>
+                            <span data-lang="de">Bild aus Saison 2022</span>
                         </h3>
                     </div>
 
                     <div class="absolute bottom-0 left-0 right-0 px-4 py-2 bg-gray-800 opacity-70">
                         <h3 class="text-xl text-white font-bold">
-                            1. Mannschaft <a href="https://dbv.turnier.de/sport/league/team?id=066F2F48-EF43-47A8-999F-A2021BE81D09&team=1131" class="font-medium text-white-600 dark:text-White-600 underline">Verbandsliga</a>
+                            <span data-lang="en" class="hidden">1st Team</span>
+                            <span data-lang="de">1. Mannschaft</span>
+                            <a href="https://dbv.turnier.de/sport/league/team?id=066F2F48-EF43-47A8-999F-A2021BE81D09&team=1131" class="font-medium text-white-600 dark:text-White-600 underline">Verbandsliga</a>
                         </h3>
                         <p class="mt-2 text-sm text-gray-300">
+                            <span data-lang="en" class="hidden">
+                                (from left to right) Ken Nozaki, Artur Mühlbeier, Claudia Jendyczek, Anne Liang, David Brock, Benedikt Nilges
+                            </span>
+                            <span data-lang="de">
                             (v.l.n.r) Ken Nozaki, Artur Mühlbeier, Claudia Jendyczek, Anne Liang, David Brock, Benedikt Nilges
+                            </span>
                         </p>
                     </div>
                 </div>
@@ -115,15 +123,25 @@
 
                     <!-- TODO: remove temporary warning and replace images and description -->
                     <div class="absolute top-0 left-0 right-0 px-4 py-2">
-                        <h3 class="text-3xl text-red-600 dark:text-red-600 font-bold">Bild aus Saison 2022</h3>
+                        <h3 class="text-3xl text-red-600 dark:text-red-600 font-bold">
+                            <span data-lang="en" class="hidden">Image from season 2022</span>
+                            <span data-lang="de">Bild aus Saison 2022</span>
+                        </h3>
                     </div>
 
                     <div class="absolute bottom-0 left-0 right-0 px-4 py-2 bg-gray-800 opacity-70">
                         <h3 class="text-xl text-white font-bold">
-                            2. Mannschaft <a href="https://dbv.turnier.de/sport/league/team?id=066F2F48-EF43-47A8-999F-A2021BE81D09&team=1132" class="font-medium text-white-600 dark:text-White-600 underline">Bezirksliga</a>
+                            <span data-lang="en" class="hidden">2nd Team</span>
+                            <span data-lang="de">2. Mannschaft</span>
+                            <a href="https://dbv.turnier.de/sport/league/team?id=066F2F48-EF43-47A8-999F-A2021BE81D09&team=1132" class="font-medium text-white-600 dark:text-White-600 underline">Bezirksliga</a>
                         </h3>
                         <p class="mt-2 text-sm text-gray-300">
-                            (v.l.n.r) Xing Zhang, Daniyal Mahmood, Miro Gondrum, Weijung li, Johanna Holsten, Shota Ito, Philip Verkerk
+                            <span data-lang="en" class="hidden">
+                                (from left to right) Xing Zhang, Daniyal Mahmood, Miro Gondrum, Weijung li, Johanna Holsten, Shota Ito, Philip Verkerk
+                            </span>
+                            <span data-lang="de">
+                                (v.l.n.r) Xing Zhang, Daniyal Mahmood, Miro Gondrum, Weijung li, Johanna Holsten, Shota Ito, Philip Verkerk
+                            </span>
                         </p>
                     </div>
                 </div>
@@ -134,15 +152,25 @@
 
                     <!-- TODO: remove temporary warning and replace images and description -->
                     <div class="absolute top-0 left-0 right-0 px-4 py-2">
-                        <h3 class="text-3xl text-red-600 dark:text-red-600 font-bold">Bild aus Saison 2022</h3>
+                        <h3 class="text-3xl text-red-600 dark:text-red-600 font-bold">
+                            <span data-lang="en" class="hidden">Image from season 2022</span>
+                            <span data-lang="de">Bild aus Saison 2022</span>
+                        </h3>
                     </div>
 
                     <div class="absolute bottom-0 left-0 right-0 px-4 py-2 bg-gray-800 opacity-70">
                         <h3 class="text-xl text-white font-bold">
-                            3. Mannschaft <a href="https://dbv.turnier.de/sport/league/team?id=066F2F48-EF43-47A8-999F-A2021BE81D09&team=1133" class="font-medium text-white-600 dark:text-White-600 underline">Bezirksliga</a>
+                            <span data-lang="en" class="hidden">3rd Team</span>
+                            <span data-lang="de">3. Mannschaft</span>
+                            <a href="https://dbv.turnier.de/sport/league/team?id=066F2F48-EF43-47A8-999F-A2021BE81D09&team=1133" class="font-medium text-white-600 dark:text-White-600 underline">Bezirksliga</a>
                         </h3>
                         <p class="mt-2 text-sm text-gray-300">
+                            <span data-lang="en" class="hidden">
+                                (from left to right) Johannes Kurz, Nicole Koczorek, Ulrich Lin, Jennifer Schubert, Max Schubert, Stefan Beschnitt, David Franke, Eva Feldhoff, Jochen Abele
+                            </span>
+                            <span data-lang="de">
                             (v.l.n.r) Johannes Kurz, Nicole Koczorek, Ulrich Lin, Jennifer Schubert, Max Schubert, Stefan Beschnitt, David Franke, Eva Feldhoff, Jochen Abele
+                            </span>
                         </p>
                     </div>
                 </div>
@@ -153,15 +181,27 @@
 
                     <!-- TODO: remove temporary warning and replace images and description -->
                     <div class="absolute top-0 left-0 right-0 px-4 py-2">
-                        <h3 class="text-3xl text-red-600 dark:text-red-600 font-bold">Bild aus Saison 2022</h3>
+                        <h3 class="text-3xl text-red-600 dark:text-red-600 font-bold">
+                            <span data-lang="en" class="hidden">Image from season 2022</span>
+                            <span data-lang="de">Bild aus Saison 2022</span>
+                        </h3>
                     </div>
 
                     <div class="absolute bottom-0 left-0 right-0 px-4 py-2 bg-gray-800 opacity-70">
                         <h3 class="text-xl text-white font-bold">
-                            4. Mannschaft <a href="https://dbv.turnier.de/sport/league/team?id=066F2F48-EF43-47A8-999F-A2021BE81D09&team=1134" class="font-medium text-white-600 dark:text-White-600 underline">Bezirksklasse</a>
+                            <span data-lang="en" class="hidden">4th Team</span>
+                            <span data-lang="de">
+                                4. Mannschaft
+                            </span>
+                            <a href="https://dbv.turnier.de/sport/league/team?id=066F2F48-EF43-47A8-999F-A2021BE81D09&team=1134" class="font-medium text-white-600 dark:text-White-600 underline">Bezirksklasse</a>
                         </h3>
                         <p class="mt-2 text-sm text-gray-300">
-                            (v.l.n.r.) Valentin Himmel, Lina Köllmann, Felix Flammer, Ruth Basten, Lukas Bram, Hendrik Hänel
+                            <span data-lang="en" class="hidden">
+                                (from left to right) Valentin Himmel, Lina Köllmann, Felix Flammer, Ruth Basten, Lukas Bram, Hendrik Hänel
+                            </span>
+                            <span data-lang="de">
+                                (v.l.n.r.) Valentin Himmel, Lina Köllmann, Felix Flammer, Ruth Basten, Lukas Bram, Hendrik Hänel
+                            </span>
                         </p>
                     </div>
                 </div>
@@ -172,15 +212,25 @@
 
                     <!-- TODO: remove temporary warning and replace images and description -->
                     <div class="absolute top-0 left-0 right-0 px-4 py-2">
-                        <h3 class="text-3xl text-red-600 dark:text-red-600 font-bold">Bild aus Saison 2022</h3>
+                        <h3 class="text-3xl text-red-600 dark:text-red-600 font-bold">
+                            <span data-lang="en" class="hidden">Image from season 2022</span>
+                            <span data-lang="de">Bild aus Saison 2022</span>
+                        </h3>
                     </div>
 
                     <div class="absolute bottom-0 left-0 right-0 px-4 py-2 bg-gray-800 opacity-70">
                         <h3 class="text-xl text-white font-bold">
-                            5. Mannschaft <a href="https://dbv.turnier.de/sport/league/team?id=066F2F48-EF43-47A8-999F-A2021BE81D09&team=1135" class="font-medium text-white-600 dark:text-White-600 underline">Bezirksklasse</a>
+                            <span data-lang="en" class="hidden">5th Team</span>
+                            <span data-lang="de">5. Mannschaft</span>
+                            <a href="https://dbv.turnier.de/sport/league/team?id=066F2F48-EF43-47A8-999F-A2021BE81D09&team=1135" class="font-medium text-white-600 dark:text-White-600 underline">Bezirksklasse</a>
                         </h3>
                         <p class="mt-2 text-sm text-gray-300">
-                            (v.l.n.r.) Huochen Jiang, Aryan Aryan, Anil Kumar Totakura,San Lei Weng, Sven Pfennings, Kim Loan Do, Leon Pogemöller
+                            <span data-lang="en" class="hidden">
+                                (from left to right) Huochen Jiang, Aryan Aryan, Anil Kumar Totakura, San Lei Weng, Sven Pfennings, Kim Loan Do, Leon Pogemöller
+                            </span>
+                            <span data-lang="de">
+                                (v.l.n.r.) Huochen Jiang, Aryan Aryan, Anil Kumar Totakura,San Lei Weng, Sven Pfennings, Kim Loan Do, Leon Pogemöller
+                            </span>
                         </p>
                     </div>
                 </div>
@@ -191,15 +241,25 @@
 
                     <!-- TODO: remove temporary warning and replace images and description -->
                     <div class="absolute top-0 left-0 right-0 px-4 py-2">
-                        <h3 class="text-3xl text-red-600 dark:text-red-600 font-bold">Bild aus Saison 2022</h3>
+                        <h3 class="text-3xl text-red-600 dark:text-red-600 font-bold">
+                            <span data-lang="en" class="hidden">Image from season 2022</span>
+                            <span data-lang="de">Bild aus Saison 2022</span>
+                        </h3>
                     </div>
 
                     <div class="absolute bottom-0 left-0 right-0 px-4 py-2 bg-gray-800 opacity-70">
                         <h3 class="text-xl text-white font-bold">
-                            Jugendmannschaft <a href="https://dbv.turnier.de/sport/league/team?id=066F2F48-EF43-47A8-999F-A2021BE81D09&team=1136" class="font-medium text-white-600 dark:text-White-600 underline">U19</a>
+                            <span data-lang="en" class="hidden">Youth Team</span>
+                            <span data-lang="de">Jugendmannschaft</span>
+                            <a href="https://dbv.turnier.de/sport/league/team?id=066F2F48-EF43-47A8-999F-A2021BE81D09&team=1136" class="font-medium text-white-600 dark:text-White-600 underline">U19</a>
                         </h3>
                         <p class="mt-2 text-sm text-gray-300">
-                            (v.l.n.r.) Friedrich Grommes, Viet-Sam Do, Justus Meentz, Sophie Schalla
+                            <span data-lang="en" class="hidden">
+                                (from left to right) Friedrich Grommes, Viet-Sam Do, Justus Meentz, Sophie Schalla
+                            </span>
+                            <span data-lang="de">
+                                (v.l.n.r.) Friedrich Grommes, Viet-Sam Do, Justus Meentz, Sophie Schalla
+                            </span>
                         </p>
                     </div>
                 </div>
@@ -210,15 +270,24 @@
 
                     <!-- TODO: remove temporary warning and replace images and description -->
                     <div class="absolute top-0 left-0 right-0 px-4 py-2">
-                        <h3 class="text-3xl text-red-600 dark:text-red-600 font-bold">Bild fehlt</h3>
+                        <h3 class="text-3xl text-red-600 dark:text-red-600 font-bold">
+                            <span data-lang="en" class="hidden">Image missing</span>
+                            <span data-lang="de">Bild fehlt</span>
+                        </h3>
                     </div>
 
                     <div class="absolute bottom-0 left-0 right-0 px-4 py-2 bg-gray-800 opacity-70">
                         <h3 class="text-xl text-white font-bold">
-                            Jugendmannschaft <a href="https://dbv.turnier.de/sport/league/team?id=066F2F48-EF43-47A8-999F-A2021BE81D09&team=1137" class="font-medium text-white-600 dark:text-White-600 underline">U15</a>
+                            <span data-lang="en" class="hidden">Youth Team</span>
+                            <span data-lang="de">Jugendmannschaft</span> Jugendmannschaft <a href="https://dbv.turnier.de/sport/league/team?id=066F2F48-EF43-47A8-999F-A2021BE81D09&team=1137" class="font-medium text-white-600 dark:text-White-600 underline">U15</a>
                         </h3>
                         <p class="mt-2 text-sm text-gray-300">
-                            Andrea Bönsch, Lina Köllmann, Andrea Schultes, Felix Flammer, Matthias Schmidt, Nico Altenhofen, Arnim Hanke, Malte Schütz und Gildas Esnault
+                            <span data-lang="en" class="hidden">
+                                (from left to right) TODO
+                            </span>
+                            <span data-lang="de">
+                                (v.l.n.r.) TODO
+                            </span>
                         </p>
                     </div>
                 </div>
