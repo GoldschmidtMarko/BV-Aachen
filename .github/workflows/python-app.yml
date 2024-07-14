@@ -92,7 +92,7 @@ jobs:
         if: env.force_flag == 'false'
         run: |
           echo "Changed files:"
-          echo "${{ env.changed_files }}"
+          echo "${{ env.changed_files }}" 
           echo "Deleted files:"
           echo "${{ env.deleted_files }}"
 

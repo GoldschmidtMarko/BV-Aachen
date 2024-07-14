@@ -140,7 +140,7 @@ def upload_files_recursivly(ftp, local_last_directory, local_full_path, remote_f
     if can_upload_file(full_local_path):
       upload_files_recursivly(ftp, directory, full_local_path, remote_folder_path_cur)
       ftp.cwd("..")
-
+ 
   
 
   
