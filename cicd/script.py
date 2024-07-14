@@ -31,11 +31,13 @@ uploadable_file_names = ["alemannencup.html",
 
 # Function to upload a file
 def upload_file(ftp, local_file_path, remote_file_path):
-    try:
-       with open(local_file_path, 'rb') as file:
-        ftp.storbinary(f'STOR {remote_file_path}', file)
-    except Exception as e:
-        print(f'Failed to upload {local_file_path} to {remote_file_path}, Error: {e}')
+  global number_inserted_files
+  try:
+    with open(local_file_path, 'rb') as file:
+      ftp.storbinary(f'STOR {remote_file_path}', file)
+      number_inserted_files += 1
+  except Exception as e:
+      print(f'Failed to upload {local_file_path} to {remote_file_path}, Error: {e}')
     
     
 # Function to delete a file
@@ -64,7 +66,7 @@ def delete_folder_contents(ftp, folder_path):
     # print(f'Current files: {current_files}')
     # print("Trying to delete: ", folder_path)
     if folder_path not in current_files:
-      print(f'Folder {folder_path} does not exist on the FTP server.', current_files)
+      print(f'Cannot delete item {folder_path}. Does not exist on the FTP server.')
       return
     
     if folder_path == ".." or folder_path == "." or folder_path == "/":
@@ -189,15 +191,19 @@ def exchange_modified_data(ftp, upload_folder, changed_files, deleted_files):
     full_reinstallation(ftp, upload_folder)
     return
   
-  changed_files_list = changed_files[0].split("\n")
-  deleted_files_list = deleted_files[0].split("\n")
+  changed_files_list = changed_files.split("\n")
+  deleted_files_list = deleted_files.split("\n")
   changed_files_list_cleaned = [file for file in changed_files_list if file != ""]
   deleted_files_list_cleaned = [file for file in deleted_files_list if file != ""]
   
   print("Changed files list: ", changed_files_list_cleaned)
   print("Deleted files list: ", deleted_files_list_cleaned)
+  ftp.cwd(upload_folder)
+  
+  
   print("###############################################################")
   print("Deleting files from the FTP server")
+
   for file in deleted_files_list_cleaned:
     if can_upload_file(file):
       current_path = ftp.pwd()
@@ -206,24 +212,24 @@ def exchange_modified_data(ftp, upload_folder, changed_files, deleted_files):
       ftp.cwd(directory_to_file)
       delete_folder_contents(ftp, direct_file_name)
       ftp.cwd(current_path)
+  print("Number of deleted files: ", number_deleted_files)
       
   print("###############################################################")
   print("Uploading files to the FTP server")
-  repo_root_path = subprocess.check_output(['git', 'rev-parse', '--show-toplevel']).decode('utf-8').strip()
   for file in changed_files_list_cleaned:
     if can_upload_file(file):
       current_path = ftp.pwd()
-      directory_to_file = "".join(file.split("/")[:-1])
+      directory_to_file = file.split("/")[:-1]
+      directory_to_file = "/".join(directory_to_file)
       direct_file_name = file.split("/")[-1]
-      print("directory_to_file: ", directory_to_file)
-      print("direct_file_name: ", direct_file_name)
-      print("current_path: ", current_path)
-      print("file: ", file)
-      print("repo_root_path: ", repo_root_path)
-      sys.exit() 
-      ftp.cwd(directory_to_file)
+      for directory in directory_to_file.split("/"):
+        if directory not in ftp.nlst():
+          ftp.mkd(directory)
+        ftp.cwd(directory)
       upload_file(ftp, file, direct_file_name)
       ftp.cwd(current_path)
+      
+  print("Number of inserted files: ", number_inserted_files)
       
   
 
@@ -274,8 +280,46 @@ def main_script():
   print("Script finished")
     
     
+    
+def manual_test():
+  contains_force = False
+  changed_files = "files/Al-Cup Ausschreibung 2024 DE.pdf"
+  deleted_files = "files"
+  
+  print("Changed files:", changed_files)
+  print("Deleted files:", deleted_files)
+  
+  try:
+    # create FTP server
+    print("###############################################################")
+    print("Creating FTP server")
+    ftp = FTP(SECRET_HOST_NAME)
+
+    # login to the server
+    print("Logging in to the FTP server")
+    ftp.login(user=SECRET_USER_NAME, passwd=SECRET_PASSWORD)
+    print("Login successful")
+    
+    if contains_force:
+      full_reinstallation(ftp, upload_folder)
+    else:
+      exchange_modified_data(ftp, upload_folder, changed_files, deleted_files)
+    
+
+    # close the connection
+    print("###############################################################")
+    print("Closing the FTP server connection")
+    ftp.quit()
+  except Exception as e:
+    print(e)
+    print('Error: Unable to connect to the FTP server')
+    
+  print("###############################################################")
+  print("Script finished")
+    
   
 if __name__ == "__main__":
+  # manual_test()
   main_script()
   
 
