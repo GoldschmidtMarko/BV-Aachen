@@ -70,7 +70,7 @@ def delete_folder_contents(ftp, folder_path):
       return
     
     if folder_path == ".." or folder_path == "." or folder_path == "/":
-      print(f'Cannot delete root folder name {folder_path}.')
+      # print(f'Cannot delete root folder name {folder_path}.')
       return
     
     if is_ftp_directory(ftp, folder_path) == False:
