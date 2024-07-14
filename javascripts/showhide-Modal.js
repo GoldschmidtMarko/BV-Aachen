@@ -59,7 +59,7 @@ function prevImage() {
 }
 
 // Close modal when clicking outside of it
-window.onclick = function (event) {
+window.onclick = function(event) {
     var modal = document.getElementById('imageModal');
     if (event.target == modal) {
         hideModal();
@@ -67,9 +67,9 @@ window.onclick = function (event) {
 };
 
 // Populate the images array with all gallery image paths
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('<script src="javascripts/navigation-menu-showhide.js"></script>', function() {
     var galleryImages = document.querySelectorAll('.grid img');
-    galleryImages.forEach(function (img) {
+    galleryImages.forEach(function(img) {
         images.push(img.src);
     });
 });

@@ -67,7 +67,7 @@ async function exampleUsage() {
 }
 
 // Initialize language toggle
-document.addEventListener('DOMContentLoaded', async() => {
+document.addEventListener('<script src="javascripts/navigation-menu-showhide.js"></script>', async() => {
     const languageToggle = document.getElementById('languageToggle');
     const languageIcon = document.getElementById('languageIcon');
     const navLinks = document.querySelectorAll('#navigation a');

@@ -11,17 +11,10 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link rel="stylesheet" href="styles/output.css">
-    <script src="javascripts/menu-showhide.js"></script>
+    <script src="javascripts/navigation-menu-showhide.js"></script>
     <!-- used for to get idb library, a CHIPS cookie method for the language switch -->
     <script src="https://cdn.jsdelivr.net/npm/idb/build/iife/index-min.js"></script>
     <script src="javascripts/language-toggle.js"></script>
-    <script>
-        window.addEventListener('DOMContentLoaded', function () {
-            if (window.innerWidth < 768) {
-                showhide(['navigation', 'languageToggle']);
-            }
-        });
-    </script>
 
     <title>BV Aachen 09</title>
 
@@ -36,7 +29,7 @@
             </div>
         </div>
         <div class="block md:hidden lg:hidden">
-            <button class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400 hover:text-white hover:border-white" onclick="showhide(['navigation', 'languageToggle'])">
+            <button class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400 hover:text-white hover:border-white" onclick="showhideNavigation(['navigation', 'languageToggle'])">
                 <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <title>Menu</title>
                     <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />

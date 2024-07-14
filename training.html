@@ -11,18 +11,11 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link rel="stylesheet" href="styles/output.css">
-    <script src="javascripts/menu-showhide.js"></script>
+    <script src="javascripts/navigation-menu-showhide.js"></script>
     <!-- used for to get idb library, a CHIPS cookie method for the language switch -->
     <script src="https://cdn.jsdelivr.net/npm/idb/build/iife/index-min.js"></script>
     <script src="javascripts/language-toggle.js"></script>
-    <script>
-        window.addEventListener('DOMContentLoaded', function () {
-            if (window.innerWidth < 768) {
-                showhide(['navigation', 'languageToggle']);
-            }
-        });
-    </script>
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>BV Aachen 09</title>
     <link rel="stylesheet" href="styles/button-training-style.css">
@@ -37,7 +30,7 @@
             </div>
         </div>
         <div class="block md:hidden lg:hidden">
-            <button class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400 hover:text-white hover:border-white" onclick="showhide(['navigation', 'languageToggle'])">
+            <button class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400 hover:text-white hover:border-white" onclick="showhideNavigation(['navigation', 'languageToggle'])">
                 <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <title>Menu</title>
                     <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
@@ -379,51 +372,15 @@
 
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const today = new Date();
-            const month = today.getMonth(); // 0: January, 1: February, ..., 11: December
-
-            const columnsMonday1 = document.querySelectorAll('[data-column="monday1"]');
-            const columnsMonday2 = document.querySelectorAll('[data-column="monday2"]');
-
-            const setSummer = () => {
-                columnsMonday1.forEach(element => element.style.display = 'none');
-                columnsMonday2.forEach(element => element.style.display = 'block');
-                document.getElementById('seasonInfo_Ger').textContent = 'Von 01.04 bis 30.09';
-                document.getElementById('seasonInfo_Eng').textContent = 'From 01.04 to 30.09';
-            };
-
-            const setWinter = () => {
-                columnsMonday1.forEach(element => element.style.display = 'block');
-                columnsMonday2.forEach(element => element.style.display = 'none');
-                document.getElementById('seasonInfo_Ger').textContent = 'Von 01.10 bis 31.03';
-                document.getElementById('seasonInfo_Eng').textContent = 'From 01.10 to 31.03';
-            };
-
-            document.getElementById('summerButton').addEventListener('click', () => {
-                setSummer();
-                document.getElementById('summerButton').classList.add('active');
-                document.getElementById('winterButton').classList.remove('active');
-            });
-
-            document.getElementById('winterButton').addEventListener('click', () => {
-                setWinter();
-                document.getElementById('winterButton').classList.add('active');
-                document.getElementById('summerButton').classList.remove('active');
-            });
-
-            // Initial setup based on current month
-            if (month >= 3 && month <= 8) { // April (3) to September (8)
-                setSummer();
-                document.getElementById('summerButton').classList.add('active');
-                document.getElementById('winterButton').classList.remove('active');
-            } else {
-                setWinter();
-                document.getElementById('winterButton').classList.add('active');
-                document.getElementById('summerButton').classList.remove('active');
-            }
-        });
-    </script>
+        document.addEventListener('<script src="javascripts/navigation-menu-showhide.js">
+    </script>', () => { const today = new Date(); const month = today.getMonth(); // 0: January, 1: February, ..., 11: December const columnsMonday1 = document.querySelectorAll('[data-column="monday1"]'); const columnsMonday2 = document.querySelectorAll('[data-column="monday2"]');
+    const setSummer = () => { columnsMonday1.forEach(element => element.style.display = 'none'); columnsMonday2.forEach(element => element.style.display = 'block'); document.getElementById('seasonInfo_Ger').textContent = 'Von 01.04 bis 30.09'; document.getElementById('seasonInfo_Eng').textContent
+    = 'From 01.04 to 30.09'; }; const setWinter = () => { columnsMonday1.forEach(element => element.style.display = 'block'); columnsMonday2.forEach(element => element.style.display = 'none'); document.getElementById('seasonInfo_Ger').textContent = 'Von
+    01.10 bis 31.03'; document.getElementById('seasonInfo_Eng').textContent = 'From 01.10 to 31.03'; }; document.getElementById('summerButton').addEventListener('click', () => { setSummer(); document.getElementById('summerButton').classList.add('active');
+    document.getElementById('winterButton').classList.remove('active'); }); document.getElementById('winterButton').addEventListener('click', () => { setWinter(); document.getElementById('winterButton').classList.add('active'); document.getElementById('summerButton').classList.remove('active');
+    }); // Initial setup based on current month if (month >= 3 && month
+    <=8 ) { // April (3) to September (8) setSummer(); document.getElementById( 'summerButton').classList.add( 'active'); document.getElementById( 'winterButton').classList.remove( 'active'); } else { setWinter(); document.getElementById( 'winterButton').classList.add(
+        'active'); document.getElementById( 'summerButton').classList.remove( 'active'); } }); </script>
 
 
 </body>
