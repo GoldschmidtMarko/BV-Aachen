@@ -67,7 +67,7 @@ window.onclick = function(event) {
 };
 
 // Populate the images array with all gallery image paths
-document.addEventListener('<script src="javascripts/navigation-menu-showhide.js"></script>', function() {
+document.addEventListener('DOMContentLoaded', function() {
     var galleryImages = document.querySelectorAll('.grid img');
     galleryImages.forEach(function(img) {
         images.push(img.src);
