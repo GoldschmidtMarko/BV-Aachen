@@ -9,13 +9,22 @@ function showhideNavigation(ids) {
 
 window.addEventListener('DOMContentLoaded', function() {
     if (window.innerWidth < 768) {
-        showhideNavigation(['navigation', 'languageToggle']);
+        var e = document.getElementById('navigation');
+        if (e.style.display === 'block') {
+            showhideNavigation(['navigation', 'languageToggle']);
+        }
     }
 });
 window.addEventListener('resize', function() {
     if (window.innerWidth >= 768) {
         var e = document.getElementById('navigation');
         if (e.style.display === 'none') {
+            showhideNavigation(['navigation', 'languageToggle']);
+        }
+    }
+    if (window.innerWidth < 768) {
+        var e = document.getElementById('navigation');
+        if (e.style.display === 'block') {
             showhideNavigation(['navigation', 'languageToggle']);
         }
     }
