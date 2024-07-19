@@ -10,3 +10,22 @@
         display: inline;
     }
 }
+
+
+/* Base styles for the responsive text */
+
+.responsive-text {
+    font-size: 1rem;
+    /* Default font size for larger screens */
+}
+
+
+/* Media query for smaller screens */
+
+@media (max-width: 640px) {
+    /* Adjust the max-width value to your needs */
+    .responsive-text {
+        font-size: 0.75rem;
+        /* Smaller font size for mobile devices */
+    }
+}
