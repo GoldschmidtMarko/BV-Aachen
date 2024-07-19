@@ -1,0 +1,12 @@
+.shortened {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .original {
+        display: none;
+    }
+    .shortened {
+        display: inline;
+    }
+}

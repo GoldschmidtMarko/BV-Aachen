@@ -15,11 +15,15 @@
     <!-- used for to get idb library, a CHIPS cookie method for the language switch -->
     <script src="https://cdn.jsdelivr.net/npm/idb/build/iife/index-min.js"></script>
     <script src="javascripts/language-toggle.js"></script>
+    <script src="javascripts/training-text-shortener.js"></script>
+    <script src="javascripts/training-seasons-toggle.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>BV Aachen 09</title>
     <link rel="stylesheet" href="styles/button-training-style.css">
     <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/training-styles.css">
+
 </head>
 
 <body class="antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900 text-center dark">
@@ -124,24 +128,24 @@
                     <div></div>
                     <!-- Header Row for Days -->
                     <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
-                        <span data-lang="en" class="hidden">Monday</span>
-                        <span data-lang="de">Montag</span>
+                        <span data-lang="en" class="hidden">Mon</span>
+                        <span data-lang="de">Mon</span>
                     </div>
                     <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
-                        <span data-lang="en" class="hidden">Tuesday</span>
-                        <span data-lang="de">Dienstag</span>
+                        <span data-lang="en" class="hidden">Tue</span>
+                        <span data-lang="de">Di</span>
                     </div>
                     <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
-                        <span data-lang="en" class="hidden">Wednesday</span>
-                        <span data-lang="de">Mittwoch</span>
+                        <span data-lang="en" class="hidden">Wed</span>
+                        <span data-lang="de">Mi</span>
                     </div>
                     <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
-                        <span data-lang="en" class="hidden">Thursday</span>
-                        <span data-lang="de">Donnerstag</span>
+                        <span data-lang="en" class="hidden">Thu</span>
+                        <span data-lang="de">Do</span>
                     </div>
                     <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
-                        <span data-lang="en" class="hidden">Friday</span>
-                        <span data-lang="de">Freitag</span>
+                        <span data-lang="en" class="hidden">Fri</span>
+                        <span data-lang="de">Fr</span>
                     </div>
                     <!-- Time slots and events -->
                     <!-- 18:00 - 19:00 Row -->
@@ -233,12 +237,24 @@
                         <span data-lang="de">Ort</span>
                     </div>
                     <!-- Header Row for Days -->
-                    <div data-column="monday1" class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">Burtscheid</div>
-                    <div data-column="monday2" class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">Burtscheid</div>
-                    <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">Laurensberg</div>
-                    <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">Burtscheid</div>
-                    <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">Laurensberg</div>
-                    <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">Laurensberg</div>
+                    <div data-column="monday1" class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
+                        <span class="original">Burtscheid</span><span class="shortened">Burt</span>
+                    </div>
+                    <div data-column="monday2" class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
+                        <span class="original">Burtscheid</span><span class="shortened">Burt</span>
+                    </div>
+                    <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
+                        <span class="original">Laurensberg</span><span class="shortened">Lau</span>
+                    </div>
+                    <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
+                        <span class="original">Burtscheid</span><span class="shortened">Burt</span>
+                    </div>
+                    <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
+                        <span class="original">Laurensberg</span><span class="shortened">Lau</span>
+                    </div>
+                    <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
+                        <span class="original">Laurensberg</span><span class="shortened">Lau</span>
+                    </div>
 
                 </div>
             </div>
