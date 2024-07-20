@@ -295,7 +295,7 @@ def main_script():
     ftp.quit()
   except Exception as e:
     print(e)
-    print('Error: Unable to connect to the FTP server')
+    print('Error: Unable to connect to the FTP server ')
     
   print(print_line_seperator)
   print("Script finished")
