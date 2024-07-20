@@ -6,10 +6,9 @@ import subprocess
 SECRET_HOST_NAME = os.getenv('SECRET_HOST_NAME')
 SECRET_PASSWORD = os.getenv('SECRET_PASSWORD')
 SECRET_USER_NAME = os.getenv('SECRET_USER_NAME')
-
-upload_folder = "test"
 number_deleted_files = 0
 number_inserted_files = 0
+print_line_seperator = "###############################################################"
 
 uploadable_file_names = [
                           # files
@@ -30,6 +29,17 @@ uploadable_file_names = [
                           "styles",
                           "videos"]
 
+
+def get_current_branch_name():
+    try:
+        # Run the git command to get the current branch name
+        result = subprocess.run(['git', 'rev-parse', '--abbrev-ref', 'HEAD'], capture_output=True, text=True, check=True)
+        # Decode the branch name and strip any trailing newline characters
+        branch_name = result.stdout.strip()
+        return branch_name
+    except subprocess.CalledProcessError as e:
+        print(f"Error getting branch name: {e}")
+        return "test"
 
 # Function to upload a file
 def upload_file(ftp, local_file_path, remote_file_path):
@@ -149,7 +159,7 @@ def upload_files_recursivly(ftp, local_last_directory, local_full_path, remote_f
 def full_reinstallation(ftp, upload_folder):
   global number_deleted_files
   global number_inserted_files
-  print("###############################################################")
+  print(print_line_seperator)
   print("Running full reinstallation")
   # list the files in the current directory
   root_files = ftp.nlst()
@@ -162,7 +172,7 @@ def full_reinstallation(ftp, upload_folder):
     print("Creating test folder")
     ftp.mkd(upload_folder)
   else:
-    print("###############################################################")
+    print(print_line_seperator)
     print("Deleting files from the FTP server")
     # Recursively delete files in the upload folder
     delete_folder_contents(ftp, upload_folder)
@@ -172,7 +182,7 @@ def full_reinstallation(ftp, upload_folder):
   print()
   
   # Upload all files from the Git repository
-  print("###############################################################")
+  print(print_line_seperator)
   print("Uploading files to the FTP server")
   repo_root_path = subprocess.check_output(['git', 'rev-parse', '--show-toplevel']).decode('utf-8').strip()
   ftp.mkd(upload_folder)
@@ -183,7 +193,7 @@ def full_reinstallation(ftp, upload_folder):
   
   
 def exchange_modified_data(ftp, upload_folder, changed_files, deleted_files):
-  print("###############################################################")
+  print(print_line_seperator)
   print("Running exchange modified data")
   # list the files in the current directory
   root_files = ftp.nlst()
@@ -203,7 +213,7 @@ def exchange_modified_data(ftp, upload_folder, changed_files, deleted_files):
   ftp.cwd(upload_folder)
   
   
-  print("###############################################################")
+  print(print_line_seperator)
   print("Deleting files from the FTP server")
 
   for file in deleted_files_list_cleaned:
@@ -220,7 +230,7 @@ def exchange_modified_data(ftp, upload_folder, changed_files, deleted_files):
         ftp.cwd(current_path)
   print("Number of deleted files: ", number_deleted_files)
       
-  print("###############################################################")
+  print(print_line_seperator)
   print("Uploading files to the FTP server")
   for file in changed_files_list_cleaned:
     if can_upload_file(file):
@@ -254,10 +264,15 @@ def main_script():
   print("Changed files:", changed_files)
   print("Deleted files:", deleted_files)
   print("Contains force flag:", contains_force)
+  print(print_line_seperator)
+  
+  root_upload_folder = get_current_branch_name()
+  print("Uploading to folder: ", root_upload_folder)
+  print(print_line_seperator)
 
   try:
     # create FTP server
-    print("###############################################################")
+    print(print_line_seperator)
     print("Creating FTP server")
     ftp = FTP(SECRET_HOST_NAME)
 
@@ -266,10 +281,12 @@ def main_script():
     ftp.login(user=SECRET_USER_NAME, passwd=SECRET_PASSWORD)
     print("Login successful")
     
+    
+    
     if contains_force:
-      full_reinstallation(ftp, upload_folder)
+      full_reinstallation(ftp, root_upload_folder)
     else:
-      exchange_modified_data(ftp, upload_folder, changed_files, deleted_files)
+      exchange_modified_data(ftp, root_upload_folder, changed_files, deleted_files)
     
     
     
@@ -279,14 +296,14 @@ def main_script():
 
 
     # close the connection
-    print("###############################################################")
+    print(print_line_seperator)
     print("Closing the FTP server connection")
     ftp.quit()
   except Exception as e:
     print(e)
     print('Error: Unable to connect to the FTP server')
     
-  print("###############################################################")
+  print(print_line_seperator)
   print("Script finished")
     
     
@@ -298,10 +315,14 @@ def manual_test():
   
   print("Changed files:", changed_files)
   print("Deleted files:", deleted_files)
+  print(print_line_seperator)
+  root_upload_folder = get_current_branch_name()
+  print("Uploading to folder: ", root_upload_folder)
+  print(print_line_seperator)
   
   try:
     # create FTP server
-    print("###############################################################")
+    print(print_line_seperator)
     print("Creating FTP server")
     ftp = FTP(SECRET_HOST_NAME)
 
@@ -311,20 +332,20 @@ def manual_test():
     print("Login successful")
     
     if contains_force:
-      full_reinstallation(ftp, upload_folder)
+      full_reinstallation(ftp, root_upload_folder)
     else:
-      exchange_modified_data(ftp, upload_folder, changed_files, deleted_files)
+      exchange_modified_data(ftp, root_upload_folder, changed_files, deleted_files)
     
 
     # close the connection
-    print("###############################################################")
+    print(print_line_seperator)
     print("Closing the FTP server connection")
     ftp.quit()
   except Exception as e:
     print(e)
     print('Error: Unable to connect to the FTP server')
     
-  print("###############################################################")
+  print(print_line_seperator)
   print("Script finished")
     
   
