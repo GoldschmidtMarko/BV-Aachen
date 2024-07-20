@@ -164,14 +164,7 @@ def full_reinstallation(ftp, upload_folder):
   # list the files in the current directory
   root_files = ftp.nlst()
   
-  if upload_folder not in root_files:
-    # throw error if the folder does not exist
-    print("Folder does not exist")
-    # print("Existing Folders: ", root_files)
-    print("Specified Uploading folder", upload_folder)
-    print("Creating test folder")
-    ftp.mkd(upload_folder)
-  else:
+  if upload_folder in root_files:
     print(print_line_seperator)
     print("Deleting files from the FTP server")
     # Recursively delete files in the upload folder
