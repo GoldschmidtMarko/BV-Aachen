@@ -1,5 +1,5 @@
 # BV-Aachen Repository
-This repository is used for the BV-Aachen homepage.
+This [repository](https://github.com/GoldschmidtMarko/BV-Aachen) is used for the BV-Aachen homepage.
 
 The homepage is available under [https://www.bv-aachen.de/](https://www.bv-aachen.de/).
 
