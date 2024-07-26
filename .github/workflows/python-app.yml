@@ -17,6 +17,21 @@ jobs:
         with:
           fetch-depth: 50  # Fetch all history for all branches and tags
 
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'  # Adjust to the version you need
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run HTML Syntax Checker
+        run: |
+          python path/to/your_html_checker_script.py
+
+
       - name: Find last commit with upload in the message, and check for |force flag|
         id: find_commit_flags
         run: |
@@ -61,8 +76,6 @@ jobs:
 
           echo "force_flag=$force_flag" >> $GITHUB_ENV
 
-
-
       - name: Get changed and deleted files since last upload commit if |force_flag| is false
         id: get_changes
         if: env.force_flag == 'false'
@@ -106,19 +119,7 @@ jobs:
           echo "Commit message does not contains #upload. Stopping the pipeline."
           exit 0
 
-      - name: Set up Python
-        if: env.upload_flag == 'true' || env.force_flag == 'true'
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.x'  # Adjust to the version you need
-
-      - name: Install dependencies
-        if: env.upload_flag == 'true' || env.force_flag == 'true'
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-
-      - name: Run script
+      - name: Run upload script
         if: env.upload_flag == 'true' || env.force_flag == 'true'
         env:
           SECRET_HOST_NAME: ${{ secrets.SECRET_HOST_NAME }}
