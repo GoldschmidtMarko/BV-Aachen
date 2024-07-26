@@ -29,8 +29,7 @@ jobs:
 
       - name: Run HTML Syntax Checker
         run: |
-          python path/to/your_html_checker_script.py
-
+          python -u cicd/file_checking.py
 
       - name: Find last commit with upload in the message, and check for |force flag|
         id: find_commit_flags
@@ -126,4 +125,4 @@ jobs:
           SECRET_PASSWORD: ${{ secrets.SECRET_PASSWORD }}
           SECRET_USER_NAME: ${{ secrets.SECRET_USER_NAME }}
         run: |
-          python -u cicd/script.py "${{ env.changed_files }}" "${{ env.deleted_files }}" "${{ env.force_flag }}"
+          python -u cicd/upload_script.py "${{ env.changed_files }}" "${{ env.deleted_files }}" "${{ env.force_flag }}"
