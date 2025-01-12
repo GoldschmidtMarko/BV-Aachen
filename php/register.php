@@ -4,6 +4,11 @@ require_once 'php/db_config.php';
 
 try {
     // Connect to the database
+    $host = $db_credentials['host'];
+    $dbname = $db_credentials['dbname'];
+    $username = $db_credentials['username'];
+    $password = $db_credentials['password'];
+    
     $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -32,7 +37,7 @@ try {
 
         $stmt->execute();
 
-        echo "User registered successfully!";
+        echo "Registered successfully!";
     }
 } catch (PDOException $e) {
     echo "Error: " . $e->getMessage();

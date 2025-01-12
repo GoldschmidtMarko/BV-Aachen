@@ -1,7 +1,9 @@
 <?php
 // Database credentials
-$host = 'localhost';
-$dbname = 'user_registration';
-$username = 'root'; 
-$password = '';
+$db_credentials = [
+    'host' => '',       // Database host
+    'dbname' => '', // Database name
+    'username' => '',        // Database username
+    'password' => ''             // Database password
+];
 ?>

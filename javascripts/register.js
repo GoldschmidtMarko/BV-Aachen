@@ -1,23 +1,37 @@
 function toggleDoppelFields() {
-    var selectValue = document.getElementById('doppel').value;
-    var additionalFields = document.getElementById('additional-doppel');
+    const doppelSelect = document.getElementById('doppel');
+    const additionalDoppel = document.getElementById('additional-doppel');
+    const isVisible = doppelSelect.value !== "Kein Doppel";
 
-    // Show or hide additional fields based on the selected value
-    if (selectValue !== "Kein Doppel") {
-        additionalFields.classList.remove('hidden');
-    } else {
-        additionalFields.classList.add('hidden');
-    }
+    toggleRequiredFields(additionalDoppel, isVisible);
+    toggleVisibility(additionalDoppel, isVisible);
 }
 
 function toggleMixedFields() {
-    var selectValue = document.getElementById('mixed').value;
-    var additionalFields = document.getElementById('additional-mixed');
+    const mixedSelect = document.getElementById('mixed');
+    const additionalMixed = document.getElementById('additional-mixed');
+    const isVisible = mixedSelect.value !== "Kein Mixed";
 
-    // Show or hide additional fields based on the selected value
-    if (selectValue !== "Kein Mixed") {
-        additionalFields.classList.remove('hidden');
+    toggleRequiredFields(additionalMixed, isVisible);
+    toggleVisibility(additionalMixed, isVisible);
+}
+
+function toggleRequiredFields(container, isVisible) {
+    if (!container) return; // Ensure container exists
+    const inputs = container.querySelectorAll('input, select');
+    inputs.forEach((input) => {
+        if (isVisible) {
+            input.setAttribute('required', 'true');
+        } else {
+            input.removeAttribute('required');
+        }
+    });
+}
+
+function toggleVisibility(element, isVisible) {
+    if (isVisible) {
+        element.classList.remove('hidden');
     } else {
-        additionalFields.classList.add('hidden');
+        element.classList.add('hidden');
     }
 }
