@@ -54,7 +54,19 @@ try {
 
         $stmt->execute();
 
-        echo "Registered successfully!";
+        $to = "ma.goldschmidt@web.de";
+        $subject = "Test Email";
+        $message = "Hello, this is a test email!";
+        $headers = "From: sender@example.com";
+
+        if (mail($to, $subject, $message, $headers)) {
+            echo "Email sent successfully!";
+        } else {
+            echo "Failed to send email.";
+        }
+
+        header('Location: success.html');
+        exit;
     }
 } catch (PDOException $e) {
     echo "Error: " . $e->getMessage();

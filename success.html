@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
+-->
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="keywords" content="BV Aachen, Badminton, Aachen">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <link rel="stylesheet" href="styles/output.css">
+    <script src="javascripts/navigation-menu-showhide.js"></script>
+    <script src="javascripts/showhide-Modal.js"></script>
+    <!-- used for to get idb library, a CHIPS cookie method for the language switch -->
+    <script src="https://cdn.jsdelivr.net/npm/idb/build/iife/index-min.js"></script>
+    <script src="javascripts/language-toggle.js"></script>
+    <script src="javascripts/register.js"></script>
+
+    <title>BV Aachen 09</title>
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/modal.css">
+</head>
+
+<body class="antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900 text-justify dark">
+    <nav class="fixed-top flex items-center justify-between flex-wrap bg-gray-800 p-3">
+        <div class="flex items-center flex-shrink-0 text-white mr-6">
+            <div class="flex flex-shrink-0 items-center bg-gray-100 p-1 rounded-md text-black">
+                <img class="h-8 w-auto rounded-md text-black" src="images/Logo.png" alt="BV Aachen">
+            </div>
+        </div>
+        <div class="block md:hidden lg:hidden">
+            <button class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400 hover:text-white hover:border-white" onclick="showhideNavigation(['navigation', 'languageToggle'])">
+                <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <title>Menu</title>
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                </svg>
+            </button>
+        </div>
+        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto md:flex md:items-center md:w-auto text-center">
+            <div id="navigation" class="text-m lg:flex-grow md:flex-grow" style="display: block;">
+                <a href="./index.html" class="block mt-4 rounded-md text-black px-3 py-2 text-m font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">
+                    Start</a>
+                <a href="./alemannencup.html" aria-current="page" class="block mt-4 rounded-md text-black bg-gray-900 px-3 py-2 text-m font-medium text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Alemannen
+                    Cup</a>
+                <a href="./teams.html" class="block mt-4 rounded-md text-black px-3 py-2 text-m font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">
+                    <span data-lang="en" class="hidden">Teams</span>
+                    <span data-lang="de">Mannschaften</span>
+                </a>
+                <a href="./training.html" class="block mt-4 rounded-md text-black px-3 py-2 text-m font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Training</a>
+                <a href="./verein.html" class="block mt-4 rounded-md text-black px-3 py-2 text-m font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">
+                    <span data-lang="en" class="hidden">Become a Member</span>
+                    <span data-lang="de">Mitglied werden</span>
+                </a>
+                <a href="./kontakt.html" class="block mt-4 rounded-md text-black px-3 py-2 text-m font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">
+                    <span data-lang="en" class="hidden">Contact</span>
+                    <span data-lang="de">Kontakt</span>
+                </a>
+                <a href="./FAQ.html" class="block mt-4 rounded-md text-black px-3 py-2 text-m font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">FAQ</a>
+            </div>
+            <button id="languageToggle" class="ml-4 bg-white text-blue-500 w-8 h-8 rounded-full flex items-center justify-center">
+                <span id="languageIcon">DE</span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="mt-10 text-center">
+            <h2 class="text-xl font-extrabold dark:text-white mt-10">
+                <span data-lang="en" class="hidden">Sucessfully registered for Alemannencup 2025</span>
+                <span data-lang="de">Sucessfully registered for Alemannencup 2025</span>
+            </h2>
+        </div>
+        <div id="footer-wrapper" class="mt-20">
+            <div id="footer" class="text-center">
+                <div id="adresse">
+                    <p>
+                        <a href="./impressum.html" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                            <span data-lang="en" class="hidden">Imprint</span>
+                            <span data-lang="de">Impressum</span>
+                        </a> <b> | </b>
+                        <a href="./datenschutz.html" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                            <span data-lang="en" class="hidden">Privacy Policy</span>
+                            <span data-lang="de">Informationen zum Datenschutz</span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
