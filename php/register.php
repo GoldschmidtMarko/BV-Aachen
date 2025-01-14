@@ -14,26 +14,43 @@ try {
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Get form data
-        $vorname = $_POST['vorname'];
-        $nachname = $_POST['nachname'];
-        $geschlecht = $_POST['geschlecht'];
-        $verein = $_POST['verein'];
-        $spieler_id = $_POST['spieler_id'];
-        $league = $_POST['league'];
-        $email = $_POST['email'];
-        $handynummer = $_POST['handynummer'];
+        $required_fields = ['vorname', 'nachname', 'geschlecht', 'verein', 'spieler_id', 'league', 'email', 'handynummer', 'einzel', 'mixed', 'doppel'];
+        $optional_fields = [
+            'mixed-vorname', 'mixed-nachname', 'mixed-verein', 'mixed-spieler_id', 'mixed-league',
+            'doppel-vorname', 'doppel-nachname', 'doppel-verein', 'doppel-spieler_id', 'doppel-league'
+        ];
+
+        // Check required fields
+        foreach ($required_fields as $field) {
+            if (empty($_POST[$field])) {
+                throw new Exception("The field '{$field}' is required.");
+            }
+        }
+
+        // Retrieve data from the POST request
+        $data = [];
+        foreach (array_merge($required_fields, $optional_fields) as $field) {
+            $data[$field] = $_POST[$field] ?? null; // Set optional fields to null if not provided
+        }
 
         // Prepare and execute the SQL query
-        $stmt = $conn->prepare("INSERT INTO users (vorname, nachname, geschlecht, verein, spieler_id, league, email, handynummer) 
-                                VALUES (:vorname, :nachname, :geschlecht, :verein, :spieler_id, :league, :email, :handynummer)");
-        $stmt->bindParam(':vorname', $vorname);
-        $stmt->bindParam(':nachname', $nachname);
-        $stmt->bindParam(':geschlecht', $geschlecht);
-        $stmt->bindParam(':verein', $verein);
-        $stmt->bindParam(':spieler_id', $spieler_id);
-        $stmt->bindParam(':league', $league, PDO::PARAM_INT);
-        $stmt->bindParam(':email', $email);
-        $stmt->bindParam(':handynummer', $handynummer);
+        $stmt = $conn->prepare("
+            INSERT INTO users (
+                vorname, nachname, geschlecht, verein, spieler_id, league, email, handynummer, 
+                einzel, mixed, mixed_vorname, mixed_nachname, mixed_verein, mixed_spieler_id, mixed_league, 
+                doppel, doppel_vorname, doppel_nachname, doppel_verein, doppel_spieler_id, doppel_league
+            ) 
+            VALUES (
+                :vorname, :nachname, :geschlecht, :verein, :spieler_id, :league, :email, :handynummer, 
+                :einzel, :mixed, :mixed_vorname, :mixed_nachname, :mixed_verein, :mixed_spieler_id, :mixed_league, 
+                :doppel, :doppel_vorname, :doppel_nachname, :doppel_verein, :doppel_spieler_id, :doppel_league
+            )
+        ");
+
+        // Bind parameters dynamically
+        foreach ($data as $key => $value) {
+            $stmt->bindValue(':' . $key, $value, is_int($value) ? PDO::PARAM_INT : PDO::PARAM_STR);
+        }
 
         $stmt->execute();
 
