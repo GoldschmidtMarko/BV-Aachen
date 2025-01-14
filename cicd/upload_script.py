@@ -22,6 +22,7 @@ uploadable_file_names = [
                           "training.html",
                           "verein.html",
                           "register.html",
+                          "success.html",
                           "tailwind.config.js",
                           "README.md",
                           # folders
