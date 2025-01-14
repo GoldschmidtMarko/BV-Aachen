@@ -7,6 +7,14 @@ function toggleDoppelFields() {
     toggleVisibility(additionalDoppel, isVisible);
 }
 
+if (performance.navigation.type == 2) { // User used the back button
+    window.location.reload();
+}
+
+window.onload = function() {
+    document.getElementById("myForm").reset();
+};
+
 function toggleMixedFields() {
     const mixedSelect = document.getElementById('mixed');
     const additionalMixed = document.getElementById('additional-mixed');
