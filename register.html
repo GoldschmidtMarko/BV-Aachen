@@ -90,11 +90,17 @@
                             </select>
                         </div>
                         <div class="flex-1">
-                            <label for="vorname" class="block text-m font-medium text-gray-700">Vorname</label>
+                            <label for="vorname" class="block text-m font-medium text-gray-700">
+                                <span data-lang="en" class="hidden">First Name</span>
+                                <span data-lang="de">Vorname</span>
+                            </label>
                             <input type="text" id="vorname" name="vorname" required class="mt-1 block w-full border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
                         </div>
                         <div class="flex-1">
-                            <label for="nachname" class="block text-m font-medium text-gray-700">Nachname</label>
+                            <label for="nachname" class="block text-m font-medium text-gray-700">
+                                <span data-lang="en" class="hidden">Last Name</span>
+                                <span data-lang="de">Nachname</span>
+                            </label>
                             <input type="text" id="nachname" name="nachname" required class="mt-1 block w-full border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
                         </div>
                     </div>
@@ -163,10 +169,7 @@
                                 <span data-lang="de">Einzel</span>
                             </label>
                             <select id="einzel" name="einzel" required class="mt-1 block w-40 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
-                            <option value="Kein Einzel">
-                                <span data-lang="en" class="hidden">No Single</span>
-                                <span data-lang="de">Kein Einzel</span>
-                            </option>
+                            <option value="Kein Einzel">--</option>
                             <option value="HE A">HE A</option>
                             <option value="HE B">HE B</option>
                             <option value="HE C">HE C</option>
@@ -185,10 +188,7 @@
                                 <span data-lang="de">Doppel</span>
                             </label>
                             <select id="doppel" name="doppel" required class="mt-1 block w-40 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500" onchange="toggleDoppelFields()">
-                            <option value="Kein Doppel">
-                                <span data-lang="en" class="hidden">No Double</span>
-                                <span data-lang="de">Kein Doppel</span>
-                            </option>
+                            <option value="Kein Doppel">--</option>
                             <option value="HD A">HD A</option>
                             <option value="HD B">HD B</option>
                             <option value="HD C">HD C</option>
@@ -259,10 +259,7 @@
                         <div>
                             <label for="mixed" class="block text-sm font-medium text-gray-700">Mixed</label>
                             <select id="mixed" name="mixed" required class="mt-1 block w-40 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500" onchange="toggleMixedFields()">
-                            <option value="Kein Mixed">
-                                <span data-lang="en" class="hidden">No Mixed</span>
-                                <span data-lang="de">Kein Mixed</span>
-                            </option>
+                            <option value="Kein Mixed">--</option>
                             <option value="XD A">XD A</option>
                             <option value="XD B">XD B</option>
                             <option value="XD C">XD C</option>
