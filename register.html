@@ -79,7 +79,7 @@
                 </p>
             </div>
             <div class="mt-6">
-                <form action="php/register.php" method="POST" class="space-y-4">
+                <form id="myForm" action="php/register.php" method="POST" class="space-y-4">
                     <!-- Vorname and Nachname in the same row -->
                     <div class="flex justify-center space-x-4">
                         <div class="flex-1">
@@ -297,6 +297,15 @@
             </div>
         </div>
     </div>
+
+    <script>
+        // When the page loads, reset the form
+        window.onload = function() {
+            document.getElementById("myForm").reset();
+        };
+    </script>
+
+
 </body>
 
 </html>
