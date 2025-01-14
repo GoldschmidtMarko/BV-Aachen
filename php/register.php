@@ -1,6 +1,6 @@
 <?php
 // Database credentials
-require_once 'php/db_config.php';
+require_once 'db_config.php';
 
 try {
     // Connect to the database
@@ -16,8 +16,8 @@ try {
         // Get form data
         $required_fields = ['vorname', 'nachname', 'geschlecht', 'verein', 'spieler_id', 'league', 'email', 'handynummer', 'einzel', 'mixed', 'doppel'];
         $optional_fields = [
-            'mixed-vorname', 'mixed-nachname', 'mixed-verein', 'mixed-spieler_id', 'mixed-league',
-            'doppel-vorname', 'doppel-nachname', 'doppel-verein', 'doppel-spieler_id', 'doppel-league'
+            'mixed_vorname', 'mixed_nachname', 'mixed_verein', 'mixed_spieler_id', 'mixed_league',
+            'doppel_vorname', 'doppel_nachname', 'doppel_verein', 'doppel_spieler_id', 'doppel_league'
         ];
 
         // Check required fields
