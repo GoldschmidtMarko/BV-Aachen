@@ -14,8 +14,9 @@ try {
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Get form data
-        $required_fields = ['vorname', 'nachname', 'geschlecht', 'verein', 'spieler_id', 'email', 'handynummer', 'einzel', 'mixed', 'doppel'];
+        $required_fields = ['vorname', 'nachname', 'geschlecht', 'verein', 'email', 'handynummer', 'einzel', 'mixed', 'doppel'];
         $optional_fields = [
+            'spieler_id',
             'mixed_vorname', 'mixed_nachname', 'mixed_verein', 'mixed_spieler_id', 'mixed_email', 'mixed_handynummer',
             'doppel_vorname', 'doppel_nachname', 'doppel_verein', 'doppel_spieler_id', 'doppel_email', 'doppel_handynummer',
         ];

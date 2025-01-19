@@ -10,7 +10,7 @@ $subject = "Registration Confirmation";
 $message = "
     Hallo {$user['vorname']} {$user['nachname']},
 
-    Vielen Dank für Ihre Registrierung. Hier sind Ihre Details:
+    Vielen Dank fuer die Registrierung. Hier sind die Details:
 
     Geschlecht: {$user['geschlecht']}
     Name: {$user['vorname']} {$user['nachname']}
@@ -36,7 +36,7 @@ $message = "
       - E-Mail: {$user['doppel_email']}
       - Handynummer: {$user['doppel_handynummer']}
 
-    Wenn Sie Fragen haben, können Sie sich gerne an uns wenden: anmeldung@alemannen-cup.de.
+    Wenn Sie Fragen haben, koennen Sie sich gerne an uns wenden: anmeldung@alemannen-cup.de.
 
     Mit freundlichen Grüßen,
     Ihr Alemannen Cup Team
