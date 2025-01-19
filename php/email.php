@@ -36,7 +36,7 @@ $message = "
       - E-Mail: {$user['doppel_email']}
       - Handynummer: {$user['doppel_handynummer']}
 
-    Wenn Sie Fragen haben, koennen Sie sich gerne an uns wenden: anmeldung@alemannen-cup.de.
+    Bei Fragen, wende dich gerne an uns: anmeldung@alemannen-cup.de.
 
     Mfg,
     Ihr Alemannen Cup Team
