@@ -16,8 +16,8 @@ try {
         // Get form data
         $required_fields = ['vorname', 'nachname', 'geschlecht', 'verein', 'spieler_id', 'email', 'handynummer', 'einzel', 'mixed', 'doppel'];
         $optional_fields = [
-            'mixed_vorname', 'mixed_nachname', 'mixed_verein', 'mixed_spieler_id', 'mixed_email', 'mixed_handynummer'
-            'doppel_vorname', 'doppel_nachname', 'doppel_verein', 'doppel_spieler_id', 'doppel_email', 'doppel_handynummer'
+            'mixed_vorname', 'mixed_nachname', 'mixed_verein', 'mixed_spieler_id', 'mixed_email', 'mixed_handynummer',
+            'doppel_vorname', 'doppel_nachname', 'doppel_verein', 'doppel_spieler_id', 'doppel_email', 'doppel_handynummer',
         ];
 
         // Check required fields
@@ -38,12 +38,12 @@ try {
             INSERT INTO users (
                 vorname, nachname, geschlecht, verein, spieler_id, email, handynummer, 
                 einzel, mixed, mixed_vorname, mixed_nachname, mixed_verein, mixed_spieler_id, mixed_email, mixed_handynummer,
-                doppel, doppel_vorname, doppel_nachname, doppel_verein, doppel_spieler_id, doppel_email, doppel_handynummer,
+                doppel, doppel_vorname, doppel_nachname, doppel_verein, doppel_spieler_id, doppel_email, doppel_handynummer
             ) 
             VALUES (
                 :vorname, :nachname, :geschlecht, :verein, :spieler_id, :email, :handynummer, 
                 :einzel, :mixed, :mixed_vorname, :mixed_nachname, :mixed_verein, :mixed_spieler_id, :mixed_email, :mixed_handynummer,
-                :doppel, :doppel_vorname, :doppel_nachname, :doppel_verein, :doppel_spieler_id, :doppel_email, :doppel_handynummer,
+                :doppel, :doppel_vorname, :doppel_nachname, :doppel_verein, :doppel_spieler_id, :doppel_email, :doppel_handynummer
             )
         ");
 
@@ -58,7 +58,7 @@ try {
         $last_id = $conn->lastInsertId();
 
         // Retrieve the inserted record
-        $stmt = $conn->prepare("SELECT * FROM users WHERE id = :id");
+        $stmt = $conn->prepare("SELECT * FROM users WHERE idPrimary = :id");
         $stmt->bindParam(':id', $last_id, PDO::PARAM_INT);
         $stmt->execute();
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
