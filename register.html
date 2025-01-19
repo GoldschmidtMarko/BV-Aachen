@@ -75,213 +75,214 @@
             <div class="mt-6">
                 <p class="text-lg dark:text-white">
                     <span data-lang="en" class="hidden">Please fill out the form below to register for the Alemannencup 2025.</span>
-                    <span data-lang="de">Bitte füllen Sie das Formular aus, um sich für den Alemannencup 2025 zu registrieren.</span>
+                    <span data-lang="de">Bitte füll das Formular aus, um sich für den Alemannencup 2025 zu registrieren.</span>
                 </p>
             </div>
             <div class="mt-6">
                 <form id="myForm" action="php/register.php" method="POST" class="space-y-4">
                     <!-- Vorname and Nachname in the same row -->
-                    <div class="flex justify-center space-x-4">
-                        <div class="flex-1">
-                            <label for="geschlecht" class="block text-m font-medium text-gray-700">Geschlecht</label>
-                            <select id="geschlecht" name="geschlecht" required class="mt-1 block w-40 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
-                                <option value="M">Male</option>
-                                <option value="F">Female</option>
+                    <div class="space-y-4">
+                        <div class="w-64">
+                            <label for="geschlecht" class="block text-m font-medium text-gray-700 text-left">Geschlecht</label>
+                            <select id="geschlecht" name="geschlecht" required class="mt-1 block w-200 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                                <option value="M">Männlich</option>
+                                <option value="F">Weiblich</option>
                             </select>
                         </div>
-                        <div class="flex-1">
-                            <label for="vorname" class="block text-m font-medium text-gray-700">
-                                <span data-lang="en" class="hidden">First Name</span>
-                                <span data-lang="de">Vorname</span>
-                            </label>
-                            <input type="text" id="vorname" name="vorname" required class="mt-1 block w-full border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
-                        </div>
-                        <div class="flex-1">
-                            <label for="nachname" class="block text-m font-medium text-gray-700">
-                                <span data-lang="en" class="hidden">Last Name</span>
-                                <span data-lang="de">Nachname</span>
-                            </label>
-                            <input type="text" id="nachname" name="nachname" required class="mt-1 block w-full border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                        <div class="flex space-x-4">
+                            <div class="flex-1">
+                                <label for="vorname" class="block text-m font-medium text-gray-700 text-left">
+                                    <span data-lang="en" class="hidden">First Name</span>
+                                    <span data-lang="de">Vorname</span>
+                                </label>
+                                <input type="text" id="vorname" name="vorname" required class="mt-1 block w-200 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            <div class="flex-1">
+                                <label for="nachname" class="block text-m font-medium text-gray-700 text-left">
+                                    <span data-lang="en" class="hidden">Last Name</span>
+                                    <span data-lang="de">Nachname</span>
+                                </label>
+                                <input type="text" id="nachname" name="nachname" required class="mt-1 block w-200 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                            </div>
                         </div>
                     </div>
 
 
-                    <div class="flex justify-center space-x-4">
+
+
+
+                    <div class="flex space-x-4">
                         <div class="flex-1">
-                            <label for="verein" class="block text-m font-medium text-gray-700">
+                            <label for="verein" class="block text-m font-medium text-gray-700 text-left">
                                 <span data-lang="en" class="hidden">Club</span>
                                 <span data-lang="de">Verein</span>
                                 </label>
-                            <input type="text" id="verein" name="verein" required class="mt-1 block w-40 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                            <input type="text" id="verein" name="verein" required class="mt-1 block w-200 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
                         </div>
                         <div class="flex-1">
-                            <label for="spieler_id" class="block text-m font-medium text-gray-700">
+                            <label for="spieler_id" class="block text-m font-medium text-gray-700 text-left">
                                 <span data-lang="en" class="hidden">Player-ID</span>
                                 <span data-lang="de">Spieler-ID</span>
                                 </label>
-                            <input type="text" id="spieler_id" name="spieler_id" required class="mt-1 block w-40 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
-                        </div>
-                        <div class="flex-1">
-                            <label for="league" class="block text-m font-medium text-gray-700">
-                                <span data-lang="en" class="hidden">League</span>
-                                <span data-lang="de">Liga</span>
-                            </label>
-                            <select id="league" name="league" required class="mt-1 block w-40 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
-                                <option value="Hoeher Landesliga">Hoeher Landesliga</option>
-                                <option value="Landesliga">Landesliga</option>
-                                <option value="Bezirksliga">Bezirksliga</option>
-                                <option value="Bezirksklasse">Bezirksklasse</option>
-                                <option value="Kreisliga">Kreisliga</option>
-                                <option value="Kreisklasse">Kreisklasse</option>
-                                <option value="Hobby">Hobby</option>
-                            </select>
+                            <input type="text" id="spieler_id" name="spieler_id" class="mt-1 block w-200 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                            <p class="mt-2 text-sm text-gray-500">
+                                <span data-lang="en" class="hidden">If not known, leave blank.</span>
+                                <span data-lang="de">Falls nicht bekannt, frei lassen.</span>
+                            </p>
                         </div>
                     </div>
 
-                    <div class="flex justify-center space-x-4">
+                    <div class="flex space-x-4">
                         <div class="flex-1">
                             <!-- Email -->
-                            <label for="email" class="block text-m font-medium text-gray-700">Email</label>
-                            <input type="email" id="email" name="email" required class="mt-1 block w-40 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                            <label for="email" class="block text-m font-medium text-gray-700 text-left">Email</label>
+                            <input type="email" id="email" name="email" required class="mt-1 block w-200 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
                         </div>
 
                         <!-- Handynummer -->
                         <div class="flex-2">
-                            <label for="handynummer" class="block text-m font-medium text-gray-700">
+                            <label for="handynummer" class="block text-m font-medium text-gray-700 text-left">
                                 <span data-lang="en" class="hidden">Mobile Number</span>
                                 <span data-lang="de">Handynummer</span>
                             </label>
-                            <input type="text" id="handynummer" name="handynummer" class="mt-1 block w-40 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                            <input type="text" id="handynummer" name="handynummer" class="mt-1 block w-200 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
                         </div>
                     </div>
 
-                    <div class="flex justify-center space-x-4">
-                        <h2 class="text-xl font-extrabold dark:text-white mt-2">
+                    <div class="space-x-4">
+                        <h2 class="text-xl font-extrabold dark:text-white mt-2 text-left">
                             <span data-lang="en" class="hidden">Disciplines</span>
                             <span data-lang="de">Disziplinen</span>
                         </h2>
                     </div>
 
-                    <div class="flex justify-center space-x-4">
+                    <div class="space-x-4">
                         <div>
-                            <label for="einzel" class="block text-m font-medium text-gray-700">
+                            <label for="einzel" class="block text-xl font-medium dark:text-white text-left">
                                 <span data-lang="en" class="hidden">Single</span>
                                 <span data-lang="de">Einzel</span>
                             </label>
                             <select id="einzel" name="einzel" required class="mt-1 block w-40 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
                             <option value="Kein Einzel">--</option>
-                            <option value="HE A">HE A</option>
-                            <option value="HE B">HE B</option>
-                            <option value="HE C">HE C</option>
-                            <option value="DE A">DE A</option>
-                            <option value="DE B">DE B</option>
-                            <option value="DE C">DE C</option>
+                            <option value="Fun (bis KL)">Fun (bis KL)</option>
+                            <option value="Basic (bis BK)">Basic (bis BK)</option>
+                            <option value="Standard (bis BL)">Standard (bis BL)</option>
+                            <option value="Premium (bis LL)">Premium (bis LL)</option>
+                            <option value="Elite">Elite</option>
                         </select>
                         </div>
                     </div>
 
                     <!-- Doppel -->
-                    <div class="flex justify-center space-x-4">
+                    <div class="space-x-4">
                         <div>
-                            <label for="doppel" class="block text-sm font-medium text-gray-700">
+                            <label for="doppel" class="block text-xl font-medium dark:text-white text-left mt-8">
                                 <span data-lang="en" class="hidden">Double</span>
                                 <span data-lang="de">Doppel</span>
                             </label>
                             <select id="doppel" name="doppel" required class="mt-1 block w-40 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500" onchange="toggleDoppelFields()">
                             <option value="Kein Doppel">--</option>
-                            <option value="HD A">HD A</option>
-                            <option value="HD B">HD B</option>
-                            <option value="HD C">HD C</option>
-                            <option value="DD A">DD A</option>
-                            <option value="DD B">DD B</option>
-                            <option value="DD C">DD C</option>
+                            <option value="Fun (bis KL)">Fun (bis KL)</option>
+                            <option value="Basic (bis BK)">Basic (bis BK)</option>
+                            <option value="Standard (bis BL)">Standard (bis BL)</option>
+                            <option value="Premium (bis LL)">Premium (bis LL)</option>
+                            <option value="Elite">Elite</option>
                         </select>
                         </div>
                     </div>
 
                     <div id="additional-doppel" class="hidden space-y-4">
-                        <h2 class="text-xl font-extrabold dark:text-white mt-2">
+                        <h2 class="text-xl font-extrabold dark:text-white mt-2 text-left">
                             <span data-lang="en" class="hidden">Double-Partner</span>
                             <span data-lang="de">Doppel-Partner</span>
                         </h2>
-                        <div class="flex justify-center space-x-4">
+                        <div class="flex space-x-4">
                             <div class="flex-1">
-                                <label for="doppel_vorname" class="block text-m font-medium text-gray-700">
+                                <label for="doppel_vorname" class="block text-m font-medium text-gray-700 text-left">
                                     <span data-lang="en" class="hidden">First Name</span>
                                     <span data-lang="de">Vorname</span>
                                 </label>
-                                <input type="text" id="doppel_vorname" name="doppel_vorname" class="mt-1 block w-full border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                                <input type="text" id="doppel_vorname" name="doppel_vorname" class="mt-1 block w-200 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
                             </div>
                             <div class="flex-1">
-                                <label for="doppel_nachname" class="block text-m font-medium text-gray-700">
+                                <label for="doppel_nachname" class="block text-m font-medium text-gray-700 text-left">
                                     <span data-lang="en" class="hidden">Last Name</span>
                                     <span data-lang="de">Nachname</span>
                                 </label>
-                                <input type="text" id="doppel_nachname" name="doppel_nachname" class="mt-1 block w-full border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                                <input type="text" id="doppel_nachname" name="doppel_nachname" class="mt-1 block w-200 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
                             </div>
                         </div>
 
-                        <div class="flex justify-center space-x-4">
+                        <div class="flex space-x-4">
                             <div class="flex-1">
-                                <label for="doppel_verein" class="block text-m font-medium text-gray-700">
+                                <label for="doppel_verein" class="block text-m font-medium text-gray-700 text-left">
                                     <span data-lang="en" class="hidden">Club</span>
                                     <span data-lang="de">Verein</span>
                                 </label>
                                 <input type="text" id="doppel_verein" name="doppel_verein" class="mt-1 block w-40 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
                             </div>
                             <div class="flex-1">
-                                <label for="doppel_spieler_id" class="block text-m font-medium text-gray-700">
+                                <label for="doppel_spieler_id" class="block text-m font-medium text-gray-700 text-left">
                                     <span data-lang="en" class="hidden">Player-ID</span>
                                     <span data-lang="de">Spieler-ID</span>
                                 </label>
                                 <input type="text" id="doppel_spieler_id" name="doppel_spieler_id" class="mt-1 block w-40 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
-                            </div>
-                            <div class="flex-1">
-                                <label for="doppel_league" class="block text-m font-medium text-gray-700">
-                                    <span data-lang="en" class="hidden">League</span>
-                                    <span data-lang="de">Liga</span>
-                                </label>
-                                <select id="doppel_league" name="doppel_league" class="mt-1 block w-40 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
-                                    <option value="Hoeher Landesliga">Hoeher Landesliga</option>
-                                    <option value="Landesliga">Landesliga</option>
-                                    <option value="Bezirksliga">Bezirksliga</option>
-                                    <option value="Bezirksklasse">Bezirksklasse</option>
-                                    <option value="Kreisliga">Kreisliga</option>
-                                    <option value="Kreisklasse">Kreisklasse</option>
-                                    <option value="Hobby">Hobby</option>
-                                </select>
+                                <p class="mt-2 text-sm text-gray-500">
+                                    <span data-lang="en" class="hidden">If not known, leave blank.</span>
+                                    <span data-lang="de">Falls nicht bekannt, frei lassen.</span>
+                                </p>
                             </div>
                         </div>
+
+                        <div class="flex space-x-4">
+                            <div class="flex-1">
+                                <!-- Email -->
+                                <label for="doppel_email" class="block text-m font-medium text-gray-700 text-left">Email</label>
+                                <input type="email" id="doppel_email" name="doppel_email" required class="mt-1 block w-200 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+
+                            <!-- Handynummer -->
+                            <div class="flex-2">
+                                <label for="doppel_handynummer" class="block text-m font-medium text-gray-700 text-left">
+                                    <span data-lang="en" class="hidden">Mobile Number</span>
+                                    <span data-lang="de">Handynummer</span>
+                                </label>
+                                <input type="text" id="doppel_handynummer" name="doppel_handynummer" class="mt-1 block w-200 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                        </div>
+
                     </div>
 
                     <!-- MIXED -->
-                    <div class="flex justify-center space-x-4">
+                    <div class="flex space-x-4">
                         <div>
-                            <label for="mixed" class="block text-sm font-medium text-gray-700">Mixed</label>
+                            <label for="mixed" class="block text-xl font-medium dark:text-white text-left mt-8">Mixed</label>
                             <select id="mixed" name="mixed" required class="mt-1 block w-40 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500" onchange="toggleMixedFields()">
                             <option value="Kein Mixed">--</option>
-                            <option value="XD A">XD A</option>
-                            <option value="XD B">XD B</option>
-                            <option value="XD C">XD C</option>
+                            <option value="Fun (bis KL)">Fun (bis KL)</option>
+                            <option value="Basic (bis BK)">Basic (bis BK)</option>
+                            <option value="Standard (bis BL)">Standard (bis BL)</option>
+                            <option value="Premium (bis LL)">Premium (bis LL)</option>
+                            <option value="Elite">Elite</option>
                         </select>
                         </div>
                     </div>
 
                     <div id="additional-mixed" class="hidden space-y-4">
-                        <h2 class="text-xl font-extrabold dark:text-white mt-2">
+                        <h2 class="text-xl font-extrabold dark:text-white mt-2 text-left">
                             <span data-lang="en" class="hidden">Mixed-Partner</span>
                             <span data-lang="de">Mixed-Partner</span>
                         </h2>
-                        <div class="flex justify-center space-x-4">
+                        <div class="flex space-x-4">
                             <div class="flex-1">
-                                <label for="mixed_vorname" class="block text-m font-medium text-gray-700">
+                                <label for="mixed_vorname" class="block text-m font-medium text-gray-700 text-left">
                                     <span data-lang="en" class="hidden">First Name</span>
                                     <span data-lang="de">Vorname</span>
                                 </label>
                                 <input type="text" id="mixed_vorname" name="mixed_vorname" class="mt-1 block w-full border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
                             </div>
                             <div class="flex-1">
-                                <label for="mixed_nachname" class="block text-m font-medium text-gray-700">
+                                <label for="mixed_nachname" class="block text-m font-medium text-gray-700 text-left">
                                     <span data-lang="en" class="hidden">Last Name</span>
                                     <span data-lang="de">Nachname</span>
                                 </label>
@@ -289,35 +290,41 @@
                             </div>
                         </div>
 
-                        <div class="flex justify-center space-x-4">
+                        <div class="flex space-x-4">
                             <div class="flex-1">
-                                <label for="mixed_verein" class="block text-m font-medium text-gray-700">
+                                <label for="mixed_verein" class="block text-m font-medium text-gray-700 text-left">
                                     <span data-lang="en" class="hidden">Club</span>
                                     <span data-lang="de">Verein</span>
                                 </label>
                                 <input type="text" id="mixed_verein" name="mixed_verein" class="mt-1 block w-40 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
                             </div>
                             <div class="flex-1">
-                                <label for="mixed_spieler_id" class="block text-m font-medium text-gray-700">
+                                <label for="mixed_spieler_id" class="block text-m font-medium text-gray-700 text-left">
                                     <span data-lang="en" class="hidden">Player-ID</span>
                                     <span data-lang="de">Spieler-ID</span>
                                 </label>
                                 <input type="text" id="mixed_spieler_id" name="mixed_spieler_id" class="mt-1 block w-40 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                                <p class="mt-2 text-sm text-gray-500">
+                                    <span data-lang="en" class="hidden">If not known, leave blank.</span>
+                                    <span data-lang="de">Falls nicht bekannt, frei lassen.</span>
+                                </p>
                             </div>
+                        </div>
+
+                        <div class="flex space-x-4">
                             <div class="flex-1">
-                                <label for="mixed_league" class="block text-m font-medium text-gray-700">
-                                    <span data-lang="en" class="hidden">League</span>
-                                    <span data-lang="de">Liga</span>
+                                <!-- Email -->
+                                <label for="mixed_email" class="block text-m font-medium text-gray-700 text-left">Email</label>
+                                <input type="email" id="mixed_email" name="mixed_email" required class="mt-1 block w-200 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+
+                            <!-- Handynummer -->
+                            <div class="flex-2">
+                                <label for="mixed_handynummer" class="block text-m font-medium text-gray-700 text-left">
+                                    <span data-lang="en" class="hidden">Mobile Number</span>
+                                    <span data-lang="de">Handynummer</span>
                                 </label>
-                                <select id="mixed_league" name="mixed_league" class="mt-1 block w-40 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
-                                    <option value="Hoeher Landesliga">Hoeher Landesliga</option>
-                                    <option value="Landesliga">Landesliga</option>
-                                    <option value="Bezirksliga">Bezirksliga</option>
-                                    <option value="Bezirksklasse">Bezirksklasse</option>
-                                    <option value="Kreisliga">Kreisliga</option>
-                                    <option value="Kreisklasse">Kreisklasse</option>
-                                    <option value="Hobby">Hobby</option>
-                                </select>
+                                <input type="text" id="mixed_handynummer" name="mixed_handynummer" class="mt-1 block w-200 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
                             </div>
                         </div>
                     </div>

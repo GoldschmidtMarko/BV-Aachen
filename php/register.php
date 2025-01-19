@@ -14,10 +14,10 @@ try {
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Get form data
-        $required_fields = ['vorname', 'nachname', 'geschlecht', 'verein', 'spieler_id', 'league', 'email', 'handynummer', 'einzel', 'mixed', 'doppel'];
+        $required_fields = ['vorname', 'nachname', 'geschlecht', 'verein', 'spieler_id', 'email', 'handynummer', 'einzel', 'mixed', 'doppel'];
         $optional_fields = [
-            'mixed_vorname', 'mixed_nachname', 'mixed_verein', 'mixed_spieler_id', 'mixed_league',
-            'doppel_vorname', 'doppel_nachname', 'doppel_verein', 'doppel_spieler_id', 'doppel_league'
+            'mixed_vorname', 'mixed_nachname', 'mixed_verein', 'mixed_spieler_id', 'mixed_email', 'mixed_handynummer'
+            'doppel_vorname', 'doppel_nachname', 'doppel_verein', 'doppel_spieler_id', 'doppel_email', 'doppel_handynummer'
         ];
 
         // Check required fields
@@ -36,14 +36,14 @@ try {
         // Prepare and execute the SQL query
         $stmt = $conn->prepare("
             INSERT INTO users (
-                vorname, nachname, geschlecht, verein, spieler_id, league, email, handynummer, 
-                einzel, mixed, mixed_vorname, mixed_nachname, mixed_verein, mixed_spieler_id, mixed_league, 
-                doppel, doppel_vorname, doppel_nachname, doppel_verein, doppel_spieler_id, doppel_league
+                vorname, nachname, geschlecht, verein, spieler_id, email, handynummer, 
+                einzel, mixed, mixed_vorname, mixed_nachname, mixed_verein, mixed_spieler_id, mixed_email, mixed_handynummer,
+                doppel, doppel_vorname, doppel_nachname, doppel_verein, doppel_spieler_id, doppel_email, doppel_handynummer,
             ) 
             VALUES (
-                :vorname, :nachname, :geschlecht, :verein, :spieler_id, :league, :email, :handynummer, 
-                :einzel, :mixed, :mixed_vorname, :mixed_nachname, :mixed_verein, :mixed_spieler_id, :mixed_league, 
-                :doppel, :doppel_vorname, :doppel_nachname, :doppel_verein, :doppel_spieler_id, :doppel_league
+                :vorname, :nachname, :geschlecht, :verein, :spieler_id, :email, :handynummer, 
+                :einzel, :mixed, :mixed_vorname, :mixed_nachname, :mixed_verein, :mixed_spieler_id, :mixed_email, :mixed_handynummer,
+                :doppel, :doppel_vorname, :doppel_nachname, :doppel_verein, :doppel_spieler_id, :doppel_email, :doppel_handynummer,
             )
         ");
 
@@ -54,18 +54,21 @@ try {
 
         $stmt->execute();
 
-        $to = "ma.goldschmidt@web.de";
-        $subject = "Test Email";
-        $message = "Hello, this is a test email!";
-        $headers = "From: sender@example.com";
+        // Get the last inserted ID
+        $last_id = $conn->lastInsertId();
 
-        if (mail($to, $subject, $message, $headers)) {
-            echo "Email sent successfully!";
-        } else {
-            echo "Failed to send email.";
-        }
+        // Retrieve the inserted record
+        $stmt = $conn->prepare("SELECT * FROM users WHERE id = :id");
+        $stmt->bindParam(':id', $last_id, PDO::PARAM_INT);
+        $stmt->execute();
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        header('Location: success.html');
+        // Include email.php and send the email
+        ob_start();
+        include 'email.php';
+        ob_end_clean();
+
+        header('Location: ../success.html');
         exit;
     }
 } catch (PDOException $e) {
