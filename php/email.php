@@ -38,7 +38,7 @@ $message = "
 
     Wenn Sie Fragen haben, koennen Sie sich gerne an uns wenden: anmeldung@alemannen-cup.de.
 
-    Mit freundlichen Grüßen,
+    Mfg,
     Ihr Alemannen Cup Team
 
     ---
