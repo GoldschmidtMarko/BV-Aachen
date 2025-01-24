@@ -7,83 +7,109 @@ if (!isset($user)) {
 // Format email content with user data
 $to = $user['email']; // Only the user's email in the "To" field
 $subject = "Registration Confirmation";
-$message = "
-    Hallo {$user['vorname']} {$user['nachname']},
 
-    Vielen Dank fuer die Registrierung. Hier sind die Details:
+// Use heredoc for better readability
+$message = <<<HTML
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <p>Hallo {$user['vorname']} {$user['nachname']},</p>
 
-    Geschlecht: {$user['geschlecht']}
-    Name: {$user['vorname']} {$user['nachname']}
-    Verein: {$user['verein']}
-    Spieler-ID: {$user['spieler_id']}
-    Einzel: {$user['einzel']}
-    Email: {$user['email']}
+    <p>Vielen Dank für deine Anmeldung, diese wird an die Turnierleitung übermittelt und spätestens innerhalb einer Woche bearbeitet.</p>
+    <p>Die Meldung gilt erst als bestätigt, wenn sie hier (<a href="https://dbv.turnier.de/sport/events.aspx?id=8e25686d-193f-4971-a464-fd9d6a9af5cc">Link</a>) veröffentlicht wurde und nicht als "Nachrücker" gekennzeichnet ist. Sollte deine Meldung nicht innerhalb einer Woche dort zu finden sein, melde dich bitte unter:</p>
+    <p><a href="mailto:anmeldung@alemannen-cup.de">anmeldung@alemannen-cup.de</a></p>
 
-    Mixed:
-      - Teilnahme: {$user['mixed']}
-      - Vorname: {$user['mixed_vorname']}
-      - Nachname: {$user['mixed_nachname']}
-      - Verein: {$user['mixed_verein']}
-      - Spieler-ID: {$user['mixed_spieler_id']}
-      - E-Mail: {$user['mixed_email']}
-      - Handynummer: {$user['mixed_handynummer']}
+    <p>Hier sind die Details:</p>
+    <ul>
+        <li><strong>Geschlecht:</strong> {$user['geschlecht']}</li>
+        <li><strong>Name:</strong> {$user['vorname']} {$user['nachname']}</li>
+        <li><strong>Verein:</strong> {$user['verein']}</li>
+        <li><strong>Spieler-ID:</strong> {$user['spieler_id']}</li>
+        <li><strong>Einzel:</strong> {$user['einzel']}</li>
+    </ul>
 
-    Doppel:
-      - Teilnahme: {$user['doppel']}
-      - Vorname: {$user['doppel_vorname']}
-      - Nachname: {$user['doppel_nachname']}
-      - Verein: {$user['doppel_verein']}
-      - Spieler-ID: {$user['doppel_spieler_id']}
-      - E-Mail: {$user['doppel_email']}
-      - Handynummer: {$user['doppel_handynummer']}
+    <p><strong>Mixed:</strong></p>
+    <ul>
+        <li>Teilnahme: {$user['mixed']}</li>
+        <li>Vorname: {$user['mixed_vorname']}</li>
+        <li>Nachname: {$user['mixed_nachname']}</li>
+        <li>Verein: {$user['mixed_verein']}</li>
+        <li>Spieler-ID: {$user['mixed_spieler_id']}</li>
+        <li>E-Mail: {$user['mixed_email']}</li>
+        <li>Handynummer: {$user['mixed_handynummer']}</li>
+    </ul>
 
-    Bei Fragen, wende dich gerne an uns: anmeldung@alemannen-cup.de.
+    <p><strong>Doppel:</strong></p>
+    <ul>
+        <li>Teilnahme: {$user['doppel']}</li>
+        <li>Vorname: {$user['doppel_vorname']}</li>
+        <li>Nachname: {$user['doppel_nachname']}</li>
+        <li>Verein: {$user['doppel_verein']}</li>
+        <li>Spieler-ID: {$user['doppel_spieler_id']}</li>
+        <li>E-Mail: {$user['doppel_email']}</li>
+        <li>Handynummer: {$user['doppel_handynummer']}</li>
+    </ul>
 
-    Mfg,
-    Alemannen Cup Team
+    <p>Mit freundlichen Grüßen
+      <br>
+      Alemannen Cup Team
+    </p>
 
-    ---
+    <hr>
 
-    Hello {$user['vorname']} {$user['nachname']},
+    <p>Hello {$user['vorname']} {$user['nachname']},</p>
 
-    Thank you for registering. Here are your details:
+    <p>Thank you for your registration, it will be forwarded to the tournament management and processed within a week at the latest.</p>
+    <p>The registration is only confirmed when it is published here (<a href="https://dbv.turnier.de/sport/events.aspx?id=8e25686d-193f-4971-a464-fd9d6a9af5cc">link</a>) and is not marked as "substitute". If your registration is not listed there within a week, please contact:</p>
+    <p><a href="mailto:anmeldung@alemannen-cup.de">anmeldung@alemannen-cup.de</a></p>
 
-    Gender: {$user['geschlecht']}
-    Name: {$user['vorname']} {$user['nachname']}
-    Club: {$user['verein']}
-    Player ID: {$user['spieler_id']}
-    Singles: {$user['einzel']}
+    <p>Here are the details:</p>
+    <ul>
+        <li><strong>Gender:</strong> {$user['geschlecht']}</li>
+        <li><strong>Name:</strong> {$user['vorname']} {$user['nachname']}</li>
+        <li><strong>Club:</strong> {$user['verein']}</li>
+        <li><strong>Player ID:</strong> {$user['spieler_id']}</li>
+        <li><strong>Singles:</strong> {$user['einzel']}</li>
+    </ul>
 
-    Mixed:
-      - Participation: {$user['mixed']}
-      - First Name: {$user['mixed_vorname']}
-      - Last Name: {$user['mixed_nachname']}
-      - Club: {$user['mixed_verein']}
-      - Player ID: {$user['mixed_spieler_id']}
-      - Email: {$user['mixed_email']}
-      - Phone Number: {$user['mixed_handynummer']}
+    <p><strong>Mixed:</strong></p>
+    <ul>
+        <li>Participation: {$user['mixed']}</li>
+        <li>First Name: {$user['mixed_vorname']}</li>
+        <li>Last Name: {$user['mixed_nachname']}</li>
+        <li>Club: {$user['mixed_verein']}</li>
+        <li>Player ID: {$user['mixed_spieler_id']}</li>
+        <li>Email: {$user['mixed_email']}</li>
+        <li>Phone Number: {$user['mixed_handynummer']}</li>
+    </ul>
 
-    Doubles:
-      - Participation: {$user['doppel']}
-      - First Name: {$user['doppel_vorname']}
-      - Last Name: {$user['doppel_nachname']}
-      - Club: {$user['doppel_verein']}
-      - Player ID: {$user['doppel_spieler_id']}
-      - Email: {$user['doppel_email']}
-      - Phone Number: {$user['doppel_handynummer']}
+    <p><strong>Doubles:</strong></p>
+    <ul>
+        <li>Participation: {$user['doppel']}</li>
+        <li>First Name: {$user['doppel_vorname']}</li>
+        <li>Last Name: {$user['doppel_nachname']}</li>
+        <li>Club: {$user['doppel_verein']}</li>
+        <li>Player ID: {$user['doppel_spieler_id']}</li>
+        <li>Email: {$user['doppel_email']}</li>
+        <li>Phone Number: {$user['doppel_handynummer']}</li>
+    </ul>
 
-    If you have any questions, feel free to reach out to us: anmeldung@alemannen-cup.de.
+    <p>If you have any questions, feel free to reach out to us: <a href="mailto:anmeldung@alemannen-cup.de">anmeldung@alemannen-cup.de</a>.</p>
 
-    Best regards,
-    Alemannen Cup Team
-";
+    <p>Best regards,<br>Alemannen Cup Team</p>
+</body>
+</html>
+HTML;
 
-
-
-$headers = "From: anmeldung@alemannen-cup.de\r\n" .
-           "Reply-To: anmeldung@alemannen-cup.de\r\n" .
-           "BCC: ma.goldschmidt@web.de, anmeldung@alemannen-cup.de\r\n" . // Add the additional recipient in BCC
-           "X-Mailer: PHP/" . phpversion();
+// Set email headers
+$headers = "MIME-Version: 1.0\r\n";
+$headers .= "Content-type: text/html; charset=UTF-8\r\n";
+$headers .= "From: anmeldung@alemannen-cup.de\r\n";
+$headers .= "Reply-To: anmeldung@alemannen-cup.de\r\n";
+$headers .= "BCC: ma.goldschmidt@web.de, anmeldung@alemannen-cup.de\r\n"; // Add additional recipient in BCC
 
 // Send the email
 if (mail($to, $subject, $message, $headers)) {
