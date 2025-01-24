@@ -24,7 +24,7 @@ try {
         // Check required fields
         foreach ($required_fields as $field) {
             if (empty($_POST[$field])) {
-                throw new Exception("The field '{$field}' is required.");
+                throw new Exception("The field '{$field}' is required. ");
             }
         }
 
