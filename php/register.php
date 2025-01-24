@@ -24,14 +24,14 @@ try {
         // Check required fields
         foreach ($required_fields as $field) {
             if (empty($_POST[$field])) {
-                throw new Exception("The field '{$field}' is required. ");
+                throw new Exception("The field '{$field}' is required.");
             }
         }
 
         // Retrieve data from the POST request
         $data = [];
         foreach (array_merge($required_fields, $optional_fields) as $field) {
-            $data[$field] = isset($_POST[$field]) ? trim($_POST[$field]) : null;
+            $data[$field] = $_POST[$field] ?? null; // Set optional fields to null if not provided
         }
 
         // Prepare and execute the SQL query
