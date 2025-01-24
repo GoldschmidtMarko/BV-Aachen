@@ -17,6 +17,7 @@ $message = "
     Verein: {$user['verein']}
     Spieler-ID: {$user['spieler_id']}
     Einzel: {$user['einzel']}
+    Email: {$user['email']}
 
     Mixed:
       - Teilnahme: {$user['mixed']}
