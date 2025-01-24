@@ -31,7 +31,7 @@ try {
         // Retrieve data from the POST request
         $data = [];
         foreach (array_merge($required_fields, $optional_fields) as $field) {
-            $data[$field] = $_POST[$field] ?? null; // Set optional fields to null if not provided
+            $data[$field] = isset($_POST[$field]) ? trim($_POST[$field]) : null;
         }
 
         // Prepare and execute the SQL query
