@@ -29,6 +29,7 @@ $message = <<<HTML
         <li><strong>Verein:</strong> {$user['verein']}</li>
         <li><strong>Spieler-ID:</strong> {$user['spieler_id']}</li>
         <li><strong>Einzel:</strong> {$user['einzel']}</li>
+        <li><strong>E-Mail:</strong> {$user['email']}</li>
     </ul>
 
     <p><strong>Mixed:</strong></p>
@@ -73,6 +74,7 @@ $message = <<<HTML
         <li><strong>Club:</strong> {$user['verein']}</li>
         <li><strong>Player ID:</strong> {$user['spieler_id']}</li>
         <li><strong>Singles:</strong> {$user['einzel']}</li>
+        <li><strong>Email:</strong> {$user['email']}</li>
     </ul>
 
     <p><strong>Mixed:</strong></p>
