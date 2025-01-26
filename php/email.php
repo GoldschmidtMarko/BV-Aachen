@@ -6,7 +6,7 @@ if (!isset($user)) {
 
 // Format email content with user data
 $to = $user['email']; // Only the user's email in the "To" field
-$subject = "Registrierung Alemannen Cup 2021"; // Email subject
+$subject = "Registrierung Alemannen Cup 2021 | Registration Alemannen Cup 2021"; // Email subject
 
 // Use heredoc for better readability
 $message = <<<HTML
