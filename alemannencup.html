@@ -42,8 +42,9 @@
             <div id="navigation" class="text-sm lg:flex-grow md:flex-grow" style="display: block;">
                 <a href="./index.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">
                     Start</a>
-                <a href="./alemannencup.html" aria-current="page" class="block mt-4 rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Alemannen
-                    Cup</a>
+                <a href="./alemannencup.html" aria-current="page" class="block mt-4 rounded-md bg-gray-900 px-3 py-2 text-sm font-medium lg:inline-block lg:mt-0 md:inline-block md:mt-0" style="color: red;">
+                        Alemannen Cup
+                    </a>
                 <a href="./teams.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">
                     <span data-lang="en" class="hidden">Teams</span>
                     <span data-lang="de">Mannschaften</span>
@@ -65,9 +66,26 @@
         </div>
     </nav>
 
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-8">
+        <div class="flex justify-center gap-6 flex-wrap">
+            <!-- Deutsche Ausschreibung -->
+            <a href="files/Al-Cup Ausschreibung 2025 DE.pdf" download>
+                <img src="images/AL-PDF-DE.png" alt="Ausschreibung Deutsch" class="w-24 h-24 cursor-pointer hover:opacity-80">
+                <p class="text-center text-sm mt-2">Deutsch</p>
+            </a>
 
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <br>
+            <!-- Niederländische Ausschreibung -->
+            <a href="files/Al-Cup Auschreibung 2025 NL.pdf" download>
+                <img src="images/AL-PDF-NL.png" alt="Toernooibrochure Nederlands" class="w-24 h-24 cursor-pointer hover:opacity-80">
+                <p class="text-center text-sm mt-2">Nederlands</p>
+            </a>
+
+            <!-- Französische Ausschreibung -->
+            <a href="files/Al-Cup Ausschreibung 2025 FR.pdf" download>
+                <img src="images/AL-PDF-FR.png" alt="Brochure du tournoi Français" class="w-24 h-24 cursor-pointer hover:opacity-80">
+                <p class="text-center text-sm mt-2">Français</p>
+            </a>
+        </div>
         <p class="text-4xl sm:text-5xl font-extrabold text-center mt-6 text-slate-900 dark:text-slate-50">
             <button onclick="window.location.href='./register.html'" class="text-red-600 dark:text-red-400 hover:underline px-4 py-2 border border-red-600 dark:border-red-400 rounded-md hover:bg-red-100 dark:hover:bg-red-800 transition">
                     <span data-lang="en" class="hidden">Register for the Alemannen Cup 2025</span>
