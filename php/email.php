@@ -25,11 +25,13 @@ $message = <<<HTML
     <p>Hier sind die Details:</p>
     <ul>
         <li><strong>Geschlecht:</strong> {$user['geschlecht']}</li>
-        <li><strong>Name:</strong> {$user['vorname']} {$user['nachname']}</li>
+        <li><strong>Vorname:</strong> {$user['vorname']}</li>
+        <li><strong>Nachname:</strong> {$user['nachname']}</li>
         <li><strong>Verein:</strong> {$user['verein']}</li>
         <li><strong>Spieler-ID:</strong> {$user['spieler_id']}</li>
         <li><strong>Einzel:</strong> {$user['einzel']}</li>
         <li><strong>E-Mail:</strong> {$user['email']}</li>
+        <li><strong>Handynummer:</strong> {$user['handynummer']}</li>
     </ul>
 
     <p><strong>Mixed:</strong></p>
