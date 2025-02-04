@@ -31,7 +31,8 @@ $message = <<<HTML
         <li><strong>Spieler-ID:</strong> {$user['spieler_id']}</li>
         <li><strong>E-Mail:</strong> {$user['email']}</li>
         <li><strong>Handynummer:</strong> {$user['handynummer']}</li>
-        <li><br><strong>Einzel:</strong> {$user['einzel']}</li>
+        <br>
+        <li><strong>Einzel:</strong> {$user['einzel']}</li>
     </ul>
 
     <p><strong>Mixed:</strong></p>
