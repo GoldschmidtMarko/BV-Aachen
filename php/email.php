@@ -18,7 +18,7 @@ $message = <<<HTML
 <body>
     <p>Hallo {$user['vorname']} {$user['nachname']},</p>
 
-    <p>Vielen Dank für deine Anmeldung, diese wird an die Turnierleitung übermittelt und spätestens innerhalb einer Woche bearbeitet.</p>
+    <p>Vielen Dank für deine Anmeldung, diese wird an die Turnierleitung übermittelt und spätestens <li>innerhalb einer Woche</li> bearbeitet.</p>
     <p>Die Meldung gilt erst als bestätigt, wenn sie hier (<a href="https://dbv.turnier.de/sport/events.aspx?id=8e25686d-193f-4971-a464-fd9d6a9af5cc">Link</a>) veröffentlicht wurde und nicht als "Nachrücker" gekennzeichnet ist. Sollte deine Meldung nicht innerhalb einer Woche dort zu finden sein, melde dich bitte unter:</p>
     <p><a href="mailto:anmeldung@alemannen-cup.de">anmeldung@alemannen-cup.de</a></p>
 
@@ -66,7 +66,7 @@ $message = <<<HTML
 
     <p>Hello {$user['vorname']} {$user['nachname']},</p>
 
-    <p>Thank you for your registration, it will be forwarded to the tournament management and processed within a week at the latest.</p>
+    <p>Thank you for your registration, it will be forwarded to the tournament management and processed <li>within a week</li> at the latest.</p>
     <p>The registration is only confirmed when it is published here (<a href="https://dbv.turnier.de/sport/events.aspx?id=8e25686d-193f-4971-a464-fd9d6a9af5cc">link</a>) and is not marked as "substitute". If your registration is not listed there within a week, please contact:</p>
     <p><a href="mailto:anmeldung@alemannen-cup.de">anmeldung@alemannen-cup.de</a></p>
 
@@ -76,8 +76,10 @@ $message = <<<HTML
         <li><strong>Name:</strong> {$user['vorname']} {$user['nachname']}</li>
         <li><strong>Club:</strong> {$user['verein']}</li>
         <li><strong>Player ID:</strong> {$user['spieler_id']}</li>
-        <li><strong>Singles:</strong> {$user['einzel']}</li>
         <li><strong>Email:</strong> {$user['email']}</li>
+        <li><strong>Phone Number:</strong> {$user['handynummer']}</li>
+        <br>
+        <li><strong>Singles:</strong> {$user['einzel']}</li>
     </ul>
 
     <p><strong>Mixed:</strong></p>
