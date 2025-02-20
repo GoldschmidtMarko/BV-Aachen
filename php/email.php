@@ -29,8 +29,8 @@ $message = <<<HTML
         <li><strong>Nachname:</strong> {$user['nachname']}</li>
         <li><strong>Verein:</strong> {$user['verein']}</li>
         <li><strong>Spieler-ID:</strong> {$user['spieler_id']}</li>
-        <li><strong>E-Mail:</strong> {$user['email']}</li>
         <li><strong>Handynummer:</strong> {$user['handynummer']}</li>
+        <li><strong>E-Mail:</strong> {$user['email']}</li>
         <br>
         <li><strong>Einzel:</strong> {$user['einzel']}</li>
     </ul>
@@ -42,8 +42,8 @@ $message = <<<HTML
         <li>Nachname: {$user['mixed_nachname']}</li>
         <li>Verein: {$user['mixed_verein']}</li>
         <li>Spieler-ID: {$user['mixed_spieler_id']}</li>
-        <li>E-Mail: {$user['mixed_email']}</li>
         <li>Handynummer: {$user['mixed_handynummer']}</li>
+        <li>E-Mail: {$user['mixed_email']}</li>
     </ul>
 
     <p><strong>Doppel:</strong></p>
@@ -53,8 +53,8 @@ $message = <<<HTML
         <li>Nachname: {$user['doppel_nachname']}</li>
         <li>Verein: {$user['doppel_verein']}</li>
         <li>Spieler-ID: {$user['doppel_spieler_id']}</li>
-        <li>E-Mail: {$user['doppel_email']}</li>
         <li>Handynummer: {$user['doppel_handynummer']}</li>
+        <li>E-Mail: {$user['doppel_email']}</li>
     </ul>
 
     <p>Mit freundlichen Grüßen
@@ -76,8 +76,8 @@ $message = <<<HTML
         <li><strong>Name:</strong> {$user['vorname']} {$user['nachname']}</li>
         <li><strong>Club:</strong> {$user['verein']}</li>
         <li><strong>Player ID:</strong> {$user['spieler_id']}</li>
-        <li><strong>Email:</strong> {$user['email']}</li>
         <li><strong>Phone Number:</strong> {$user['handynummer']}</li>
+        <li><strong>Email:</strong> {$user['email']}</li>
         <br>
         <li><strong>Singles:</strong> {$user['einzel']}</li>
     </ul>
@@ -89,8 +89,8 @@ $message = <<<HTML
         <li>Last Name: {$user['mixed_nachname']}</li>
         <li>Club: {$user['mixed_verein']}</li>
         <li>Player ID: {$user['mixed_spieler_id']}</li>
-        <li>Email: {$user['mixed_email']}</li>
         <li>Phone Number: {$user['mixed_handynummer']}</li>
+        <li>Email: {$user['mixed_email']}</li>
     </ul>
 
     <p><strong>Doubles:</strong></p>
@@ -100,8 +100,8 @@ $message = <<<HTML
         <li>Last Name: {$user['doppel_nachname']}</li>
         <li>Club: {$user['doppel_verein']}</li>
         <li>Player ID: {$user['doppel_spieler_id']}</li>
-        <li>Email: {$user['doppel_email']}</li>
         <li>Phone Number: {$user['doppel_handynummer']}</li>
+        <li>Email: {$user['doppel_email']}</li>
     </ul>
 
     <p>If you have any questions, feel free to reach out to us: <a href="mailto:anmeldung@alemannen-cup.de">anmeldung@alemannen-cup.de</a>.</p>
