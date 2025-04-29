@@ -97,168 +97,357 @@
                 </span>
             </p>
 
-            <p class="mt-10 text-3xl sm:text-4xl text-slate-900 font-extrabold tracking-tight dark:text-slate-50 relative">
-                <span class="inline-block">
-                    <span data-lang="en" class="hidden">Training Times</span>
-                <span data-lang="de">Trainingszeiten</span>
-                </span>
-                <br>
-                <br>
-                <div class="flex justify-center space-x-2">
-                    <!-- Adjusted space-x for closer buttons -->
-                    <button id="summerButton" class="toggle-button active">
-                        <i class="icon fas fa-sun"></i>
-                        <span data-lang="en" class="hidden">Summer</span>
-                        <span data-lang="de">Sommer</span>
+            <div class="w-full max-w-7xl p-4">
+                <div class="mt-10 text-3xl sm:text-4xl text-slate-900 tracking-tight dark:text-slate-50">
+
+                    <button id="tab-senior" class="px-4 py-2 text-gray-700 border-b-2 border-transparent font-bold hover:border-blue-500 underline" onclick="selectTab('senior')">
+                        <span data-lang="de">Senioren</span>
+                        <span data-lang="en" class="hidden">Seniors</span>
                     </button>
-                    <button id="winterButton" class="toggle-button">
-                        <i class="icon fas fa-snowflake"></i>
-                        <span data-lang="en" class="hidden">Winter</span>
-                        <span data-lang="de">Winter</span>
+
+                    <button id="tab-kids" class="px-4 py-2 text-gray-700 border-b-2 border-transparent hover:border-blue-500" onclick="selectTab('kids')">
+                        <span data-lang="de">Kinder</span>
+                        <span data-lang="en" class="hidden">Kids</span>
                     </button>
-                </div>
-                <div class="toggle-info">
-                    <span data-lang="en" class="hidden" id="seasonInfo_Eng">From 01.04 to 30.09</span>
-                    <span data-lang="de" id="seasonInfo_Ger">Von 01.04 bis 30.09</span>
-                    <!-- Default text for Summer -->
-                </div>
-            </p>
-            <div class="container mx-auto p-4 text-xs md:text-base lg:text-base">
-                <div class="grid grid-cols-6 gap-1">
-                    <!-- Empty top-left cell -->
-                    <div></div>
-                    <!-- Header Row for Days -->
-                    <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
-                        <span data-lang="en" class="hidden">Mon</span>
-                        <span data-lang="de">Mon</span>
-                    </div>
-                    <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
-                        <span data-lang="en" class="hidden">Tue</span>
-                        <span data-lang="de">Di</span>
-                    </div>
-                    <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
-                        <span data-lang="en" class="hidden">Wed</span>
-                        <span data-lang="de">Mi</span>
-                    </div>
-                    <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
-                        <span data-lang="en" class="hidden">Thu</span>
-                        <span data-lang="de">Do</span>
-                    </div>
-                    <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
-                        <span data-lang="en" class="hidden">Fri</span>
-                        <span data-lang="de">Fr</span>
-                    </div>
-                    <!-- Time slots and events -->
-                    <!-- 18:00 - 19:00 Row -->
-                    <div class="text-right font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-2">18:00 - 19:00</div>
-
-                    <div data-column="monday1" class="p-2 text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-4 dark:text-gray-200"></div>
-                    <div data-column="monday2" class="p-2 text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-2 dark:text-gray-200"></div>
-                    <div class="p-2 font-bold border-yellow-600 bg-yellow-400 rounded dark:border-black text-black dark:bg-yellow-600 dark:border-yellow-800 row-span-4 whitespace-normal h-auto dark:text-gray-200 responsive-text">
-                        <span data-lang="en" class="hidden">Children & Youth Training</span>
-                        <span data-lang="de">Kinder & Jugend Training</span>
-                        <br>
-                        <div class="font-light">18:00 - 20:00</div>
-                    </div>
-                    <div class="p-2 text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-4 dark:text-gray-200"></div>
-                    <div class="p-2 text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-1 dark:text-gray-200"></div>
-                    <div class="p-2 font-bold border-yellow-600 bg-yellow-400 rounded dark:border-black text-black dark:bg-yellow-600 dark:border-yellow-800 row-span-4 whitespace-normal h-auto dark:text-gray-200 responsive-text">
-                        <span data-lang="en" class="hidden">Children & Youth Training</span>
-                        <span data-lang="de">Kinder & Jugend Training</span>
-                        <br>
-                        <div class="font-light">18:00 - 20:00</div>
-                    </div>
-                    <div class="p-2 font-bold border-green-600 bg-green-400 rounded dark:border-black text-black dark:bg-green-600 dark:border-green-800 row-span-3 dark:text-gray-200 responsive-text">
-                        <span data-lang="en" class="hidden">Beginner Training</span>
-                        <span data-lang="de">Anfänger Training</span>
-                        <br>
-                        <div class="font-light">18:30 - 20:00</div>
-                    </div>
-
-                    <!-- 19:00 - 20:00 Row -->
-                    <div class="text-right font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-2">19:00 - 20:00</div>
-                    <div data-column="monday2" class="p-2 font-bold border-red-600 bg-red-400 rounded dark:border-black text-black dark:bg-red-600 dark:border-red-800 whitespace-normal h-auto row-span-3 dark:text-gray-200 responsive-text">
-                        <span data-lang="en" class="hidden">Team Training</span>
-                        <span data-lang="de">Mann&shyschafts&shytraining</span>
-                        <br>
-                        <div class="font-light">19:00 - 20:30</div>
-                    </div>
-
-                    <!-- 20:00 - 21:00 Row -->
-                    <div class="text-right font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-2">20:00 - 21:00</div>
-                    <div data-column="monday1" class="p-2 font-bold border-red-600 bg-red-400 rounded dark:border-black text-black dark:bg-red-600 dark:border-red-800 whitespace-normal h-auto row-span-3 dark:text-gray-200 responsive-text">
-                        <span data-lang="en" class="hidden">Team Training</span>
-                        <span data-lang="de">Mann&shyschafts&shytraining</span>
-                        <br>
-                        <div class="font-light">20:00 - 21:30</div>
-                    </div>
-                    <div class="p-2 text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-6 dark:text-gray-200"></div>
-                    <div class="p-2 bg-white font-bold rounded border text-black dark:bg-blue-500 dark:border-black row-span-6 bg-black-400 border-black-600 dark:text-gray-200 responsive-text">
-                        <span data-lang="en" class="hidden">Free Play Seniors</span>
-                        <span data-lang="de">Freies Spiel Senioren</span>
-                        <br>
-                        <div class="font-light">20:00 - 23:00</div>
-                    </div>
-                    <div class="p-2 bg-white font-bold rounded border text-black dark:bg-blue-500 dark:border-black row-span-4 bg-blue-400 border-blue-600 dark:text-gray-200 responsive-text">
-                        <span data-lang="en" class="hidden">Free Play Seniors</span>
-                        <span data-lang="de">Freies Spiel Senioren</span>
-                        <br>
-                        <div class="font-light">20:00 - 22:00</div>
-                    </div>
-                    <div class="p-2 text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-6 dark:text-gray-200"></div>
-                    <div data-column="monday2" class="p-2 bg-white font-bold rounded border text-black dark:bg-blue-500 dark:border-black row-span-5 bg-blue-400 border-blue-600 dark:text-gray-200 responsive-text">
-                        <span data-lang="en" class="hidden">Free Play Seniors</span>
-                        <span data-lang="de">Freies Spiel Senioren</span>
-                        <br>
-                        <div class="font-light">20:30 - 23:00</div>
-                    </div>
-
-                    <!-- 21:00 - 22:00 Row -->
-                    <div class="text-right font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-2">21:00 - 22:00</div>
-                    <div data-column="monday1" class="p-2 bg-white font-bold rounded border text-black dark:bg-blue-500 dark:border-black row-span-3 bg-blue-400 border-blue-600 dark:text-gray-200 responsive-text">
-                        <span data-lang="en" class="hidden">Free Play Seniors</span>
-                        <span data-lang="de">Freies Spiel Senioren</span>
-                        <br>
-                        <div class="font-light">21:30 - 23:00</div>
-                    </div>
-
-                    <!-- 22:00 - 23:00 Row -->
-                    <div class="text-right font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-2">22:00 - 23:00</div>
-                    <div class="p-2 text-center font-bold p-2  bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-2 dark:text-gray-200"></div>
-
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <!-- Empty top-left cell -->
-                    <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-1">
-                        <span data-lang="en" class="hidden">Location</span>
-                        <span data-lang="de">Ort</span>
-                    </div>
-                    <!-- Header Row for Days -->
-                    <div data-column="monday1" class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
-                        <span class="original">Burtscheid</span><span class="shortened">Burt</span>
-                    </div>
-                    <div data-column="monday2" class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
-                        <span class="original">Burtscheid</span><span class="shortened">Burt</span>
-                    </div>
-                    <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
-                        <span class="original">Laurensberg</span><span class="shortened">Lau</span>
-                    </div>
-                    <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
-                        <span class="original">Burtscheid</span><span class="shortened">Burt</span>
-                    </div>
-                    <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
-                        <span class="original">Laurensberg</span><span class="shortened">Lau</span>
-                    </div>
-                    <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
-                        <span class="original">Laurensberg</span><span class="shortened">Lau</span>
-                    </div>
 
                 </div>
             </div>
+
+            <div id="content-kids" class="hidden text-center">
+                <div class="white-border-div white-border p-4">
+                    <div class="mt-10 grid grid-cols-1 gap-4 lg:gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 overflow-hidden content-center items-center">
+                        <!-- 1. MANNSCHAFT-->
+                        <div class="relative">
+                            <img src="images/man1.jpg" alt="Image 1" class="w-1/4 max-w-full h-auto">
+                        </div>
+                        <div class="relative">
+                            <img src="images/man1.jpg" alt="Image 2" class="w-1/4 max-w-full h-auto">
+                        </div>
+                        <div class="relative">
+                            <img src="images/man1.jpg" alt="Image 3" class="w-1/4 max-w-full h-auto">
+                        </div>
+                        <div class="relative">
+                            <img src="images/man1.jpg" alt="Image 4" class="w-1/4 max-w-full h-auto">
+                        </div>
+                    </div>
+
+                    <div>
+                        <!-- Callender placeholder image -->
+                        <p class="mt-4 text-3xl sm:text-4xl text-slate-900 font-extrabold tracking-tight dark:text-slate-50 relative">
+                            <div class="flex justify-center space-x-2">
+                                <!-- Adjusted space-x for closer buttons -->
+                                <button id="summerButton-kids" class="toggle-button active">
+                                    <i class="icon fas fa-sun"></i>
+                                    <span data-lang="en" class="hidden">Summer</span>
+                                    <span data-lang="de">Sommer</span>
+                                </button>
+                                <button id="winterButton-kids" class="toggle-button">
+                                    <i class="icon fas fa-snowflake"></i>
+                                    <span data-lang="en" class="hidden">Winter</span>
+                                    <span data-lang="de">Winter</span>
+                                </button>
+                            </div>
+                            <div class="toggle-info">
+                                <span data-lang="en" class="hidden" id="seasonInfo_Eng-kids">From 01.04 to 30.09</span>
+                                <span data-lang="de" id="seasonInfo_Ger-kids">Von 01.04 bis 30.09</span>
+                                <!-- Default text for Summer -->
+                            </div>
+                        </p>
+                        <div class="container mx-auto p-4 text-xs md:text-base lg:text-base">
+                            <div class="grid grid-cols-6 gap-1">
+                                <!-- Empty top-left cell -->
+                                <div></div>
+                                <!-- Header Row for Days -->
+                                <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
+                                    <span data-lang="en" class="hidden">Mon</span>
+                                    <span data-lang="de">Mon</span>
+                                </div>
+                                <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
+                                    <span data-lang="en" class="hidden">Tue</span>
+                                    <span data-lang="de">Di</span>
+                                </div>
+                                <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
+                                    <span data-lang="en" class="hidden">Wed</span>
+                                    <span data-lang="de">Mi</span>
+                                </div>
+                                <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
+                                    <span data-lang="en" class="hidden">Thu</span>
+                                    <span data-lang="de">Do</span>
+                                </div>
+                                <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
+                                    <span data-lang="en" class="hidden">Fri</span>
+                                    <span data-lang="de">Fr</span>
+                                </div>
+                                <!-- Time slots and events -->
+                                <!-- 17:00 - 18:00 Row -->
+                                <div class="text-right font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-2">17:00 - 18:00</div>
+                                <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-6 dark:text-gray-200"></div>
+                                <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-2 dark:text-gray-200"></div>
+                                <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-6 dark:text-gray-200"></div>
+
+                                
+
+                                <div data-column="thursday1-kids" class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-3 dark:text-gray-200">
+                                    <span data-lang="en" class="hidden">Performance Training</span>
+                                    <span data-lang="de">Leistungstraining</span>
+                                    <br>
+                                    <div class="font-light">17:00 - 18:30</div>
+                                </div>
+                                
+                                <div data-column="thursday2-kids" class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-6 dark:text-gray-200"></div>
+                                
+
+
+
+                                <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-3 dark:text-gray-200">
+                                    <span data-lang="en" class="hidden">6-8 years</span>
+                                    <span data-lang="de">6-8 Jahre</span>
+                                    <br>
+                                    <div class="font-light">17:00 - 18:30</div>
+                                </div>
+                                <!-- Time slots and events -->
+                                <!-- 18:00 - 19:00 Row -->
+                                <div class="text-right font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-2">18:00 - 19:00</div>
+                                <div class="p-2 text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-4 dark:text-gray-200">
+                                    <span data-lang="en" class="hidden">6-18 years</span>
+                                    <span data-lang="de">6-18 Jahre</span>
+                                    <br>
+                                    <div class="font-light">18:00 - 20:00</div>
+                                </div>
+
+
+
+                                <div data-column="thursday1-kids" class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-3 dark:text-gray-200"></div>
+
+
+
+
+
+                                <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-3 dark:text-gray-200">
+                                    <span data-lang="en" class="hidden">9-18 years</span>
+                                    <span data-lang="de">9-18 Jahre</span>
+                                    <br>
+                                    <div class="font-light">18:30 - 20:00</div>
+                                </div>
+
+
+                                <!-- 19:00 - 20:00 Row -->
+                                <div class="text-right font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-2">19:00 - 20:00</div>
+
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <!-- Empty top-left cell -->
+                                <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-1">
+                                    <span data-lang="en" class="hidden">Location</span>
+                                    <span data-lang="de">Ort</span>
+                                </div>
+                                <!-- Header Row for Days -->
+                                <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
+                                </div>
+                                <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
+                                    <span class="original">Laurensberg</span><span class="shortened">Lau</span>
+                                </div>
+                                <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
+                                </div>
+                                <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
+                                    <span class="original">Laurensberg</span><span class="shortened">Lau</span>
+                                </div>
+                                <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
+                                    <span class="original">Laurensberg</span><span class="shortened">Lau</span>
+                                </div>
+        
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <p>
+                        <h2 class="text-l font-extrabold dark:text-white mt-10">
+                            <span data-lang="en" class="hidden">Children & Youth Training</span>
+                            <span data-lang="de">Kinder- und Jugendtraining</span>
+                        </h2>
+                        <br>
+                        <span data-lang="en" class="hidden">
+                        Note: For questions about children and youth training, please contact Lina Köllmann (
+                            <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="mailto:jugendwart@bv-aachen.de">jugendwart@bv-aachen.de
+                            </a>
+                        ).
+                        <br> Please contact Lina to arrange a trial training session.
+                    </span>
+                        <span data-lang="de">Hinweis: Bei Fragen zum Kinder- und Jugendtraining bitte an Lina Köllmann (<a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="mailto:jugendwart@bv-aachen.de">jugendwart@bv-aachen.de</a>) wenden.<br> Bitte meldet euch bei Lina um ein Probetraining zu vereinbaren.
+                    </span>
+                    </p>
+            </div>
+
+            </div>
+
+            <div id="content-senior">
+                <div class="white-border-div white-border p-4">
+                    <p class="mt-4 text-3xl sm:text-4xl text-slate-900 font-extrabold tracking-tight dark:text-slate-50 relative">
+                        <div class="flex justify-center space-x-2">
+                            <!-- Adjusted space-x for closer buttons -->
+                            <button id="summerButton-senior" class="toggle-button active">
+                                <i class="icon fas fa-sun"></i>
+                                <span data-lang="en" class="hidden">Summer</span>
+                                <span data-lang="de">Sommer</span>
+                            </button>
+                            <button id="winterButton-senior" class="toggle-button">
+                                <i class="icon fas fa-snowflake"></i>
+                                <span data-lang="en" class="hidden">Winter</span>
+                                <span data-lang="de">Winter</span>
+                            </button>
+                        </div>
+                        <div class="toggle-info">
+                            <span data-lang="en" class="hidden" id="seasonInfo_Eng-senior">From 01.04 to 30.09</span>
+                            <span data-lang="de" id="seasonInfo_Ger-senior">Von 01.04 bis 30.09</span>
+                            <!-- Default text for Summer -->
+                        </div>
+                    </p>
+                    <div class="container mx-auto p-4 text-xs md:text-base lg:text-base">
+                        <div class="grid grid-cols-6 gap-1">
+                            <!-- Empty top-left cell -->
+                            <div></div>
+                            <!-- Header Row for Days -->
+                            <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
+                                <span data-lang="en" class="hidden">Mon</span>
+                                <span data-lang="de">Mon</span>
+                            </div>
+                            <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
+                                <span data-lang="en" class="hidden">Tue</span>
+                                <span data-lang="de">Di</span>
+                            </div>
+                            <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
+                                <span data-lang="en" class="hidden">Wed</span>
+                                <span data-lang="de">Mi</span>
+                            </div>
+                            <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
+                                <span data-lang="en" class="hidden">Thu</span>
+                                <span data-lang="de">Do</span>
+                            </div>
+                            <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
+                                <span data-lang="en" class="hidden">Fri</span>
+                                <span data-lang="de">Fr</span>
+                            </div>
+                            <!-- Time slots and events -->
+                            <!-- 18:00 - 19:00 Row -->
+                            <div class="text-right font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-2">18:00 - 19:00</div>
+
+                            <div data-column="monday1-senior" class="p-2 text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-4 dark:text-gray-200"></div>
+                            <div data-column="monday2-senior" class="p-2 text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-2 dark:text-gray-200"></div>
+                            <div style="grid-row: span 10 / span 10;" class="p-2 text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white dark:text-gray-200"></div>
+                            <div class="p-2 text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-4 dark:text-gray-200"></div>
+                            <div class="p-2 text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-1 dark:text-gray-200"></div>
+                            <div style="grid-row: span 10 / span 10;" class="p-2 text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white dark:text-gray-200"></div>
+                            <div class="p-2 font-bold border-green-600 bg-green-400 rounded dark:border-black text-black dark:bg-green-600 dark:border-green-800 row-span-3 dark:text-gray-200 responsive-text">
+                                <span data-lang="en" class="hidden">Beginner Training</span>
+                                <span data-lang="de">Anfänger Training</span>
+                                <br>
+                                <div class="font-light">18:30 - 20:00</div>
+                            </div>
+
+                            <!-- 19:00 - 20:00 Row -->
+                            <div class="text-right font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-2">19:00 - 20:00</div>
+                            <div data-column="monday2-senior" class="p-2 font-bold border-red-600 bg-red-400 rounded dark:border-black text-black dark:bg-red-600 dark:border-red-800 whitespace-normal h-auto row-span-3 dark:text-gray-200 responsive-text">
+                                <span data-lang="en" class="hidden">Team Training</span>
+                                <span data-lang="de">Mann&shyschafts&shytraining</span>
+                                <br>
+                                <div class="font-light">19:00 - 20:30</div>
+                            </div>
+
+                            <!-- 20:00 - 21:00 Row -->
+                            <div class="text-right font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-2">20:00 - 21:00</div>
+                            <div data-column="monday1-senior" class="p-2 font-bold border-red-600 bg-red-400 rounded dark:border-black text-black dark:bg-red-600 dark:border-red-800 whitespace-normal h-auto row-span-3 dark:text-gray-200 responsive-text">
+                                <span data-lang="en" class="hidden">Team Training</span>
+                                <span data-lang="de">Mann&shyschafts&shytraining</span>
+                                <br>
+                                <div class="font-light">20:00 - 21:30</div>
+                            </div>
+                            <div class="p-2 bg-white font-bold rounded border text-black dark:bg-blue-500 dark:border-black row-span-6 bg-black-400 border-black-600 dark:text-gray-200 responsive-text">
+                                <span data-lang="en" class="hidden">Free Play Seniors</span>
+                                <span data-lang="de">Freies Spiel Senioren</span>
+                                <br>
+                                <div class="font-light">20:00 - 23:00</div>
+                            </div>
+                            <div class="p-2 bg-white font-bold rounded border text-black dark:bg-blue-500 dark:border-black row-span-4 bg-blue-400 border-blue-600 dark:text-gray-200 responsive-text">
+                                <span data-lang="en" class="hidden">Free Play Seniors</span>
+                                <span data-lang="de">Freies Spiel Senioren</span>
+                                <br>
+                                <div class="font-light">20:00 - 22:00</div>
+                            </div>
+                            <div data-column="monday2-senior" class="p-2 bg-white font-bold rounded border text-black dark:bg-blue-500 dark:border-black row-span-5 bg-blue-400 border-blue-600 dark:text-gray-200 responsive-text">
+                                <span data-lang="en" class="hidden">Free Play Seniors</span>
+                                <span data-lang="de">Freies Spiel Senioren</span>
+                                <br>
+                                <div class="font-light">20:30 - 23:00</div>
+                            </div>
+
+                            <!-- 21:00 - 22:00 Row -->
+                            <div class="text-right font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-2">21:00 - 22:00</div>
+                            <div data-column="monday1-senior" class="p-2 bg-white font-bold rounded border text-black dark:bg-blue-500 dark:border-black row-span-3 bg-blue-400 border-blue-600 dark:text-gray-200 responsive-text">
+                                <span data-lang="en" class="hidden">Free Play Seniors</span>
+                                <span data-lang="de">Freies Spiel Senioren</span>
+                                <br>
+                                <div class="font-light">21:30 - 23:00</div>
+                            </div>
+
+                            <!-- 22:00 - 23:00 Row -->
+                            <div class="text-right font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-2">22:00 - 23:00</div>
+                            <div class="p-2 text-center font-bold p-2  bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-2 dark:text-gray-200"></div>
+
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <!-- Empty top-left cell -->
+                            <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-1">
+                                <span data-lang="en" class="hidden">Location</span>
+                                <span data-lang="de">Ort</span>
+                            </div>
+                            <!-- Header Row for Days -->
+                            <div data-column="monday1-senior" class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
+                                <span class="original">Burtscheid</span><span class="shortened">Burt</span>
+                            </div>
+                            <div data-column="monday2-senior" class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
+                                <span class="original">Burtscheid</span><span class="shortened">Burt</span>
+                            </div>
+                            <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
+                                <span class="original">Laurensberg</span><span class="shortened">Lau</span>
+                            </div>
+                            <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
+                                <span class="original">Burtscheid</span><span class="shortened">Burt</span>
+                            </div>
+                            <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
+                                <span class="original">Laurensberg</span><span class="shortened">Lau</span>
+                            </div>
+                            <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
+                                <span class="original">Laurensberg</span><span class="shortened">Lau</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <p>
+                        <h2 class="text-l font-extrabold dark:text-white mt-10">
+                            <span data-lang="en" class="hidden">Senior Training</span>
+                            <span data-lang="de">Seniorentraining</span>
+                        </h2>
+                        <br>
+                        <span data-lang="en" class="hidden">
+                            The guided training on Monday is oriented towards team players. A prior agreement with the coach and a minimum playing strength (from medium district league level) are required. The training on Thursday can be attended by players of all classes after prior registration with Felix. Contact both trainers via the address
+                            <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="mailto:seniorentraining@bv-aachen.de">seniorentraining@bv-aachen.de</a>.</span>
+                        <span data-lang="de">
+                            Das angeleitete Training am Montag ist für Mannschaftsspieler:innen orierntiert. Hierzu ist eine vorherige Absprache mit dem Trainer sowie eine Mindestspielstärke erforderlich (ab mittlerem Bezirksklassenniveau). Das Training am Donnerstag kann nach vorheriger Anmeldung bei Felix von Spieler:innen aller Klassen besucht werden. Die Kontaktaufnahme mit beiden Trainern ist über die Adresse <a class="font-medium  text-blue-600 dark:text-blue-500 hover:underline" href="mailto:seniorentraining@bv-aachen.de">seniorentraining@bv-aachen.de</a>.</span>
+                    </p>
+                </div>
+            </div>
+
+
             <div class="mt-10">
                 <h2 class="text-xl font-extrabold dark:text-white mt-10">
                     <span data-lang="en" class="hidden">Notes</span>
@@ -281,40 +470,6 @@
                 <span data-lang="en" class="hidden">Further Information</span>
                 <span data-lang="de">Weitere Informationen</span>
             </p>
-            <div class="mt-2 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-                <div class="floatleft">
-                    <p>
-                        <h2 class="text-l font-extrabold dark:text-white mt-10">
-                            <span data-lang="en" class="hidden">Children & Youth Training</span>
-                            <span data-lang="de">Kinder- und Jugendtraining</span>
-                        </h2>
-                        <br>
-                        <span data-lang="en" class="hidden">
-                            Note: For questions about children and youth training, please contact Lina Köllmann (
-                                <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="mailto:jugendwart@bv-aachen.de">jugendwart@bv-aachen.de
-                                </a>
-                            ).
-                            <br> Please contact Lina to arrange a trial training session.
-                        </span>
-                        <span data-lang="de">Hinweis: Bei Fragen zum Kinder- und Jugendtraining bitte an Lina Köllmann (<a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="mailto:jugendwart@bv-aachen.de">jugendwart@bv-aachen.de</a>) wenden.<br> Bitte meldet euch bei Lina um ein Probetraining zu vereinbaren.
-                        </span>
-                    </p>
-                </div>
-                <div class="floatleft">
-                    <p>
-                        <h2 class="text-l font-extrabold dark:text-white mt-10">
-                            <span data-lang="en" class="hidden">Senior Training</span>
-                            <span data-lang="de">Seniorentraining</span>
-                        </h2>
-                        <br>
-                        <span data-lang="en" class="hidden">
-                            The guided training on Monday is oriented towards team players. A prior agreement with the coach and a minimum playing strength (from medium district league level) are required. The training on Thursday can be attended by players of all classes after prior registration with Felix. Contact both trainers via the address
-                            <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="mailto:seniorentraining@bv-aachen.de">seniorentraining@bv-aachen.de</a>.</span>
-                        <span data-lang="de">
-                            Das angeleitete Training am Montag ist für Mannschaftsspieler:innen orierntiert. Hierzu ist eine vorherige Absprache mit dem Trainer sowie eine Mindestspielstärke erforderlich (ab mittlerem Bezirksklassenniveau). Das Training am Donnerstag kann nach vorheriger Anmeldung bei Felix von Spieler:innen aller Klassen besucht werden. Die Kontaktaufnahme mit beiden Trainern ist über die Adresse <a class="font-medium  text-blue-600 dark:text-blue-500 hover:underline" href="mailto:seniorentraining@bv-aachen.de">seniorentraining@bv-aachen.de</a>.</span>
-                    </p>
-                </div>
-            </div>
 
             <h2 class="text-xl font-extrabold dark:text-white mt-10">
                 <span data-lang="en" class="hidden">Location</span>
@@ -391,53 +546,6 @@
             </div>
         </div>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const today = new Date();
-            const month = today.getMonth(); // 0: January, 1: February, ..., 11: December
-
-            const columnsMonday1 = document.querySelectorAll('[data-column="monday1"]');
-            const columnsMonday2 = document.querySelectorAll('[data-column="monday2"]');
-
-            const setSummer = () => {
-                columnsMonday1.forEach(element => element.style.display = 'none');
-                columnsMonday2.forEach(element => element.style.display = 'block');
-                document.getElementById('seasonInfo_Ger').textContent = 'Von 01.04 bis 30.09';
-                document.getElementById('seasonInfo_Eng').textContent = 'From 01.04 to 30.09';
-            };
-
-            const setWinter = () => {
-                columnsMonday1.forEach(element => element.style.display = 'block');
-                columnsMonday2.forEach(element => element.style.display = 'none');
-                document.getElementById('seasonInfo_Ger').textContent = 'Von 01.10 bis 31.03';
-                document.getElementById('seasonInfo_Eng').textContent = 'From 01.10 to 31.03';
-            };
-
-            document.getElementById('summerButton').addEventListener('click', () => {
-                setSummer();
-                document.getElementById('summerButton').classList.add('active');
-                document.getElementById('winterButton').classList.remove('active');
-            });
-
-            document.getElementById('winterButton').addEventListener('click', () => {
-                setWinter();
-                document.getElementById('winterButton').classList.add('active');
-                document.getElementById('summerButton').classList.remove('active');
-            });
-
-            // Initial setup based on current month
-            if (month >= 3 && month <= 8) { // April (3) to September (8)
-                setSummer();
-                document.getElementById('summerButton').classList.add('active');
-                document.getElementById('winterButton').classList.remove('active');
-            } else {
-                setWinter();
-                document.getElementById('winterButton').classList.add('active');
-                document.getElementById('summerButton').classList.remove('active');
-            }
-        });
-    </script>
-
 </body>
 
 </html>
