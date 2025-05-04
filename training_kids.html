@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+<!DOCTYPE html PUBLIC"-//W3C//DTD XHTML 1.0 Transitional//EN""http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
+-->
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="keywords" content="BV Aachen, Badminton, Aachen">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="styles/output.css">
+    <script src="javascripts/navigation-menu-showhide.js"></script>
+    <!-- used for to get idb library, a CHIPS cookie method for the language switch -->
+    <script src="https://cdn.jsdelivr.net/npm/idb/build/iife/index-min.js"></script>
+    <script src="javascripts/language-toggle.js"></script>
+    <script src="javascripts/training-text-shortener.js"></script>
+    <script src="javascripts/training-seasons-toggle.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>BV Aachen 09</title>
+    <link rel="stylesheet" href="styles/button-training-style.css">
+    <link rel="stylesheet" href="styles/navigation-layout.css">
+    <link rel="stylesheet" href="styles/training-styles.css">
+
+</head>
+
+<body class="antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900 text-center dark">
+    <nav class="fixed-top flex items-center justify-between flex-wrap bg-gray-800 p-3">
+        <div class="flex items-center flex-shrink-0 text-white mr-6">
+            <div class="flex flex-shrink-0 items-center bg-gray-100 p-1 rounded-md">
+                <img class="h-8 w-auto rounded-md" src="images/Logo.png" alt="BV Aachen">
+            </div>
+        </div>
+        <div class="block md:hidden lg:hidden">
+            <button class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400  hover:border-white" onclick="showhideNavigation(['navigation', 'languageToggle'])">
+                <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <title>Menu</title>
+                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                </svg>
+            </button>
+        </div>
+        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto md:flex md:items-center md:w-auto">
+            <div id="navigation" class="text-sm lg:flex-grow md:flex-grow" style="display: block;">
+                <a href="./index.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium  lg:inline-block lg:mt-0 md:inline-block md:mt-0">
+                    Start</a>
+                    <a href="./alemannencup.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium   lg:inline-block lg:mt-0 md:inline-block md:mt-0" style="color: red; background-color: transparent;">
+                        Alemannen Cup
+                    </a>
+                <a href="./teams.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium  lg:inline-block lg:mt-0 md:inline-block md:mt-0">
+                    <span data-lang="en" class="hidden">Teams</span>
+                    <span data-lang="de">Mannschaften</span>
+                </a>
+
+                <div class="relative inline-block align-top">
+                    <button onclick="toggleDropdown()" class="mt-4 rounded-md px-3 py-2 text-sm font-medium text-white text-left min-w-max lg:mt-0 md:mt-0" aria-current="page">
+                        <span data-lang="en" class="hidden">Training ▼</span>
+                        <span data-lang="de">Training ▼</span>
+                    </button>
+                    <div id="trainingDropdown" class="hidden mt-2 space-y-1">
+                        <a href="./training_senior.html" class="block rounded-md px-3 py-2 text-sm font-medium">
+                            <span data-lang="en" class="hidden">Seniors</span>
+                            <span data-lang="de">Senioren</span>
+                        </a>
+                        <a href="./training_kids.html" class="block rounded-md px-3 py-2 text-sm font-medium dropdown-current-page">
+                            <span data-lang="en" class="hidden">Kids</span>
+                            <span data-lang="de">Kinder</span>
+                        </a>
+                    </div>
+                </div>
+
+
+                <a href="./verein.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium  lg:inline-block lg:mt-0 md:inline-block md:mt-0">
+                    <span data-lang="en" class="hidden">Become a Member</span>
+                    <span data-lang="de">Mitglied werden</span>
+                </a>
+                <a href="./kontakt.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium  lg:inline-block lg:mt-0 md:inline-block md:mt-0">
+                    <span data-lang="en" class="hidden">Contact</span>
+                    <span data-lang="de">Kontakt</span>
+                </a>
+                <a href="./FAQ.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium  lg:inline-block lg:mt-0 md:inline-block md:mt-0">FAQ</a>
+            </div>
+            <button id="languageToggle" class="ml-4 bg-white text-blue-500 w-8 h-8 rounded-full flex items-center justify-center">
+                <span id="languageIcon">EN</span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="mx-auto px-2 max-w-7xl sm:px-6 lg:px-8 content-center">
+        <!--
+        <div>
+            <img class="inline" src="images/bild1.jpg" alt="Badmintonball" width="600" height="230">
+            <br>
+            <div id="pagetitle">Badmintonverein Aachen 2009 e.V.</div>
+        </div>
+        -->
+        <div>
+            <p class="mt-10 text-3xl sm:text-4xl text-slate-900 font-extrabold tracking-tight dark:text-slate-50">
+                <span data-lang="en" class="hidden">Kids Training</span>
+                <span data-lang="de">Kindertraining</span>
+            </p>
+            <p class="mt-4 space-y-6">
+                Hier kann text stehen
+            </p>
+
+            <div class="mt-10 grid grid-cols-1 gap-4 lg:gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 overflow-hidden content-center items-center">
+                <!-- 1. MANNSCHAFT-->
+                <div class="relative">
+                    <img src="images/man1.jpg" alt="Image 1" class="w-1/4 max-w-full h-auto">
+                </div>
+                <div class="relative">
+                    <img src="images/man1.jpg" alt="Image 2" class="w-1/4 max-w-full h-auto">
+                </div>
+                <div class="relative">
+                    <img src="images/man1.jpg" alt="Image 3" class="w-1/4 max-w-full h-auto">
+                </div>
+                <div class="relative">
+                    <img src="images/man1.jpg" alt="Image 4" class="w-1/4 max-w-full h-auto">
+                </div>
+            </div>
+
+            <div>
+                <!-- Callender placeholder image -->
+                <p class="mt-4 text-3xl sm:text-4xl text-slate-900 font-extrabold tracking-tight dark:text-slate-50 relative">
+                    <div class="flex justify-center space-x-2">
+                        <!-- Adjusted space-x for closer buttons -->
+                        <button id="summerButton" class="toggle-button active">
+                            <i class="icon fas fa-sun"></i>
+                            <span data-lang="en" class="hidden">Summer</span>
+                            <span data-lang="de">Sommer</span>
+                        </button>
+                        <button id="winterButton" class="toggle-button">
+                            <i class="icon fas fa-snowflake"></i>
+                            <span data-lang="en" class="hidden">Winter</span>
+                            <span data-lang="de">Winter</span>
+                        </button>
+                    </div>
+                    <div class="toggle-info">
+                        <span data-lang="en" class="hidden" id="seasonInfo_Eng">From 01.04 to 30.09</span>
+                        <span data-lang="de" id="seasonInfo_Ger">Von 01.04 bis 30.09</span>
+                        <!-- Default text for Summer -->
+                    </div>
+                </p>
+                <div class="container mx-auto p-4 text-xs md:text-base lg:text-base">
+                    <div class="grid grid-cols-6 gap-1">
+                        <!-- Empty top-left cell -->
+                        <div></div>
+                        <!-- Header Row for Days -->
+                        <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
+                            <span data-lang="en" class="hidden">Mon</span>
+                            <span data-lang="de">Mon</span>
+                        </div>
+                        <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
+                            <span data-lang="en" class="hidden">Tue</span>
+                            <span data-lang="de">Di</span>
+                        </div>
+                        <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
+                            <span data-lang="en" class="hidden">Wed</span>
+                            <span data-lang="de">Mi</span>
+                        </div>
+                        <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
+                            <span data-lang="en" class="hidden">Thu</span>
+                            <span data-lang="de">Do</span>
+                        </div>
+                        <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
+                            <span data-lang="en" class="hidden">Fri</span>
+                            <span data-lang="de">Fr</span>
+                        </div>
+                        <!-- Time slots and events -->
+                        <!-- 17:00 - 18:00 Row -->
+                        <div class="text-right font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-2">17:00 - 18:00</div>
+                        <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-6"></div>
+                        <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-2"></div>
+                        <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-6"></div>
+
+                        
+
+                        <div data-column="thursday2" class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-3">
+                            <span data-lang="en" class="hidden">Performance Training</span>
+                            <span data-lang="de">Leistungstraining</span>
+                            <br>
+                            <div class="font-light">17:00 - 18:30</div>
+                        </div>
+                        
+                        <div data-column="thursday1" class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-6"></div>
+                        
+
+
+
+                        <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-yellow-600 dark:text-white row-span-3">
+                            <span data-lang="en" class="hidden">6-8 years</span>
+                            <span data-lang="de">6-8 Jahre</span>
+                            <br>
+                            <div class="font-light">17:00 - 18:30</div>
+                        </div>
+                        <!-- Time slots and events -->
+                        <!-- 18:00 - 19:00 Row -->
+                        <div class="text-right font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-2">18:00 - 19:00</div>
+                        <div class="p-2 text-center font-bold p-2 bg-gray-200 text-black  dark:bg-blue-500 dark:text-white row-span-4">
+                            <span data-lang="en" class="hidden">6-18 years</span>
+                            <span data-lang="de">6-18 Jahre</span>
+                            <br>
+                            <div class="font-light">18:00 - 20:00</div>
+                        </div>
+
+
+
+                        <div data-column="thursday2" class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-3"></div>
+
+
+
+
+
+                        <div class="text-center font-bold p-2 bg-gray-200 text-black  dark:bg-green-600 dark:text-white row-span-3">
+                            <span data-lang="en" class="hidden">9-18 years</span>
+                            <span data-lang="de">9-18 Jahre</span>
+                            <br>
+                            <span style="color: rgb(95, 0, 0);">18:00</span> - 20:00
+                        </div>
+
+
+                        <!-- 19:00 - 20:00 Row -->
+                        <div class="text-right font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-2">19:00 - 20:00</div>
+
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <!-- Empty top-left cell -->
+                        <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-1">
+                            <span data-lang="en" class="hidden">Location</span>
+                            <span data-lang="de">Ort</span>
+                        </div>
+                        <!-- Header Row for Days -->
+                        <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
+                        </div>
+                        <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
+                            <span class="original">Laurensberg</span><span class="shortened">Lau</span>
+                        </div>
+                        <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
+                        </div>
+                        <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
+                            <span class="original">Laurensberg</span><span class="shortened">Lau</span>
+                        </div>
+                        <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
+                            <span class="original">Laurensberg</span><span class="shortened">Lau</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <p>
+                <h2 class="text-l font-extrabold dark:text-white mt-10">
+                    <span data-lang="en" class="hidden">Children & Youth Training</span>
+                    <span data-lang="de">Kinder- und Jugendtraining</span>
+                </h2>
+                <br>
+                <span data-lang="en" class="hidden">
+                Note: For questions about children and youth training, please contact Lina Köllmann (
+                    <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="mailto:jugendwart@bv-aachen.de">jugendwart@bv-aachen.de
+                    </a>
+                ).
+                <br> Please contact Lina to arrange a trial training session.
+            </span>
+                <span data-lang="de">Hinweis: Bei Fragen zum Kinder- und Jugendtraining bitte an Lina Köllmann (<a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="mailto:jugendwart@bv-aachen.de">jugendwart@bv-aachen.de</a>) wenden.<br> Bitte meldet euch bei Lina um ein Probetraining zu vereinbaren.
+            </span>
+            </p>
+   
+
+            <div class="mt-10">
+                <h2 class="text-xl font-extrabold dark:text-white mt-10">
+                    <span data-lang="en" class="hidden">Notes</span>
+                    <span data-lang="de">Hinweise</span>
+                </h2>
+
+                <p class="mt-4 space-y-6">
+                    <span data-lang="en" class="hidden">For participation in the free play times, no prior registration is required.</span>
+                    <span data-lang="de">Für die Teilnahme an den freien Spielzeiten ist aktuell keine Voranmeldung erforderlich.</span>
+
+                </p>
+                <span data-lang="en" class="hidden">During the <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="https://www.schulferien.org/deutschland/ferien/nordrhein-westfalen/">school holidays</a> in NRW, the hall in Burtscheid is generally open and the hall in Laurensberg is generally closed. Exception: During the Christmas holidays, both halls are generally closed. Any exceptions will be announced via the internal club email distribution list or can be requested at <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="mailto:vorsitz@bv-aachen.de">
+                        vorsitz@bv-aachen.de</a> erfragt werden.
+                </span>
+                <span data-lang="de">Während der <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="https://www.schulferien.org/deutschland/ferien/nordrhein-westfalen/"> Schulferien</a> in NRW ist die Halle in Burtscheid grundsätzlich geöffnet und die Halle in Laurensberg grundsätzlich geschlossen. Ausnahme: In den Weihnachtsferien sind grundsätzlich beide Hallen geschlossen. Eventuelle Ausnahmen werden über den vereinsinternen E-Mail-Verteiler bekanntgegeben bzw. können unter <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="mailto:vorsitz@bv-aachen.de">
+                        vorsitz@bv-aachen.de</a> erfragt werden.
+                </span>
+            </div>
+            <p class="mt-6 text-xl sm:text-xl text-slate-900 font-extrabold tracking-tight dark:text-slate-50">
+                <span data-lang="en" class="hidden">Further Information</span>
+                <span data-lang="de">Weitere Informationen</span>
+            </p>
+
+            <h2 class="text-xl font-extrabold dark:text-white mt-10">
+                <span data-lang="en" class="hidden">Location</span>
+                <span data-lang="de">Ort</span>
+            </h2>
+            <p>
+                <h2 class="text-l font-extrabold dark:text-white mt-10">Laurensberg:</h2>
+                <br> Anne-Frank-Gymnasium Halle II
+                <br> Hander Weg 89
+                <br>52072 Aachen-Laurensberg
+                <br>
+                <br>
+                <div class="flex">
+
+                    <iframe width="100%" height="450" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d714.5670695079923!2d6.052033108595938!3d50.80379343567636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c0995da16abadf%3A0x1de42e10144befb9!2sHalle%202!5e0!3m2!1sde!2sde!4v1720024787823!5m2!1sde!2sde"
+                        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                </div>
+            </p>
+
+            <p class="mt-8 space-y-6">
+                <span data-lang="en" class="hidden">Further information on training and training organization can be found here:
+                </span>
+                <span data-lang="de">Weitere Informationen zum Training und zur Trainingsorganisation finden Sie hier:
+                </span>
+                <br>
+                <a class="group inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-pink-50 text-pink-600 hover:bg-pink-100 hover:text-pink-700 focus:ring-pink-600 dark:bg-slate-700 dark:text-slate-100 dark:hover:bg-slate-600 dark: dark:focus:ring-slate-500 mt-8"
+                    href="files/BVAachen-Trainingsorganisation_Stand_01-Mai-2022.pdf">
+                    <span data-lang="en" class="hidden">Training Organization</span>
+                    <span data-lang="de">Trainingsorganisation</span>
+                    <svg class="overflow-visible ml-3 text-pink-300 group-hover:text-pink-400 dark:text-slate-500 dark:group-hover:text-slate-400" width="3" height="6" viewBox="0 0 3 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M0 0L3 3L0 6"></path>
+                    </svg>
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <br>
+    <div id="footer-wrapper" class="mt-20">
+        <div id="footer" class="text-center">
+            <div id="adresse">
+                <p>
+                    <a href="./impressum.html" class="font-medium  text-blue-600 dark:text-blue-500 hover:underline">
+                        <span data-lang="en" class="hidden">Imprint</span>
+                        <span data-lang="de">Impressum</span>
+                    </a> <b> | </b>
+                    <a href="./datenschutz.html" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                        <span data-lang="en" class="hidden">Privacy Policy</span>
+                        <span data-lang="de">Informationen zum Datenschutz</span>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

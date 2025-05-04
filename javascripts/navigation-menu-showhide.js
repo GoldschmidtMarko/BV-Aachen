@@ -29,3 +29,9 @@ window.addEventListener('resize', function() {
         }
     }
 });
+
+
+function toggleDropdown() {
+    const dropdown = document.getElementById('trainingDropdown');
+    dropdown.classList.toggle('hidden');
+}

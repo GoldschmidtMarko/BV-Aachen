@@ -1,0 +1,180 @@
+/* Ensure the navigation bar is fixed at the top */
+nav.fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #2d3748; /* Your navigation background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex; /* Make the nav a flex container */
+    align-items: center; /* Vertically align items within the nav */
+    justify-content: space-between; /* Distribute space between logo and the rest */
+    padding: 0.75rem 1rem; /* Adjust padding as needed */
+}
+
+/* Style the logo container */
+nav.fixed-top > div.flex.items-center.flex-shrink-0.text-white.mr-6 {
+    /* Already has necessary flex properties */
+}
+
+/* Style the mobile menu button */
+nav.fixed-top > div.block.md\:hidden.lg\:hidden {
+    /* Existing styles are fine */
+}
+
+/* Flex container for navigation links and language toggle button */
+nav.fixed-top > div.w-full.flex-grow.lg\:flex.lg\:items-center.lg\:w-auto.md\:flex.md\:items-center.md\:w-auto {
+    display: flex; /* Ensure this inner div is also a flex container */
+    align-items: center; /* Vertically align items */
+}
+
+/* Style the navigation links container */
+nav.fixed-top #navigation {
+    display: flex; /* Lay out the links horizontally */
+    flex-grow: 1; /* Allow it to take up available space */
+    margin-right: 1rem; /* Add some spacing between links and the toggle */
+}
+
+/* Style individual navigation links */
+nav.fixed-top #navigation > a {
+    color: #e2e8f0; /* Text color */
+    padding: 0.5rem 0.75rem;
+    text-decoration: none;
+    margin-right: 0.5rem; /* Spacing between links */
+    display: inline-block; /* Allows horizontal layout and margin */
+    border-radius: 0.25rem; /* Match rounded corners */
+    margin-top: 0 !important; /* Override any top margin */
+}
+
+nav.fixed-top #navigation > a:hover {
+    background-color: #4a5568; /* Background color on hover */
+    color: #ffffff; /* Text color on hover */
+}
+
+nav.fixed-top #navigation > a[aria-current="page"] {
+    background-color: #111827; /* Background color for current page (adjust if needed) */
+    color: #ffffff; /* Text color for current page */
+}
+
+nav.fixed-top #navigation > div.relative.inline-block.align-top > button[aria-current="page"] {
+    background-color: #111827; /* Match the background of your current page links */
+    color: #ffffff; /* Match the text color */
+    /* Add any other styles you have for your current page links */
+}
+
+nav.fixed-top #trainingDropdown > a.dropdown-current-page {
+    background-color: #111827; /* Match the background of the active button */
+    color: #ffffff; /* Match the text color of the active button */
+    /* Add any other styles you want (e.g., rounded corners if applicable) */
+}
+
+/* Style the training dropdown container */
+nav.fixed-top #navigation > div.relative.inline-block.align-top {
+    display: inline-block; /* Allows it to sit in the flow */
+}
+
+/* Style the training dropdown button */
+nav.fixed-top #navigation > div.relative.inline-block.align-top > button {
+    /* background-color: #4a5568; /* Match hover background or use a different one */
+    color: #e2e8f0;
+    padding: 0.5rem 0.75rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 0.875rem; /* Match link font size */
+    font-weight: 500; /* Match link font weight */
+    margin-right: 0.5rem; /* Spacing */
+    margin-top: 0 !important; /* Override top margin */
+}
+
+nav.fixed-top #navigation > div.relative.inline-block.align-top > button:hover {
+    background-color: #616f83; /* Darker hover */
+}
+
+/* Style the actual dropdown menu */
+nav.fixed-top #trainingDropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #374151; /* Darker background for dropdown */
+    border: 1px solid #4a5568;
+    border-top: none;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 10; /* Ensure it's above other elements */
+}
+
+nav.fixed-top #trainingDropdown > a {
+    display: block;
+    color: #e2e8f0;
+    padding: 0.5rem 0.75rem;
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+
+nav.fixed-top #trainingDropdown > a:hover {
+    background-color: #4a5568;
+}
+
+/* Language toggle button */
+nav.fixed-top #languageToggle {
+    background-color: #ffffff;
+    /* Button background color */
+    color: #3182ce;
+    /* Button text color */
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 16px;
+    /* Adjust the margin as needed */
+}
+
+/* Ensure there's enough space for the fixed nav */
+body {
+    padding-top: 64px; /* Adjust based on the actual height of your nav */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    nav.fixed-top {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    nav.fixed-top > div.w-full.flex-grow.lg\:flex.lg\:items-center.lg\:w-auto.md\:flex.md\:items-center.md\:w-auto {
+        flex-direction: column; /* Stack navigation items */
+        align-items: flex-start; /* Left align */
+        width: 100%; /* Take full width */
+    }
+
+    nav.fixed-top #navigation {
+        flex-direction: column; /* Stack links in mobile view */
+        width: 100%;
+        margin-right: 0; /* Remove right margin */
+    }
+
+    nav.fixed-top #navigation > a,
+    nav.fixed-top #navigation > div.relative.inline-block.align-top {
+        display: block; /* Make them take full width */
+        margin-right: 0;
+        margin-bottom: 0.5rem; /* Add spacing between stacked items */
+    }
+
+    nav.fixed-top #languageToggle {
+        margin-left: 0;
+        margin-top: 0.5rem;
+    }
+
+    nav.fixed-top #trainingDropdown {
+        position: static; /* Flow normally in mobile view */
+        border-left: none;
+        border-right: none;
+        box-shadow: none;
+    }
+}
