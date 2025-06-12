@@ -21,6 +21,7 @@
     <title>BV Aachen 09</title>
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modal.css">
+    <link rel="stylesheet" href="styles/alemannencup.css">
 </head>
 
 <body class="antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900 text-justify dark">
@@ -66,65 +67,44 @@
         </div>
     </nav>
 
-    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-8">
-        <div class="flex justify-center gap-6 flex-wrap">
-            <!-- Deutsche Ausschreibung -->
+    <div class="alemannencup-container">
+    <div class="flex justify-between items-center flex-wrap">
+        <div class="logo-style">
+            <img src="images/alemancup25/Logo-regio iT-web.png" alt="Logo regio iT" class="max-w-full max-h-full object-contain cursor-pointer hover:opacity-80">
+        </div>
+
+        <div class="flex justify-center gap-6 mx-auto">
             <a href="files/Al-Cup Ausschreibung 2025 DE.pdf" download>
-                <img src="images/AL-PDF-DE.png" alt="Ausschreibung Deutsch" class="w-24 h-24 cursor-pointer hover:opacity-80">
-                <p class="text-center text-sm mt-2">Deutsch</p>
+                <img src="images/AL-PDF-DE.png" alt="Ausschreibung Deutsch" class="pdf-link-img cursor-pointer hover:opacity-80">
+                <p class="pdf-link-text text-center mt-2">Deutsch</p>
             </a>
 
-            <!-- Niederländische Ausschreibung -->
             <a href="files/Al-Cup Auschreibung 2025 NL.pdf" download>
-                <img src="images/AL-PDF-NL.png" alt="Toernooibrochure Nederlands" class="w-24 h-24 cursor-pointer hover:opacity-80">
-                <p class="text-center text-sm mt-2">Nederlands</p>
+                <img src="images/AL-PDF-NL.png" alt="Toernooibrochure Nederlands" class="pdf-link-img cursor-pointer hover:opacity-80">
+                <p class="pdf-link-text text-center mt-2">Nederlands</p>
             </a>
 
-            <!-- Französische Ausschreibung -->
             <a href="files/Al-Cup Ausschreibung 2025 FR.pdf" download>
-                <img src="images/AL-PDF-FR.png" alt="Brochure du tournoi Français" class="w-24 h-24 cursor-pointer hover:opacity-80">
-                <p class="text-center text-sm mt-2">Français</p>
+                <img src="images/AL-PDF-FR.png" alt="Brochure du tournoi Français" class="pdf-link-img cursor-pointer hover:opacity-80">
+                <p class="pdf-link-text text-center mt-2">Français</p>
             </a>
         </div>
+
+        <div class="logo-style">
+            <img src="images/alemancup25/STAWAG_Logo_Orange 218,8 mm breit.png" alt="Logo STAWAG" class="max-w-full max-h-full object-contain cursor-pointer hover:opacity-80">
+        </div>
+    </div>
+    <div class="main-content-wrapper">
+
         <p class="text-4xl sm:text-5xl font-extrabold text-center mt-6 text-slate-900 dark:text-slate-50">
-            <button onclick="window.location.href='./register.html'" class="text-red-600 dark:text-red-400 hover:underline px-4 py-2 border border-red-600 dark:border-red-400 rounded-md hover:bg-red-100 dark:hover:bg-red-800 transition">
-                    <span data-lang="en" class="hidden">Register for the Alemannen Cup 2025</span>
-                    <span data-lang="de">Zum Alemannen Cup 2025 anmelden</span>
-                </button>
+            <button onclick="window.location.href='./register.html'" class="text-green-100 hover:underline px-4 py-2 border border-green-100 dark:border-green-100 rounded-md hover:bg-green-100 dark:hover:bg-green-100 transition">
+                <span data-lang="en" class="hidden">Register for the Alemannen Cup 2025</span>
+                <span data-lang="de">Zum Alemannen Cup 2025 anmelden</span>
+            </button>
         </p>
 
-        <!--
         <div class="max-w-7xl mx-auto">
-            <p class="mt-10 text-3xl sm:text-4xl text-slate-900 font-extrabold tracking-tight dark:text-slate-50 ">
-                <span data-lang="en" class="hidden">We thank all participants and helpers for a great tournament in
-                    2024!</span>
-                <span data-lang="de">Wir bedanken uns bei allen Teilnehmenden und HelferInnen für ein tolles Turnier
-                    2024!</span>
-            </p>
-            <p class="mt-4 space-y-6 ">
-                <span data-lang="en" class="hidden">Thank you for your participation! Despite the less-than-optimal
-                    scheduling on Sunday, we hope you enjoyed the tournament. If you have lost something, please contact
-                    us at <a href="mailto:anmeldung@alemannen-cup.de"
-                        class="font-medium text-blue-600 dark:text-blue-500 hover:underline">anmeldung@alemannen-cup.de</a>.
-                    You're also welcome to send us feedback about the tournament to the same address.</span>
-                <span data-lang="de">Vielen Dank für eure Teilnahme, wir hoffen es hat euch trotz der nicht ganz
-                    optimalen Zeitplanung am Sonntag gut gefallen. Es wurden einige Sachen gefunden, wer etwas vermisst
-                    meldet sich bitte unter <a href="mailto:anmeldung@alemannen-cup.de"
-                        class="font-medium text-blue-600 dark:text-blue-500 hover:underline">anmeldung@alemannen-cup.de</a>.
-                    Dorthin könnt ihr auch gerne Feedback zum Turnier schicken.</span>
-
-            </p>
-            <br>
-            <a href="https://www.turnier.de/tournament/500faf3c-80b0-43d6-967f-ff31d7517de7" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                <span data-lang="en" class="hidden">Here</span>
-                <span data-lang="de">Hier</span>
-            </a>
-            <span data-lang="en" class="hidden"> are the results of the 18th Alemannen Cup.</span>
-            <span data-lang="de"> sind die Ergebnisse vom 18. Alemannen Cup zu finden.</span>
-        </div>
-        -->
-        <div class="max-w-7xl mx-auto">
-            <p class="mt-10 text-3xl  sm:text-xl text-slate-900 font-extrabold tracking-tight dark:text-slate-50 ">
+            <p class="mt-10 text-3xl sm:text-xl text-slate-900 font-extrabold tracking-tight dark:text-slate-50 ">
                 <span data-lang="de">Die aktuelle Meldeliste für den Alemannen Cup 2025 ist <a href="https://dbv.turnier.de/sport/events.aspx?id=8e25686d-193f-4971-a464-fd9d6a9af5cc" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">hier</a> zu finden.</span>
                 <span data-lang="en" class="hidden">The current entry list for the Alemannen Cup 2025 can be found <a href="https://dbv.turnier.de/sport/events.aspx?id=8e25686d-193f-4971-a464-fd9d6a9af5cc" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">here</a>.</span>
             </p>
@@ -166,83 +146,18 @@
                 </div>
                 <div style="position: relative; top: 0; left: 0; width: 100%; height: 100%; z-index: 2;">
                     <img class="object-cover object-center w-full h-40 max-w-full rounded-lg" src="images/alemancup24/IMG_6728.JPG" alt="gallery-photo" onclick="showImage('images/alemancup24/IMG_6728.JPG')" />
-
                 </div>
             </div>
         </div>
 
-        <!-- Modal for displaying larger image -->
         <div id="imageModal" class="modal">
             <div class="modal-content">
                 <span class="close-button" onclick="hideModal()">×</span>
-                <button class="modal-arrow modal-left-arrow" onclick="prevImage()">&lt;</button>
+                <button class="modal-arrow modal-left-arrow" onclick="prevImage()"><</button>
                 <img id="modalImage" class="modal-image" src="" alt="modal-image" />
-                <button class="modal-arrow  modal-right-arrow" onclick="nextImage()">&gt;</button>
+                <button class="modal-arrow modal-right-arrow" onclick="nextImage()">></button>
             </div>
         </div>
-
-        <!--
-
-        <h2 class="text-xl font-extrabold dark:text-white mt-40">
-            <span data-lang="en" class="hidden">In June, it's that time again! The 19th Alemannen Cup is just around the
-                corner.</span>
-            <span data-lang="de">Im Juni ist es wieder soweit! Der 19. Alemannen Cup steht vor der Tür.</span>
-        </h2>
-
-        <span data-lang="en" class="hidden">Of course, we're also starting our Alemannen Cup with you in 2025!
-            <br>
-            <br> On 14th and 15th June 2025, we hope to welcome you back in large numbers to the "Hexenkessel" on
-            Neuköllner Straße. This year, the Elite and Fun divisions will be available again if we receive sufficient
-            registrations. For further information, please refer to the announcement at the top of the title image.
-            <br>
-            <br> The entire BV Aachen is looking forward to many registrations!
-            <br> Please register directly at
-            <a href="mailto:anmeldung@alemannen-cup.de"
-                class="font-medium text-blue-600 dark:text-blue-500 hover:underline">anmeldung@alemannen-cup.de </a>
-        </span>
-        <span data-lang="de">Natürlich starten wir auch 2025 mit euch unseren Alemannen Cup.
-            <br>
-            <br> Am 14. und 15. Juni 2025 begrüßen wir euch hoffentlich wieder zahlreich im "Hexenkessel" an der
-            Neuköllner Straße. Auch in diesem Jahr sind die Spielklassen Elite und Fun bei ausreichend Meldungen wieder
-            verfügbar. Weitere Informationen entnehmt
-            ihr bitte der Ausschreibung oben im Titelbild.
-            <br>
-            <br> Der ganze BV Aachen freut sich auf zahlreiche Meldungen!
-            <br> Bitte direkt an
-            <a href="mailto:anmeldung@alemannen-cup.de"
-                class="font-medium text-blue-600 dark:text-blue-500 hover:underline">anmeldung@alemannen-cup.de </a>
-        </span>
-        <br>
-        <br>
-        <h2 class="text-xl font-extrabold dark:text-white mt-10">
-            <span data-lang="en" class="hidden">Entry List</span>
-            <span data-lang="de">Meldeliste</span>
-        </h2>
-
-        <span data-lang="en" class="hidden">
-            If you want to see who your competitors are or to verify your entry, you can check the <a
-                href="https://dbv.turnier.de/sport/events.aspx?id=500faf3c-80b0-43d6-967f-ff31d7517de7"
-                class="font-medium text-blue-600 dark:text-blue-500 hover:underline"><b>current list of entries</b></a>.
-            <br>
-            <p class="mt-2">
-                <i>Please allow us one day after your entry has been confirmed, and then contact us in case of any
-                    errors or missing entries.</i>
-            </p>
-        </span>
-        <span data-lang="de">
-            Falls Ihr schonmal sehen wollt wer eure Konkurrenten sind und auch um eure Meldung zu überprüfen findet ihr
-            hier <a href="https://dbv.turnier.de/sport/events.aspx?id=500faf3c-80b0-43d6-967f-ff31d7517de7"
-                class="font-medium text-blue-600 dark:text-blue-500 hover:underline"><b>den aktuellen
-                    Stand der Meldungen</b></a>. <br>
-            <p class="mt-2">
-                <i>Gebt uns bitte einen Tag Zeit, nachdem eure Meldung bestätigt
-                    wurde und meldet euch danach bei etwaiger fehlerhafter oder fehlender
-                    Meldung bei uns.</i>
-            </p>
-        </span>
-        -->
-
-        <!-- TODO: URL des Stands der Meldungen aktualisieren (von 2025)-->
 
         <br>
         <div class="content-block">
@@ -349,16 +264,6 @@
             <br>
         </div>
         <div class="text-center">
-            <!--
-            <a class="group inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-pink-50 text-pink-600 hover:bg-pink-100 hover:text-pink-700 focus:ring-pink-600 dark:bg-slate-700 dark:text-slate-100 dark:hover:bg-slate-600 dark:hover:text-white dark:focus:ring-slate-500 mt-8"
-                href="files/Al-Cup%20Ausschreibung%202024%20DE.pdf">
-                <span data-lang="en" class="hidden">To the announcement</span>
-                <span data-lang="de">Zur Ausschreibung</span>
-                <svg class="overflow-visible ml-3 text-pink-300 group-hover:text-pink-400 dark:text-slate-500 dark:group-hover:text-slate-400" width="3" height="6" viewBox="0 0 3 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M0 0L3 3L0 6"></path>
-                </svg>
-            </a>
-            -->
             <div class="justify-center">
                 <h2 class="text-xl font-extrabold dark:text-white mt-10">
                     <span data-lang="en" class="hidden">Location</span>
@@ -378,6 +283,7 @@
             <h1 class="mt-20"> Das Alemannen Cup Team und der ganze BVA freut sich auf eure Meldungen!</h1>
         </div>
     </div>
+</div>
     <br>
     <div id="footer-wrapper" class="mt-20">
         <div id="footer" class="text-center">

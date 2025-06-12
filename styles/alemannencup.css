@@ -1,0 +1,64 @@
+.alemannencup-container {
+  /* Centers the container horizontally on the page */
+  margin-left: auto;
+  margin-right: auto;
+
+  /* Sets a maximum width for the content */
+  max-width: 1280px; /* This corresponds to Tailwind's max-w-7xl by default (1280px or 80rem) */
+
+  /* Adds horizontal padding for spacing on different screen sizes */
+  padding-left: 16px;  /* Corresponds to Tailwind's px-4 (16px or 1rem) */
+  padding-right: 16px; /* Corresponds to Tailwind's px-4 (16px or 1rem) */
+
+  /* Adds top margin for spacing from elements above it */
+  margin-top: 32px;    /* Corresponds to Tailwind's mt-8 (32px or 2rem) */
+}
+
+/* Media queries for responsive padding, similar to Tailwind's sm:px-6 lg:px-8 */
+@media (min-width: 640px) { /* Tailwind's 'sm' breakpoint */
+  .my-main-container {
+    padding-left: 24px; /* px-6 */
+    padding-right: 24px; /* px-6 */
+  }
+}
+
+@media (min-width: 1024px) { /* Tailwind's 'lg' breakpoint */
+  .my-main-container {
+    padding-left: 32px; /* px-8 */
+    padding-right: 32px; /* px-8 */
+  }
+}
+
+/* Your existing CSS for .logo-style and .pdf-link-img/text goes here */
+.logo-style {
+  height: 32px;
+  width: 360px; /* Default width for larger screens */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pdf-link-img {
+    width: 96px;
+    height: 96px;
+}
+
+.pdf-link-text {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .logo-style {
+    width: 100px; /* Smaller width for logos on smaller screens */
+  }
+
+  .pdf-link-img {
+    width: 64px;
+    height: 64px;
+  }
+
+  .pdf-link-text {
+    font-size: 0.75rem;
+  }
+}
