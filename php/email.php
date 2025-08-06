@@ -4,6 +4,8 @@ if (!isset($user)) {
     exit;
 }
 
+exit();
+
 // Format email content with user data
 $to = $user['email']; // Only the user's email in the "To" field
 $subject = "Registrierung Alemannen Cup 2025 | Registration Alemannen Cup 2025"; // Email subject

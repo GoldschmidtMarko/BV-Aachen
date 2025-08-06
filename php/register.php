@@ -2,6 +2,8 @@
 // Database credentials
 require_once 'db_config.php';
 
+exit();
+
 try {
     // Connect to the database
     $host = $db_credentials['host'];
