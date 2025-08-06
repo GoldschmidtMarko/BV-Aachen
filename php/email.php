@@ -1,10 +1,12 @@
 <?php
+
+exit();
+
 if (!isset($user)) {
     echo "No user data provided.";
     exit;
 }
 
-exit();
 
 // Format email content with user data
 $to = $user['email']; // Only the user's email in the "To" field
