@@ -1,0 +1,843 @@
+/* Professional Training Page Enhanced Styling */
+
+/* Hero Section */
+.training-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 4rem 2rem;
+    margin-top: 4rem;
+    border-radius: 0 0 2rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.training-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0%, transparent 50%, rgba(255, 255, 255, 0.1) 100%);
+    pointer-events: none;
+}
+
+.training-hero h1 {
+    color: white;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1;
+}
+
+/* Enhanced Content Cards */
+.content-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin: 2rem 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.dark .content-card {
+    background: rgba(30, 41, 59, 0.9);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+}
+
+.content-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Season Toggle Buttons */
+.season-toggle-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0.5rem 0;
+    position: relative;
+}
+
+.toggle-button {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    border: 2px solid rgba(59, 130, 246, 0.2);
+    border-radius: 50px;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    color: #64748b;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    position: relative;
+    overflow: hidden;
+    min-width: 140px;
+    justify-content: center;
+}
+
+.dark .toggle-button {
+    background: linear-gradient(135deg, #334155 0%, #1e293b 100%);
+    color: #e2e8f0;
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+.toggle-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.2);
+    border-color: rgba(59, 130, 246, 0.4);
+}
+
+.toggle-button.active {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    color: white;
+    border-color: #1d4ed8;
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+}
+
+.toggle-button.clicked {
+    transform: scale(0.95);
+}
+
+.toggle-button .icon {
+    font-size: 1.25rem;
+    transition: transform 0.3s ease;
+}
+
+.toggle-button:hover .icon {
+    transform: scale(1.1);
+}
+
+.toggle-info {
+    text-align: center;
+    margin-top: 0.2rem;
+    font-size: 0.875rem;
+    color: #64748b;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    background: rgba(59, 130, 246, 0.1);
+    border-radius: 20px;
+    display: inline-block;
+}
+
+.dark .toggle-info {
+    color: #e2e8f0;
+    background: rgba(59, 130, 246, 0.2);
+}
+
+/* Enhanced Training Schedule Table */
+.training-schedule {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+    overflow-x: auto;
+}
+
+.dark .training-schedule {
+    background: rgba(30, 41, 59, 0.9);
+}
+
+/* New Flexible Schedule Structure */
+.schedule-container {
+    min-width: 800px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Schedule Header */
+.schedule-header {
+    display: grid;
+    grid-template-columns: 80px repeat(5, 1fr);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.time-column-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0.5rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.day-column {
+    padding: 1rem 0.75rem;
+    text-align: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.day-column:last-child {
+    border-right: none;
+}
+
+.day-name {
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+}
+
+.location-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.location-tag {
+    font-size: 0.75rem;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    font-weight: 500;
+}
+
+/* Schedule Body */
+.schedule-body {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+.dark .schedule-body {
+    background: rgba(30, 41, 59, 0.5);
+}
+
+.time-block {
+    display: grid;
+    grid-template-columns: 80px repeat(5, 1fr);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    min-height: 80px;
+}
+
+.dark .time-block {
+    border-bottom-color: rgba(71, 85, 105, 0.3);
+}
+
+.time-block:last-child {
+    border-bottom: none;
+}
+
+.time-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    color: #64748b;
+}
+
+.dark .time-label {
+    background: rgba(71, 85, 105, 0.3);
+    border-right-color: rgba(71, 85, 105, 0.3);
+    color: #e2e8f0;
+}
+
+.day-activities {
+    display: flex;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    min-height: 80px;
+}
+
+.dark .day-activities {
+    border-right-color: rgba(71, 85, 105, 0.3);
+}
+
+.day-activities:last-child {
+    border-right: none;
+}
+
+.activity-slot {
+    flex: 1;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.activity-slot.empty {
+    background: transparent;
+}
+
+.activity-slot.continues {
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 0.02),
+        rgba(0, 0, 0, 0.02) 8px,
+        rgba(0, 0, 0, 0.05) 8px,
+        rgba(0, 0, 0, 0.05) 16px
+    );
+}
+
+.dark .activity-slot.continues {
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(255, 255, 255, 0.02),
+        rgba(255, 255, 255, 0.02) 8px,
+        rgba(255, 255, 255, 0.05) 8px,
+        rgba(255, 255, 255, 0.05) 16px
+    );
+}
+
+/* Enhanced Activity Cards */
+.activity-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 0.75rem;
+    text-align: center;
+    width: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.activity-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.activity-card.continues {
+    opacity: 0.8;
+    border-style: dashed;
+}
+
+.activity-card.small {
+    padding: 0.5rem;
+    font-size: 0.8rem;
+}
+
+/* Activity Types with Enhanced Colors */
+.activity-youth {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: white;
+    border-color: rgba(245, 158, 11, 0.5);
+}
+
+.activity-team {
+    background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    color: white;
+    border-color: rgba(239, 68, 68, 0.5);
+}
+
+.activity-beginner {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    border-color: rgba(16, 185, 129, 0.5);
+}
+
+.activity-free {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    color: white;
+    border-color: rgba(59, 130, 246, 0.5);
+}
+
+/* Activity Content */
+.activity-title {
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+    line-height: 1.2;
+}
+
+.activity-time {
+    font-size: 0.75rem;
+    opacity: 0.9;
+    font-weight: 500;
+}
+
+.activity-note {
+    font-size: 0.7rem;
+    opacity: 0.8;
+    margin-top: 0.25rem;
+    font-style: italic;
+}
+
+/* Activity Splits and Overlaps */
+.activity-split {
+    display: flex;
+    gap: 0.25rem;
+    width: 100%;
+}
+
+.activity-split .activity-card {
+    flex: 1;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.activity-overlap {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    width: 100%;
+    align-items: stretch;
+}
+
+.activity-overlap .activity-card {
+    flex: 1;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+}
+
+/* Legacy grid styles for backward compatibility */
+.training-grid {
+    display: grid;
+    grid-template-columns: auto repeat(5, 1fr);
+    gap: 0.25rem;
+    font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+    .training-grid {
+        font-size: 1rem;
+    }
+}
+
+/* Enhanced Table Cells */
+.training-grid > div {
+    padding: 1rem 0.5rem;
+    text-align: center;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.training-grid .time-slot {
+    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+    font-weight: 700;
+    color: #1e293b;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    writing-mode: horizontal-tb;
+}
+
+.dark .training-grid .time-slot {
+    background: linear-gradient(135deg, #334155 0%, #1e293b 100%);
+    color: #e2e8f0;
+}
+
+.training-grid .day-header {
+    background: linear-gradient(135deg, #64748b 0%, #475569 100%);
+    color: white;
+    font-weight: 700;
+    border-radius: 12px;
+    padding: 1.25rem 0.5rem;
+}
+
+.training-grid .location-header {
+    background: linear-gradient(135deg, #64748b 0%, #475569 100%);
+    color: white;
+    font-weight: 700;
+    border-radius: 12px;
+}
+
+/* Empty cells */
+.activity-empty {
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    color: #64748b;
+}
+
+.dark .activity-empty {
+    background: linear-gradient(135deg, #374151 0%, #1f2937 100%);
+    color: #9ca3af;
+}
+
+/* Information Sections */
+.info-section {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border-radius: 16px;
+    padding: 2rem;
+    margin: 2rem 0;
+    border-left: 4px solid #3b82f6;
+    transition: all 0.3s ease;
+}
+
+.dark .info-section {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    border-left-color: #60a5fa;
+}
+
+.info-section:hover {
+    transform: translateX(5px);
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.15);
+}
+
+.info-section h2 {
+    color: #1e40af;
+    margin-bottom: 1rem;
+}
+
+.dark .info-section h2 {
+    color: #60a5fa;
+}
+
+/* Location Cards */
+.location-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.dark .location-card {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    border-color: rgba(71, 85, 105, 0.8);
+}
+
+.location-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.location-card h2 {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.map-container {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.map-container:hover {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Enhanced Links */
+.enhanced-link {
+    background: linear-gradient(135deg, #ec4899 0%, #be185d 100%);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);
+}
+
+.enhanced-link:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(236, 72, 153, 0.4);
+    text-decoration: none;
+    color: white;
+}
+
+.enhanced-link svg {
+    transition: transform 0.3s ease;
+}
+
+.enhanced-link:hover svg {
+    transform: translateX(3px);
+}
+
+/* Responsive Improvements */
+@media (max-width: 768px) {
+    .training-hero {
+        padding: 2rem 1rem;
+        margin-top: 3rem;
+    }
+    
+    .content-card {
+        padding: 1.5rem;
+        margin: 1rem 0;
+        border-radius: 16px;
+    }
+    
+    .toggle-button {
+        padding: 0.75rem 1.5rem;
+        min-width: 120px;
+        font-size: 0.875rem;
+    }
+    
+    .season-toggle-container {
+        gap: 0.5rem;
+    }
+    
+    .training-grid {
+        font-size: 0.75rem;
+        gap: 0.125rem;
+    }
+    
+    .training-grid > div {
+        padding: 0.75rem 0.25rem;
+    }
+    
+    .activity-card {
+        padding: 0.75rem;
+        font-size: 0.75rem;
+    }
+    
+    .location-card {
+        padding: 1.5rem;
+    }
+}
+
+/* Animation Classes */
+.fade-in {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.fade-in-delay-1 { animation-delay: 0.2s; }
+.fade-in-delay-2 { animation-delay: 0.4s; }
+.fade-in-delay-3 { animation-delay: 0.6s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Season transition effects */
+.season-hidden {
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+/* Responsive text handling */
+.responsive-text {
+    font-size: 0.875rem;
+    line-height: 1.4;
+}
+
+@media (max-width: 640px) {
+    .responsive-text {
+        font-size: 0.75rem;
+        line-height: 1.3;
+    }
+    
+    .original {
+        display: none;
+    }
+    
+    .shortened {
+        display: inline;
+    }
+}
+
+@media (min-width: 641px) {
+    .original {
+        display: inline;
+    }
+    
+    .shortened {
+        display: none;
+    }
+}
+
+/* Enhanced Schedule Responsive Design */
+@media (max-width: 768px) {
+    .schedule-container {
+        min-width: 600px;
+    }
+    
+    .schedule-header {
+        grid-template-columns: 60px repeat(5, 1fr);
+    }
+    
+    .time-block {
+        grid-template-columns: 60px repeat(5, 1fr);
+        min-height: 70px;
+    }
+    
+    .time-column-header,
+    .time-label {
+        font-size: 0.8rem;
+        padding: 0.75rem 0.25rem;
+    }
+    
+    .day-name {
+        font-size: 0.85rem;
+        margin-bottom: 0.3rem;
+    }
+    
+    .location-tag {
+        font-size: 0.7rem;
+        padding: 0.15rem 0.3rem;
+    }
+    
+    .location-tag .original {
+        display: none;
+    }
+    
+    .location-tag .shortened {
+        display: inline;
+    }
+    
+    .activity-slot {
+        padding: 0.3rem;
+    }
+    
+    .activity-card {
+        padding: 0.5rem !important;
+        font-size: 0.75rem !important;
+    }
+    
+    .activity-title {
+        font-size: 0.75rem !important;
+        margin-bottom: 0.15rem;
+    }
+    
+    .activity-time {
+        font-size: 0.65rem !important;
+    }
+    
+    .activity-note {
+        font-size: 0.6rem !important;
+    }
+    
+    .activity-split .activity-card,
+    .activity-overlap .activity-card {
+        padding: 0.35rem !important;
+        font-size: 0.7rem !important;
+    }
+    
+    .activity-split .activity-title,
+    .activity-overlap .activity-title {
+        font-size: 0.7rem !important;
+        margin-bottom: 0.1rem;
+    }
+    
+    .activity-split .activity-time,
+    .activity-overlap .activity-time {
+        font-size: 0.6rem !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .location-tag .original {
+        display: inline;
+    }
+    
+    .location-tag .shortened {
+        display: none;
+    }
+}
+
+/* Connected Training Slots - Remove gap between connected time blocks */
+.activity-card.connected-top {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.activity-card.connected-bottom {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    margin-top: -6px;
+    position: relative;
+    z-index: 2;
+}
+
+.activity-card.connected-middle {
+    border-radius: 0;
+    margin-top: -6px;
+    margin-bottom: 0;
+    position: relative;
+    z-index: 2;
+}
+
+/* Remove padding from activity slots that contain connected cards */
+.activity-slot.connected-slot-top {
+    padding-bottom: 0;
+    margin-bottom: -4px;
+}
+
+.activity-slot.connected-slot-bottom {
+    padding-top: 0;
+    margin-top: -4px;
+}
+
+.activity-slot.connected-slot-middle {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: -4px;
+    margin-bottom: -4px;
+}
+
+/* Remove border and minimize height between connected time blocks */
+.time-block.connected-time-block {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: -4px;
+}
+
+/* Special handling for activity-overlap containers */
+.activity-overlap .activity-card {
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.activity-overlap .activity-card:first-child {
+    margin-bottom: 2px;
+}
+
+.activity-overlap .activity-card:last-child {
+    margin-top: 2px;
+}
+
+/* Remove gaps between same activity type connected cards */
+/* Red blocks (team training) - remove gap between red elements */
+.activity-card.activity-team.connected-bottom {
+    margin-top: -6px;
+}
+
+/* Blue blocks (free play) - remove gap between blue elements */
+.activity-card.activity-free.connected-bottom {
+    margin-top: -6px;
+}
+
+/* Special handling for activity-overlap containers - same activity types */
+.activity-overlap .activity-card.activity-team.connected-top,
+.activity-overlap .activity-card.activity-team.connected-bottom,
+.activity-overlap .activity-card.activity-team.connected-middle {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.activity-overlap .activity-card.activity-team.connected-bottom {
+    margin-top: -4px;
+}
+
+.activity-overlap .activity-card.activity-free.connected-top,
+.activity-overlap .activity-card.activity-free.connected-bottom,
+.activity-overlap .activity-card.activity-free.connected-middle {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.activity-overlap .activity-card.activity-free.connected-bottom {
+    margin-top: -4px;
+}

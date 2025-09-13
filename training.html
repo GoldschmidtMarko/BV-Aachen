@@ -15,14 +15,15 @@
     <!-- used for to get idb library, a CHIPS cookie method for the language switch -->
     <script src="https://cdn.jsdelivr.net/npm/idb/build/iife/index-min.js"></script>
     <script src="javascripts/language-toggle.js"></script>
-    <script src="javascripts/training-text-shortener.js"></script>
     <script src="javascripts/training-seasons-toggle.js"></script>
+    <script src="javascripts/training-enhanced.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>BV Aachen 09</title>
     <link rel="stylesheet" href="styles/button-training-style.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/training-styles.css">
+    <link rel="stylesheet" href="styles/training-enhanced.css">
 
 </head>
 
@@ -70,18 +71,25 @@
     </nav>
 
     <div class="mx-auto px-2 max-w-7xl sm:px-6 lg:px-8 content-center">
-        <!--
-        <div>
-            <img class="inline" src="images/bild1.jpg" alt="Badmintonball" width="600" height="230">
-            <br>
-            <div id="pagetitle">Badmintonverein Aachen 2009 e.V.</div>
+        <!-- Professional Hero Section -->
+        <div class="training-hero fade-in" style="padding-top: 2rem; padding-bottom: 2rem;">
+            <div class="text-center">
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-3">
+                    Training
+                </h1>
+                <p class="text-lg text-white/90 max-w-2xl mx-auto leading-relaxed"></p>
+                    <span data-lang="de">
+                        Der BV Aachen bietet Spiel und Trainingsspaß für ambitionierte Spieler:innen.
+                    </span>
+                    <span data-lang="en" class="hidden">
+                        The BV Aachen offers fun and training for ambitious players.
+                    </span>
+                </p>
+            </div>
         </div>
-        -->
-        <div>
-            <p class="mt-10 text-3xl sm:text-4xl text-slate-900 font-extrabold tracking-tight dark:text-slate-50 ">
-                Training
-            </p>
-            <p class="mt-4 space-y-6 ">
+        <!-- Enhanced Content Description -->
+        <div class="content-card fade-in-delay-1">
+            <p class="text-lg leading-relaxed text-slate-600 dark:text-slate-300">
                 <span data-lang="de">
                     Der BV Aachen bietet Spiel und Trainingsspaß für ambitionierte Spieler:innen. Abgesehen vom Mannschaftstraining montags haben unsere Spielzeiten keine Teilnahmebeschränkung (Anmeldung vorab erforderlich).
                     Wir möchten allerdings darauf hinweisen, dass Trainingsspiele mit niedrigerem Spielniveau als Bezirksklasse nur selten zu Stande kommen.
@@ -101,16 +109,18 @@
                     We offer training for all skill levels as well as play and fun.
                 </span>
             </p>
+        </div>
 
-            <p class="mt-10 text-3xl sm:text-4xl text-slate-900 font-extrabold tracking-tight dark:text-slate-50 relative">
-                <span class="inline-block">
+        <!-- Enhanced Training Schedule Section -->
+        <div class="content-card fade-in-delay-2">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl sm:text-4xl text-slate-900 font-extrabold tracking-tight dark:text-slate-50 mb-6">
                     <span data-lang="en" class="hidden">Training Times</span>
-                <span data-lang="de">Trainingszeiten</span>
-                </span>
-                <br>
-                <br>
-                <div class="flex justify-center space-x-2">
-                    <!-- Adjusted space-x for closer buttons -->
+                    <span data-lang="de">Trainingszeiten</span>
+                </h2>
+                
+                <!-- Enhanced Season Toggle -->
+                <div class="season-toggle-container">
                     <button id="summerButton" class="toggle-button active">
                         <i class="icon fas fa-sun"></i>
                         <span data-lang="en" class="hidden">Summer</span>
@@ -125,171 +135,359 @@
                 <div class="toggle-info">
                     <span data-lang="en" class="hidden" id="seasonInfo_Eng">From 01.04 to 30.09</span>
                     <span data-lang="de" id="seasonInfo_Ger">Von 01.04 bis 30.09</span>
-                    <!-- Default text for Summer -->
-                </div>
-            </p>
-            <div class="container mx-auto p-4 text-xs md:text-base lg:text-base">
-                <div class="grid grid-cols-6 gap-1">
-                    <!-- Empty top-left cell -->
-                    <div></div>
-                    <!-- Header Row for Days -->
-                    <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
-                        <span data-lang="en" class="hidden">Mon</span>
-                        <span data-lang="de">Mon</span>
-                    </div>
-                    <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
-                        <span data-lang="en" class="hidden">Tue</span>
-                        <span data-lang="de">Di</span>
-                    </div>
-                    <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
-                        <span data-lang="en" class="hidden">Wed</span>
-                        <span data-lang="de">Mi</span>
-                    </div>
-                    <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
-                        <span data-lang="en" class="hidden">Thu</span>
-                        <span data-lang="de">Do</span>
-                    </div>
-                    <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
-                        <span data-lang="en" class="hidden">Fri</span>
-                        <span data-lang="de">Fr</span>
-                    </div>
-                    <!-- Time slots and events -->
-                    <!-- 18:00 - 19:00 Row -->
-                    <div class="text-right font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-2 flex items-center justify-center">18:00 - 19:00</div>
-
-                    <div data-column="monday1" class="p-2 text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-4 dark:text-gray-200"></div>
-                    <div data-column="monday2" class="p-2 text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-2 dark:text-gray-200"></div>
-                    <div class="p-2 font-bold border-yellow-600 bg-yellow-400 rounded dark:border-black text-black dark:bg-yellow-600 dark:border-yellow-800 row-span-4 whitespace-normal h-auto dark:text-gray-200 responsive-text">
-                        <span data-lang="en" class="hidden">Children & Youth Training</span>
-                        <span data-lang="de">Kinder & Jugend Training</span>
-                        <br>
-                        <div class="font-light">18:00 - 20:00</div>
-                    </div>
-                    <div class="p-2 text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-4 dark:text-gray-200"></div>
-                    <div class="p-2 text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-1 dark:text-gray-200"></div>
-                    <div class="p-2 font-bold border-yellow-600 bg-yellow-400 rounded dark:border-black text-black dark:bg-yellow-600 dark:border-yellow-800 row-span-4 whitespace-normal h-auto dark:text-gray-200 responsive-text">
-                        <span data-lang="en" class="hidden">Children & Youth Training</span>
-                        <span data-lang="de">Kinder & Jugend Training</span>
-                        <br>
-                        <div class="font-light">18:00 - 20:00</div>
-                    </div>
-                    <div class="row-span-3 font-bold dark:bg-gray-800 dark:text-white flex">
-                        <div class="p-2 font-bold border-green-600 bg-green-400 rounded dark:border-black text-black dark:bg-green-600 dark:border-green-800 flex-1 dark:text-gray-200 responsive-text">
-                            <span data-lang="en" class="hidden">Beginner Training</span>
-                            <span data-lang="de">Anfänger Training</span>
-                            <br>
-                            <br>
-                            <br>
-                            <div class="font-light">18:30 - 20:00</div>
-                        </div>
-                        <div class="p-2 bg-white font-bold rounded border text-black dark:bg-blue-500 dark:border-black flex-1 bg-black-400 border-black-600 dark:text-gray-200 responsive-text">
-                            <span data-lang="en" class="hidden">Free Play Seniors</span>
-                            <span data-lang="de">Freies Spiel Senioren</span>
-                            <br>
-                            <div data-lang="en" class="font-light hidden">(3 Courts)</div>
-                            <div data-lang="de" class="font-light">(3 Felder)</div>
-                            <br>
-                            <div class="font-light">18:30 - 20:00</div>
-                        </div>
-                    </div>
-
-                    <!-- 19:00 - 20:00 Row -->
-                    <div class="text-right font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-2 flex items-center justify-center">
-                        19:00 - 20:00
-                    </div>
-                    <div data-column="monday2" class="p-2 font-bold border-red-600 bg-red-400 rounded dark:border-black text-black dark:bg-red-600 dark:border-red-800 whitespace-normal h-auto row-span-3 dark:text-gray-200 responsive-text">
-                        <span data-lang="en" class="hidden">Team Training</span>
-                        <span data-lang="de">Mann&shyschafts&shytraining</span>
-                        <br>
-                        <div class="font-light">19:00 - 20:30</div>
-                    </div>
-
-                    <!-- 20:00 - 21:00 Row -->
-                    <div class="text-right font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-2 flex items-center justify-center">20:00 - 21:00</div>
-                    <div data-column="monday1" class="p-2 font-bold border-red-600 bg-red-400 rounded dark:border-black text-black dark:bg-red-600 dark:border-red-800 whitespace-normal h-auto row-span-3 dark:text-gray-200 responsive-text">
-                        <span data-lang="en" class="hidden">Team Training</span>
-                        <span data-lang="de">Mann&shyschafts&shytraining</span>
-                        <br>
-                        <div class="font-light">20:00 - 21:30</div>
-                    </div>
-                    <div class="p-2 text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-6 dark:text-gray-200"></div>
-                    <div class="p-2 bg-white font-bold rounded border text-black dark:bg-blue-500 dark:border-black row-span-6 bg-black-400 border-black-600 dark:text-gray-200 responsive-text">
-                        <span data-lang="en" class="hidden">Free Play Seniors</span>
-                        <span data-lang="de">Freies Spiel Senioren</span>
-                        <br>
-                        <div class="font-light">20:00 - 23:00</div>
-                    </div>
-                    <div class="p-2 bg-white font-bold rounded border text-black dark:bg-blue-500 dark:border-black row-span-4 bg-blue-400 border-blue-600 dark:text-gray-200 responsive-text">
-                        <span data-lang="en" class="hidden">Free Play Seniors</span>
-                        <span data-lang="de">Freies Spiel Senioren</span>
-                        <br>
-                        <div class="font-light">20:00 - 22:00</div>
-                    </div>
-                    <div class="p-2 text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-6 dark:text-gray-200"></div>
-                    <div data-column="monday2" class="p-2 bg-white font-bold rounded border text-black dark:bg-blue-500 dark:border-black row-span-5 bg-blue-400 border-blue-600 dark:text-gray-200 responsive-text ">
-                        <span data-lang="en" class="hidden">Free Play Seniors</span>
-                        <span data-lang="de">Freies Spiel Senioren</span>
-                        <br>
-                        <div class="font-light">20:30 - 23:00</div>
-                    </div>
-
-                    <!-- 21:00 - 22:00 Row -->
-                    <div class="text-right font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-2 flex items-center justify-center">21:00 - 22:00</div>
-                    <div data-column="monday1" class="p-2 bg-white font-bold rounded border text-black dark:bg-blue-500 dark:border-black row-span-3 bg-blue-400 border-blue-600 dark:text-gray-200 responsive-text">
-                        <span data-lang="en" class="hidden">Free Play Seniors</span>
-                        <span data-lang="de">Freies Spiel Senioren</span>
-                        <br>
-                        <div class="font-light">21:30 - 23:00</div>
-                    </div>
-
-                    <!-- 22:00 - 23:00 Row --> 
-                    <div class="text-right font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-2 flex items-center justify-center">22:00 - 23:00</div>
-                    <div class="p-2 text-center font-bold p-2  bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-2 dark:text-gray-200"></div>
-
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <!-- Empty top-left cell -->
-                    <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white row-span-1">
-                        <span data-lang="en" class="hidden">Location</span>
-                        <span data-lang="de">Ort</span>
-                    </div>
-                    <!-- Header Row for Days -->
-                    <div data-column="monday1" class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
-                        <span class="original">Burtscheid</span><span class="shortened">Burt</span>
-                    </div>
-                    <div data-column="monday2" class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
-                        <span class="original">Burtscheid</span><span class="shortened">Burt</span>
-                    </div>
-                    <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
-                        <span class="original">Laurensberg</span><span class="shortened">Lau</span>
-                    </div>
-                    <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
-                        <span class="original">Burtscheid</span><span class="shortened">Burt</span>
-                    </div>
-                    <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
-                        <span class="original">Laurensberg</span><span class="shortened">Lau</span>
-                    </div>
-                    <div class="text-center font-bold p-2 bg-gray-200 text-black dark:bg-gray-800 dark:text-white">
-                        <span class="original">Laurensberg</span><span class="shortened">Lau</span>
-                    </div>
-
                 </div>
             </div>
-            <div class="mt-10">
-                <h2 class="text-xl font-extrabold dark:text-white mt-10">
-                    <span data-lang="en" class="hidden">Notes</span>
-                    <span data-lang="de">Hinweise</span>
-                </h2>
+            
+            <!-- Enhanced Training Schedule -->
+            <div class="training-schedule">
+                <div class="schedule-container">
+                    <!-- Schedule Header -->
+                    <div class="schedule-header">
+                        <div class="time-column-header">
+                            <span data-lang="en" class="hidden">Time</span>
+                            <span data-lang="de">Zeit</span>
+                        </div>
+                        <div class="day-column">
+                            <div class="day-name">
+                                <span data-lang="en" class="hidden">Monday</span>
+                                <span data-lang="de">Montag</span>
+                            </div>
+                            <div class="location-info">
+                                <span class="location-tag">
+                                    <span class="original">Burtscheid</span><span class="shortened">Burt</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="day-column">
+                            <div class="day-name">
+                                <span data-lang="en" class="hidden">Tuesday</span>
+                                <span data-lang="de">Dienstag</span>
+                            </div>
+                            <div class="location-info">
+                                <span class="location-tag">
+                                    <span class="original">Laurensberg</span><span class="shortened">Lau</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="day-column">
+                            <div class="day-name">
+                                <span data-lang="en" class="hidden">Wednesday</span>
+                                <span data-lang="de">Mittwoch</span>
+                            </div>
+                            <div class="location-info">
+                                <span class="location-tag">
+                                    <span class="original">Burtscheid</span><span class="shortened">Burt</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="day-column">
+                            <div class="day-name">
+                                <span data-lang="en" class="hidden">Thursday</span>
+                                <span data-lang="de">Donnerstag</span>
+                            </div>
+                            <div class="location-info">
+                                <span class="location-tag">
+                                    <span class="original">Laurensberg</span><span class="shortened">Lau</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="day-column">
+                            <div class="day-name">
+                                <span data-lang="en" class="hidden">Friday</span>
+                                <span data-lang="de">Freitag</span>
+                            </div>
+                            <div class="location-info">
+                                <span class="location-tag">
+                                    <span class="original">Laurensberg</span><span class="shortened">Lau</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
 
-                <p class="mt-4 space-y-6 ">
-                    <span data-lang="en" class="hidden">For participation in the free play times, no prior registration is required.</span>
-                    <span data-lang="de">Für die Teilnahme an den freien Spielzeiten ist aktuell keine Voranmeldung erforderlich.</span>
+                    <!-- Schedule Body -->
+                    <div class="schedule-body">
+                        <!-- 18:00 - 19:00 Time Block -->
+                        <div class="time-block connected-time-block">
+                            <div class="time-label">18:00</div>
+                            <!-- Monday -->
+                            <div class="day-activities">
+                                <div data-column="monday1" class="activity-slot empty"></div>
+                                <div data-column="monday2" class="activity-slot empty"></div>
+                            </div>
+                            <!-- Tuesday -->
+                            <div class="day-activities">
+                                <div class="activity-slot connected-slot-top">
+                                    <div class="activity-card activity-youth connected-top", style="height: 90%">
+                                        <div class="activity-title">
+                                            <span data-lang="en" class="hidden">Children & Youth Training</span>
+                                            <span data-lang="de">Kinder & Jugend Training</span>
+                                        </div>
+                                        <div class="activity-time">18:00 - 20:00</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Wednesday -->
+                            <div class="day-activities">
+                                <div class="activity-slot empty"></div>
+                            </div>
+                            <!-- Thursday -->
+                            <div class="day-activities">
+                                <div class="activity-slot connected-slot-top">
+                                    <div class="activity-overlap">
+                                        <div>
+                                            <br>
+                                            <br>
+                                        </div>
+                                        <div class="activity-split">
+                                            <div class="activity-card activity-beginner connected-top">
+                                                <div class="activity-title">
+                                                    <span data-lang="en" class="hidden">Beginner Training</span>
+                                                    <span data-lang="de">Anfänger Training</span>
+                                                </div>
+                                                <div class="activity-time">18:30 - 20:00</div>
+                                            </div>
+                                            <div class="activity-card activity-free connected-top">
+                                                <div class="activity-title">
+                                                    <span data-lang="en" class="hidden">Free Play</span>
+                                                    <span data-lang="de">Freies Spiel</span>
+                                                </div>
+                                                <div class="activity-time">18:30 - 20:00</div>
+                                                <div class="activity-note">
+                                                    <span data-lang="en" class="hidden">(3 Courts)</span>
+                                                    <span data-lang="de">(3 Felder)</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Friday -->
+                            <div class="day-activities">
+                                <div class="activity-slot connected-slot-top">
+                                    <div class="activity-card activity-youth connected-top", style="height: 90%">
+                                        <div class="activity-title">
+                                            <span data-lang="en" class="hidden">Children & Youth Training</span>
+                                            <span data-lang="de">Kinder & Jugend Training</span>
+                                        </div>
+                                        <div class="activity-time">18:00 - 20:00</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-                </p>
+                        <!-- 19:00 - 20:00 Time Block -->
+                        <div class="time-block connected-time-block">
+                            <div class="time-label">19:00</div>
+                            <!-- Monday -->
+                            <div class="day-activities">
+                                <div data-column="monday1" class="activity-slot empty"></div>
+                                <div data-column="monday2" class="activity-slot connected-slot-top">
+                                    <div class="activity-card activity-team connected-top" style="height: 90%">
+                                        <div class="activity-title">
+                                            <span data-lang="en" class="hidden">Team Training</span>
+                                            <span data-lang="de">Mannschaftstraining</span>
+                                        </div>
+                                        <div class="activity-time">19:00 - 20:30</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Tuesday - Youth continues -->
+                            <div class="day-activities">
+                                <div class="activity-slot connected-slot-bottom" style="height: 100%;">
+                                    <div class="activity-card activity-youth connected-bottom" style="height: 90%">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Wednesday -->
+                            <div class="day-activities">
+                                <div class="activity-slot empty"></div>
+                            </div>
+                            <!-- Thursday - Beginner continues, Free Play continues -->
+                            <div class="day-activities">
+                                <div class="activity-slot connected-slot-bottom" style="height: 100%;">
+                                    <div class="activity-split">
+                                        <div class="activity-card activity-beginner connected-bottom" style="height: 90%">
+                                            <br>
+                                            <br>
+                                        </div>
+                                        <div class="activity-card activity-free connected-bottom" style="height: 90%">
+                                            <br>
+                                            <br>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Friday - Youth continues -->
+                            <div class="day-activities">
+                                    <div class="activity-slot connected-slot-bottom" style="height: 100%;">
+                                        <div class="activity-card activity-youth connected-bottom" style="height: 90%">
+                                        </div>
+                                    </div>    
+                            </div>
+                        </div>
+
+                        <!-- 20:00 - 21:00 Time Block -->
+                        <div class="time-block connected-time-block">
+                            <div class="time-label">20:00</div>
+                            <!-- Monday -->
+                            <div class="day-activities">
+                                <div data-column="monday2" class="activity-slot">
+                                    <div class="activity-overlap">
+                                        <div class="activity-card activity-team connected-bottom" style="height: 50%;">
+                                            <br>
+                                            <br>
+                                        </div>
+                                        <div class="activity-card activity-free connected-top" style="height: 50%;">
+                                            <div class="activity-title">
+                                                <span data-lang="en" class="hidden">Free Play Seniors</span>
+                                                <span data-lang="de">Freies Spiel Senioren</span>
+                                            </div>
+                                            <div class="activity-time">20:30 - 23:00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-column="monday1" class="activity-slot connected-slot-top">
+                                    <div class="activity-card activity-team connected-top" style="height: 90%">
+                                        <div class="activity-title">
+                                            <span data-lang="en" class="hidden">Team Training</span>
+                                            <span data-lang="de">Mannschaftstraining</span>
+                                        </div>
+                                        <div class="activity-time">20:00 - 21:30</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Tuesday -->
+                            <div class="day-activities">
+                                <div class="activity-slot empty"></div>
+                            </div>
+                            <!-- Wednesday -->
+                            <div class="day-activities">
+                                <div class="activity-slot connected-slot-top">
+                                    <div class="activity-card activity-free connected-top" style="height: 100%">
+                                        <div class="activity-title">
+                                            <span data-lang="en" class="hidden">Free Play Seniors</span>
+                                            <span data-lang="de">Freies Spiel Senioren</span>
+                                        </div>
+                                        <div class="activity-time">20:00 - 23:00</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Thursday -->
+                            <div class="day-activities">
+                                <div class="activity-slot connected-slot-top">
+                                    <div class="activity-card activity-free connected-top"  style="height: 100%">
+                                        <div class="activity-title">
+                                            <span data-lang="en" class="hidden">Free Play Seniors</span>
+                                            <span data-lang="de">Freies Spiel Senioren</span>
+                                        </div>
+                                        <div class="activity-time">20:00 - 22:00</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Friday -->
+                            <div class="day-activities">
+                                <div class="activity-slot empty"></div>
+                            </div>
+                        </div>
+
+                        <!-- 21:00 - 22:00 Time Block -->
+                        <div class="time-block connected-time-block">
+                            <div class="time-label">21:00</div>
+                            <!-- Monday -->
+                            <div class="day-activities">
+                                <div data-column="monday1" class="activity-slot connected-slot-middle" style="height: 100%;">
+                                    <div class="activity-overlap">
+                                        <div class="activity-card activity-team connected-bottom" style="height: 50%;">
+                                            <br>
+                                            <br>
+                                        </div>
+                                        <div class="activity-card activity-free connected-top" style="height: 50%;">
+                                            <div class="activity-title">
+                                                <span data-lang="en" class="hidden">Free Play Seniors</span>
+                                                <span data-lang="de">Freies Spiel Senioren</span>
+                                            </div>
+                                            <div class="activity-time">21:30 - 23:00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-column="monday2" class="activity-slot connected-slot-middle" style="height: 100%;">
+                                    <div class="activity-card activity-free connected-middle" style="height: 95%">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Tuesday -->
+                            <div class="day-activities">
+                                <div class="activity-slot empty"></div>
+                            </div>
+                            <!-- Wednesday -->
+                            <div class="day-activities">
+                                <div class="activity-slot connected-slot-middle" style="height: 100%;">
+                                    <div class="activity-card activity-free connected-middle" style="height: 100%">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Thursday -->
+                            <div class="day-activities">
+                                <div class="activity-slot connected-slot-bottom" style="height: 100%;">
+                                    <div class="activity-card activity-free connected-bottom" style="height: 90%">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Friday -->
+                            <div class="day-activities">
+                                <div class="activity-slot empty"></div>
+                            </div>
+                        </div>
+
+                        <!-- 22:00 - 23:00 Time Block -->
+                        <div class="time-block connected-time-block">
+                            <div class="time-label">22:00</div>
+                            <!-- Monday -->
+                            <div class="day-activities">
+                                <div data-column="monday1" class="activity-slot connected-slot-bottom" style="height: 100%;">
+                                    <div class="activity-card activity-free connected-bottom" style="height: 100%">
+                                    </div>
+                                </div>
+                                <div data-column="monday2" class="activity-slot connected-slot-bottom" style="height: 100%;">
+                                    <div class="activity-card activity-free connected-bottom" style="height: 100%">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Tuesday -->
+                            <div class="day-activities">
+                                <div class="activity-slot empty"></div>
+                            </div>
+                            <!-- Wednesday -->
+                            <div class="day-activities">
+                                <div class="activity-slot connected-slot-bottom" style="height: 100%;">
+                                    <div class="activity-card activity-free connected-bottom" style="height: 90%">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Thursday - Ends at 22:00 -->
+                            <div class="day-activities">
+                                <div class="activity-slot empty"></div>
+                            </div>
+                            <!-- Friday -->
+                            <div class="day-activities">
+                                <div class="activity-slot empty"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Enhanced Notes Section -->
+        <div class="info-section fade-in-delay-3">
+            <h2 class="text-2xl font-bold mb-4">
+                <span data-lang="en" class="hidden">Notes</span>
+                <span data-lang="de">Hinweise</span>
+            </h2>
+            <p class="text-lg leading-relaxed mb-4">
+                <span data-lang="en" class="hidden">For participation in the free play times, no prior registration is required.</span>
+                <span data-lang="de">Für die Teilnahme an den freien Spielzeiten ist aktuell keine Voranmeldung erforderlich.</span>
+            </p>
+            <p class="text-lg leading-relaxed">
                 <span data-lang="de">
                     Während der 
                     <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="https://www.schulferien.org/deutschland/ferien/nordrhein-westfalen/"> Schulferien</a>
@@ -304,19 +502,23 @@
                      Exception: During the Christmas holidays, both halls are generally closed.
                      Any exceptions will be announced via the club's internal email distribution list or can be requested at <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="mailto:vorsitz@bv-aachen.de">vorsitz@bv-aachen.de</a>.
                 </span>
-            </div>
-            <p class="mt-6 text-xl sm:text-xl text-slate-900 font-extrabold tracking-tight dark:text-slate-50 ">
+            </p>
+        </div>
+        <!-- Enhanced Further Information Section -->
+        <div class="content-card">
+            <h2 class="text-3xl font-bold text-slate-900 dark:text-white text-center mb-8">
                 <span data-lang="en" class="hidden">Further Information</span>
                 <span data-lang="de">Weitere Informationen</span>
-            </p>
-            <div class="mt-2 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
-                <div class="floatleft">
-                    <p>
-                        <h2 class="text-l font-extrabold dark:text-white mt-10">
-                            <span data-lang="en" class="hidden">Children & Youth Training</span>
-                            <span data-lang="de">Kinder- und Jugendtraining</span>
-                        </h2>
-                        <br>
+            </h2>
+            
+            <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <!-- Children & Youth Training Card -->
+                <div class="info-section">
+                    <h3 class="text-xl font-bold mb-4">
+                        <span data-lang="en" class="hidden">Children & Youth Training</span>
+                        <span data-lang="de">Kinder- und Jugendtraining</span>
+                    </h3>
+                    <p class="leading-relaxed">
                         <span data-lang="en" class="hidden">
                             Note: For questions about children and youth training, please contact Lina Köllmann (
                                 <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="mailto:jugendwart@bv-aachen.de">jugendwart@bv-aachen.de
@@ -328,13 +530,14 @@
                         </span>
                     </p>
                 </div>
-                <div class="floatleft">
-                    <p>
-                        <h2 class="text-l font-extrabold dark:text-white mt-10">
-                            <span data-lang="en" class="hidden">Senior Training</span>
-                            <span data-lang="de">Seniorentraining</span>
-                        </h2>
-                        <br>
+                
+                <!-- Senior Training Card -->
+                <div class="info-section">
+                    <h3 class="text-xl font-bold mb-4">
+                        <span data-lang="en" class="hidden">Senior Training</span>
+                        <span data-lang="de">Seniorentraining</span>
+                    </h3>
+                    <p class="leading-relaxed">
                         <span data-lang="de">
                             Das angeleitete Training am Montag ist unseren Mannschaftsspieler:innen vorbehalten.
                             Hierzu ist eine vorherige Absprache mit dem Trainer sowie eine Mindestspielstärke erforderlich (ab mittlerem Bezirksklassenniveau).
@@ -352,71 +555,88 @@
                     </p>
                 </div>
             </div>
+        </div>
 
-            <h2 class="text-xl font-extrabold dark:text-white mt-10">
-                <span data-lang="en" class="hidden">Location</span>
-                <span data-lang="de">Ort</span>
+        <!-- Enhanced Location Information Section -->
+        <div class="content-card">
+            <h2 class="text-3xl font-bold text-slate-900 dark:text-white text-center mb-8">
+                <span data-lang="en" class="hidden">Training Locations</span>
+                <span data-lang="de">Trainingsorte</span>
             </h2>
-            <div class="mt-2 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12">
-                <div class="floatleft">
-                    <p>
-                        <h2 class="text-l font-extrabold dark:text-white mt-10">Laurensberg:</h2>
-                        <br> Anne-Frank-Gymnasium Halle II
-                        <br> Hander Weg 89
-                        <br>52072 Aachen-Laurensberg
-                        <br>
-                        <br>
-                        <div class="flex">
-
-                            <iframe width="100%" height="450" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d714.5670695079923!2d6.052033108595938!3d50.80379343567636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c0995da16abadf%3A0x1de42e10144befb9!2sHalle%202!5e0!3m2!1sde!2sde!4v1720024787823!5m2!1sde!2sde"
-                                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
+            
+            <div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                <!-- Laurensberg Location Card -->
+                <div class="location-card">
+                    <h3 class="text-xl font-bold mb-4">Laurensberg</h3>
+                    <div class="space-y-4">
+                        <div class="space-y-2">
+                            <p class="text-slate-700 dark:text-slate-300">
+                                <strong>Anne-Frank-Gymnasium Halle II</strong>
+                            </p>
+                            <p class="text-slate-700 dark:text-slate-300">Hander Weg 89</p>
+                            <p class="text-slate-700 dark:text-slate-300">52072 Aachen-Laurensberg</p>
                         </div>
-                    </p>
+                        <div class="map-container">
+                            <iframe width="100%" height="300" 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d714.5670695079923!2d6.052033108595938!3d50.80379343567636!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c0995da16abadf%3A0x1de42e10144befb9!2sHalle%202!5e0!3m2!1sde!2sde!4v1720024787823!5m2!1sde!2sde"
+                                style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
                 </div>
-                <div class="floatleft">
-                    <p>
-                        <h2 class="text-l font-extrabold dark:text-white mt-10">Burtscheid:</h2>
-                        <br> Einhard-Gymnasium TH II
-                        <br> Malmedyer Str. 55
-                        <br> 52066 Aachen-Burtscheid
-                        <br>
-                        <br>
-                        <div class="flex">
-
-                            <iframe width="100%" height="450" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1262.004932678846!2d6.090378674318797!3d50.756850747421325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c09bc2593b090f%3A0x63586c6bc65fa531!2sMalmedyer%20Str.%2055%2C%2052066%20Aachen!5e0!3m2!1sde!2sde!4v1720025735597!5m2!1sde!2sde"
-                                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
+                
+                <!-- Burtscheid Location Card -->
+                <div class="location-card">
+                    <h3 class="text-xl font-bold mb-4">Burtscheid</h3>
+                    <div class="space-y-4">
+                        <div class="space-y-2">
+                            <p class="text-slate-700 dark:text-slate-300">
+                                <strong>Einhard-Gymnasium TH II</strong>
+                            </p>
+                            <p class="text-slate-700 dark:text-slate-300">Malmedyer Str. 55</p>
+                            <p class="text-slate-700 dark:text-slate-300">52066 Aachen-Burtscheid</p>
                         </div>
-                    </p>
-                    <!-- <iframe src="training-Dateien/embed.htm" width="250" height="350" frameboarder="0" style="border:0"
-                allowfullscreen=""></iframe> -->
+                        <div class="map-container">
+                            <iframe width="100%" height="300" 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1262.004932678846!2d6.090378674318797!3d50.756850747421325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c09bc2593b090f%3A0x63586c6bc65fa531!2sMalmedyer%20Str.%2055%2C%2052066%20Aachen!5e0!3m2!1sde!2sde!4v1720025735597!5m2!1sde!2sde"
+                                style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade">
+                            </iframe>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <p class="mt-8 space-y-6 ">
-                <span data-lang="en" class="hidden">Further information on training and training organization can be found here:
-                </span>
-                <span data-lang="de">Weitere Informationen zum Training und zur Trainingsorganisation finden Sie hier:
-                </span>
-                <br>
-                <a class="group inline-flex items-center h-9 rounded-full text-sm font-semibold whitespace-nowrap px-3 focus:outline-none focus:ring-2 bg-pink-50 text-pink-600 hover:bg-pink-100 hover:text-pink-700 focus:ring-pink-600 dark:bg-slate-700 dark:text-slate-100 dark:hover:bg-slate-600 dark:hover:text-white dark:focus:ring-slate-500 mt-8"
-                    href="files/BVAachen-Trainingsorganisation_Stand_01-Mai-2022.pdf">
+        </div>
+        <!-- Enhanced Documents Section -->
+        <div class="content-card">
+            <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-6">
+                <span data-lang="en" class="hidden">Additional Information</span>
+                <span data-lang="de">Weitere Informationen</span>
+            </h2>
+            
+            <div class="text-center">
+                <p class="text-slate-700 dark:text-slate-300 mb-6">
+                    <span data-lang="en" class="hidden">Further information on training and training organization can be found here:</span>
+                    <span data-lang="de">Weitere Informationen zum Training und zur Trainingsorganisation finden Sie hier:</span>
+                </p>
+                
+                <a class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                   href="files/BVAachen-Trainingsorganisation_Stand_01-Mai-2022.pdf">
+                    <i class="fas fa-file-pdf mr-3"></i>
                     <span data-lang="en" class="hidden">Training Organization</span>
                     <span data-lang="de">Trainingsorganisation</span>
-                    <svg class="overflow-visible ml-3 text-pink-300 group-hover:text-pink-400 dark:text-slate-500 dark:group-hover:text-slate-400" width="3" height="6" viewBox="0 0 3 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M0 0L3 3L0 6"></path>
-                    </svg>
                 </a>
-            </p>
+            </div>
         </div>
     </div>
 
-    <br>
+    <!-- Footer -->
     <div id="footer-wrapper" class="mt-20">
         <div id="footer" class="text-center">
             <div id="adresse">
                 <p>
-                    <a href="./impressum.html" class="font-medium  text-blue-600 dark:text-blue-500 hover:underline">
+                    <a href="./impressum.html" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
                         <span data-lang="en" class="hidden">Imprint</span>
                         <span data-lang="de">Impressum</span>
                     </a> <b> | </b>
@@ -428,53 +648,11 @@
             </div>
         </div>
     </div>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const today = new Date();
-            const month = today.getMonth(); // 0: January, 1: February, ..., 11: December
 
-            const columnsMonday1 = document.querySelectorAll('[data-column="monday1"]');
-            const columnsMonday2 = document.querySelectorAll('[data-column="monday2"]');
-
-            const setSummer = () => {
-                columnsMonday1.forEach(element => element.style.display = 'none');
-                columnsMonday2.forEach(element => element.style.display = 'block');
-                document.getElementById('seasonInfo_Ger').textContent = 'Von 01.04 bis 30.09';
-                document.getElementById('seasonInfo_Eng').textContent = 'From 01.04 to 30.09';
-            };
-
-            const setWinter = () => {
-                columnsMonday1.forEach(element => element.style.display = 'block');
-                columnsMonday2.forEach(element => element.style.display = 'none');
-                document.getElementById('seasonInfo_Ger').textContent = 'Von 01.10 bis 31.03';
-                document.getElementById('seasonInfo_Eng').textContent = 'From 01.10 to 31.03';
-            };
-
-            document.getElementById('summerButton').addEventListener('click', () => {
-                setSummer();
-                document.getElementById('summerButton').classList.add('active');
-                document.getElementById('winterButton').classList.remove('active');
-            });
-
-            document.getElementById('winterButton').addEventListener('click', () => {
-                setWinter();
-                document.getElementById('winterButton').classList.add('active');
-                document.getElementById('summerButton').classList.remove('active');
-            });
-
-            // Initial setup based on current month
-            if (month >= 3 && month <= 8) { // April (3) to September (8)
-                setSummer();
-                document.getElementById('summerButton').classList.add('active');
-                document.getElementById('winterButton').classList.remove('active');
-            } else {
-                setWinter();
-                document.getElementById('winterButton').classList.add('active');
-                document.getElementById('summerButton').classList.remove('active');
-            }
-        });
-    </script>
+    <!-- Enhanced JavaScript -->
+    <script src="javascripts/language-toggle.js"></script>
+    <script src="javascripts/navigation-menu-showhide.js"></script>
+    <script src="javascripts/training-enhanced.js"></script>
 
 </body>
-
 </html>
