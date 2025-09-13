@@ -18,58 +18,7 @@
 
     <title>BV Aachen 09</title>
     <link rel="stylesheet" href="styles/layout.css">
-    <style>
-        /* Professional team card animations and styling */
-        .team-card {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .team-card:hover {
-            transform: translateY(-8px) scale(1.02);
-        }
-        
-        .team-badge {
-            backdrop-filter: blur(8px);
-            background-color: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        
-        .gradient-overlay {
-            background: linear-gradient(
-                to top, 
-                rgba(0, 0, 0, 0.9) 0%, 
-                rgba(0, 0, 0, 0.6) 30%, 
-                rgba(0, 0, 0, 0.3) 60%, 
-                transparent 100%
-            );
-        }
-        
-        .image-zoom {
-            transition: transform 0.3s ease-in-out;
-        }
-        
-        .team-card:hover .image-zoom {
-            transform: scale(1.1);
-        }
-        
-        @media (max-width: 768px) {
-            .team-card:hover {
-                transform: translateY(-4px) scale(1.01);
-            }
-        }
-        
-        /* Smooth fade-in animation */
-        .fade-in {
-            opacity: 0;
-            animation: fadeIn 0.6s ease-in-out forwards;
-        }
-        
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles/teams.css">
 
 </head>
 
@@ -92,7 +41,7 @@
             <div id="navigation" class="text-sm lg:flex-grow md:flex-grow" style="display: block;">
                 <a href="./index.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">
 					Start</a>
-                <a href="./alemannencup.html" aria-current="page" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0" style="color: red;">
+                <a href="./alemannencup.html" aria-current="page" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0" >
                         Alemannen Cup
                     </a>
                 <a href="./teams.html" aria-current="page" class="block mt-4 rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">
@@ -134,7 +83,7 @@
             </div>
         </div>
 
-        <div class="grid grid-cols-1 gap-8 lg:gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+        <div class="teams-grid grid grid-cols-1 gap-8 lg:gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
                 <!-- 1. MANNSCHAFT-->
                 <div class="team-card group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl bg-white dark:bg-gray-800 fade-in">
                     <div class="aspect-w-16 aspect-h-12 overflow-hidden">
