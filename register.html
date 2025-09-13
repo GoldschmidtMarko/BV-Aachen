@@ -22,10 +22,194 @@
     <title>BV Aachen 09</title>
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modal.css">
+    <style>
+        /* Professional registration form styling */
+        .form-container {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem 0;
+        }
+        
+        .form-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            padding: 3rem;
+            margin: 2rem auto;
+            max-width: 800px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .dark .form-card {
+            background: rgba(30, 41, 59, 0.95);
+            border: 1px solid rgba(148, 163, 184, 0.2);
+        }
+        
+        .form-section {
+            background: rgba(248, 250, 252, 0.8);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            border: 1px solid rgba(226, 232, 240, 0.5);
+            transition: all 0.3s ease;
+        }
+        
+        .dark .form-section {
+            background: rgba(51, 65, 85, 0.6);
+            border: 1px solid rgba(71, 85, 105, 0.5);
+        }
+        
+        .form-section:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            background: white;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+            transform: translateY(-1px);
+        }
+        
+        .dark .form-input {
+            background: rgba(30, 41, 59, 0.8);
+            border-color: #475569;
+            color: white;
+        }
+        
+        .dark .form-input:focus {
+            border-color: #60a5fa;
+            box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.1);
+        }
+        
+        .form-label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #374151;
+            font-size: 0.95rem;
+        }
+        
+        .dark .form-label {
+            color: #e5e7eb;
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid #e5e7eb;
+        }
+        
+        .dark .section-title {
+            color: #f9fafb;
+            border-bottom-color: #374151;
+        }
+        
+        .submit-button {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            color: white;
+            padding: 1rem 3rem;
+            border: none;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+        }
+        
+        .submit-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .form-card {
+                padding: 1.5rem;
+                margin: 1rem;
+            }
+        }
+        
+        .select-input {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            background: white;
+            transition: all 0.3s ease;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        
+        .select-input:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        
+        .dark .select-input {
+            background: rgba(30, 41, 59, 0.8);
+            border-color: #475569;
+            color: white;
+        }
+        
+        .helper-text {
+            font-size: 0.875rem;
+            color: #6b7280;
+            margin-top: 0.25rem;
+        }
+        
+        .dark .helper-text {
+            color: #9ca3af;
+        }
+        
+        .fade-in {
+            opacity: 0;
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 
-<body class="antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900 text-justify dark">
-    <nav class="fixed-top flex items-center justify-between flex-wrap bg-gray-800 p-3">
+<body class="antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900 dark">
+    <div class="form-container">
+        <nav class="fixed-top flex items-center justify-between flex-wrap bg-gray-800 p-3 relative z-50">
         <div class="flex items-center flex-shrink-0 text-white mr-6">
             <div class="flex flex-shrink-0 items-center bg-gray-100 p-1 rounded-md text-black">
                 <img class="h-8 w-auto rounded-md text-black" src="images/Logo.png" alt="BV Aachen">
@@ -67,198 +251,199 @@
         </div>
     </nav>
 
-    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div class="mt-10 text-center">
-            <h2 class="text-xl font-extrabold dark:text-white mt-10">
-                <span data-lang="en" class="hidden">Registration Alemannencup 2025</span>
-                <span data-lang="de">Registrierung Alemannencup 2025</span>
-            </h2>
-            <div class="mt-6">
-                <p class="text-lg dark:text-white">
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 pt-20">
+        <div class="form-card fade-in">
+            <div class="text-center mb-8">
+                <h1 class="text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
+                    <span data-lang="en" class="hidden">Registration Alemannencup 2025</span>
+                    <span data-lang="de">Registrierung Alemannencup 2025</span>
+                </h1>
+                <p class="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
                     <span data-lang="en" class="hidden">Please fill out the form below to register for the Alemannencup 2025.</span>
-                    <span data-lang="de">Bitte füll das Formular aus, um dich für den Alemannencup 2025 anzumelden.</span>
+                    <span data-lang="de">Bitte fülle das Formular aus, um dich für den Alemannencup 2025 anzumelden.</span>
                 </p>
             </div>
-            <div class="mt-6">
-                <form id="myForm" action="php/register.php" method="POST" class="space-y-4">
+
+            <form id="myForm" action="php/register.php" method="POST" class="space-y-6">
+                <!-- Personal Information Section -->
+                <div class="form-section fade-in">
+                    <h2 class="section-title">
+                        <span data-lang="en" class="hidden">Personal Information</span>
+                        <span data-lang="de">Persönliche Daten</span>
+                    </h2>
                     <!-- Vorname and Nachname in the same row -->
                     <div class="space-y-4">
-                        <div class="w-64">
-                            <label for="geschlecht" class="block text-m font-medium text-gray-700 text-left">Geschlecht</label>
-                            <select id="geschlecht" name="geschlecht" required class="mt-1 block w-200 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                        <div>
+                            <label for="geschlecht" class="form-label">
+                                <span data-lang="en" class="hidden">Gender</span>
+                                <span data-lang="de">Geschlecht</span>
+                            </label>
+                            <select id="geschlecht" name="geschlecht" required class="select-input">
                                 <option value="M">Männlich</option>
                                 <option value="F">Weiblich</option>
                             </select>
                         </div>
-                        <div class="flex space-x-4">
-                            <div class="flex-1">
-                                <label for="vorname" class="block text-m font-medium text-gray-700 text-left">
+                        <div class="form-row">
+                            <div>
+                                <label for="vorname" class="form-label">
                                     <span data-lang="en" class="hidden">First Name</span>
                                     <span data-lang="de">Vorname</span>
                                 </label>
-                                <input type="text" id="vorname" name="vorname" required class="mt-1 block w-200 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                                <input type="text" id="vorname" name="vorname" required class="form-input">
                             </div>
-                            <div class="flex-1">
-                                <label for="nachname" class="block text-m font-medium text-gray-700 text-left">
+                            <div>
+                                <label for="nachname" class="form-label">
                                     <span data-lang="en" class="hidden">Last Name</span>
                                     <span data-lang="de">Nachname</span>
                                 </label>
-                                <input type="text" id="nachname" name="nachname" required class="mt-1 block w-200 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                                <input type="text" id="nachname" name="nachname" required class="form-input">
                             </div>
                         </div>
                     </div>
 
-
-
-
-
-                    <div class="flex space-x-4">
-                        <div class="flex-1">
-                            <label for="verein" class="block text-m font-medium text-gray-700 text-left">
+                    <div class="form-row">
+                        <div>
+                            <label for="verein" class="form-label">
                                 <span data-lang="en" class="hidden">Club</span>
                                 <span data-lang="de">Verein</span>
-                                </label>
-                            <input type="text" id="verein" name="verein" required class="mt-1 block w-200 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                            </label>
+                            <input type="text" id="verein" name="verein" required class="form-input">
                         </div>
-                        <div class="flex-1">
-                            <label for="spieler_id" class="block text-m font-medium text-gray-700 text-left">
+                        <div>
+                            <label for="spieler_id" class="form-label">
                                 <span data-lang="en" class="hidden">Player-ID</span>
                                 <span data-lang="de">Spieler-ID</span>
-                                </label>
-                            <input type="text" id="spieler_id" name="spieler_id" class="mt-1 block w-200 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
-                            <p class="mt-2 text-sm text-gray-500">
+                            </label>
+                            <input type="text" id="spieler_id" name="spieler_id" class="form-input">
+                            <p class="helper-text">
                                 <span data-lang="en" class="hidden">If not known, leave blank.</span>
                                 <span data-lang="de">Falls nicht bekannt, frei lassen.</span>
                             </p>
                         </div>
                     </div>
 
-                    <div class="flex space-x-4">
-                        <div class="flex-1">
-                            <!-- Email -->
-                            <label for="email" class="block text-m font-medium text-gray-700 text-left">Email</label>
-                            <input type="email" id="email" name="email" required class="mt-1 block w-200 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                    <div class="form-row">
+                        <div>
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" required class="form-input">
                         </div>
-
-                        <!-- Handynummer -->
-                        <div class="flex-2">
-                            <label for="handynummer" class="block text-m font-medium text-gray-700 text-left">
+                        <div>
+                            <label for="handynummer" class="form-label">
                                 <span data-lang="en" class="hidden">Mobile Number</span>
                                 <span data-lang="de">Handynummer</span>
                             </label>
-                            <input type="text" id="handynummer" name="handynummer" class="mt-1 block w-200 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                            <input type="text" id="handynummer" name="handynummer" class="form-input">
                         </div>
                     </div>
+                </div>
 
-                    <div class="space-x-4">
-                        <h2 class="text-xl font-extrabold dark:text-white mt-2 text-left">
-                            <span data-lang="en" class="hidden">Disciplines</span>
-                            <span data-lang="de">Disziplinen</span>
-                        </h2>
-                    </div>
+                <!-- Disciplines Section -->
+                <div class="form-section fade-in">
+                    <h2 class="section-title">
+                        <span data-lang="en" class="hidden">Disciplines</span>
+                        <span data-lang="de">Disziplinen</span>
+                    </h2>
 
-                    <div class="space-x-4">
+                    <div class="space-y-6">
                         <div>
-                            <label for="einzel" class="block text-xl font-medium dark:text-white text-left">
-                                <span data-lang="en" class="hidden">Single</span>
+                            <label for="einzel" class="form-label">
+                                <span data-lang="en" class="hidden">Singles</span>
                                 <span data-lang="de">Einzel</span>
                             </label>
-                            <select id="einzel" name="einzel" required class="mt-1 block w-40 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
-                            <option value="Kein Einzel">--</option>
-                            <option value="Fun (bis KL)">Fun (bis KL)</option>
-                            <option value="Basic (bis BK)">Basic (bis BK)</option>
-                            <option value="Standard (bis BL)">Standard (bis BL)</option>
-                            <option value="Premium (bis LL)">Premium (bis LL)</option>
-                            <option value="Elite">Elite</option>
-                        </select>
+                            <select id="einzel" name="einzel" required class="select-input">
+                                <option value="Kein Einzel">--</option>
+                                <option value="Fun (bis KL)">Fun (bis KL)</option>
+                                <option value="Basic (bis BK)">Basic (bis BK)</option>
+                                <option value="Standard (bis BL)">Standard (bis BL)</option>
+                                <option value="Premium (bis LL)">Premium (bis LL)</option>
+                                <option value="Elite">Elite</option>
+                            </select>
                         </div>
-                    </div>
 
-                    <!-- Doppel -->
-                    <div class="space-x-4">
                         <div>
-                            <label for="doppel" class="block text-xl font-medium dark:text-white text-left mt-8">
-                                <span data-lang="en" class="hidden">Double</span>
+                            <label for="doppel" class="form-label">
+                                <span data-lang="en" class="hidden">Doubles</span>
                                 <span data-lang="de">Doppel</span>
                             </label>
-                            <select id="doppel" name="doppel" required class="mt-1 block w-40 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500" onchange="toggleDoppelFields()">
-                            <option value="Kein Doppel">--</option>
-                            <option value="Fun (bis KL)">Fun (bis KL)</option>
-                            <option value="Basic (bis BK)">Basic (bis BK)</option>
-                            <option value="Standard (bis BL)">Standard (bis BL)</option>
-                            <option value="Premium (bis LL)">Premium (bis LL)</option>
-                            <option value="Elite">Elite</option>
-                        </select>
+                            <select id="doppel" name="doppel" required class="select-input" onchange="toggleDoppelFields()">
+                                <option value="Kein Doppel">--</option>
+                                <option value="Fun (bis KL)">Fun (bis KL)</option>
+                                <option value="Basic (bis BK)">Basic (bis BK)</option>
+                                <option value="Standard (bis BL)">Standard (bis BL)</option>
+                                <option value="Premium (bis LL)">Premium (bis LL)</option>
+                                <option value="Elite">Elite</option>
+                            </select>
                         </div>
                     </div>
+                </div>
 
-                    <div id="additional-doppel" class="hidden space-y-4">
-                        <h2 class="text-xl font-extrabold dark:text-white mt-2 text-left">
-                            <span data-lang="en" class="hidden">Double-Partner</span>
-                            <span data-lang="de">Doppel-Partner</span>
-                        </h2>
-                        <div class="flex space-x-4">
-                            <div class="flex-1">
-                                <label for="doppel_vorname" class="block text-m font-medium text-gray-700 text-left">
+                <div id="additional-doppel" class="hidden form-section fade-in">
+                    <h2 class="section-title">
+                        <span data-lang="en" class="hidden">Doubles Partner</span>
+                        <span data-lang="de">Doppel-Partner</span>
+                    </h2>
+                    
+                    <div class="space-y-4">
+                        <div class="form-row">
+                            <div>
+                                <label for="doppel_vorname" class="form-label">
                                     <span data-lang="en" class="hidden">First Name</span>
                                     <span data-lang="de">Vorname</span>
                                 </label>
-                                <input type="text" id="doppel_vorname" name="doppel_vorname" class="mt-1 block w-200 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                                <input type="text" id="doppel_vorname" name="doppel_vorname" class="form-input">
                             </div>
-                            <div class="flex-1">
-                                <label for="doppel_nachname" class="block text-m font-medium text-gray-700 text-left">
+                            <div>
+                                <label for="doppel_nachname" class="form-label">
                                     <span data-lang="en" class="hidden">Last Name</span>
                                     <span data-lang="de">Nachname</span>
                                 </label>
-                                <input type="text" id="doppel_nachname" name="doppel_nachname" class="mt-1 block w-200 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                                <input type="text" id="doppel_nachname" name="doppel_nachname" class="form-input">
                             </div>
                         </div>
 
-                        <div class="flex space-x-4">
-                            <div class="flex-1">
-                                <label for="doppel_verein" class="block text-m font-medium text-gray-700 text-left">
+                        <div class="form-row">
+                            <div>
+                                <label for="doppel_verein" class="form-label">
                                     <span data-lang="en" class="hidden">Club</span>
                                     <span data-lang="de">Verein</span>
                                 </label>
-                                <input type="text" id="doppel_verein" name="doppel_verein" class="mt-1 block w-40 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                                <input type="text" id="doppel_verein" name="doppel_verein" class="form-input">
                             </div>
-                            <div class="flex-1">
-                                <label for="doppel_spieler_id" class="block text-m font-medium text-gray-700 text-left">
+                            <div>
+                                <label for="doppel_spieler_id" class="form-label">
                                     <span data-lang="en" class="hidden">Player-ID</span>
                                     <span data-lang="de">Spieler-ID</span>
                                 </label>
-                                <input type="text" id="doppel_spieler_id" name="doppel_spieler_id" class="mt-1 block w-40 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
-                                <p class="mt-2 text-sm text-gray-500">
+                                <input type="text" id="doppel_spieler_id" name="doppel_spieler_id" class="form-input">
+                                <p class="helper-text">
                                     <span data-lang="en" class="hidden">If not known, leave blank.</span>
                                     <span data-lang="de">Falls nicht bekannt, frei lassen.</span>
                                 </p>
                             </div>
                         </div>
 
-                        <div class="flex space-x-4">
-                            <div class="flex-1">
-                                <!-- Email -->
-                                <label for="doppel_email" class="block text-m font-medium text-gray-700 text-left">Email</label>
-                                <input type="email" id="doppel_email" name="doppel_email" class="mt-1 block w-200 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                        <div class="form-row">
+                            <div>
+                                <label for="doppel_email" class="form-label">Email</label>
+                                <input type="email" id="doppel_email" name="doppel_email" class="form-input">
                             </div>
-
-                            <!-- Handynummer -->
-                            <div class="flex-2">
-                                <label for="doppel_handynummer" class="block text-m font-medium text-gray-700 text-left">
+                            <div>
+                                <label for="doppel_handynummer" class="form-label">
                                     <span data-lang="en" class="hidden">Mobile Number</span>
                                     <span data-lang="de">Handynummer</span>
                                 </label>
-                                <input type="text" id="doppel_handynummer" name="doppel_handynummer" class="mt-1 block w-200 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                                <input type="text" id="doppel_handynummer" name="doppel_handynummer" class="form-input">
                             </div>
                         </div>
-
                     </div>
+                </div>
 
-                    <!-- MIXED -->
-                    <div class="flex space-x-4">
-                        <div>
-                            <label for="mixed" class="block text-xl font-medium dark:text-white text-left mt-8">Mixed</label>
-                            <select id="mixed" name="mixed" required class="mt-1 block w-40 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500" onchange="toggleMixedFields()">
+                <!-- Mixed Section -->
+                <div class="form-section fade-in">
+                    <h3 class="text-lg font-semibold text-slate-900 dark:text-white mb-4">Mixed</h3>
+                    <div>
+                        <label for="mixed" class="form-label">Mixed</label>
+                        <select id="mixed" name="mixed" required class="select-input" onchange="toggleMixedFields()">
                             <option value="Kein Mixed">--</option>
                             <option value="Fun (bis KL)">Fun (bis KL)</option>
                             <option value="Basic (bis BK)">Basic (bis BK)</option>
@@ -266,96 +451,92 @@
                             <option value="Premium (bis LL)">Premium (bis LL)</option>
                             <option value="Elite">Elite</option>
                         </select>
-                        </div>
                     </div>
+                </div>
 
-                    <div id="additional-mixed" class="hidden space-y-4">
-                        <h2 class="text-xl font-extrabold dark:text-white mt-2 text-left">
-                            <span data-lang="en" class="hidden">Mixed-Partner</span>
-                            <span data-lang="de">Mixed-Partner</span>
-                        </h2>
-                        <div class="flex space-x-4">
-                            <div class="flex-1">
-                                <label for="mixed_vorname" class="block text-m font-medium text-gray-700 text-left">
+                <div id="additional-mixed" class="hidden form-section fade-in">
+                    <h2 class="section-title">
+                        <span data-lang="en" class="hidden">Mixed Partner</span>
+                        <span data-lang="de">Mixed-Partner</span>
+                    </h2>
+                    
+                    <div class="space-y-4">
+                        <div class="form-row">
+                            <div>
+                                <label for="mixed_vorname" class="form-label">
                                     <span data-lang="en" class="hidden">First Name</span>
                                     <span data-lang="de">Vorname</span>
                                 </label>
-                                <input type="text" id="mixed_vorname" name="mixed_vorname" class="mt-1 block w-full border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                                <input type="text" id="mixed_vorname" name="mixed_vorname" class="form-input">
                             </div>
-                            <div class="flex-1">
-                                <label for="mixed_nachname" class="block text-m font-medium text-gray-700 text-left">
+                            <div>
+                                <label for="mixed_nachname" class="form-label">
                                     <span data-lang="en" class="hidden">Last Name</span>
                                     <span data-lang="de">Nachname</span>
                                 </label>
-                                <input type="text" id="mixed_nachname" name="mixed_nachname" class="mt-1 block w-full border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                                <input type="text" id="mixed_nachname" name="mixed_nachname" class="form-input">
                             </div>
                         </div>
 
-                        <div class="flex space-x-4">
-                            <div class="flex-1">
-                                <label for="mixed_verein" class="block text-m font-medium text-gray-700 text-left">
+                        <div class="form-row">
+                            <div>
+                                <label for="mixed_verein" class="form-label">
                                     <span data-lang="en" class="hidden">Club</span>
                                     <span data-lang="de">Verein</span>
                                 </label>
-                                <input type="text" id="mixed_verein" name="mixed_verein" class="mt-1 block w-40 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                                <input type="text" id="mixed_verein" name="mixed_verein" class="form-input">
                             </div>
-                            <div class="flex-1">
-                                <label for="mixed_spieler_id" class="block text-m font-medium text-gray-700 text-left">
+                            <div>
+                                <label for="mixed_spieler_id" class="form-label">
                                     <span data-lang="en" class="hidden">Player-ID</span>
                                     <span data-lang="de">Spieler-ID</span>
                                 </label>
-                                <input type="text" id="mixed_spieler_id" name="mixed_spieler_id" class="mt-1 block w-40 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
-                                <p class="mt-2 text-sm text-gray-500">
+                                <input type="text" id="mixed_spieler_id" name="mixed_spieler_id" class="form-input">
+                                <p class="helper-text">
                                     <span data-lang="en" class="hidden">If not known, leave blank.</span>
                                     <span data-lang="de">Falls nicht bekannt, frei lassen.</span>
                                 </p>
                             </div>
                         </div>
 
-                        <div class="flex space-x-4">
-                            <div class="flex-1">
-                                <!-- Email -->
-                                <label for="mixed_email" class="block text-m font-medium text-gray-700 text-left">Email</label>
-                                <input type="email" id="mixed_email" name="mixed_email" class="mt-1 block w-200 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                        <div class="form-row">
+                            <div>
+                                <label for="mixed_email" class="form-label">Email</label>
+                                <input type="email" id="mixed_email" name="mixed_email" class="form-input">
                             </div>
-
-                            <!-- Handynummer -->
-                            <div class="flex-2">
-                                <label for="mixed_handynummer" class="block text-m font-medium text-gray-700 text-left">
+                            <div>
+                                <label for="mixed_handynummer" class="form-label">
                                     <span data-lang="en" class="hidden">Mobile Number</span>
                                     <span data-lang="de">Handynummer</span>
                                 </label>
-                                <input type="text" id="mixed_handynummer" name="mixed_handynummer" class="mt-1 block w-200 border-gray-300 rounded-md text-black shadow-sm focus:ring-blue-500 focus:border-blue-500">
+                                <input type="text" id="mixed_handynummer" name="mixed_handynummer" class="form-input">
                             </div>
                         </div>
                     </div>
+                </div>
 
-
-
-                    <!-- Submit Button -->
-                    <div>
-                        <p class="text-m font-extrabold text-center mt-6 text-slate-900 dark:text-slate-50">
-                            <button type="submit" class="text-white dark:text-red-400 hover:underline px-4 py-2 border border-white  rounded-md hover:bg-red-100  transition">
-                                <span data-lang="en" class="hidden">Submit</span>
-                                <span data-lang="de">Absenden</span>
-                            </button>
-                        </p>
-                    </div>
-
-                </form>
-            </div>
+                <!-- Submit Button -->
+                <div class="text-center pt-6">
+                    <button type="submit" class="submit-button">
+                        <span data-lang="en" class="hidden">Submit Registration</span>
+                        <span data-lang="de">Anmeldung absenden</span>
+                    </button>
+                </div>
+            </form>
         </div>
-        <div id="footer-wrapper" class="mt-20">
+        </div>
+
+        <div id="footer-wrapper" class="mt-20 pb-10">
             <div id="footer" class="text-center">
                 <div id="adresse">
-                    <p>
-                        <a href="./impressum.html" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                    <p class="text-white">
+                        <a href="./impressum.html" class="font-medium text-blue-300 hover:text-blue-100 hover:underline transition-colors">
                             <span data-lang="en" class="hidden">Imprint</span>
                             <span data-lang="de">Impressum</span>
                         </a> <b> | </b>
-                        <a href="./datenschutz.html" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
+                        <a href="./datenschutz.html" class="font-medium text-blue-300 hover:text-blue-100 hover:underline transition-colors">
                             <span data-lang="en" class="hidden">Privacy Policy</span>
-                            <span data-lang="de">Informationen zum Datenschutz </span>
+                            <span data-lang="de">Informationen zum Datenschutz</span>
                         </a>
                     </p>
                 </div>
