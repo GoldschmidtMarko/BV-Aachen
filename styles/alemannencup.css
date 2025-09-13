@@ -62,3 +62,102 @@
     font-size: 0.75rem;
   }
 }
+
+/* Professional Card Styles */
+@layer components {
+        .alemannencup-hero {
+            @apply relative bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 text-white py-20 px-6 rounded-3xl shadow-2xl overflow-hidden;
+        }
+
+        .alemannencup-hero::before {
+            content: '';
+            @apply absolute inset-0 bg-black opacity-20;
+        }
+
+        .alemannencup-hero > * {
+            @apply relative z-10;
+        }
+
+        .content-card {
+            @apply bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl p-8 border border-slate-200 dark:border-slate-700 shadow-lg hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300;
+        }
+
+        .sponsor-section {
+            @apply bg-gradient-to-r from-slate-50 to-blue-50 dark:from-slate-800 dark:to-slate-700 rounded-2xl p-8 border border-slate-200 dark:border-slate-600;
+        }
+
+        .gallery-item {
+            @apply relative overflow-hidden rounded-xl group cursor-pointer transition-all duration-300 hover:scale-105;
+        }
+
+        .gallery-item img {
+            @apply w-full h-full object-cover transition-transform duration-500 group-hover:scale-110;
+        }
+
+        .gallery-item::after {
+            content: '';
+            @apply absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300;
+        }
+
+        .gallery-item .view-indicator {
+            @apply absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10;
+        }
+
+        .performance-card {
+            @apply bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl p-6 border border-slate-200 dark:border-slate-700 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300;
+        }
+
+        .level-badge {
+            @apply px-3 py-1 rounded-full text-xs font-semibold tracking-wide;
+        }
+
+        .level-badge.beginner {
+            @apply bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-300;
+        }
+
+        .level-badge.intermediate {
+            @apply bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300;
+        }
+
+        .level-badge.advanced {
+            @apply bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300;
+        }
+
+        .level-badge.competitive {
+            @apply bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-300;
+        }
+
+        .level-badge.open {
+            @apply bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-300;
+        }
+
+        .location-card {
+            @apply bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm rounded-2xl p-8 border border-slate-200 dark:border-slate-700 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300 mb-8;
+        }
+
+        .map-container {
+            @apply rounded-xl overflow-hidden shadow-lg border border-slate-200 dark:border-slate-700;
+        }
+
+        .map-container iframe {
+            @apply w-full h-96;
+        }
+
+        .fade-in {
+            @apply opacity-0 translate-y-4;
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .fade-in:nth-child(1) { animation-delay: 0.1s; }
+        .fade-in:nth-child(2) { animation-delay: 0.2s; }
+        .fade-in:nth-child(3) { animation-delay: 0.3s; }
+        .fade-in:nth-child(4) { animation-delay: 0.4s; }
+        .fade-in:nth-child(5) { animation-delay: 0.5s; }
+    }
+
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
