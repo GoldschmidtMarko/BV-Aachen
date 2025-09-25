@@ -134,6 +134,7 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     margin: 2rem 0;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
 }
 
 .dark .training-schedule {
@@ -147,6 +148,8 @@
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    display: block;
 }
 
 /* Schedule Header */
@@ -155,6 +158,9 @@
     grid-template-columns: 80px repeat(5, 1fr);
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .time-column-header {
@@ -344,7 +350,7 @@
 /* Activity Content */
 .activity-title {
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     margin-bottom: 0.25rem;
     line-height: 1.2;
 }
@@ -576,6 +582,8 @@
     
     .season-toggle-container {
         gap: 0.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     
     .training-grid {
@@ -594,6 +602,25 @@
     
     .location-card {
         padding: 1.5rem;
+    }
+    
+    .training-schedule {
+        margin: 1rem -0.5rem; /* Extend to screen edges on mobile */
+        border-radius: 0;
+        padding: 1rem 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .training-schedule {
+        margin: 1rem -1rem; /* Extend further on very small screens */
+        padding: 0.5rem;
+    }
+    
+    .content-card {
+        margin: 1rem -0.5rem;
+        border-radius: 0;
+        padding: 1rem;
     }
 }
 
@@ -624,16 +651,57 @@
     transform: scale(0.95);
 }
 
-/* Responsive text handling */
+/* Enhanced Responsive text handling */
 .responsive-text {
     font-size: 0.875rem;
     line-height: 1.4;
 }
 
-@media (max-width: 640px) {
+/* Comprehensive text scaling for mobile devices - Enhanced Specificity */
+@media (max-width: 480px) {
+    /* Toggle buttons - keep CSS-based scaling */
+    .toggle-button {
+        font-size: 0.75rem !important;
+        padding: 0.5rem 1rem !important;
+    }
+    
+    .toggle-info {
+        font-size: 0.75rem !important;
+    }
+    
+    /* Navigation scaling - keep CSS-based scaling */
+    nav a {
+        font-size: 0.75rem !important;
+    }
+    
+    /* Footer scaling - keep CSS-based scaling */
+    #footer p {
+        font-size: 0.75rem !important;
+    }
+    
     .responsive-text {
         font-size: 0.75rem;
         line-height: 1.3;
+    }
+    
+    .original {
+        display: none;
+    }
+    
+    .shortened {
+        display: inline;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 640px) {
+    /* Toggle buttons - keep CSS-based scaling */
+    .toggle-button {
+        font-size: 0.8rem !important;
+    }
+    
+    .responsive-text {
+        font-size: 0.8rem;
+        line-height: 1.35;
     }
     
     .original {
@@ -653,12 +721,149 @@
     .shortened {
         display: none;
     }
+    
+    .responsive-text {
+        font-size: 0.875rem;
+        line-height: 1.4;
+    }
+}
+
+/* Medium screens (tablets) - additional scaling */
+@media (min-width: 641px) and (max-width: 768px) {
+    .training-hero h1 {
+        font-size: 2.5rem !important; /* Slightly smaller than desktop */
+    }
+    
+    .content-card h2 {
+        font-size: 2rem !important; /* Slightly smaller than desktop */
+    }
+    
+    .info-section h2 {
+        font-size: 1.75rem !important; /* Slightly smaller than desktop */
+    }
 }
 
 /* Enhanced Schedule Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
+    .training-schedule {
+        padding: 0.5rem;
+        margin: 1rem 0;
+        border-radius: 12px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
     .schedule-container {
-        min-width: 600px;
+        min-width: 320px;
+        overflow-x: visible;
+        width: max-content;
+    }
+    
+    .schedule-header {
+        grid-template-columns: 50px repeat(5, minmax(60px, 1fr));
+        font-size: 0.7rem;
+    }
+    
+    .time-block {
+        grid-template-columns: 50px repeat(5, minmax(60px, 1fr));
+        min-height: 60px;
+    }
+    
+    .time-column-header {
+        font-size: 0.7rem;
+        padding: 0.5rem 0.25rem;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+    }
+    
+    .time-label {
+        font-size: 0.7rem;
+        padding: 0.5rem 0.1rem;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+    }
+    
+    .day-name {
+        font-size: 0.7rem;
+        margin-bottom: 0.25rem;
+        line-height: 1;
+    }
+    
+    .location-tag {
+        font-size: 0.6rem;
+        padding: 0.1rem 0.25rem;
+        margin: 0.1rem 0;
+    }
+    
+    .location-tag .original {
+        display: none;
+    }
+    
+    .location-tag .shortened {
+        display: inline;
+    }
+    
+    .activity-slot {
+        padding: 0.15rem;
+    }
+    
+    .activity-card {
+        padding: 0.25rem !important;
+        font-size: 0.65rem !important;
+        border-radius: 6px;
+    }
+    
+    .activity-title {
+        font-size: 0.6rem !important;
+        margin-bottom: 0.1rem;
+        line-height: 1.1;
+    }
+    
+    .activity-time {
+        font-size: 0.55rem !important;
+        line-height: 1;
+    }
+    
+    .activity-note {
+        font-size: 0.5rem !important;
+        margin-top: 0.1rem;
+    }
+    
+    .activity-split {
+        gap: 0.1rem;
+    }
+    
+    .activity-split .activity-card,
+    .activity-overlap .activity-card {
+        padding: 0.2rem !important;
+        font-size: 0.6rem !important;
+    }
+    
+    .activity-split .activity-title,
+    .activity-overlap .activity-title {
+        font-size: 0.55rem !important;
+        margin-bottom: 0.05rem;
+    }
+    
+    .activity-split .activity-time,
+    .activity-overlap .activity-time {
+        font-size: 0.5rem !important;
+    }
+    
+    /* Main container adjustments for mobile */
+    .mx-auto.px-2.max-w-7xl {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .training-schedule {
+        padding: 1rem;
+    }
+    
+    .schedule-container {
+        min-width: 500px;
     }
     
     .schedule-header {
@@ -704,7 +909,7 @@
     }
     
     .activity-title {
-        font-size: 0.75rem !important;
+        font-size: 0.7rem !important;
         margin-bottom: 0.15rem;
     }
     
@@ -724,7 +929,7 @@
     
     .activity-split .activity-title,
     .activity-overlap .activity-title {
-        font-size: 0.7rem !important;
+        font-size: 0.65rem !important;
         margin-bottom: 0.1rem;
     }
     
