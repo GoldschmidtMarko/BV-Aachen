@@ -10,7 +10,7 @@ if (!isset($user)) {
 
 // Format email content with user data
 $to = $user['email']; // Only the user's email in the "To" field
-$subject = "Registrierung Alemannen Cup 2025 | Registration Alemannen Cup 2025"; // Email subject
+$subject = "Registrierung Alemannen Cup 2026 | Registration Alemannen Cup 2026"; // Email subject
 
 // Use heredoc for better readability
 $message = <<<HTML
@@ -120,7 +120,7 @@ $headers = "MIME-Version: 1.0\r\n";
 $headers .= "Content-type: text/html; charset=UTF-8\r\n";
 $headers .= "From: anmeldung@alemannen-cup.de\r\n";
 $headers .= "Reply-To: anmeldung@alemannen-cup.de\r\n";
-$headers .= "BCC: ma.goldschmidt@web.de, anmeldung@alemannen-cup.de\r\n"; // Add additional recipient in BCC
+$headers .= "BCC: mgoldschmidt01@gmail.com, anmeldung@alemannen-cup.de\r\n"; // Add additional recipient in BCC
 
 // Send the email
 if (mail($to, $subject, $message, $headers)) {
