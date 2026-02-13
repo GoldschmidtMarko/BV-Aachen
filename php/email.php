@@ -1,6 +1,6 @@
 <?php
 
-exit();
+// exit();
 
 if (!isset($user)) {
     echo "No user data provided.";
