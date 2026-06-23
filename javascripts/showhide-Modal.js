@@ -36,14 +36,29 @@ window.onclick = function(event) {
     }
 };
 
-// Populate the images array with the current gallery image paths
+// Populate the images array with the full-resolution gallery image paths
 document.addEventListener('DOMContentLoaded', function() {
+    var container = document.querySelector('.gallery-container');
+    if (!container) return;
     images = [];
-    var galleryImages = document.querySelectorAll('.gallery-container img');
-    galleryImages.forEach(function(img) {
-        var imageSrc = img.getAttribute('src');
-        if (images.indexOf(imageSrc) === -1) {
-            images.push(imageSrc);
+
+    function addImage(src) {
+        src = (src || '').trim();
+        if (src && images.indexOf(src) === -1) {
+            images.push(src);
         }
+    }
+
+    // Preferred: an explicit, comma-separated list declared on the container.
+    // This lets us include images that are not rendered in the grid (e.g. _13.jpg).
+    var declared = container.getAttribute('data-modal-images');
+    if (declared) {
+        declared.split(',').forEach(addImage);
+        return;
+    }
+
+    // Fallback: derive full-resolution paths from the displayed thumbnails.
+    container.querySelectorAll('img').forEach(function(img) {
+        addImage(img.getAttribute('src').replace('/thumbs/', '/'));
     });
 });
