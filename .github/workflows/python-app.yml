@@ -1,6 +1,14 @@
 name: Python application
 
-on: [push, pull_request]
+on:
+  push:
+  pull_request:
+  # Manual re-upload of everything changed since a given commit, e.g. after failed uploads
+  workflow_dispatch:
+    inputs:
+      base_commit:
+        description: 'Upload all changes since this commit'
+        required: true
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -33,7 +41,18 @@ jobs:
 
       - name: Find last commit with upload in the message, and check for |force flag|
         id: find_commit_flags
+        env:
+          BASE_COMMIT: ${{ inputs.base_commit }}
         run: |
+          if [ -n "$BASE_COMMIT" ]; then
+            upload_commit=$(git rev-parse --verify "$BASE_COMMIT^{commit}")
+            echo "Manual upload of changes since $upload_commit"
+            echo "upload_commit=$upload_commit" >> $GITHUB_ENV
+            echo "upload_flag=true" >> $GITHUB_ENV
+            echo "force_flag=false" >> $GITHUB_ENV
+            exit 0
+          fi
+
           echo "Finding last commit with #upload in the message..."
 
           # Find the last commit with #upload in the message
