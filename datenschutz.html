@@ -1,161 +1,160 @@
 <!DOCTYPE html>
-<html lang="en">
-<!--
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
--->
-
+<html lang="de" data-ui-lang="de">
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta name="keywords" content="BV Aachen, Badminton, Aachen">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <link rel="stylesheet" href="styles/output.css">
-    <script src="javascripts/navigation-menu-showhide.js"></script>
-    <!-- used for to get idb library, a CHIPS cookie method for the language switch -->
-    <script src="https://cdn.jsdelivr.net/npm/idb/build/iife/index-min.js"></script>
-    <script src="javascripts/language-toggle.js"></script>
-
-    <title>BV Aachen 09</title>
-
-    <link rel="stylesheet" href="styles/navigation-layout.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Datenschutz · BV Aachen 2009 e.V.</title>
+  <meta name="description" content="Datenschutzerklärung des BV Aachen 2009 e.V.">
+  <meta name="theme-color" content="#0b1b2b">
+  <link rel="icon" href="images/icon.png">
+  <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/martian-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/site.css">
+  <script>document.documentElement.classList.add("js")</script>
+  <script src="assets/site.js" defer></script>
 </head>
+<body>
+  <a class="visually-hidden" href="#main">Zum Inhalt springen</a>
 
-<body class="antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900 text-center dark">
-    <nav class="fixed-top flex items-center justify-between flex-wrap bg-gray-800 p-3">
-        <div class="flex items-center flex-shrink-0 text-white mr-6">
-            <div class="flex flex-shrink-0 items-center bg-gray-100 p-1 rounded-md">
-                <img class="h-8 w-auto rounded-md" src="images/Logo.png" alt="BV Aachen">
-            </div>
-        </div>
-        <div class="block md:hidden lg:hidden">
-            <button class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400  hover:border-white" onclick="showhideNavigation(['navigation', 'languageToggle'])">
-                <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <title>Menu</title>
-                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-                </svg>
-            </button>
-        </div>
-        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto md:flex md:items-center md:w-auto">
-            <div id="navigation" class="text-sm lg:flex-grow md:flex-grow" style="display: block;">
-                <a href="./index.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium  lg:inline-block lg:mt-0 md:inline-block md:mt-0">Start</a>
-                <a href="./alemannencup.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium  lg:inline-block lg:mt-0 md:inline-block md:mt-0" style="color: red;">
-                    Alemannen Cup
-                </a>
-                <a href="./teams.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium  lg:inline-block lg:mt-0 md:inline-block md:mt-0">
-                    <span data-lang="en" class="hidden">Teams</span>
-                    <span data-lang="de">Mannschaften</span>
-                </a>
-                <div class="relative inline-block align-top">
-                    <button onclick="toggleDropdown()" class="mt-4 rounded-md px-3 py-2 text-sm font-medium text-white text-left min-w-max lg:mt-0 md:mt-0">
-                        <span data-lang="en" class="hidden">Training ▼</span>
-                        <span data-lang="de">Training ▼</span>
-                    </button>
-                    <div id="trainingDropdown" class="hidden mt-2 space-y-1">
-                        <a href="./training_senior.html" class="block rounded-md px-3 py-2 text-sm font-medium">
-                            <span data-lang="en" class="hidden">Seniors</span>
-                            <span data-lang="de">Senioren</span>
-                        </a>
-                        <a href="./training_kids.html" class="block rounded-md px-3 py-2 text-sm font-medium">
-                            <span data-lang="en" class="hidden">Kids</span>
-                            <span data-lang="de">Kinder</span>
-                        </a>
-                    </div>
-                </div>
-                <a href="./verein.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium  lg:inline-block lg:mt-0 md:inline-block md:mt-0">
-                    <span data-lang="en" class="hidden">Become a Member</span>
-                    <span data-lang="de">Mitglied werden</span>
-                </a>
-                <a href="./kontakt.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium  lg:inline-block lg:mt-0 md:inline-block md:mt-0">
-                    <span data-lang="en" class="hidden">Contact</span>
-                    <span data-lang="de">Kontakt</span>
-                </a>
-                <a href="./FAQ.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium  lg:inline-block lg:mt-0 md:inline-block md:mt-0">FAQ</a>
-            </div>
-            <button id="languageToggle" class="ml-4 bg-white text-blue-500 w-8 h-8 rounded-full flex items-center justify-center">
-                <span id="languageIcon">EN</span>
-            </button>
-        </div>
+  <!-- Score bug -->
+  <header class="bug">
+    <div class="bug__score">
+      <a class="bug__crest" href="index.html" aria-label="BV Aachen Startseite"><img src="assets/img/logo-white.png" alt="BVA 09" width="200" height="98"></a>
+      <span class="bug__season num">25/26</span>
+      <a class="bug__live" href="training.html#woche" data-live aria-live="polite"><span class="live-dot"></span><span><b>Training</b><small>Mo–Fr · 18–23 Uhr</small></span></a>
+    </div>
+    <div class="bug__nav">
+      <nav class="nav" aria-label="Hauptnavigation">
+        <a href="index.html">Start</a>
+        <a href="training.html">Training</a>
+        <a href="teams.html"><span data-lang="de">Mannschaften</span><span data-lang="en">Teams</span></a>
+        <a href="alemannencup.html" class="nav__cup">Alemannen Cup</a>
+        <a href="verein.html"><span data-lang="de">Mitglied werden</span><span data-lang="en">Join</span></a>
+        <a href="kontakt.html"><span data-lang="de">Kontakt</span><span data-lang="en">Contact</span></a>
+        <a href="FAQ.html">FAQ</a>
+      </nav>
+      <button class="lang" type="button" data-toggle-lang aria-label="Sprache wechseln / switch language"><span data-code="de">DE</span><span data-code="en">EN</span></button>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="sheet" aria-label="Menü">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square"><path d="M3 7h18M3 12h18M3 17h12"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="sheet" id="sheet" data-open="false" role="dialog" aria-modal="true" aria-label="Menü">
+    <div class="sheet__top">
+      <a class="bug__crest" href="index.html" aria-label="BV Aachen Startseite"><img src="assets/img/logo-white.png" alt="BVA 09" width="400" height="196"></a>
+      <button class="sheet__close" type="button" aria-label="Menü schließen">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      </button>
+    </div>
+    <nav aria-label="Mobile Navigation">
+      <a href="index.html"><span>Start</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+      <a href="training.html"><span>Training</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+      <a href="teams.html"><span><span data-lang="de">Mannschaften</span><span data-lang="en">Teams</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+      <a href="alemannencup.html"><span>Alemannen Cup</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+      <a href="verein.html"><span><span data-lang="de">Mitglied werden</span><span data-lang="en">Join</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+      <a href="kontakt.html"><span><span data-lang="de">Kontakt</span><span data-lang="en">Contact</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+      <a href="FAQ.html"><span>FAQ</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
     </nav>
-
-    <div class="mx-auto px-2 sm:px-6 lg:px-8 content-center">
-        <div class="mt-10">
-            <h2 class="text-xl font-extrabold dark:text-gray-300 mt-10">
-                <span data-lang="en" class="hidden">Privacy Policy</span>
-                <span data-lang="de">Datenschutzerklärung</span>
-            </h2>
-
-            <h1 class="mt-10">
-                <span data-lang="en" class="hidden">Principle</span>
-                <span data-lang="de">Grundsatz</span>
-            </h1>
-            <span data-lang="en" class="hidden">
-                We take the protection of personal data very seriously and treat personal data confidentially and in accordance with the statutory data protection regulations and this data protection declaration.
-            </span>
-            <span data-lang="de">
-                Wir nehmen den Schutz persönlicher Daten sehr ernst und behandeln personenbezogene Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.
-            </span>
-            <h1 class="mt-10">
-                <span data-lang="en" class="hidden">Data Collection</span>
-                <span data-lang="de">Erheben von Daten</span>
-            </h1>
-            <span data-lang="en" class="hidden">
-                We collect and process personal data only to the extent necessary. We do not collect usage data about the use of our websites.
-            </span>
-            <span data-lang="de">
-                Wir erheben und verarbeiten personenbezogene Daten nur, soweit diese erforderlich sind. Personenbezogene Daten über die Inanspruchnahme unserer Internetseiten (Nutzungsdaten) erheben wir nicht.
-
-            </span>
-
-            <h1 class="mt-10">
-                <span data-lang="en" class="hidden">Data Processing</span>
-                <span data-lang="de">Verarbeitung von Daten</span>
-            </h1>
-            <span data-lang="en" class="hidden">
-                This website uses Google Maps to visually display geographical information. We would like to point out that Google Maps is integrated under "Training" in the directions and that when this page is called up, the IP address and possibly other personal data of the user are transferred to the respective operator of these services. Further information on data processing by the Google Maps Foundation can be found in the
-                <a href="https://www.google.com/intl/de_de/help/terms_maps.html" class="font-medium text-blue-600 dark:text-blue-500 hover:underline" target="_blank" rel="noopener">Google Maps privacy policy</a>.
-            </span>
-            <span data-lang="de">
-                Diese Webseite verwendet Google Maps, um geographische Informationen visuell darzustellen. Wir weisen darauf hin, dass unter "Training" in der Anfahrtsbeschreibung Google Maps eingebunden ist und dass beim Aufruf dieser Seite die IP-Adresse sowie möglicherweise weitere personenbezogene Daten des Nutzers/ der Nutzerin an den jeweiligen Betreiber dieser Dienste übertragen werden. Nähere Informationen über die Datenverarbeitung durch die Google Maps Foundation können Sie den
-                <a href="https://www.google.com/intl/de_de/help/terms_maps.html" class="font-medium text-blue-600 dark:text-blue-500 hover:underline" target="_blank" rel="noopener">Google Maps-Datenschutzhinweisen</a> entnehmen.
-            </span>
-            <h1 class="mt-10">
-                <span data-lang="en" class="hidden">Accoutability</span>
-                <span data-lang="de">Haftungshinweis</span>
-            </h1>
-            <span data-lang="en" class="hidden">
-                Despite careful content control, we assume no liability for the content of external links! The operators of the linked pages are solely responsible for their content!
-            </span>
-            <span data-lang="de">
-                Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links! Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber:innen verantwortlich!
-            </span>
-            <h1 class="mt-10">
-                <span data-lang="en" class="hidden">Further Information on Data Protection: </span>
-                <span data-lang="de">Weitere Informationen zum Datenschutz: </span>
-                <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="files/Datenschutzrichtlinie.pdf" target="_blank">
-                    <span data-lang="en" class="hidden">Privacy Policy</span>
-                    <span data-lang="de">Datenschutzrichtlinie</span>
-                </a>.
-            </h1>
-        </div>
+    <div class="sheet__foot">
+      <button class="lang" type="button" data-toggle-lang aria-label="Sprache wechseln / switch language"><span data-code="de">DE</span><span data-code="en">EN</span></button>
+      <span class="sheet__legal"><a href="impressum.html"><span data-lang="de">Impressum</span><span data-lang="en">Imprint</span></a><a href="datenschutz.html"><span data-lang="de">Datenschutz</span><span data-lang="en">Privacy</span></a></span>
     </div>
-    <br>
-    <div id="footer-wrapper" class="mt-20">
-        <div id="footer" class="text-center">
-            <div id="adresse">
-                <p>
-                    <a href="./impressum.html" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                        <span data-lang="en" class="hidden">Imprint</span>
-                        <span data-lang="de">Impressum</span>
-                    </a> <b> | </b>
-                    <a href="./datenschutz.html" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                        <span data-lang="en" class="hidden">Privacy Policy</span>
-                        <span data-lang="de">Informationen zum Datenschutz</span>
-                    </a>
-                </p>
-            </div>
+  </div>
+
+  <div class="stinger" aria-hidden="true"><i></i><i></i><i></i></div>
+
+  <main id="main">
+    <header class="masthead">
+      <div class="net" aria-hidden="true"></div>
+      <div class="wrap">
+        <div class="l3">
+          <h1 class="l3__title"><span data-lang="de">Datenschutz</span><span data-lang="en">Privacy</span></h1>
+          <div class="l3__sub">
+            <span class="b"><span data-lang="de">Datenschutzerklärung</span><span data-lang="en">Privacy Policy</span></span>
+          </div>
         </div>
+      </div>
+    </header>
+
+    <section class="section" aria-label="Datenschutzerklärung">
+      <div class="wrap">
+        <div class="legal">
+          <h2 class="h3"><span data-lang="de">Grundsatz</span><span data-lang="en">Principle</span></h2>
+          <p>
+            <span data-lang="de">Wir nehmen den Schutz persönlicher Daten sehr ernst und behandeln personenbezogene Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.</span>
+            <span data-lang="en">We take the protection of personal data very seriously and treat personal data confidentially and in accordance with the statutory data protection regulations and this data protection declaration.</span>
+          </p>
+
+          <h2 class="h3"><span data-lang="de">Erheben von Daten</span><span data-lang="en">Data Collection</span></h2>
+          <p>
+            <span data-lang="de">Wir erheben und verarbeiten personenbezogene Daten nur, soweit diese erforderlich sind. Personenbezogene Daten über die Inanspruchnahme unserer Internetseiten (Nutzungsdaten) erheben wir nicht.</span>
+            <span data-lang="en">We collect and process personal data only to the extent necessary. We do not collect usage data about the use of our websites.</span>
+          </p>
+
+          <h2 class="h3"><span data-lang="de">Verarbeitung von Daten</span><span data-lang="en">Data Processing</span></h2>
+          <p>
+            <span data-lang="de">Diese Webseite verwendet Google Maps, um geographische Informationen visuell darzustellen. Wir weisen darauf hin, dass unter "Training" in der Anfahrtsbeschreibung Google Maps eingebunden ist und dass beim Aufruf dieser Seite die IP-Adresse sowie möglicherweise weitere personenbezogene Daten des Nutzers/ der Nutzerin an den jeweiligen Betreiber dieser Dienste übertragen werden. Nähere Informationen über die Datenverarbeitung durch die Google Maps Foundation können Sie den <a class="link" href="https://www.google.com/intl/de_de/help/terms_maps.html" target="_blank" rel="noopener">Google Maps-Datenschutzhinweisen</a> entnehmen.</span>
+            <span data-lang="en">This website uses Google Maps to visually display geographical information. We would like to point out that Google Maps is integrated under "Training" in the directions and that when this page is called up, the IP address and possibly other personal data of the user are transferred to the respective operator of these services. Further information on data processing by the Google Maps Foundation can be found in the <a class="link" href="https://www.google.com/intl/de_de/help/terms_maps.html" target="_blank" rel="noopener">Google Maps privacy policy</a>.</span>
+          </p>
+
+          <h2 class="h3"><span data-lang="de">Haftungshinweis</span><span data-lang="en">Accoutability</span></h2>
+          <p>
+            <span data-lang="de">Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links! Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber:innen verantwortlich!</span>
+            <span data-lang="en">Despite careful content control, we assume no liability for the content of external links! The operators of the linked pages are solely responsible for their content!</span>
+          </p>
+
+          <h2 class="h3"><span data-lang="de">Weitere Informationen zum Datenschutz</span><span data-lang="en">Further Information on Data Protection</span></h2>
+          <p>
+            <a class="link" href="files/Datenschutzrichtlinie.pdf" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>
+              <span data-lang="de">Datenschutzrichtlinie</span><span data-lang="en">Privacy Policy</span> (PDF)
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot on-dark">
+    <div class="net" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="foot__grid">
+        <div class="foot__brand">
+          <img src="assets/img/logo-white.png" alt="BVA 09" width="200" height="98">
+          <p><span data-lang="de">BV Aachen 2009 e.V. · Badminton in Burtscheid und Laurensberg.</span><span data-lang="en">BV Aachen 2009 e.V. · Badminton in Burtscheid and Laurensberg.</span></p>
+        </div>
+        <div>
+          <p class="foot__h"><span data-lang="de">Verein</span><span data-lang="en">Club</span></p>
+          <ul>
+            <li><a href="training.html">Training</a></li>
+            <li><a href="teams.html"><span data-lang="de">Mannschaften</span><span data-lang="en">Teams</span></a></li>
+            <li><a href="alemannencup.html">Alemannen Cup</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="foot__h"><span data-lang="de">Kontakt</span><span data-lang="en">Contact</span></p>
+          <ul>
+            <li><a class="mono" href="mailto:vorsitz@bv-aachen.de">vorsitz@</a></li>
+            <li><a class="mono" href="mailto:seniorentraining@bv-aachen.de">seniorentraining@</a></li>
+            <li><a class="mono" href="mailto:jugendwart@bv-aachen.de">jugendwart@</a></li>
+            <li><a class="mono" href="mailto:kassenwart@bv-aachen.de">kassenwart@</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="foot__h"><span data-lang="de">Hallen</span><span data-lang="en">Halls</span></p>
+          <ul>
+            <li>Burtscheid · <span class="mono">Malmedyer Str. 55</span></li>
+            <li>Laurensberg · <span class="mono">Hander Weg 89</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot__legal">
+        <span class="num">© 2026 BV Aachen 2009 e.V.</span>
+        <span><a href="impressum.html"><span data-lang="de">Impressum</span><span data-lang="en">Imprint</span></a> · <a href="datenschutz.html"><span data-lang="de">Datenschutz</span><span data-lang="en">Privacy</span></a></span>
+      </div>
     </div>
+  </footer>
 </body>
-
 </html>

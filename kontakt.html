@@ -1,190 +1,176 @@
 <!DOCTYPE html>
-<html lang="en">
-<!--
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
--->
-
+<html lang="de" data-ui-lang="de">
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta name="keywords" content="BV Aachen, Badminton, Aachen">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <link rel="stylesheet" href="styles/output.css">
-    <script src="javascripts/navigation-menu-showhide.js"></script>
-    <!-- used for to get idb library, a CHIPS cookie method for the language switch -->
-    <script src="https://cdn.jsdelivr.net/npm/idb/build/iife/index-min.js"></script>
-    <script src="javascripts/language-toggle.js"></script>
-
-
-    <title>BV Aachen 09</title>
-    <link rel="stylesheet" href="styles/navigation-layout.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kontakt · BV Aachen 2009 e.V.</title>
+  <meta name="description" content="Kontakt zum BV Aachen: E-Mail-Adressen für allgemeine Fragen, Mitgliedschaft, Senioren- und Jugendtraining.">
+  <meta name="theme-color" content="#0b1b2b">
+  <link rel="icon" href="images/icon.png">
+  <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/martian-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/site.css">
+  <script>document.documentElement.classList.add("js")</script>
+  <script src="assets/site.js" defer></script>
 </head>
+<body>
+  <a class="visually-hidden" href="#main">Zum Inhalt springen</a>
 
-<body class="antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900 text-center dark">
-    <nav class="fixed-top flex items-center justify-between flex-wrap bg-gray-800 p-3">
-        <div class="flex items-center flex-shrink-0 text-white mr-6">
-            <div class="flex flex-shrink-0 items-center bg-gray-100 p-1 rounded-md">
-                <img class="h-8 w-auto rounded-md" src="images/Logo.png" alt="BV Aachen">
-            </div>
-        </div>
-        <div class="block md:hidden lg:hidden">
-            <button class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400  hover:border-white" onclick="showhideNavigation(['navigation', 'languageToggle'])">
-				<svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-					<title>Menu</title>
-					<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-				</svg>
-			</button>
-        </div>
-        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto md:flex md:items-center md:w-auto">
-            <div id="navigation" class="text-sm lg:flex-grow md:flex-grow" style="display: block;">
-                <a href="./index.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium  lg:inline-block lg:mt-0 md:inline-block md:mt-0">
-					Start</a>
-                <a href="./alemannencup.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium  lg:inline-block lg:mt-0 md:inline-block md:mt-0" style="color: red;">
-                        Alemannen Cup
-                    </a>
-                <a href="./teams.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium  lg:inline-block lg:mt-0 md:inline-block md:mt-0">
-                    <span data-lang="en" class="hidden">Teams</span>
-                    <span data-lang="de">Mannschaften</span>
-                </a>
-                <div class="relative inline-block align-top">
-                    <button onclick="toggleDropdown()" class="mt-4 rounded-md px-3 py-2 text-sm font-medium text-white text-left min-w-max lg:mt-0 md:mt-0">
-                        <span data-lang="en" class="hidden">Training ▼</span>
-                        <span data-lang="de">Training ▼</span>
-                    </button>
-                    <div id="trainingDropdown" class="hidden mt-2 space-y-1">
-                        <a href="./training_senior.html" class="block rounded-md px-3 py-2 text-sm font-medium">
-                            <span data-lang="en" class="hidden">Seniors</span>
-                            <span data-lang="de">Senioren</span>
-                        </a>
-                        <a href="./training_kids.html" class="block rounded-md px-3 py-2 text-sm font-medium">
-                            <span data-lang="en" class="hidden">Kids</span>
-                            <span data-lang="de">Kinder</span>
-                        </a>
-                    </div>
-                </div>
-                <a href="./verein.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium  lg:inline-block lg:mt-0 md:inline-block md:mt-0">
-                    <span data-lang="en" class="hidden">Become a Member</span>
-                    <span data-lang="de">Mitglied werden</span>
-                </a>
-                <a href="./kontakt.html" aria-current="page" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium  lg:inline-block lg:mt-0 md:inline-block md:mt-0">
-                    <span data-lang="en" class="hidden">Contact</span>
-                    <span data-lang="de">Kontakt</span>
-                </a>
-                <a href="./FAQ.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium  lg:inline-block lg:mt-0 md:inline-block md:mt-0">FAQ</a>
-            </div>
-            <button id="languageToggle" class="ml-4 bg-white text-blue-500 w-8 h-8 rounded-full flex items-center justify-center">
-                <span id="languageIcon">EN</span>
-            </button>
-        </div>
+  <!-- Score bug -->
+  <header class="bug">
+    <div class="bug__score">
+      <a class="bug__crest" href="index.html" aria-label="BV Aachen Startseite"><img src="assets/img/logo-white.png" alt="BVA 09" width="200" height="98"></a>
+      <span class="bug__season num">25/26</span>
+      <a class="bug__live" href="training.html#woche" data-live aria-live="polite"><span class="live-dot"></span><span><b>Training</b><small>Mo–Fr · 18–23 Uhr</small></span></a>
+    </div>
+    <div class="bug__nav">
+      <nav class="nav" aria-label="Hauptnavigation">
+        <a href="index.html">Start</a>
+        <a href="training.html">Training</a>
+        <a href="teams.html"><span data-lang="de">Mannschaften</span><span data-lang="en">Teams</span></a>
+        <a href="alemannencup.html" class="nav__cup">Alemannen Cup</a>
+        <a href="verein.html"><span data-lang="de">Mitglied werden</span><span data-lang="en">Join</span></a>
+        <a href="kontakt.html" aria-current="page"><span data-lang="de">Kontakt</span><span data-lang="en">Contact</span></a>
+        <a href="FAQ.html">FAQ</a>
+      </nav>
+      <button class="lang" type="button" data-toggle-lang aria-label="Sprache wechseln / switch language"><span data-code="de">DE</span><span data-code="en">EN</span></button>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="sheet" aria-label="Menü">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square"><path d="M3 7h18M3 12h18M3 17h12"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="sheet" id="sheet" data-open="false" role="dialog" aria-modal="true" aria-label="Menü">
+    <div class="sheet__top">
+      <a class="bug__crest" href="index.html" aria-label="BV Aachen Startseite"><img src="assets/img/logo-white.png" alt="BVA 09" width="400" height="196"></a>
+      <button class="sheet__close" type="button" aria-label="Menü schließen">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      </button>
+    </div>
+    <nav aria-label="Mobile Navigation">
+      <a href="index.html"><span>Start</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+      <a href="training.html"><span>Training</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+      <a href="teams.html"><span><span data-lang="de">Mannschaften</span><span data-lang="en">Teams</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+      <a href="alemannencup.html"><span>Alemannen Cup</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+      <a href="verein.html"><span><span data-lang="de">Mitglied werden</span><span data-lang="en">Join</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+      <a href="kontakt.html" aria-current="page"><span><span data-lang="de">Kontakt</span><span data-lang="en">Contact</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+      <a href="FAQ.html"><span>FAQ</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
     </nav>
-
-    <div class="mx-auto px-2 sm:px-6 lg:px-8 content-center">
-        <div>
-            <img class="inline" src="images/bild1.jpg" alt="Badmintonball" width="600" height="230">
-        </div>
-        <div>
-
-            <div>
-                <p class="mt-10 text-3xl sm:text-4xl text-slate-900 font-extrabold tracking-tight dark:text-slate-50 ">
-                    <span data-lang="en" class="hidden">Contact</span>
-                    <span data-lang="de">Kontakt</span>
-                </p>
-                <p class="mt-4 space-y-6 ">
-                    <span data-lang="en" class="hidden">You can reach us by email:</span>
-                    <span data-lang="de">Du kannst uns per E-Mail erreichen:</span>
-                    <br>
-                </p>
-                <p class="mt-4 space-y-6 ">
-                    <ul>
-                        <li>
-                            <span data-lang="en" class="hidden">For general questions: </span>
-                            <span data-lang="de">Für allgemeine Fragen: </span>
-                            <a href="mailto: vorsitz@bv-aachen.de" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-							vorsitz@bv-aachen.de</a>.
-                        </li>
-                        <li>
-                            <span data-lang="en" class="hidden">For questions regarding membership: </span>
-                            <span data-lang="de">Für Fragen bezüglich der Mitgliedschaft: </span>
-                            <a href="mailto: kassenwart@bv-aachen.de" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-							kassenwart@bv-aachen.de</a>.</li>
-                        <li>
-                            <span data-lang="en" class="hidden">For questions regarding the senior training: </span>
-                            <span data-lang="de">Für Fragen bezüglich des Seniorentrainings: </span>
-                            <a href="mailto: seniorentraining@bv-aachen.de" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-							seniorentraining@bv-aachen.de</a>.
-                        </li>
-                        <li>
-                            <span data-lang="en" class="hidden">For questions regarding the children and youth training: </span>
-                            <span data-lang="de">Für Fragen bezüglich des Kinder- und Jugendtrainings: </span>
-                            <a href="mailto: jugendwart@bv-aachen.de" class="font-medium text-blue-600 dark:text-blue-500 hover:underline"> jugendwart@bv-aachen.de</a>.
-                        </li>
-                        <br>
-                        <li>
-                            <span data-lang="en" class="hidden">For questions and comments regarding this website: </span>
-                            <span data-lang="de">Für Fragen und Anmerkungen bezüglich dieser Webseite: </span>
-                            <br>
-                            <div class="max-w-4xl mx-auto grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 gap-2">
-                                <div>
-                                    <a href="https://www.xing.com/profile/Valentin_Himmel">
-                                        <figcaption class="mt-6 flex items-center justify-center space-x-4 text-left"><img src="images/valentin.jpg" alt="" class="w-auto h-14 rounded-full" loading="lazy" decoding="async">
-                                            <div>
-                                                <div class="text-slate-900 font-semibold dark:text-white">Valentin Himmel</div>
-                                                <div class="mt-0.5 text-sm leading-6 dark:text-blue-200">Softwareentwickler
-                                                </div>
-                                            </div>
-                                        </figcaption>
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="https://www.linkedin.com/in/marko-goldschmidt-05b002235/">
-                                        <figcaption class="mt-6 flex items-center justify-center space-x-4 text-left"><img src="images/marko_cartoon.png" alt="" class="w-auto h-14 rounded-full" loading="lazy" decoding="async">
-                                            <div>
-                                                <div class="text-slate-900 font-semibold dark:text-white">Marko Goldschmidt</div>
-                                                <div class="mt-0.5 text-sm leading-6 dark:text-blue-200">Softwareentwickler
-                                                </div>
-                                            </div>
-                                        </figcaption>
-                                    </a>
-                                </div>
-                                <div>
-                                    <a href="mailto:webmaster@bv-aachen.de">
-                                        <figcaption class="mt-6 flex items-center justify-center space-x-4 text-left"><img src="images/matthias.jpg" alt="" class="w-auto h-14 rounded-full" loading="lazy" decoding="async">
-                                            <div>
-                                                <div class="text-slate-900 font-semibold dark:text-white">Matthias Böing</div>
-                                                <div class="mt-0.5 text-sm leading-6 dark:text-blue-200">UI Designer
-                                                </div>
-                                            </div>
-                                        </figcaption>
-                                    </a>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </p>
-            </div>
-        </div>
+    <div class="sheet__foot">
+      <button class="lang" type="button" data-toggle-lang aria-label="Sprache wechseln / switch language"><span data-code="de">DE</span><span data-code="en">EN</span></button>
+      <span class="sheet__legal"><a href="impressum.html"><span data-lang="de">Impressum</span><span data-lang="en">Imprint</span></a><a href="datenschutz.html"><span data-lang="de">Datenschutz</span><span data-lang="en">Privacy</span></a></span>
     </div>
+  </div>
 
+  <div class="stinger" aria-hidden="true"><i></i><i></i><i></i></div>
 
-    <br>
-    <div id="footer-wrapper" class="mt-20">
-        <div id="footer" class="text-center">
-            <div id="adresse">
-                <p>
-                    <a href="./impressum.html" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                        <span data-lang="en" class="hidden">Imprint</span>
-                        <span data-lang="de">Impressum</span>
-                    </a> <b> | </b>
-                    <a href="./datenschutz.html" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                        <span data-lang="en" class="hidden">Privacy Policy</span>
-                        <span data-lang="de">Informationen zum Datenschutz</span>
-                    </a>
-                </p>
-            </div>
+  <main id="main">
+    <header class="masthead">
+      <div class="net" aria-hidden="true"></div>
+      <div class="wrap">
+        <div class="l3">
+          <h1 class="l3__title"><span data-lang="de">Kontakt</span><span data-lang="en">Contact</span></h1>
+          <div class="l3__sub">
+            <span class="a num">@bv-aachen.de</span>
+            <span class="b"><span data-lang="de">Per E-Mail</span><span data-lang="en">By email</span></span>
+          </div>
         </div>
+        <p class="lede">
+          <span data-lang="de">Du kannst uns per E-Mail erreichen:</span>
+          <span data-lang="en">You can reach us by email:</span>
+        </p>
+      </div>
+    </header>
+
+    <section class="section" aria-label="E-Mail-Adressen">
+      <div class="wrap">
+        <ul class="mails">
+          <li>
+            <span class="mails__topic"><span data-lang="de">Allgemeine Fragen</span><span data-lang="en">General questions</span></span>
+            <a class="mails__addr" href="mailto:vorsitz@bv-aachen.de">vorsitz@bv-aachen.de</a>
+          </li>
+          <li>
+            <span class="mails__topic"><span data-lang="de">Mitgliedschaft</span><span data-lang="en">Membership</span></span>
+            <a class="mails__addr" href="mailto:kassenwart@bv-aachen.de">kassenwart@bv-aachen.de</a>
+          </li>
+          <li>
+            <span class="mails__topic"><span data-lang="de">Seniorentraining</span><span data-lang="en">Senior training</span></span>
+            <a class="mails__addr" href="mailto:seniorentraining@bv-aachen.de">seniorentraining@bv-aachen.de</a>
+          </li>
+          <li>
+            <span class="mails__topic"><span data-lang="de">Kinder- &amp; Jugendtraining</span><span data-lang="en">Youth training</span></span>
+            <a class="mails__addr" href="mailto:jugendwart@bv-aachen.de">jugendwart@bv-aachen.de</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section--ink on-dark" aria-labelledby="web-title">
+      <div class="wrap">
+        <div class="head">
+          <h2 class="h2" id="web-title"><span data-lang="de">Website-Team</span><span data-lang="en">Website team</span></h2>
+          <p class="lede">
+            <span data-lang="de">Für Fragen und Anmerkungen bezüglich dieser Webseite:</span>
+            <span data-lang="en">For questions and comments regarding this website:</span>
+          </p>
+        </div>
+        <div class="crew">
+          <a class="crew__item" href="https://www.xing.com/profile/Valentin_Himmel" target="_blank" rel="noopener">
+            <img src="assets/img/valentin.jpg" alt="" width="400" height="397" loading="lazy">
+            <span class="l3-mini"><span>Valentin Himmel</span><span>Softwareentwickler</span></span>
+          </a>
+          <a class="crew__item" href="https://www.linkedin.com/in/marko-goldschmidt-05b002235/" target="_blank" rel="noopener">
+            <img src="assets/img/marko.jpeg" alt="" width="400" height="400" loading="lazy">
+            <span class="l3-mini"><span>Marko Goldschmidt</span><span>Softwareentwickler</span></span>
+          </a>
+          <a class="crew__item" href="mailto:webmaster@bv-aachen.de">
+            <img src="assets/img/matthias.jpg" alt="" width="400" height="399" loading="lazy">
+            <span class="l3-mini"><span>Matthias Böing</span><span>UI Designer</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot on-dark">
+    <div class="net" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="foot__grid">
+        <div class="foot__brand">
+          <img src="assets/img/logo-white.png" alt="BVA 09" width="200" height="98">
+          <p><span data-lang="de">BV Aachen 2009 e.V. · Badminton in Burtscheid und Laurensberg.</span><span data-lang="en">BV Aachen 2009 e.V. · Badminton in Burtscheid and Laurensberg.</span></p>
+        </div>
+        <div>
+          <p class="foot__h"><span data-lang="de">Verein</span><span data-lang="en">Club</span></p>
+          <ul>
+            <li><a href="training.html">Training</a></li>
+            <li><a href="teams.html"><span data-lang="de">Mannschaften</span><span data-lang="en">Teams</span></a></li>
+            <li><a href="alemannencup.html">Alemannen Cup</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="foot__h"><span data-lang="de">Kontakt</span><span data-lang="en">Contact</span></p>
+          <ul>
+            <li><a class="mono" href="mailto:vorsitz@bv-aachen.de">vorsitz@</a></li>
+            <li><a class="mono" href="mailto:seniorentraining@bv-aachen.de">seniorentraining@</a></li>
+            <li><a class="mono" href="mailto:jugendwart@bv-aachen.de">jugendwart@</a></li>
+            <li><a class="mono" href="mailto:kassenwart@bv-aachen.de">kassenwart@</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="foot__h"><span data-lang="de">Hallen</span><span data-lang="en">Halls</span></p>
+          <ul>
+            <li>Burtscheid · <span class="mono">Malmedyer Str. 55</span></li>
+            <li>Laurensberg · <span class="mono">Hander Weg 89</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot__legal">
+        <span class="num">© 2026 BV Aachen 2009 e.V.</span>
+        <span><a href="impressum.html"><span data-lang="de">Impressum</span><span data-lang="en">Imprint</span></a> · <a href="datenschutz.html"><span data-lang="de">Datenschutz</span><span data-lang="en">Privacy</span></a></span>
+      </div>
     </div>
+  </footer>
 </body>
-
 </html>

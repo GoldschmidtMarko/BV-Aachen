@@ -1,639 +1,452 @@
 <!DOCTYPE html>
-<html lang="en">
-<!--
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
--->
-
+<html lang="de" data-ui-lang="de">
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta name="keywords" content="BV Aachen, Badminton, Aachen">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <link rel="stylesheet" href="styles/output.css">
-    <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
-    <script src="javascripts/navigation-menu-showhide.js"></script>
-    <!-- used for to get idb library, a CHIPS cookie method for the language switch -->
-    <script src="https://cdn.jsdelivr.net/npm/idb/build/iife/index-min.js"></script>
-    <script src="javascripts/language-toggle.js"></script>
-    <title>BV Aachen 09</title>
-    <link rel="stylesheet" href="styles/navigation-layout.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FAQ · BV Aachen 2009 e.V.</title>
+  <meta name="description" content="Häufig gestellte Fragen zum BV Aachen: Trainingszeiten, Probetraining, Ausrüstung, Beiträge und Mannschaften.">
+  <meta name="theme-color" content="#0b1b2b">
+  <link rel="icon" href="images/icon.png">
+  <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/martian-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/site.css">
+  <script>document.documentElement.classList.add("js")</script>
+  <script src="assets/site.js" defer></script>
 </head>
+<body>
+  <a class="visually-hidden" href="#main">Zum Inhalt springen</a>
 
-<body class="antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900 text-center dark">
-    <nav class="fixed-top flex items-center justify-between flex-wrap bg-gray-800 p-3">
-        <div class="flex items-center flex-shrink-0 text-white mr-6">
-            <div class="flex flex-shrink-0 items-center bg-gray-100 p-1 rounded-md">
-                <img class="h-8 w-auto rounded-md" src="images/Logo.png" alt="BV Aachen">
-            </div>
-        </div>
-        <div class="block md:hidden lg:hidden">
-            <button class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400  hover:border-white" onclick="showhideNavigation(['navigation', 'languageToggle'])">
-				<svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-					<title>Menu</title>
-					<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-				</svg>
-			</button>
-        </div>
-        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto md:flex md:items-center md:w-auto">
-            <div id="navigation" class="text-sm lg:flex-grow md:flex-grow" style="display: block;">
-                <a href="./index.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium  lg:inline-block lg:mt-0 md:inline-block md:mt-0">
-					Start</a>
-                <a href="./alemannencup.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium  lg:inline-block lg:mt-0 md:inline-block md:mt-0" style="color: red;">
-                        Alemannen Cup
-                    </a>
-                <a href="./teams.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium  lg:inline-block lg:mt-0 md:inline-block md:mt-0">
-                    <span data-lang="en" class="hidden">Teams</span>
-                    <span data-lang="de">Mannschaften</span>
-                </a>
-                <div class="relative inline-block align-top">
-                    <button onclick="toggleDropdown()" class="mt-4 rounded-md px-3 py-2 text-sm font-medium text-white text-left min-w-max lg:mt-0 md:mt-0">
-                        <span data-lang="en" class="hidden">Training ▼</span>
-                        <span data-lang="de">Training ▼</span>
-                    </button>
-                    <div id="trainingDropdown" class="hidden mt-2 space-y-1">
-                        <a href="./training_senior.html" class="block rounded-md px-3 py-2 text-sm font-medium">
-                            <span data-lang="en" class="hidden">Seniors</span>
-                            <span data-lang="de">Senioren</span>
-                        </a>
-                        <a href="./training_kids.html" class="block rounded-md px-3 py-2 text-sm font-medium">
-                            <span data-lang="en" class="hidden">Kids</span>
-                            <span data-lang="de">Kinder</span>
-                        </a>
-                    </div>
-                </div>
-                <a href="./verein.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium  lg:inline-block lg:mt-0 md:inline-block md:mt-0">
-                    <span data-lang="en" class="hidden">Become a Member</span>
-                    <span data-lang="de">Mitglied werden</span>
-                </a>
-                <a href="./kontakt.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium  lg:inline-block lg:mt-0 md:inline-block md:mt-0">
-                    <span data-lang="en" class="hidden">Contact</span>
-                    <span data-lang="de">Kontakt</span>
-                </a>
-                <a href="./FAQ.html" aria-current="page" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium  lg:inline-block lg:mt-0 md:inline-block md:mt-0">FAQ</a>
-            </div>
-            <button id="languageToggle" class="ml-4 bg-white text-blue-500 w-8 h-8 rounded-full flex items-center justify-center">
-                <span id="languageIcon">EN</span>
-            </button>
-        </div>
+  <!-- Score bug -->
+  <header class="bug">
+    <div class="bug__score">
+      <a class="bug__crest" href="index.html" aria-label="BV Aachen Startseite"><img src="assets/img/logo-white.png" alt="BVA 09" width="200" height="98"></a>
+      <span class="bug__season num">25/26</span>
+      <a class="bug__live" href="training.html#woche" data-live aria-live="polite"><span class="live-dot"></span><span><b>Training</b><small>Mo–Fr · 18–23 Uhr</small></span></a>
+    </div>
+    <div class="bug__nav">
+      <nav class="nav" aria-label="Hauptnavigation">
+        <a href="index.html">Start</a>
+        <a href="training.html">Training</a>
+        <a href="teams.html"><span data-lang="de">Mannschaften</span><span data-lang="en">Teams</span></a>
+        <a href="alemannencup.html" class="nav__cup">Alemannen Cup</a>
+        <a href="verein.html"><span data-lang="de">Mitglied werden</span><span data-lang="en">Join</span></a>
+        <a href="kontakt.html"><span data-lang="de">Kontakt</span><span data-lang="en">Contact</span></a>
+        <a href="FAQ.html" aria-current="page">FAQ</a>
+      </nav>
+      <button class="lang" type="button" data-toggle-lang aria-label="Sprache wechseln / switch language"><span data-code="de">DE</span><span data-code="en">EN</span></button>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="sheet" aria-label="Menü">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square"><path d="M3 7h18M3 12h18M3 17h12"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="sheet" id="sheet" data-open="false" role="dialog" aria-modal="true" aria-label="Menü">
+    <div class="sheet__top">
+      <a class="bug__crest" href="index.html" aria-label="BV Aachen Startseite"><img src="assets/img/logo-white.png" alt="BVA 09" width="400" height="196"></a>
+      <button class="sheet__close" type="button" aria-label="Menü schließen">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      </button>
+    </div>
+    <nav aria-label="Mobile Navigation">
+      <a href="index.html"><span>Start</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+      <a href="training.html"><span>Training</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+      <a href="teams.html"><span><span data-lang="de">Mannschaften</span><span data-lang="en">Teams</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+      <a href="alemannencup.html"><span>Alemannen Cup</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+      <a href="verein.html"><span><span data-lang="de">Mitglied werden</span><span data-lang="en">Join</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+      <a href="kontakt.html"><span><span data-lang="de">Kontakt</span><span data-lang="en">Contact</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+      <a href="FAQ.html" aria-current="page"><span>FAQ</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
     </nav>
-
-    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 content-center text-justify">
-        <div class="content-logo text-center">
-            <img class="inline" src="images/bild1.jpg" alt="Badmintonball" width="600" height="230">
-            <br>
-        </div>
-
-        <div class="mt-10">
-            <div class="mt-10">
-                <p class="mt-10 text-3xl sm:text-4xl text-slate-900 font-extrabold tracking-tight dark:text-slate-50 ">
-                    FAQ
-                </p>
-                <i>
-                    <span data-lang="en" class="hidden">Note: With a term like "player", all genders are always meant, unless it is explicitly stated otherwise.</span>
-                    <span data-lang="de">Anmerkung: Mit einem Begriff wie "Spieler" sind stets alle Geschlechter gemeint, wenn es nicht ausdrücklich anders aus dem Zusammenhang hervorgeht.</span>
-                </i>
-                <p class="mt-4 space-y-6 ">
-                    <span data-lang="en" class="hidden">
-                        Since many new players ask the same or very similar questions, we have decided to answer most of them here. If you have any further questions or if you think of something we should add here, please contact us. The FAQ only refer to adult players. For questions about the offer for children and young people, please contact our youth officer Lina Köllmann: <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="mailto:jugendwart@bv-aachen.de">
-						jugendwart@bv-aachen.de</a>.
-                    </span>
-                    <span data-lang="de">
-                        Da viele neue Spieler die gleichen oder sehr ähnliche Fragen stellen, haben wir uns überlegt, die meisten bereits hier zu beantworten. Wenn ihr darüber hinaus noch Fragen habt oder euch etwas einfällt, was wir hier ergänzen sollten, nehmt bitte Kontakt
-                        mit uns auf. Die FAQ beziehen sich nur auf volljährige Spieler. Bei Fragen zum Angebot für Kinder und Jugendliche bitte Kontakt mit unserer Jugendwartin Lina Köllmann aufnehmen: <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="mailto:jugendwart@bv-aachen.de"> jugendwart@bv-aachen.de</a>.
-                    </span>
-                    <br>
-                    <br>
-                    <i>
-                        <span data-lang="en" class="hidden">Status: July 2024</span>
-                        <span data-lang="de">Stand: Juli 2024</span>
-                    </i>
-                </p>
-            </div>
-
-            <!-- collapsable windows for faq -->
-            <div id="accordion-collapse" data-accordion="collapse">
-                <!-- question -->
-                <h2 id="accordion-collapse-heading-0">
-                    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
-                        data-accordion-target="#accordion-collapse-body-0" aria-expanded="false" aria-controls="accordion-collapse-body-0">
-									<span>
-                                        <span data-lang="en" class="hidden">When and where do you play?</span>
-                                        <span data-lang="de">Wann und wo spielt ihr?</span>
-                                    </span>
-									<svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-										<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
-									</svg>
-									</button>
-                </h2>
-                <!-- answer -->
-                <div id="accordion-collapse-body-0" class="hidden" aria-labelledby="accordion-collapse-heading-0">
-                    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">
-                            <span data-lang="en" class="hidden">
-                                Mondays: 8:30 - 11 pm in Aachen-Burtscheid (Malmedyer Straße)<br> Wednesdays: 8 – 11 pm in Aachen-Burtscheid (Malmedyer Straße)<br> Thursdays: 8 – 10 pm in Aachen-Laurensberg (Hander Weg) <br> <br> Attention: In the winter half-year (October - March) the free game on Mondays only starts at 9:30 pm.
-                                <br><br>More information can be found under the tab <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="./training.html">Training</a>.
-                            </span>
-                            <span data-lang="de">
-                                Montags: 20:30 - 23 Uhr in Aachen-Burtscheid (Malmedyer Straße)<br> Mittwochs: 20 – 23 Uhr in Aachen-Burtscheid (Malmedyer Straße)<br> Donnerstags: 20 – 22 Uhr in Aachen-Laurensberg (Hander Weg) <br> <br> Achtung: Im Winterhalbjahr (Oktober – März) beginnt das freie Spiel montags erst um 21:30 Uhr.
-                                <br><br>Mehr Informationen findest du unter dem Reiter <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="./training.html">Training</a>.
-                            </span>
-                        </p>
-
-                    </div>
-                </div>
-                <!-- question -->
-                <h2 id="accordion-collapse-heading-1">
-                    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
-                        data-accordion-target="#accordion-collapse-body-1" aria-expanded="false" aria-controls="accordion-collapse-body-1">
-										<span>
-                                            <span data-lang="en" class="hidden">Are there differences between free play and training?</span>
-                                            <span data-lang="de">Gibt es Unterschiede zwischen freiem Spiel und Training?</span>
-                                        </span>
-										<svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-											<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
-										</svg>
-									</button>
-                </h2>
-                <!-- answer -->
-                <div id="accordion-collapse-body-1" class="hidden" aria-labelledby="accordion-collapse-heading-1">
-                    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">
-                            <span data-lang="en" class="hidden">
-                                Yes. More information can be found under the tab <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="./training.html">Training</a>.
-                            </span>
-                            <span data-lang="de">
-                                Ja. Weitere Informationen findest du unter dem Reiter <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="./training.html">Training</a>.
-                            </span>
-                        </p>
-                    </div>
-                </div>
-                <!-- question -->
-                <h2 id="accordion-collapse-heading-2">
-                    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
-                        data-accordion-target="#accordion-collapse-body-2" aria-expanded="false" aria-controls="accordion-collapse-body-2">
-										<span>
-                                            <span data-lang="en" class="hidden">Are the training dates divided into performance groups?</span>
-                                            <span data-lang="de">Sind die Trainingstermine in Leistungsgruppen eingeteilt?</span>
-                                        </span>
-										<svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-											<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
-										</svg>
-									</button>
-                </h2>
-                <!-- answer -->
-                <div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
-                    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">
-                            <span data-lang="en" class="hidden">
-                                Yes. More information can be found under the tab <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="./training.html">Training</a>.
-                            </span>
-                            <span data-lang="de">
-                                Ja. Weitere Informationen findest du unter dem Reiter <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="./training.html">Training</a>.
-                            </span>
-                        </p>
-                    </div>
-                </div>
-                <!-- question -->
-                <h2 id="accordion-collapse-heading-3">
-                    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
-                        data-accordion-target="#accordion-collapse-body-3" aria-expanded="false" aria-controls="accordion-collapse-body-3">
-										<span>
-                                            <span data-lang="en" class="hidden">Can I just come by or do I have to register beforehand?</span>
-                                            <span data-lang="de">Kann ich einfach vorbeikommen oder muss ich mich vorher melden?</span>
-                                        </span>
-										<svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-											<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
-										</svg>
-									</button>
-                </h2>
-                <!-- answer -->
-                <div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-heading-3">
-                    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">
-                            <span data-lang="en" class="hidden">
-                                You can come by without prior registration. However, the following applies: <br> At team training on Mondays (in the summer half-year from 7 to 8:30 pm) you can only participate after consulting the trainer (Ansgar Kirste). The contact details can be requested via <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="mailto:vorsitz@bv-aachen.de">vorsitz@bv-aachen.de</a> if you are interested. All other units can be visited without prior registration.
-                            </span>
-                            <span data-lang="de">
-                                Du kannst ohne Voranmeldung vorbeikommen. Folgendes gilt jedoch: <br>
-                                Am Mannschaftstraining Montags (im Sommerhalbjahr 19 bis 20:30 Uhr) darf <b>nur nach Rücksprache</b> mit dem Trainer (Ansgar Kirste) teilgenommen werden. Die Kontaktdaten können bei Interesse über <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="mailto:vorsitz@bv-aachen.de"> vorsitz@bv-aachen.de</a> erfragt werden. Alle anderen Einheiten können ohne Voranmeldung besucht werden.
-                            </span>
-                        </p>
-                    </div>
-                </div>
-                <!-- question -->
-                <h2 id="accordion-collapse-heading-4">
-                    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
-                        data-accordion-target="#accordion-collapse-body-4" aria-expanded="false" aria-controls="accordion-collapse-body-4">
-										<span>
-                                            <span data-lang="en" class="hidden">Is there training during the school holidays?</span>
-                                            <span data-lang="de">Findet auch in den Schulferien Training statt?</span>
-                                        </span>
-                            <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-											<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
-										</svg>
-                            </button>
-                </h2>
-                <!-- answer -->
-                <div id="accordion-collapse-body-4" class="hidden" aria-labelledby="accordion-collapse-heading-4">
-                    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">
-                            <span data-lang="en" class="hidden">
-                                The hall in Laurensberg is generally closed during the school holidays. The hall in Burtscheid is generally open during the school holidays (exception: Christmas holidays).
-                            </span>
-                            <span data-lang="de">
-                                Die Halle in Laurensberg ist grundsätzlich in den Schulferien geschlossen. Die Halle in Burtscheid ist in den Schulferien grundsätzlich geöffnet (Ausnahme: Weihnachtsferien).
-                            </span>
-                        </p>
-                    </div>
-                </div>
-                <!-- question -->
-                <h2 id="accordion-collapse-heading-5">
-                    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
-                        data-accordion-target="#accordion-collapse-body-5" aria-expanded="false" aria-controls="accordion-collapse-body-5">
-										<span>
-                                            <span data-lang="en" class="hidden">Is there training on public holidays?</span>
-                                            <span data-lang="de">Findet auch an Feiertagen Training statt?</span>
-                                        </span>
-										<svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-											<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
-										</svg>
-									</button>
-                </h2>
-                <!-- answer -->
-                <div id="accordion-collapse-body-5" class="hidden" aria-labelledby="accordion-collapse-heading-5">
-                    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">
-                            <span data-lang="en" class="hidden">
-                                On public holidays, both halls are closed.
-                            </span>
-                            <span data-lang="de">
-                                An gesetzlichen Feiertagen sind beide Hallen geschlossen.
-                            </span>
-                        </p>
-                    </div>
-                </div>
-                <!-- question -->
-                <h2 id="accordion-collapse-heading-6">
-                    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
-                        data-accordion-target="#accordion-collapse-body-6" aria-expanded="false" aria-controls="accordion-collapse-body-6">
-										<span>
-                                            <span data-lang="en" class="hidden">What is the age structure on the different training days?</span>
-                                            <span data-lang="de">Wie ist die Altersstruktur an den verschiedenen Trainingstagen?</span>
-                                        </span>
-										<svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-											<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
-										</svg>
-									</button>
-                </h2>
-                <!-- answer -->
-                <div id="accordion-collapse-body-6" class="hidden" aria-labelledby="accordion-collapse-heading-6">
-                    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">
-                            <span data-lang="en" class="hidden">
-                                In our club, mostly (former) students play, so new players are constantly joining and the average age is between 18 and 35 years. But of course, all other professional and age groups are also welcome. The individual days of the week hardly differ.
-                            </span>
-                            <span data-lang="de">
-                                In unserem Verein spielen überwiegend (ehemalige) Studenten, sodass ständig neue Spieler dazukommen und der Altersschnitt zwischen 18 und 35 Jahren liegt. Aber natürlich sind auch alle anderen Berufs- und Altersgruppen herzlich willkommen. Die einzelnen Wochentage unterscheiden sich hierbei kaum.
-                            </span>
-                        </p>
-                    </div>
-                </div>
-                <!-- question -->
-                <h2 id="accordion-collapse-heading-7">
-                    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
-                        data-accordion-target="#accordion-collapse-body-7" aria-expanded="false" aria-controls="accordion-collapse-body-7">
-										<span>
-                                            <span data-lang="en" class="hidden">I don't have any badminton equipment. Can I still come and what do I need to bring?</span>
-                                            <span data-lang="de">Ich habe noch keine Badmintonausrüstung. Kann ich trotzdem kommen und was muss ich mitbringen?</span>
-                                        </span>
-										<svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-											<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
-										</svg>
-									</button>
-                </h2>
-                <!-- answer -->
-                <div id="accordion-collapse-body-7" class="hidden" aria-labelledby="accordion-collapse-heading-7">
-                    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">
-                            <span data-lang="en" class="hidden">
-                                The most important thing is clean, non-staining indoor sports shoes and normal sportswear. We cannot lend these things either. The hall may not be entered with street shoes even during the trial period. If you do not yet have your own racket and would like to try out whether it is the right sport, you can borrow a club racket for the respective evening free of charge during the trial period (attention, only applies to dates in Laurensberg).
-                            </span>
-                            <span data-lang="de">
-                                Das wichtigste sind saubere, nicht abfärbende Hallenturnschuhe und normale Sportkleidung. Diese Dinge können wir auch nicht verleihen. Mit Straßenschuhen darf die Halle auch in der Probezeit nicht betreten werden. Wenn du noch
-                                keinen eigenen Schläger besitzt und erstmal ausprobieren möchtest, ob es der richtige Sport ist, kannst du dir während der Probezeit kostenlos einen Vereinsschläger für den jeweiligen Abend ausleihen (Achtung, gilt nur für
-                                Termine in Laurensberg).
-                            </span>
-                        </p>
-                    </div>
-                </div>
-                <!-- question -->
-                <h2 id="accordion-collapse-heading-8">
-                    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
-                        data-accordion-target="#accordion-collapse-body-8" aria-expanded="false" aria-controls="accordion-collapse-body-8">
-										<span>
-                                            <span data-lang="en" class="hidden">Do I have to join directly or can I try out the training first?</span>
-                                            <span data-lang="de">Muss ich direkt beitreten oder kann ich das Training erstmal ausprobieren?</span>
-                                        </span>
-										<svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-											<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
-										</svg>
-									</button>
-                </h2>
-                <!-- answer -->
-                <div id="accordion-collapse-body-8" class="hidden" aria-labelledby="accordion-collapse-heading-8">
-                    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">
-                            <span data-lang="en" class="hidden">
-                                New players can use all training dates free of charge and without obligation for four weeks (team training on Mondays only after consultation with the trainer, see above).
-                            </span>
-                            <span data-lang="de">
-                                Neue Spieler können vier Wochen lang kostenlos und unverbindlich alle Trainingstermine nutzen (Mannschaftstraining montags aber nur nach Rücksprache mit dem Trainer, s. oben).
-                            </span>
-                        </p>
-                    </div>
-                </div>
-                <!-- question -->
-                <h2 id="accordion-collapse-heading-9">
-                    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
-                        data-accordion-target="#accordion-collapse-body-9" aria-expanded="false" aria-controls="accordion-collapse-body-9">
-										<span>
-                                            <span data-lang="en" class="hidden">What does membership cost?</span>
-                                            <span data-lang="de">Was kostet die Mitgliedschaft?</span>
-                                        </span>
-										<svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-											<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
-										</svg>
-									</button>
-                </h2>
-                <!-- answer -->
-                <div id="accordion-collapse-body-9" class="hidden" aria-labelledby="accordion-collapse-heading-9">
-                    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">
-                            <span data-lang="en" class="hidden">
-                                The membership fee for young people up to and including 17 years of age is 7.00 € per month. For adults, the membership fee is 10.00 € per month.
-                            </span>
-                            <span data-lang="de">
-                                Der Mitgliedsbeitrag für Jugendliche bis einschließlich 17 Jahre beträgt 7,00 € pro Monat. Für Volljährige beträgt der Mitgliedsbeitrag 10,00 € pro Monat.
-                            </span>
-                        </p>
-                    </div>
-                </div>
-                <!-- question -->
-                <h2 id="accordion-collapse-heading-10">
-                    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
-                        data-accordion-target="#accordion-collapse-body-10" aria-expanded="false" aria-controls="accordion-collapse-body-10">
-										<span>
-                                            <span data-lang="en" class="hidden">Is there an admission fee?</span>
-                                            <span data-lang="de">Gibt es eine Aufnahmegebühr?</span>
-                                        </span>
-										<svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-											<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
-										</svg>
-									</button>
-                </h2>
-                <!-- answer -->
-                <div id="accordion-collapse-body-10" class="hidden" aria-labelledby="accordion-collapse-heading-10">
-                    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">
-                            <span data-lang="en" class="hidden">
-                                No.
-                            </span>
-                            <span data-lang="de">
-                                Nein.
-                            </span>
-                        </p>
-                    </div>
-                </div>
-                <!-- question -->
-                <h2 id="accordion-collapse-heading-11">
-                    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
-                        data-accordion-target="#accordion-collapse-body-11" aria-expanded="false" aria-controls="accordion-collapse-body-11">
-										<span>
-                                            <span data-lang="en" class="hidden">Are there discounts for students, pupils and trainees?</span>
-                                            <span data-lang="de">Gibt es Ermäßigungen für Schüler, Studenten und Azubis?</span>
-                                        </span>
-										<svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-											<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
-										</svg>
-									</button>
-                </h2>
-                <!-- answer -->
-                <div id="accordion-collapse-body-11" class="hidden" aria-labelledby="accordion-collapse-heading-11">
-                    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">
-                            <span data-lang="en" class="hidden">
-                                No. To keep the administrative effort as low as possible, we only differentiate between young people (up to and including 17 years) and adults (from 18 years/ 10€) when it comes to the membership fee.
-                            </span>
-                            <span data-lang="de">
-                                Nein. Um den Verwaltungsaufwand so gering wie möglich zu halten unterscheiden wir beim Mitgliedsbeitrag nur zwischen Jugendlichen (bis einschl. 17 Jahre) und Erwachsenen (ab 18 Jahre/ 10€).
-                            </span>
-                        </p>
-                    </div>
-                </div>
-                <!-- question -->
-                <h2 id="accordion-collapse-heading-12">
-                    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
-                        data-accordion-target="#accordion-collapse-body-12" aria-expanded="false" aria-controls="accordion-collapse-body-12">
-										<span>
-                                            <span data-lang="en" class="hidden">How can I become a member?</span>
-                                            <span data-lang="de">Wie kann ich Mitglied werden?</span>
-                                        </span>
-										<svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-											<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
-										</svg>
-									</button>
-                </h2>
-                <!-- answer -->
-                <div id="accordion-collapse-body-12" class="hidden" aria-labelledby="accordion-collapse-heading-12">
-                    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">
-                            <span data-lang="en" class="hidden">
-                                You can become a member by filling out the membership application form and sending it to the treasurer. Exact information can be found under the tab <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="./verein.html">Become a member</a>.</span>
-                            <span data-lang="de">
-                                Genaue Informationen findest du unter dem Reiter <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="./verein.html">Mitglied werden</a>.
-                            </span>
-                        </p>
-                    </div>
-                </div>
-                <!-- question -->
-                <h2 id="accordion-collapse-heading-13">
-                    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
-                        data-accordion-target="#accordion-collapse-body-13" aria-expanded="false" aria-controls="accordion-collapse-body-13">
-										<span>
-                                            <span data-lang="en" class="hidden">At what point can I join and leave?</span>
-                                            <span data-lang="de">Zu welchem Zeitpunkt kann ich ein- und austreten?</span>
-                                        </span>
-										<svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-											<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
-										</svg>
-									</button>
-                </h2>
-                <!-- answer -->
-                <div id="accordion-collapse-body-13" class="hidden" aria-labelledby="accordion-collapse-heading-13">
-                    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">
-                            <span data-lang="en" class="hidden">
-                                Membership in the club is possible at the beginning of each month. Termination can only be made at the end of each half-year and must be received by a board member at least four weeks before the start of the new half-year (preferably by e-mail and directly to the treasurer <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="mailto:kassenwart@bv-aachen.de"> kassenwart@bv-aachen.de</a>).
-                            </span>
-                            <span data-lang="de">
-                                Der Beitritt zum Verein ist zum Ersten eines jeden Monats möglich. Die Kündigung kann nur zum Halbjahresende erfolgen und muss mindestens vier Wochen vor Beginn des neuen Halbjahres bei einem Vorstandsmitglied eingegangen sein (bevorzugt per E-Mail und direkt an den Kassenwart <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="mailto:kassenwart@bv-aachen.de"> kassenwart@bv-aachen.de</a>).
-                            </span>
-                        </p>
-                    </div>
-                </div>
-                <!-- question -->
-                <h2 id="accordion-collapse-heading-14">
-                    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
-                        data-accordion-target="#accordion-collapse-body-14" aria-expanded="false" aria-controls="accordion-collapse-body-14">
-										<span>
-                                            <span data-lang="en" class="hidden">Do you play with plastic or feather shuttles?</span>
-                                            <span data-lang="de">Spielt ihr mit Plastik- oder mit Federbällen?</span>
-                                        </span>
-										<svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-											<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
-										</svg>
-									</button>
-                </h2>
-                <!-- answer -->
-                <div id="accordion-collapse-body-14" class="hidden" aria-labelledby="accordion-collapse-heading-14">
-                    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">
-                            <span data-lang="en" class="hidden">
-                                In the youth sector, we play 99% of our training games with plastic shuttles. In the senior sector, we play 99% of our training games with feather shuttles.
-                            </span>
-                            <span data-lang="de">
-                                Im Jugendbereich spielen wir 99 % unserer Trainingsspiele mit Plastikbällen.
-                                Im Seniorenbereich spielen wir 99 % unserer Trainingsspiele mit Naturfederbällen.
-                            </span>
-                        </p>
-                    </div>
-                </div>
-                <!-- question -->
-                <h2 id="accordion-collapse-heading-15">
-                    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
-                        data-accordion-target="#accordion-collapse-body-15" aria-expanded="false" aria-controls="accordion-collapse-body-15">
-										<span>
-                                            <span data-lang="en" class="hidden">Are the shuttles provided for training or do you play with your own shuttles?</span>
-                                            <span data-lang="de">Werden die Bälle für das Training gestellt oder spielt ihr mit eigenen Bällen?</span>
-                                        </span>
-										<svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-											<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
-										</svg>
-									</button>
-                </h2>
-                <!-- answer -->
-                <div id="accordion-collapse-body-15" class="hidden" aria-labelledby="accordion-collapse-heading-15">
-                    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">
-                            <span data-lang="en" class="hidden">
-                                We play with our own shuttles during senior training. For registered members, however, there is the possibility to purchase a limited number of feather shuttles per month at a greatly reduced price. The contact persons for the ball sale are Ansgar and Felix.
-                            </span>
-                            <span data-lang="de">
-                                Wir spielen beim Seniorentraining mit eigenen Bällen. Für angemeldete Mitglieder besteht aber die Möglichkeit, eine begrenzte Anzahl Naturfederbälle im Monat stark vergünstigt zu erwerben. Ansprechpartner für den Ballverkauf sind Ansgar und Felix.
-                            </span>
-                        </p>
-                    </div>
-                </div>
-                <!-- question -->
-                <h2 id="accordion-collapse-heading-16">
-                    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
-                        data-accordion-target="#accordion-collapse-body-16" aria-expanded="false" aria-controls="accordion-collapse-body-16">
-										<span>
-                                            <span data-lang="en" class="hidden">How many teams do you have?</span>
-                                            <span data-lang="de">Wie viele Mannschaften habt ihr?</span>
-                                        </span>
-										<svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-											<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
-										</svg>
-									</button>
-                </h2>
-                <!-- answer -->
-                <div id="accordion-collapse-body-16" class="hidden" aria-labelledby="accordion-collapse-heading-16">
-                    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">
-                            <span data-lang="en" class="hidden">
-                                In the 2024/2025 season, we will probably participate with 5 senior teams in the official league competition of the BLV NRW. Further information can be found under the tab <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="./teams.html">Teams</a>.
-                            </span>
-                            <span data-lang="de">
-                                In der Saison 2024/2025 nehmen wir vorraussichtlich mit 5 Seniorenmannschaften am offiziellen Ligabetrieb des BLV NRW teil. Weitere Informationen findest du unter dem Reiter <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="./teams.html">Teams</a>.
-                            </span>
-                        </p>
-                    </div>
-                </div>
-                <!-- question -->
-                <h2 id="accordion-collapse-heading-17">
-                    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
-                        data-accordion-target="#accordion-collapse-body-17" aria-expanded="false" aria-controls="accordion-collapse-body-17">
-										<span>
-                                            <span data-lang="en" class="hidden">How do I become a team player at BV Aachen?</span>
-                                            <span data-lang="de">Wie werde ich Mannschaftsspieler beim BV Aachen?</span>    
-                                        </span>
-										<svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-											<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
-										</svg>
-									</button>
-                </h2>
-                <!-- answer -->
-                <div id="accordion-collapse-body-17" class="hidden" aria-labelledby="accordion-collapse-heading-17">
-                    <div class="p-5 border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">
-                            <span data-lang="en" class="hidden">
-                                Since we regularly get new players due to the high student share and others leave us again, we form the teams anew every year. Those who register in good time will definitely be considered. However, we can usually also integrate new players into the ongoing season. If you are interested in playing in a team, please contact <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="mailto:sportwart@bv-aachen.de"> sportwart@bv-aachen.de</a>.
-                            </span>
-                            <span data-lang="de">
-                                Da wir durch den hohen Studentenanteil regelmäßig neue Spieler hinzubekommen und uns andere wieder verlassen, bilden wir die Mannschaften jedes Jahr neu. Wer sich rechtzeitig meldet, wird auf jeden Fall berücksichtigt. Meistens können wir aber auch Neuzugänge in der laufenden Saison noch integrieren. Wer Interesse hat in einer Mannschaft zu spielen, meldet sich bitte unter <a class="font-medium text-blue-600 dark:text-blue-500 hover:underline" href="mailto:sportwart@bv-aachen.de"> sportwart@bv-aachen.de</a>.
-                            </span>
-                        </p>
-                    </div>
-                </div>
-                <!-- question -->
-                <h2 id="accordion-collapse-heading-18">
-                    <button type="button" class="flex items-center justify-between w-full p-5 font-medium rtl:text-right text-gray-500 border border-gray-200 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3"
-                        data-accordion-target="#accordion-collapse-body-18" aria-expanded="false" aria-controls="accordion-collapse-body-18">
-										<span>
-                                            <span data-lang="en" class="hidden">How do you communicate outside of training?</span>
-                                            <span data-lang="de">Wie kommuniziert ihr außerhalb des Trainings?</span>
-                                        </span>
-										<svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-											<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>
-										</svg>
-									</button>
-                </h2>
-                <!-- answer -->
-                <div id="accordion-collapse-body-18" class="hidden" aria-labelledby="accordion-collapse-heading-18">
-                    <div class="p-5 border border-t-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-                        <p class="mb-2 text-gray-500 dark:text-gray-400">
-                            <span data-lang="en" class="hidden">
-                                Our most important tool is our "Federball-Verteiler". This is an email distributor that you should definitely join when you register with us. All important information comes via the distributor, e.g. changes in training times, short-term training cancellations, information from the board, information about teams and tournaments, etc. In addition to the distributor, there is also the WhatsApp group.
-                            </span>
-                            <span data-lang="de">
-                                Wichtigstes Hilfsmittel ist unser "Federball-Verteiler". Es handelt sich hierbei um einen Email-Verteiler, dem ihr unbedingt beitreten solltet, wenn ihr euch bei uns anmeldet. Über den Verteiler kommen alle wichtigen Informationen z. B. Änderungen der Trainingszeiten, kurzfristige Trainingsausfälle, Infos vom Vorstand, Informationen zu Mannschaften und Turnieren, etc. Zusätzlich zu dem Verteiler gibt es auch die WhatsApp Gruppe.
-                            </span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="sheet__foot">
+      <button class="lang" type="button" data-toggle-lang aria-label="Sprache wechseln / switch language"><span data-code="de">DE</span><span data-code="en">EN</span></button>
+      <span class="sheet__legal"><a href="impressum.html"><span data-lang="de">Impressum</span><span data-lang="en">Imprint</span></a><a href="datenschutz.html"><span data-lang="de">Datenschutz</span><span data-lang="en">Privacy</span></a></span>
     </div>
-    <br>
-    <div id="footer-wrapper" class="mt-20">
-        <div id="footer" class="text-center">
-            <div id="adresse">
-                <p>
-                    <a href="./impressum.html" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                        <span data-lang="en" class="hidden">Imprint</span>
-                        <span data-lang="de">Impressum</span>
-                    </a> <b> | </b>
-                    <a href="./datenschutz.html" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                        <span data-lang="en" class="hidden">Privacy Policy</span>
-                        <span data-lang="de">Informationen zum Datenschutz</span>
-                    </a>
-                </p>
-            </div>
+  </div>
+
+  <div class="stinger" aria-hidden="true"><i></i><i></i><i></i></div>
+
+  <main id="main">
+    <header class="masthead">
+      <div class="net" aria-hidden="true"></div>
+      <div class="wrap">
+        <div class="l3">
+          <h1 class="l3__title">FAQ</h1>
+          <div class="l3__sub">
+            <span class="a num"><span data-lang="de">Stand: Juli 2024</span><span data-lang="en">Last updated: July 2024</span></span>
+          </div>
         </div>
+        <p class="lede">
+          <span data-lang="de">Häufig gestellte Fragen zum BV Aachen Badminton Verein</span>
+          <span data-lang="en">Frequently Asked Questions about BV Aachen Badminton Club</span>
+        </p>
+      </div>
+    </header>
+
+    <section class="section" aria-label="FAQ">
+      <div class="wrap faq">
+        <div class="faq__intro">
+          <p class="lede">
+            <span data-lang="de">Da viele neue Spieler die gleichen oder sehr ähnliche Fragen stellen, haben wir uns überlegt, die meisten bereits hier zu beantworten. Wenn ihr darüber hinaus noch Fragen habt oder euch etwas einfällt, was wir hier ergänzen sollten, nehmt bitte <a class="link" href="kontakt.html">Kontakt</a> mit uns auf. Die FAQ beziehen sich nur auf volljährige Spieler. Bei Fragen zum Angebot für Kinder und Jugendliche bitte Kontakt mit unserer Jugendwartin Lina Köllmann aufnehmen: <a class="link" href="mailto:jugendwart@bv-aachen.de">jugendwart@bv-aachen.de</a>.</span>
+            <span data-lang="en">Since many new players ask the same or very similar questions, we have decided to answer most of them here. If you have any further questions or if you think of something we should add here, please <a class="link" href="kontakt.html">contact</a> us. The FAQ only refer to adult players. For questions about the offer for children and young people, please contact our youth officer Lina Köllmann: <a class="link" href="mailto:jugendwart@bv-aachen.de">jugendwart@bv-aachen.de</a>.</span>
+          </p>
+          <p class="faq__note">
+            <span data-lang="de">Anmerkung: Mit einem Begriff wie "Spieler" sind stets alle Geschlechter gemeint, wenn es nicht ausdrücklich anders aus dem Zusammenhang hervorgeht.</span>
+            <span data-lang="en">Note: With a term like "player", all genders are always meant, unless it is explicitly stated otherwise.</span>
+          </p>
+        </div>
+        <div class="faq__list">
+          <details class="faq__item" id="faq-0">
+            <summary>
+              <span><span data-lang="de">Wann und wo spielt ihr?</span><span data-lang="en">When and where do you play?</span></span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="faq__answer">
+<p>
+<span data-lang="en">
+Mondays: 8:30 - 11 pm in Aachen-Burtscheid (Malmedyer Straße)<br> Wednesdays: 8 – 11 pm in Aachen-Burtscheid (Malmedyer Straße)<br> Thursdays: 8 – 10 pm in Aachen-Laurensberg (Hander Weg) <br> <br> Attention: In the winter half-year (October - March) the free game on Mondays only starts at 9:30 pm.
+<br><br>More information can be found under the tab <a class="link" href="training.html">Training</a>.
+</span>
+<span data-lang="de">
+Montags: 20:30 - 23 Uhr in Aachen-Burtscheid (Malmedyer Straße)<br> Mittwochs: 20 – 23 Uhr in Aachen-Burtscheid (Malmedyer Straße)<br> Donnerstags: 20 – 22 Uhr in Aachen-Laurensberg (Hander Weg) <br> <br> Achtung: Im Winterhalbjahr (Oktober – März) beginnt das freie Spiel montags erst um 21:30 Uhr.
+<br><br>Mehr Informationen findest du unter dem Reiter <a class="link" href="training.html">Training</a>.
+</span>
+</p>
+            </div>
+          </details>
+          <details class="faq__item" id="faq-1">
+            <summary>
+              <span><span data-lang="de">Gibt es Unterschiede zwischen freiem Spiel und Training?</span><span data-lang="en">Are there differences between free play and training?</span></span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="faq__answer">
+<p>
+<span data-lang="en">
+Yes. More information can be found under the tab <a class="link" href="training.html">Training</a>.
+</span>
+<span data-lang="de">
+Ja. Weitere Informationen findest du unter dem Reiter <a class="link" href="training.html">Training</a>.
+</span>
+</p>
+            </div>
+          </details>
+          <details class="faq__item" id="faq-2">
+            <summary>
+              <span><span data-lang="de">Sind die Trainingstermine in Leistungsgruppen eingeteilt?</span><span data-lang="en">Are the training dates divided into performance groups?</span></span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="faq__answer">
+<p>
+<span data-lang="en">
+Yes. More information can be found under the tab <a class="link" href="training.html">Training</a>.
+</span>
+<span data-lang="de">
+Ja. Weitere Informationen findest du unter dem Reiter <a class="link" href="training.html">Training</a>.
+</span>
+</p>
+            </div>
+          </details>
+          <details class="faq__item" id="faq-3">
+            <summary>
+              <span><span data-lang="de">Kann ich einfach vorbeikommen oder muss ich mich vorher melden?</span><span data-lang="en">Can I just come by or do I have to register beforehand?</span></span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="faq__answer">
+<p>
+<span data-lang="en">
+You can come by without prior registration. However, the following applies: <br> At team training on Mondays (in the summer half-year from 7 to 8:30 pm) you can only participate after consulting the trainer (Ansgar Kirste). The contact details can be requested via <a class="link" href="mailto:vorsitz@bv-aachen.de">vorsitz@bv-aachen.de</a> if you are interested. All other units can be visited without prior registration.
+</span>
+<span data-lang="de">
+Du kannst ohne Voranmeldung vorbeikommen. Folgendes gilt jedoch: <br>
+Am Mannschaftstraining Montags (im Sommerhalbjahr 19 bis 20:30 Uhr) darf <b>nur nach Rücksprache</b> mit dem Trainer (Ansgar Kirste) teilgenommen werden. Die Kontaktdaten können bei Interesse über <a class="link" href="mailto:vorsitz@bv-aachen.de"> vorsitz@bv-aachen.de</a> erfragt werden. Alle anderen Einheiten können ohne Voranmeldung besucht werden.
+</span>
+</p>
+            </div>
+          </details>
+          <details class="faq__item" id="faq-4">
+            <summary>
+              <span><span data-lang="de">Findet auch in den Schulferien Training statt?</span><span data-lang="en">Is there training during the school holidays?</span></span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="faq__answer">
+<p>
+<span data-lang="en">
+The hall in Laurensberg is generally closed during the school holidays. The hall in Burtscheid is generally open during the school holidays (exception: Christmas holidays).
+</span>
+<span data-lang="de">
+Die Halle in Laurensberg ist grundsätzlich in den Schulferien geschlossen. Die Halle in Burtscheid ist in den Schulferien grundsätzlich geöffnet (Ausnahme: Weihnachtsferien).
+</span>
+</p>
+            </div>
+          </details>
+          <details class="faq__item" id="faq-5">
+            <summary>
+              <span><span data-lang="de">Findet auch an Feiertagen Training statt?</span><span data-lang="en">Is there training on public holidays?</span></span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="faq__answer">
+<p>
+<span data-lang="en">
+On public holidays, both halls are closed.
+</span>
+<span data-lang="de">
+An gesetzlichen Feiertagen sind beide Hallen geschlossen.
+</span>
+</p>
+            </div>
+          </details>
+          <details class="faq__item" id="faq-6">
+            <summary>
+              <span><span data-lang="de">Wie ist die Altersstruktur an den verschiedenen Trainingstagen?</span><span data-lang="en">What is the age structure on the different training days?</span></span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="faq__answer">
+<p>
+<span data-lang="en">
+In our club, mostly (former) students play, so new players are constantly joining and the average age is between 18 and 35 years. But of course, all other professional and age groups are also welcome. The individual days of the week hardly differ.
+</span>
+<span data-lang="de">
+In unserem Verein spielen überwiegend (ehemalige) Studenten, sodass ständig neue Spieler dazukommen und der Altersschnitt zwischen 18 und 35 Jahren liegt. Aber natürlich sind auch alle anderen Berufs- und Altersgruppen herzlich willkommen. Die einzelnen Wochentage unterscheiden sich hierbei kaum.
+</span>
+</p>
+            </div>
+          </details>
+          <details class="faq__item" id="faq-7">
+            <summary>
+              <span><span data-lang="de">Ich habe noch keine Badmintonausrüstung. Kann ich trotzdem kommen und was muss ich mitbringen?</span><span data-lang="en">I don't have any badminton equipment. Can I still come and what do I need to bring?</span></span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="faq__answer">
+<p>
+<span data-lang="en">
+The most important thing is clean, non-staining indoor sports shoes and normal sportswear. We cannot lend these things either. The hall may not be entered with street shoes even during the trial period. If you do not yet have your own racket and would like to try out whether it is the right sport, you can borrow a club racket for the respective evening free of charge during the trial period (attention, only applies to dates in Laurensberg).
+</span>
+<span data-lang="de">
+Das wichtigste sind saubere, nicht abfärbende Hallenturnschuhe und normale Sportkleidung. Diese Dinge können wir auch nicht verleihen. Mit Straßenschuhen darf die Halle auch in der Probezeit nicht betreten werden. Wenn du noch
+keinen eigenen Schläger besitzt und erstmal ausprobieren möchtest, ob es der richtige Sport ist, kannst du dir während der Probezeit kostenlos einen Vereinsschläger für den jeweiligen Abend ausleihen (Achtung, gilt nur für
+Termine in Laurensberg).
+</span>
+</p>
+            </div>
+          </details>
+          <details class="faq__item" id="faq-8">
+            <summary>
+              <span><span data-lang="de">Muss ich direkt beitreten oder kann ich das Training erstmal ausprobieren?</span><span data-lang="en">Do I have to join directly or can I try out the training first?</span></span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="faq__answer">
+<p>
+<span data-lang="en">
+New players can use all training dates free of charge and without obligation for four weeks (team training on Mondays only after consultation with the trainer, see above).
+</span>
+<span data-lang="de">
+Neue Spieler können vier Wochen lang kostenlos und unverbindlich alle Trainingstermine nutzen (Mannschaftstraining montags aber nur nach Rücksprache mit dem Trainer, s. oben).
+</span>
+</p>
+            </div>
+          </details>
+          <details class="faq__item" id="faq-9">
+            <summary>
+              <span><span data-lang="de">Was kostet die Mitgliedschaft?</span><span data-lang="en">What does membership cost?</span></span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="faq__answer">
+<p>
+<span data-lang="en">
+The membership fee for young people up to and including 17 years of age is 7.00 € per month. For adults, the membership fee is 10.00 € per month.
+</span>
+<span data-lang="de">
+Der Mitgliedsbeitrag für Jugendliche bis einschließlich 17 Jahre beträgt 7,00 € pro Monat. Für Volljährige beträgt der Mitgliedsbeitrag 10,00 € pro Monat.
+</span>
+</p>
+            </div>
+          </details>
+          <details class="faq__item" id="faq-10">
+            <summary>
+              <span><span data-lang="de">Gibt es eine Aufnahmegebühr?</span><span data-lang="en">Is there an admission fee?</span></span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="faq__answer">
+<p>
+<span data-lang="en">
+No.
+</span>
+<span data-lang="de">
+Nein.
+</span>
+</p>
+            </div>
+          </details>
+          <details class="faq__item" id="faq-11">
+            <summary>
+              <span><span data-lang="de">Gibt es Ermäßigungen für Schüler, Studenten und Azubis?</span><span data-lang="en">Are there discounts for students, pupils and trainees?</span></span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="faq__answer">
+<p>
+<span data-lang="en">
+No. To keep the administrative effort as low as possible, we only differentiate between young people (up to and including 17 years) and adults (from 18 years/ 10€) when it comes to the membership fee.
+</span>
+<span data-lang="de">
+Nein. Um den Verwaltungsaufwand so gering wie möglich zu halten unterscheiden wir beim Mitgliedsbeitrag nur zwischen Jugendlichen (bis einschl. 17 Jahre) und Erwachsenen (ab 18 Jahre/ 10€).
+</span>
+</p>
+            </div>
+          </details>
+          <details class="faq__item" id="faq-12">
+            <summary>
+              <span><span data-lang="de">Wie kann ich Mitglied werden?</span><span data-lang="en">How can I become a member?</span></span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="faq__answer">
+<p>
+<span data-lang="en">
+You can become a member by filling out the membership application form and sending it to the treasurer. Exact information can be found under the tab <a class="link" href="verein.html">Become a member</a>.</span>
+<span data-lang="de">
+Genaue Informationen findest du unter dem Reiter <a class="link" href="verein.html">Mitglied werden</a>.
+</span>
+</p>
+            </div>
+          </details>
+          <details class="faq__item" id="faq-13">
+            <summary>
+              <span><span data-lang="de">Zu welchem Zeitpunkt kann ich ein- und austreten?</span><span data-lang="en">At what point can I join and leave?</span></span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="faq__answer">
+<p>
+<span data-lang="en">
+Membership in the club is possible at the beginning of each month. Termination can only be made at the end of each half-year and must be received by a board member at least four weeks before the start of the new half-year (preferably by e-mail and directly to the treasurer <a class="link" href="mailto:kassenwart@bv-aachen.de"> kassenwart@bv-aachen.de</a>).
+</span>
+<span data-lang="de">
+Der Beitritt zum Verein ist zum Ersten eines jeden Monats möglich. Die Kündigung kann nur zum Halbjahresende erfolgen und muss mindestens vier Wochen vor Beginn des neuen Halbjahres bei einem Vorstandsmitglied eingegangen sein (bevorzugt per E-Mail und direkt an den Kassenwart <a class="link" href="mailto:kassenwart@bv-aachen.de"> kassenwart@bv-aachen.de</a>).
+</span>
+</p>
+            </div>
+          </details>
+          <details class="faq__item" id="faq-14">
+            <summary>
+              <span><span data-lang="de">Spielt ihr mit Plastik- oder mit Federbällen?</span><span data-lang="en">Do you play with plastic or feather shuttles?</span></span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="faq__answer">
+<p>
+<span data-lang="en">
+In the youth sector, we play 99% of our training games with plastic shuttles. In the senior sector, we play 99% of our training games with feather shuttles.
+</span>
+<span data-lang="de">
+Im Jugendbereich spielen wir 99 % unserer Trainingsspiele mit Plastikbällen.
+Im Seniorenbereich spielen wir 99 % unserer Trainingsspiele mit Naturfederbällen.
+</span>
+</p>
+            </div>
+          </details>
+          <details class="faq__item" id="faq-15">
+            <summary>
+              <span><span data-lang="de">Werden die Bälle für das Training gestellt oder spielt ihr mit eigenen Bällen?</span><span data-lang="en">Are the shuttles provided for training or do you play with your own shuttles?</span></span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="faq__answer">
+<p>
+<span data-lang="en">
+We play with our own shuttles during senior training. For registered members, however, there is the possibility to purchase a limited number of feather shuttles per month at a greatly reduced price. The contact persons for the ball sale are Ansgar and Felix.
+</span>
+<span data-lang="de">
+Wir spielen beim Seniorentraining mit eigenen Bällen. Für angemeldete Mitglieder besteht aber die Möglichkeit, eine begrenzte Anzahl Naturfederbälle im Monat stark vergünstigt zu erwerben. Ansprechpartner für den Ballverkauf sind Ansgar und Felix.
+</span>
+</p>
+            </div>
+          </details>
+          <details class="faq__item" id="faq-16">
+            <summary>
+              <span><span data-lang="de">Wie viele Mannschaften habt ihr?</span><span data-lang="en">How many teams do you have?</span></span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="faq__answer">
+<p>
+<span data-lang="en">
+In the 2024/2025 season, we will probably participate with 5 senior teams in the official league competition of the BLV NRW. Further information can be found under the tab <a class="link" href="teams.html">Teams</a>.
+</span>
+<span data-lang="de">
+In der Saison 2024/2025 nehmen wir vorraussichtlich mit 5 Seniorenmannschaften am offiziellen Ligabetrieb des BLV NRW teil. Weitere Informationen findest du unter dem Reiter <a class="link" href="teams.html">Teams</a>.
+</span>
+</p>
+            </div>
+          </details>
+          <details class="faq__item" id="faq-17">
+            <summary>
+              <span><span data-lang="de">Wie werde ich Mannschaftsspieler beim BV Aachen?</span><span data-lang="en">How do I become a team player at BV Aachen?</span></span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="faq__answer">
+<p>
+<span data-lang="en">
+Since we regularly get new players due to the high student share and others leave us again, we form the teams anew every year. Those who register in good time will definitely be considered. However, we can usually also integrate new players into the ongoing season. If you are interested in playing in a team, please contact <a class="link" href="mailto:sportwart@bv-aachen.de"> sportwart@bv-aachen.de</a>.
+</span>
+<span data-lang="de">
+Da wir durch den hohen Studentenanteil regelmäßig neue Spieler hinzubekommen und uns andere wieder verlassen, bilden wir die Mannschaften jedes Jahr neu. Wer sich rechtzeitig meldet, wird auf jeden Fall berücksichtigt. Meistens können wir aber auch Neuzugänge in der laufenden Saison noch integrieren. Wer Interesse hat in einer Mannschaft zu spielen, meldet sich bitte unter <a class="link" href="mailto:sportwart@bv-aachen.de"> sportwart@bv-aachen.de</a>.
+</span>
+</p>
+            </div>
+          </details>
+          <details class="faq__item" id="faq-18">
+            <summary>
+              <span><span data-lang="de">Wie kommuniziert ihr außerhalb des Trainings?</span><span data-lang="en">How do you communicate outside of training?</span></span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </summary>
+            <div class="faq__answer">
+<p>
+<span data-lang="en">
+Our most important tool is our "Federball-Verteiler". This is an email distributor that you should definitely join when you register with us. All important information comes via the distributor, e.g. changes in training times, short-term training cancellations, information from the board, information about teams and tournaments, etc. In addition to the distributor, there is also the WhatsApp group.
+</span>
+<span data-lang="de">
+Wichtigstes Hilfsmittel ist unser "Federball-Verteiler". Es handelt sich hierbei um einen Email-Verteiler, dem ihr unbedingt beitreten solltet, wenn ihr euch bei uns anmeldet. Über den Verteiler kommen alle wichtigen Informationen z. B. Änderungen der Trainingszeiten, kurzfristige Trainingsausfälle, Infos vom Vorstand, Informationen zu Mannschaften und Turnieren, etc. Zusätzlich zu dem Verteiler gibt es auch die WhatsApp Gruppe.
+</span>
+</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot on-dark">
+    <div class="net" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="foot__grid">
+        <div class="foot__brand">
+          <img src="assets/img/logo-white.png" alt="BVA 09" width="200" height="98">
+          <p><span data-lang="de">BV Aachen 2009 e.V. · Badminton in Burtscheid und Laurensberg.</span><span data-lang="en">BV Aachen 2009 e.V. · Badminton in Burtscheid and Laurensberg.</span></p>
+        </div>
+        <div>
+          <p class="foot__h"><span data-lang="de">Verein</span><span data-lang="en">Club</span></p>
+          <ul>
+            <li><a href="training.html">Training</a></li>
+            <li><a href="teams.html"><span data-lang="de">Mannschaften</span><span data-lang="en">Teams</span></a></li>
+            <li><a href="alemannencup.html">Alemannen Cup</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="foot__h"><span data-lang="de">Kontakt</span><span data-lang="en">Contact</span></p>
+          <ul>
+            <li><a class="mono" href="mailto:vorsitz@bv-aachen.de">vorsitz@</a></li>
+            <li><a class="mono" href="mailto:seniorentraining@bv-aachen.de">seniorentraining@</a></li>
+            <li><a class="mono" href="mailto:jugendwart@bv-aachen.de">jugendwart@</a></li>
+            <li><a class="mono" href="mailto:kassenwart@bv-aachen.de">kassenwart@</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="foot__h"><span data-lang="de">Hallen</span><span data-lang="en">Halls</span></p>
+          <ul>
+            <li>Burtscheid · <span class="mono">Malmedyer Str. 55</span></li>
+            <li>Laurensberg · <span class="mono">Hander Weg 89</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot__legal">
+        <span class="num">© 2026 BV Aachen 2009 e.V.</span>
+        <span><a href="impressum.html"><span data-lang="de">Impressum</span><span data-lang="en">Imprint</span></a> · <a href="datenschutz.html"><span data-lang="de">Datenschutz</span><span data-lang="en">Privacy</span></a></span>
+      </div>
     </div>
+  </footer>
 </body>
-
 </html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="de" data-ui-lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Training · BV Aachen 2009 e.V.</title>
+  <meta name="description" content="Trainingszeiten des BV Aachen: freies Spiel, Mannschafts-, Anfänger- und Jugendtraining in Burtscheid und Laurensberg.">
+  <meta name="theme-color" content="#0b1b2b">
+  <link rel="icon" href="images/icon.png">
+  <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/martian-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/site.css">
+  <script>document.documentElement.classList.add("js")</script>
+  <script src="assets/site.js" defer></script>
+</head>
+<body>
+  <a class="visually-hidden" href="#main">Zum Inhalt springen</a>
+
+  <!-- Score bug -->
+  <header class="bug">
+    <div class="bug__score">
+      <a class="bug__crest" href="index.html" aria-label="BV Aachen Startseite"><img src="assets/img/logo-white.png" alt="BVA 09" width="200" height="98"></a>
+      <span class="bug__season num">25/26</span>
+      <a class="bug__live" href="training.html#woche" data-live aria-live="polite"><span class="live-dot"></span><span><b>Training</b><small>Mo–Fr · 18–23 Uhr</small></span></a>
+    </div>
+    <div class="bug__nav">
+      <nav class="nav" aria-label="Hauptnavigation">
+        <a href="index.html">Start</a>
+        <a href="training.html" aria-current="page">Training</a>
+        <a href="teams.html"><span data-lang="de">Mannschaften</span><span data-lang="en">Teams</span></a>
+        <a href="alemannencup.html" class="nav__cup">Alemannen Cup</a>
+        <a href="verein.html"><span data-lang="de">Mitglied werden</span><span data-lang="en">Join</span></a>
+        <a href="kontakt.html"><span data-lang="de">Kontakt</span><span data-lang="en">Contact</span></a>
+        <a href="FAQ.html">FAQ</a>
+      </nav>
+      <button class="lang" type="button" data-toggle-lang aria-label="Sprache wechseln / switch language"><span data-code="de">DE</span><span data-code="en">EN</span></button>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="sheet" aria-label="Menü">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square"><path d="M3 7h18M3 12h18M3 17h12"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="sheet" id="sheet" data-open="false" role="dialog" aria-modal="true" aria-label="Menü">
+    <div class="sheet__top">
+      <a class="bug__crest" href="index.html" aria-label="BV Aachen Startseite"><img src="assets/img/logo-white.png" alt="BVA 09" width="400" height="196"></a>
+      <button class="sheet__close" type="button" aria-label="Menü schließen">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      </button>
+    </div>
+    <nav aria-label="Mobile Navigation">
+      <a href="index.html"><span>Start</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+      <a href="training.html" aria-current="page"><span>Training</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+      <a href="teams.html"><span><span data-lang="de">Mannschaften</span><span data-lang="en">Teams</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+      <a href="alemannencup.html"><span>Alemannen Cup</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+      <a href="verein.html"><span><span data-lang="de">Mitglied werden</span><span data-lang="en">Join</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+      <a href="kontakt.html"><span><span data-lang="de">Kontakt</span><span data-lang="en">Contact</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+      <a href="FAQ.html"><span>FAQ</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+    </nav>
+    <div class="sheet__foot">
+      <button class="lang" type="button" data-toggle-lang aria-label="Sprache wechseln / switch language"><span data-code="de">DE</span><span data-code="en">EN</span></button>
+      <span class="sheet__legal"><a href="impressum.html"><span data-lang="de">Impressum</span><span data-lang="en">Imprint</span></a><a href="datenschutz.html"><span data-lang="de">Datenschutz</span><span data-lang="en">Privacy</span></a></span>
+    </div>
+  </div>
+
+  <div class="stinger" aria-hidden="true"><i></i><i></i><i></i></div>
+
+  <main id="main">
+    <header class="masthead masthead--photo">
+      <img src="assets/img/hall.jpg" alt="Volle Halle mit mehreren Spielen gleichzeitig" width="2000" height="1333">
+      <div class="wrap">
+        <div class="l3">
+          <h1 class="l3__title">Training</h1>
+          <div class="l3__sub">
+            <span class="a num">Mo–Fr · 18:00–23:00</span>
+            <span class="b"><span data-lang="de">Zwei Hallen · Burtscheid &amp; Laurensberg</span><span data-lang="en">Two halls · Burtscheid &amp; Laurensberg</span></span>
+          </div>
+        </div>
+        <p class="lede">
+          <span data-lang="de">Spiel und Training für ambitionierte Spieler:innen. Außer dem Mannschaftstraining am Montag gibt es keine Teilnahmebeschränkung.</span>
+          <span data-lang="en">Play and training for ambitious players. Apart from Monday’s team training, there are no participation limits.</span>
+        </p>
+      </div>
+    </header>
+
+    <section class="section" id="woche" aria-labelledby="woche-title">
+      <div class="wrap">
+        <div class="head">
+          <h2 class="h2" id="woche-title"><span data-lang="de">Wochenplan</span><span data-lang="en">Weekly plan</span></h2>
+          <div class="season" role="group" aria-label="Saison">
+            <span class="season__ind" aria-hidden="true"></span>
+            <button type="button" value="summer" aria-pressed="true"><b><span data-lang="de">Sommer</span><span data-lang="en">Summer</span></b><small>01.04.–30.09.</small></button>
+            <button type="button" value="winter" aria-pressed="false"><b>Winter</b><small>01.10.–31.03.</small></button>
+          </div>
+        </div>
+
+        <div class="tl" id="timeline" aria-live="polite"></div>
+
+        <div class="legend">
+          <span data-kind="free"><i></i><span data-lang="de">Freies Spiel</span><span data-lang="en">Free play</span></span>
+          <span data-kind="team"><i></i><span data-lang="de">Mannschaftstraining</span><span data-lang="en">Team training</span></span>
+          <span data-kind="beginner"><i></i><span data-lang="de">Anfängertraining</span><span data-lang="en">Beginner training</span></span>
+          <span data-kind="youth"><i></i><span data-lang="de">Kinder &amp; Jugend</span><span data-lang="en">Kids &amp; youth</span></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--petrol on-dark" aria-labelledby="rules-title">
+      <div class="wrap">
+        <h2 class="h2" id="rules-title" style="margin-bottom:clamp(32px,5vw,56px)"><span data-lang="de">Gut zu wissen</span><span data-lang="en">Good to know</span></h2>
+        <div class="cols">
+          <div class="col">
+            <h3 class="h3"><span data-lang="de">Einfach vorbeikommen</span><span data-lang="en">Just show up</span></h3>
+            <p><span data-lang="de">Für die freien Spielzeiten ist aktuell keine Voranmeldung erforderlich.</span><span data-lang="en">No registration is currently needed for free play.</span></p>
+          </div>
+          <div class="col">
+            <h3 class="h3"><span data-lang="de">Schulferien NRW</span><span data-lang="en">NRW school holidays</span></h3>
+            <p><span data-lang="de">Burtscheid bleibt grundsätzlich geöffnet, Laurensberg ist geschlossen. In den Weihnachtsferien sind beide Hallen zu.</span><span data-lang="en">Burtscheid generally stays open, Laurensberg is closed. Both halls close over the Christmas holidays.</span></p>
+            <a class="link" href="https://www.schulferien.org/deutschland/ferien/nordrhein-westfalen/" target="_blank" rel="noopener"><span data-lang="de">Ferienkalender</span><span data-lang="en">Holiday calendar</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+          </div>
+          <div class="col">
+            <h3 class="h3"><span data-lang="de">Ausnahmen</span><span data-lang="en">Exceptions</span></h3>
+            <p><span data-lang="de">Änderungen kommen über den vereinsinternen E-Mail-Verteiler oder auf Nachfrage.</span><span data-lang="en">Changes are sent via the club mailing list, or ask us.</span></p>
+            <a class="link mono" href="mailto:vorsitz@bv-aachen.de">vorsitz@bv-aachen.de</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="groups-title">
+      <div class="wrap">
+        <h2 class="h2" id="groups-title" style="margin-bottom:clamp(32px,5vw,56px)"><span data-lang="de">Gruppen &amp; Einstieg</span><span data-lang="en">Groups &amp; getting started</span></h2>
+        <div class="cols">
+          <div class="col">
+            <span class="state state--team"><span data-lang="de">Nur Mannschaft</span><span data-lang="en">Team only</span></span>
+            <h3 class="h3"><span data-lang="de">Mannschaftstraining</span><span data-lang="en">Team training</span></h3>
+            <p class="lineup-cap"><span data-lang="de">Montag · Burtscheid</span><span data-lang="en">Monday · Burtscheid</span></p>
+            <p><span data-lang="de">Angeleitetes Training für Mannschaftsspieler:innen. Nach Absprache mit dem Trainer und ab mittlerem Bezirksklassen-Niveau.</span><span data-lang="en">Coached training for team players. By arrangement with the coach, from mid-Bezirksklasse level.</span></p>
+          </div>
+          <div class="col">
+            <span class="state state--wait"><span data-lang="de">Warteliste</span><span data-lang="en">Waiting list</span></span>
+            <h3 class="h3"><span data-lang="de">Anfängertraining</span><span data-lang="en">Beginner training</span></h3>
+            <p class="lineup-cap"><span data-lang="de">Donnerstag · Laurensberg</span><span data-lang="en">Thursday · Laurensberg</span></p>
+            <p><span data-lang="de">Bringt Anfänger:innen und Freizeitspieler:innen auf das Niveau der freien Spielzeiten. Wegen großer Nachfrage aktuell nur über die Warteliste.</span><span data-lang="en">Gets beginners and casual players to free-play level. Due to high demand it’s waitlist-only right now.</span></p>
+            <a class="link mono" href="mailto:seniorentraining@bv-aachen.de">seniorentraining@bv-aachen.de</a>
+          </div>
+          <div class="col">
+            <span class="state state--wait"><span data-lang="de">Warteliste · 9–12 Monate</span><span data-lang="en">Waiting list · 9–12 months</span></span>
+            <h3 class="h3"><span data-lang="de">Kinder &amp; Jugend</span><span data-lang="en">Kids &amp; youth</span></h3>
+            <p class="lineup-cap"><span data-lang="de">Dienstag + Freitag · Laurensberg</span><span data-lang="en">Tuesday + Friday · Laurensberg</span></p>
+            <p><span data-lang="de">Das Training ist voll, die Warteliste gut gefüllt. Für ein Probetraining rechnet bitte mit 9–12 Monaten Wartezeit. Fragen an Lina Köllmann.</span><span data-lang="en">Training is full and the waiting list is long. Expect 9–12 months for a trial session. Questions go to Lina Köllmann.</span></p>
+            <a class="link mono" href="mailto:jugendwart@bv-aachen.de">jugendwart@bv-aachen.de</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tight" aria-labelledby="halls-title" style="padding-top:0">
+      <div class="wrap">
+        <h2 class="h2" id="halls-title" style="margin-bottom:clamp(32px,5vw,56px)"><span data-lang="de">Hallen</span><span data-lang="en">Halls</span></h2>
+        <div class="halls">
+          <article class="hall">
+            <span class="hall__code">BUR</span>
+            <h3 class="h3">Burtscheid</h3>
+            <address>Einhard-Gymnasium TH II<br><span class="mono">Malmedyer Str. 55 · 52066 Aachen</span></address>
+            <div class="days"><span class="chip">Mo</span><span class="chip">Mi</span></div>
+            <a class="link" href="https://maps.google.com/?q=Malmedyer+Str.+55,+52066+Aachen" target="_blank" rel="noopener"><span data-lang="de">In Karten öffnen</span><span data-lang="en">Open in maps</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+          </article>
+          <article class="hall">
+            <span class="hall__code">LAU</span>
+            <h3 class="h3">Laurensberg</h3>
+            <address>Anne-Frank-Gymnasium Halle II<br><span class="mono">Hander Weg 89 · 52072 Aachen</span></address>
+            <div class="days"><span class="chip">Di</span><span class="chip">Do</span><span class="chip">Fr</span></div>
+            <a class="link" href="https://maps.google.com/?q=Hander+Weg+89,+52072+Aachen" target="_blank" rel="noopener"><span data-lang="de">In Karten öffnen</span><span data-lang="en">Open in maps</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+          </article>
+        </div>
+        <p style="margin-top:28px">
+          <a class="link" href="files/BVAachen-Trainingsorganisation_Stand_01-Mai-2022.pdf" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>
+            <span data-lang="de">Trainingsorganisation (PDF)</span><span data-lang="en">Training organisation (PDF, German)</span>
+          </a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="foot on-dark">
+    <div class="net" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="foot__grid">
+        <div class="foot__brand">
+          <img src="assets/img/logo-white.png" alt="BVA 09" width="200" height="98">
+          <p><span data-lang="de">BV Aachen 2009 e.V. · Badminton in Burtscheid und Laurensberg.</span><span data-lang="en">BV Aachen 2009 e.V. · Badminton in Burtscheid and Laurensberg.</span></p>
+        </div>
+        <div>
+          <p class="foot__h"><span data-lang="de">Verein</span><span data-lang="en">Club</span></p>
+          <ul>
+            <li><a href="training.html">Training</a></li>
+            <li><a href="teams.html"><span data-lang="de">Mannschaften</span><span data-lang="en">Teams</span></a></li>
+            <li><a href="alemannencup.html">Alemannen Cup</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="foot__h"><span data-lang="de">Kontakt</span><span data-lang="en">Contact</span></p>
+          <ul>
+            <li><a class="mono" href="mailto:vorsitz@bv-aachen.de">vorsitz@</a></li>
+            <li><a class="mono" href="mailto:seniorentraining@bv-aachen.de">seniorentraining@</a></li>
+            <li><a class="mono" href="mailto:jugendwart@bv-aachen.de">jugendwart@</a></li>
+            <li><a class="mono" href="mailto:kassenwart@bv-aachen.de">kassenwart@</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="foot__h"><span data-lang="de">Hallen</span><span data-lang="en">Halls</span></p>
+          <ul>
+            <li>Burtscheid · <span class="mono">Malmedyer Str. 55</span></li>
+            <li>Laurensberg · <span class="mono">Hander Weg 89</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot__legal">
+        <span class="num">© 2026 BV Aachen 2009 e.V.</span>
+        <span><a href="impressum.html"><span data-lang="de">Impressum</span><span data-lang="en">Imprint</span></a> · <a href="datenschutz.html"><span data-lang="de">Datenschutz</span><span data-lang="en">Privacy</span></a></span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

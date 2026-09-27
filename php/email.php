@@ -1,12 +1,16 @@
 <?php
+
+// exit();
+
 if (!isset($user)) {
     echo "No user data provided.";
     exit;
 }
 
+
 // Format email content with user data
 $to = $user['email']; // Only the user's email in the "To" field
-$subject = "Registrierung Alemannen Cup 2025 | Registration Alemannen Cup 2025"; // Email subject
+$subject = "Registrierung Alemannen Cup 2026 | Registration Alemannen Cup 2026"; // Email subject
 
 // Use heredoc for better readability
 $message = <<<HTML
@@ -19,7 +23,7 @@ $message = <<<HTML
     <p>Hallo {$user['vorname']} {$user['nachname']},</p>
 
     <p>Vielen Dank für deine Anmeldung, diese wird an die Turnierleitung übermittelt und spätestens <strong>innerhalb einer Woche</strong> bearbeitet.</p>
-    <p>Die Meldung gilt erst als bestätigt, wenn sie hier (<a href="https://dbv.turnier.de/sport/events.aspx?id=8e25686d-193f-4971-a464-fd9d6a9af5cc">Link</a>) veröffentlicht wurde und nicht als "Nachrücker" gekennzeichnet ist. Sollte deine Meldung nicht innerhalb einer Woche dort zu finden sein, melde dich bitte unter:</p>
+    <p>Die Meldung gilt erst als bestätigt, wenn sie hier (<a href="https://dbv.turnier.de/sport/events.aspx?id=1eb702e0-4333-44f8-bbeb-fe5de2e91269">Link</a>) veröffentlicht wurde und nicht als "Nachrücker" gekennzeichnet ist. Sollte deine Meldung nicht innerhalb einer Woche dort zu finden sein, melde dich bitte unter:</p>
     <p><a href="mailto:anmeldung@alemannen-cup.de">anmeldung@alemannen-cup.de</a></p>
 
     <p>Hier sind die Details:</p>
@@ -67,7 +71,7 @@ $message = <<<HTML
     <p>Hello {$user['vorname']} {$user['nachname']},</p>
 
     <p>Thank you for your registration, it will be forwarded to the tournament management and processed <strong>within a week</strong> at the latest.</p>
-    <p>The registration is only confirmed when it is published here (<a href="https://dbv.turnier.de/sport/events.aspx?id=8e25686d-193f-4971-a464-fd9d6a9af5cc">link</a>) and is not marked as "substitute". If your registration is not listed there within a week, please contact:</p>
+    <p>The registration is only confirmed when it is published here (<a href="https://dbv.turnier.de/sport/events.aspx?id=1eb702e0-4333-44f8-bbeb-fe5de2e91269">link</a>) and is not marked as "substitute". If your registration is not listed there within a week, please contact:</p>
     <p><a href="mailto:anmeldung@alemannen-cup.de">anmeldung@alemannen-cup.de</a></p>
 
     <p>Here are the details:</p>
@@ -116,7 +120,7 @@ $headers = "MIME-Version: 1.0\r\n";
 $headers .= "Content-type: text/html; charset=UTF-8\r\n";
 $headers .= "From: anmeldung@alemannen-cup.de\r\n";
 $headers .= "Reply-To: anmeldung@alemannen-cup.de\r\n";
-$headers .= "BCC: ma.goldschmidt@web.de, anmeldung@alemannen-cup.de\r\n"; // Add additional recipient in BCC
+$headers .= "BCC: mgoldschmidt01@gmail.com, anmeldung@alemannen-cup.de\r\n"; // Add additional recipient in BCC
 
 // Send the email
 if (mail($to, $subject, $message, $headers)) {

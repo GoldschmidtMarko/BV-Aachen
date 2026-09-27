@@ -1,324 +1,244 @@
 <!DOCTYPE html>
-<html lang="en">
-<!--
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
--->
-
+<html lang="de" data-ui-lang="de">
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta name="keywords" content="BV Aachen, Badminton, Aachen">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <link rel="stylesheet" href="styles/output.css">
-    <script src="javascripts/navigation-menu-showhide.js"></script>
-    <!-- used for to get idb library, a CHIPS cookie method for the language switch -->
-    <script src="https://cdn.jsdelivr.net/npm/idb/build/iife/index-min.js"></script>
-    <script src="javascripts/language-toggle.js"></script>
-
-    <title>BV Aachen 09</title>
-    <link rel="stylesheet" href="styles/navigation-layout.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mannschaften · BV Aachen 2009 e.V.</title>
+  <meta name="description" content="Die Mannschaften des BV Aachen in der Saison 2025/26: fünf Seniorenteams von der Bezirksklasse bis zur Verbandsliga und zwei Jugendteams.">
+  <meta name="theme-color" content="#0b1b2b">
+  <link rel="icon" href="images/icon.png">
+  <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/martian-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/site.css">
+  <script>document.documentElement.classList.add("js")</script>
+  <script src="assets/site.js" defer></script>
 </head>
+<body>
+  <a class="visually-hidden" href="#main">Zum Inhalt springen</a>
 
-<body class="antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900 text-center dark">
-    <nav class="fixed-top flex items-center justify-between flex-wrap bg-gray-800 p-3">
-        <div class="flex items-center flex-shrink-0 text-white mr-6">
-            <div class="flex flex-shrink-0 items-center bg-gray-100 p-1 rounded-md">
-                <img class="h-8 w-auto rounded-md" src="images/Logo.png" alt="BV Aachen">
-            </div>
-        </div>
-        <div class="block md:hidden lg:hidden">
-            <button class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400  hover:border-white" onclick="showhideNavigation(['navigation', 'languageToggle'])">
-				<svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-					<title>Menu</title>
-					<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-				</svg>
-			</button>
-        </div>
-        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto md:flex md:items-center md:w-auto">
-            <div id="navigation" class="text-sm lg:flex-grow md:flex-grow" style="display: block;">
-                <a href="./index.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium  lg:inline-block lg:mt-0 md:inline-block md:mt-0">
-					Start</a>
-                <a href="./alemannencup.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium  lg:inline-block lg:mt-0 md:inline-block md:mt-0" style="color: red;">
-                        Alemannen Cup
-                    </a>
-                <a href="./teams.html" aria-current="page" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium  lg:inline-block lg:mt-0 md:inline-block md:mt-0">
-                    <span data-lang="en" class="hidden">Teams</span>
-                    <span data-lang="de">Mannschaften</span>
-                </a>
-                <div class="relative inline-block align-top">
-                    <button onclick="toggleDropdown()" class="mt-4 rounded-md px-3 py-2 text-sm font-medium text-white text-left min-w-max lg:mt-0 md:mt-0">
-                        <span data-lang="en" class="hidden">Training ▼</span>
-                        <span data-lang="de">Training ▼</span>
-                    </button>
-                    <div id="trainingDropdown" class="hidden mt-2 space-y-1">
-                        <a href="./training_senior.html" class="block rounded-md px-3 py-2 text-sm font-medium">
-                            <span data-lang="en" class="hidden">Seniors</span>
-                            <span data-lang="de">Senioren</span>
-                        </a>
-                        <a href="./training_kids.html" class="block rounded-md px-3 py-2 text-sm font-medium">
-                            <span data-lang="en" class="hidden">Kids</span>
-                            <span data-lang="de">Kinder</span>
-                        </a>
-                    </div>
-                </div>
-                <a href="./verein.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium  lg:inline-block lg:mt-0 md:inline-block md:mt-0">
-                    <span data-lang="en" class="hidden">Become a Member</span>
-                    <span data-lang="de">Mitglied werden</span>
-                </a>
-                <a href="./kontakt.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium  lg:inline-block lg:mt-0 md:inline-block md:mt-0">
-                    <span data-lang="en" class="hidden">Contact</span>
-                    <span data-lang="de">Kontakt</span>
-                </a>
-                <a href="./FAQ.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium  lg:inline-block lg:mt-0 md:inline-block md:mt-0">FAQ</a>
-            </div>
-            <button id="languageToggle" class="ml-4 bg-white text-blue-500 w-8 h-8 rounded-full flex items-center justify-center">
-                <span id="languageIcon">EN</span>
-            </button>
-        </div>
-    </nav>
-
-    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-        <div>
-            <p class="mt-10 text-3xl sm:text-4xl text-slate-900 font-extrabold tracking-tight dark:text-slate-50 ">
-                <span data-lang="en" class="hidden">Our Teams</span>
-                <span data-lang="de">Unsere Teams</span>
-            </p>
-            <p class="mt-6 max-w-3xl mx-auto text-lg dark:text-blue-100">
-                <span data-lang="en" class="hidden">In the 2024/2025 season, BV Aachen will participate with five senior teams and one youth team in the official league competition of the BLV-NRW. All levels of play are represented, from district class to league. </span>
-                <span data-lang="de">In der Saison 2024/2025 nimmt der BV Aachen mit fünf Seniorenmannschaften und einer Jugendmannschaft am offiziellen Ligabetrieb des BLV-NRW teil. Von der Bezirksklasse bis zur Verbandsliga sind alle Spielstärken vertreten. </span>
-            </p>
-            <p class="mt-6 space-y-6 text-lg">
-                <span data-lang="en" class="hidden">The following teams are playing in the current season:</span>
-                <span data-lang="de">In der aktuellen Saison spielen folgende Mannschaften:</span>
-            </p>
-
-            <div class="mt-10 grid grid-cols-1 gap-4 lg:gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 overflow-hidden content-center items-center">
-                <!-- 1. MANNSCHAFT-->
-                <div class="relative">
-                    <img src="images/teams/1.Mannschaft_2022.jpeg" />
-
-                    <!-- TODO: remove temporary warning and replace images and description -->
-                    <div class="absolute top-0 left-0 right-0 px-4 py-2">
-                        <h3 class="text-3xl text-red-600 dark:text-red-600 font-bold">
-                            <span data-lang="en" class="hidden">Image from season 2022</span>
-                            <span data-lang="de">Bild aus Saison 2022</span>
-                        </h3>
-                    </div>
-
-                    <div class="absolute bottom-0 left-0 right-0 px-4 py-2 bg-gray-800 opacity-70">
-                        <h3 class="text-xl text-white font-bold">
-                            <span data-lang="en" class="hidden">1st Team</span>
-                            <span data-lang="de">1. Mannschaft</span>
-                            <a href="https://dbv.turnier.de/sport/league/team?id=066F2F48-EF43-47A8-999F-A2021BE81D09&team=1131" class="font-medium text-white-600 dark:text-White-600 underline">Verbandsliga</a>
-                        </h3>
-                        <p class="mt-2 text-sm text-gray-300">
-                            <span data-lang="en" class="hidden">
-                                (from left to right) Ken Nozaki, Artur Mühlbeier, Claudia Jendyczek, Anne Liang, David Brock, Benedikt Nilges
-                            </span>
-                            <span data-lang="de">
-                            (v.l.n.r) Ken Nozaki, Artur Mühlbeier, Claudia Jendyczek, Anne Liang, David Brock, Benedikt Nilges
-                            </span>
-                        </p>
-                    </div>
-                </div>
-
-                <!-- 2. MANNSCHAFT-->
-                <div class="relative">
-                    <img src="images/teams/2.Mannschaft_2022.jpeg" />
-
-                    <!-- TODO: remove temporary warning and replace images and description -->
-                    <div class="absolute top-0 left-0 right-0 px-4 py-2">
-                        <h3 class="text-3xl text-red-600 dark:text-red-600 font-bold">
-                            <span data-lang="en" class="hidden">Image from season 2022</span>
-                            <span data-lang="de">Bild aus Saison 2022</span>
-                        </h3>
-                    </div>
-
-                    <div class="absolute bottom-0 left-0 right-0 px-4 py-2 bg-gray-800 opacity-70">
-                        <h3 class="text-xl text-white font-bold">
-                            <span data-lang="en" class="hidden">2nd Team</span>
-                            <span data-lang="de">2. Mannschaft</span>
-                            <a href="https://dbv.turnier.de/sport/league/team?id=066F2F48-EF43-47A8-999F-A2021BE81D09&team=1132" class="font-medium text-white-600 dark:text-White-600 underline">Bezirksliga</a>
-                        </h3>
-                        <p class="mt-2 text-sm text-gray-300">
-                            <span data-lang="en" class="hidden">
-                                (from left to right) Xing Zhang, Daniyal Mahmood, Miro Gondrum, Weijung li, Johanna Holsten, Shota Ito, Philip Verkerk
-                            </span>
-                            <span data-lang="de">
-                                (v.l.n.r) Xing Zhang, Daniyal Mahmood, Miro Gondrum, Weijung li, Johanna Holsten, Shota Ito, Philip Verkerk
-                            </span>
-                        </p>
-                    </div>
-                </div>
-
-                <!-- 3. MANNSCHAFT-->
-                <div class="relative">
-                    <img src="images/teams/3.Mannschaft.jpeg" />
-
-                    <div class="absolute bottom-0 left-0 right-0 px-4 py-2 bg-gray-800 opacity-70">
-                        <h3 class="text-xl text-white font-bold">
-                            <span data-lang="en" class="hidden">3rd Team</span>
-                            <span data-lang="de">3. Mannschaft</span>
-                            <a href="https://dbv.turnier.de/sport/league/team?id=066F2F48-EF43-47A8-999F-A2021BE81D09&team=1133" class="font-medium text-white-600 dark:text-White-600 underline">Bezirksliga</a>
-                        </h3>
-                        <p class="mt-2 text-sm text-gray-300">
-                            <span data-lang="en" class="hidden">
-                                (from left to right) David Franke, Lena Strotmann, Florian Musialek, Sara Dammers, Christos Coucas, Leon Poggemöller, Valentin Himmel (missing: Kim-Loan Do, Hendrik Hänel, Ulrich Lin)
-                            </span>
-                            <span data-lang="de">
-                            (v.l.n.r) David Franke, Lena Strotmann, Florian Musialek, Sara Dammers, Christos Coucas, Leon Poggemöller, Valentin Himmel (es fehlt: Kim-Loan Do, Hendrik Hänel, Ulrich Lin)
-                            </span>
-                        </p>
-                    </div>
-                </div>
-
-                <!-- 4. MANNSCHAFT-->
-                <div class="relative">
-                    <img src="images/teams/4.Mannschaft_2022.jpeg" />
-
-                    <!-- TODO: remove temporary warning and replace images and description -->
-                    <div class="absolute top-0 left-0 right-0 px-4 py-2">
-                        <h3 class="text-3xl text-red-600 dark:text-red-600 font-bold">
-                            <span data-lang="en" class="hidden">Image from season 2022</span>
-                            <span data-lang="de">Bild aus Saison 2022</span>
-                        </h3>
-                    </div>
-
-                    <div class="absolute bottom-0 left-0 right-0 px-4 py-2 bg-gray-800 opacity-70">
-                        <h3 class="text-xl text-white font-bold">
-                            <span data-lang="en" class="hidden">4th Team</span>
-                            <span data-lang="de">
-                                4. Mannschaft
-                            </span>
-                            <a href="https://dbv.turnier.de/sport/league/team?id=066F2F48-EF43-47A8-999F-A2021BE81D09&team=1134" class="font-medium text-white-600 dark:text-White-600 underline">Bezirksklasse</a>
-                        </h3>
-                        <p class="mt-2 text-sm text-gray-300">
-                            <span data-lang="en" class="hidden">
-                                (from left to right) Valentin Himmel, Lina Köllmann, Felix Flammer, Ruth Basten, Lukas Bram, Hendrik Hänel
-                            </span>
-                            <span data-lang="de">
-                                (v.l.n.r.) Valentin Himmel, Lina Köllmann, Felix Flammer, Ruth Basten, Lukas Bram, Hendrik Hänel
-                            </span>
-                        </p>
-                    </div>
-                </div>
-
-                <!-- 5. MANNSCHAFT-->
-                <div class="relative">
-                    <img src="images/teams/5.Mannschaft_2022.jpeg" />
-
-                    <!-- TODO: remove temporary warning and replace images and description -->
-                    <div class="absolute top-0 left-0 right-0 px-4 py-2">
-                        <h3 class="text-3xl text-red-600 dark:text-red-600 font-bold">
-                            <span data-lang="en" class="hidden">Image from season 2022</span>
-                            <span data-lang="de">Bild aus Saison 2022</span>
-                        </h3>
-                    </div>
-
-                    <div class="absolute bottom-0 left-0 right-0 px-4 py-2 bg-gray-800 opacity-70">
-                        <h3 class="text-xl text-white font-bold">
-                            <span data-lang="en" class="hidden">5th Team</span>
-                            <span data-lang="de">5. Mannschaft</span>
-                            <a href="https://dbv.turnier.de/sport/league/team?id=066F2F48-EF43-47A8-999F-A2021BE81D09&team=1135" class="font-medium text-white-600 dark:text-White-600 underline">Bezirksklasse</a>
-                        </h3>
-                        <p class="mt-2 text-sm text-gray-300">
-                            <span data-lang="en" class="hidden">
-                                (from left to right) Huochen Jiang, Aryan Aryan, Anil Kumar Totakura, San Lei Weng, Sven Pfennings, Kim Loan Do, Leon Pogemöller
-                            </span>
-                            <span data-lang="de">
-                                (v.l.n.r.) Huochen Jiang, Aryan Aryan, Anil Kumar Totakura,San Lei Weng, Sven Pfennings, Kim Loan Do, Leon Pogemöller
-                            </span>
-                        </p>
-                    </div>
-                </div>
-
-                <!-- U19 MANNSCHAFT-->
-                <div class="relative">
-                    <img src="images/teams/JugendMannschaft_2022.jpeg" />
-
-                    <!-- TODO: remove temporary warning and replace images and description -->
-                    <div class="absolute top-0 left-0 right-0 px-4 py-2">
-                        <h3 class="text-3xl text-red-600 dark:text-red-600 font-bold">
-                            <span data-lang="en" class="hidden">Image from season 2022</span>
-                            <span data-lang="de">Bild aus Saison 2022</span>
-                        </h3>
-                    </div>
-
-                    <div class="absolute bottom-0 left-0 right-0 px-4 py-2 bg-gray-800 opacity-70">
-                        <h3 class="text-xl text-white font-bold">
-                            <span data-lang="en" class="hidden">Youth Team</span>
-                            <span data-lang="de">Jugendmannschaft</span>
-                            <a href="https://dbv.turnier.de/sport/league/team?id=066F2F48-EF43-47A8-999F-A2021BE81D09&team=1136" class="font-medium text-white-600 dark:text-White-600 underline">U19</a>
-                        </h3>
-                        <p class="mt-2 text-sm text-gray-300">
-                            <span data-lang="en" class="hidden">
-                                (from left to right) Friedrich Grommes, Viet-Sam Do, Justus Meentz, Sophie Schalla
-                            </span>
-                            <span data-lang="de">
-                                (v.l.n.r.) Friedrich Grommes, Viet-Sam Do, Justus Meentz, Sophie Schalla
-                            </span>
-                        </p>
-                    </div>
-                </div>
-
-                <!-- SCHÜLERMANNSCHAFT -->
-                <div class="relative">
-                    <img src="images/bild1.jpg" />
-
-                    <!-- TODO: remove temporary warning and replace images and description -->
-                    <div class="absolute top-0 left-0 right-0 px-4 py-2">
-                        <h3 class="text-3xl text-red-600 dark:text-red-600 font-bold">
-                            <span data-lang="en" class="hidden">Image missing</span>
-                            <span data-lang="de">Bild fehlt</span>
-                        </h3>
-                    </div>
-
-                    <div class="absolute bottom-0 left-0 right-0 px-4 py-2 bg-gray-800 opacity-70">
-                        <h3 class="text-xl text-white font-bold">
-                            <span data-lang="en" class="hidden">Youth Team</span>
-                            <span data-lang="de">Jugendmannschaft</span> Jugendmannschaft <a href="https://dbv.turnier.de/sport/league/team?id=066F2F48-EF43-47A8-999F-A2021BE81D09&team=1137" class="font-medium text-white-600 dark:text-White-600 underline">U15</a>
-                        </h3>
-                        <p class="mt-2 text-sm text-gray-300">
-                            <span data-lang="en" class="hidden">
-                                (from left to right) TODO
-                            </span>
-                            <span data-lang="de">
-                                (v.l.n.r.) TODO
-                            </span>
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="mt-20 text-center">
-                <h2 class="text-xl font-extrabold dark:text-white mt-10">
-                    <span data-lang="en" class="hidden">We are looking for reinforcements for our teams</span>
-                    <span data-lang="de">Wir suchen Verstärkung für unsere Mannschaften</span>
-                </h2>
-            </div>
-        </div>
-        <br>
-
-        <div id="footer-wrapper" class="mt-20">
-            <div id="footer" class="text-center">
-                <div id="adresse">
-                    <p>
-                        <a href="./impressum.html" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                            <span data-lang="en" class="hidden">Imprint</span>
-                            <span data-lang="de">Impressum</span>
-                        </a> <b> | </b>
-                        <a href="./datenschutz.html" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                            <span data-lang="en" class="hidden">Privacy Policy</span>
-                            <span data-lang="de">Informationen zum Datenschutz</span>
-                        </a>
-                    </p>
-                </div>
-            </div>
-        </div>
+  <!-- Score bug -->
+  <header class="bug">
+    <div class="bug__score">
+      <a class="bug__crest" href="index.html" aria-label="BV Aachen Startseite"><img src="assets/img/logo-white.png" alt="BVA 09" width="200" height="98"></a>
+      <span class="bug__season num">25/26</span>
+      <a class="bug__live" href="training.html#woche" data-live aria-live="polite"><span class="live-dot"></span><span><b>Training</b><small>Mo–Fr · 18–23 Uhr</small></span></a>
     </div>
-</body>
+    <div class="bug__nav">
+      <nav class="nav" aria-label="Hauptnavigation">
+        <a href="index.html">Start</a>
+        <a href="training.html">Training</a>
+        <a href="teams.html" aria-current="page"><span data-lang="de">Mannschaften</span><span data-lang="en">Teams</span></a>
+        <a href="alemannencup.html" class="nav__cup">Alemannen Cup</a>
+        <a href="verein.html"><span data-lang="de">Mitglied werden</span><span data-lang="en">Join</span></a>
+        <a href="kontakt.html"><span data-lang="de">Kontakt</span><span data-lang="en">Contact</span></a>
+        <a href="FAQ.html">FAQ</a>
+      </nav>
+      <button class="lang" type="button" data-toggle-lang aria-label="Sprache wechseln / switch language"><span data-code="de">DE</span><span data-code="en">EN</span></button>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="sheet" aria-label="Menü">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square"><path d="M3 7h18M3 12h18M3 17h12"/></svg>
+      </button>
+    </div>
+  </header>
 
+  <div class="sheet" id="sheet" data-open="false" role="dialog" aria-modal="true" aria-label="Menü">
+    <div class="sheet__top">
+      <a class="bug__crest" href="index.html" aria-label="BV Aachen Startseite"><img src="assets/img/logo-white.png" alt="BVA 09" width="400" height="196"></a>
+      <button class="sheet__close" type="button" aria-label="Menü schließen">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      </button>
+    </div>
+    <nav aria-label="Mobile Navigation">
+      <a href="index.html"><span>Start</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+      <a href="training.html"><span>Training</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+      <a href="teams.html" aria-current="page"><span><span data-lang="de">Mannschaften</span><span data-lang="en">Teams</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+      <a href="alemannencup.html"><span>Alemannen Cup</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+      <a href="verein.html"><span><span data-lang="de">Mitglied werden</span><span data-lang="en">Join</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+      <a href="kontakt.html"><span><span data-lang="de">Kontakt</span><span data-lang="en">Contact</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+      <a href="FAQ.html"><span>FAQ</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+    </nav>
+    <div class="sheet__foot">
+      <button class="lang" type="button" data-toggle-lang aria-label="Sprache wechseln / switch language"><span data-code="de">DE</span><span data-code="en">EN</span></button>
+      <span class="sheet__legal"><a href="impressum.html"><span data-lang="de">Impressum</span><span data-lang="en">Imprint</span></a><a href="datenschutz.html"><span data-lang="de">Datenschutz</span><span data-lang="en">Privacy</span></a></span>
+    </div>
+  </div>
+
+  <div class="stinger" aria-hidden="true"><i></i><i></i><i></i></div>
+
+  <main id="main">
+    <header class="masthead">
+      <div class="net" aria-hidden="true"></div>
+      <div class="wrap">
+        <div class="l3">
+          <h1 class="l3__title"><span data-lang="de">Mannschaften</span><span data-lang="en">Teams</span></h1>
+          <div class="l3__sub">
+            <span class="a num">Saison 2025/26</span>
+            <span class="b">BLV-NRW</span>
+          </div>
+        </div>
+        <p class="lede">
+          <span data-lang="de">Fünf Seniorenmannschaften und zwei Jugendmannschaften im Ligabetrieb, von der Bezirksklasse bis zur Verbandsliga ist jede Spielstärke vertreten.</span>
+          <span data-lang="en">Five senior teams and two youth teams in league play: every level from Bezirksklasse up to Verbandsliga is covered.</span>
+        </p>
+        <nav class="tindex" aria-label="Mannschaften">
+          <a href="#team-1"><span class="num">1</span> Verbandsliga</a>
+          <a href="#team-2"><span class="num">2</span> Landesliga</a>
+          <a href="#team-3"><span class="num">3</span> Bezirksliga</a>
+          <a href="#team-4"><span class="num">4</span> Bezirksliga</a>
+          <a href="#team-5"><span class="num">5</span> Bezirksklasse</a>
+          <a href="#u19"><span class="num">U19</span> <span data-lang="de">Jugend</span><span data-lang="en">Youth</span></a>
+          <a href="#u15"><span class="num">U15</span> <span data-lang="de">Jugend</span><span data-lang="en">Youth</span></a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="wrap">
+      <article class="team" id="team-1">
+        <div class="team__media">
+          <img src="assets/img/team1.jpg" alt="1. Mannschaft des BV Aachen" width="746" height="677">
+          <span class="team__num" aria-hidden="true">1</span>
+        </div>
+        <div class="team__body">
+          <h2 class="h2"><span data-lang="de">1. Mannschaft</span><span data-lang="en">1st team</span></h2>
+          <a class="team__league" href="https://dbv.turnier.de/sport/league/team?id=925D6245-1FA1-496D-9810-1439487E5801&amp;team=1224" target="_blank" rel="noopener"><span>VL</span><span>Verbandsliga <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
+          <p class="lineup-cap"><span data-lang="de">Aufstellung · v.l.n.r.</span><span data-lang="en">Line-up · left to right</span></p>
+          <ol class="lineup"><li>Artur Mühlbeier</li><li>Jens Igel</li><li>Ansgar Kirste</li><li>Benedikt Nilges</li><li>David Brock</li><li>Mehak Deep Singh</li><li>Hannah Schröder</li></ol>
+        </div>
+      </article>
+
+      <article class="team" id="team-2">
+        <div class="team__media">
+          <img src="assets/img/team2.jpg" alt="2. Mannschaft des BV Aachen" width="1400" height="1290" loading="lazy">
+          <span class="team__num" aria-hidden="true">2</span>
+        </div>
+        <div class="team__body">
+          <h2 class="h2"><span data-lang="de">2. Mannschaft</span><span data-lang="en">2nd team</span></h2>
+          <a class="team__league" href="https://dbv.turnier.de/sport/league/team?id=925D6245-1FA1-496D-9810-1439487E5801&amp;team=1225" target="_blank" rel="noopener"><span>LL</span><span>Landesliga <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
+          <p class="lineup-cap"><span data-lang="de">Aufstellung · v.l.n.r.</span><span data-lang="en">Line-up · left to right</span></p>
+          <ol class="lineup"><li>Ramzi Abdul Rahim</li><li>Johanna Holsten</li><li>Felix Flammer</li><li>Sam Carl Benz</li><li>Yi Liu</li><li>Jochen Abele</li><li>Eva Wille</li><li>Luis Dannhorn</li></ol>
+        </div>
+      </article>
+
+      <article class="team" id="team-3">
+        <div class="team__media">
+          <img src="assets/img/team3.jpg" alt="3. Mannschaft des BV Aachen" width="1400" height="1050" loading="lazy">
+          <span class="team__num" aria-hidden="true">3</span>
+        </div>
+        <div class="team__body">
+          <h2 class="h2"><span data-lang="de">3. Mannschaft</span><span data-lang="en">3rd team</span></h2>
+          <a class="team__league" href="https://dbv.turnier.de/sport/league/team?id=925D6245-1FA1-496D-9810-1439487E5801&amp;team=1226" target="_blank" rel="noopener"><span>BL</span><span>Bezirksliga <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
+          <p class="lineup-cap"><span data-lang="de">Aufstellung · v.l.n.r.</span><span data-lang="en">Line-up · left to right</span></p>
+          <ol class="lineup"><li>Nicole Koczorek</li><li>Viet-Sam Do</li><li>Sara Dammers</li><li>Christos Coucas</li><li>Kim-Loan Do</li><li>David Franke</li><li>Yannick Ernesti</li><li>Valentin Himmel</li></ol>
+        </div>
+      </article>
+
+      <article class="team" id="team-4">
+        <div class="team__media">
+          <img src="assets/img/team4.jpg" alt="4. Mannschaft des BV Aachen" width="659" height="517" loading="lazy">
+          <span class="team__num" aria-hidden="true">4</span>
+        </div>
+        <div class="team__body">
+          <h2 class="h2"><span data-lang="de">4. Mannschaft</span><span data-lang="en">4th team</span></h2>
+          <a class="team__league" href="https://dbv.turnier.de/sport/league/team?id=925D6245-1FA1-496D-9810-1439487E5801&amp;team=1227" target="_blank" rel="noopener"><span>BL</span><span>Bezirksliga <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
+          <p class="lineup-cap"><span data-lang="de">Aufstellung · v.l.n.r.</span><span data-lang="en">Line-up · left to right</span></p>
+          <ol class="lineup"><li>Luke Hassel</li><li>Alexander Heinrichs</li><li>Jong Yun Kim</li><li>Finn Hoven</li><li>Jaqueline Thiel</li><li>Weng San Lei</li></ol>
+        </div>
+      </article>
+
+      <article class="team" id="team-5">
+        <div class="team__media">
+          <img src="assets/img/team5.jpg" alt="5. Mannschaft des BV Aachen" width="927" height="798" loading="lazy">
+          <span class="team__num" aria-hidden="true">5</span>
+        </div>
+        <div class="team__body">
+          <h2 class="h2"><span data-lang="de">5. Mannschaft</span><span data-lang="en">5th team</span></h2>
+          <a class="team__league" href="https://dbv.turnier.de/sport/league/team?id=925D6245-1FA1-496D-9810-1439487E5801&amp;team=1228" target="_blank" rel="noopener"><span>BK</span><span>Bezirksklasse <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
+          <p class="lineup-cap"><span data-lang="de">Aufstellung · v.l.n.r.</span><span data-lang="en">Line-up · left to right</span></p>
+          <ol class="lineup"><li>Judith Beißel</li><li>Elisabeth Nacken</li><li>Viet Long Dang</li><li>Tobias Breuer</li><li>Haotian Ma</li><li>Nikjas Hartmann</li><li>Tobias Kiehn</li><li>Lina Köllmann</li><li>Kunhao Li</li><li>Zheran Lu</li><li>Friedrich Grommes</li><li>Xin Wei</li><li>Kehao Li</li></ol>
+        </div>
+      </article>
+
+      <article class="team" id="u19">
+        <div class="team__media">
+          <img src="assets/img/u19.jpg" alt="U19-Jugendmannschaft des BV Aachen" width="1301" height="1148" loading="lazy">
+          <span class="team__num team__num--u" aria-hidden="true">U19</span>
+        </div>
+        <div class="team__body">
+          <h2 class="h2"><span data-lang="de">Jugend U19</span><span data-lang="en">Youth U19</span></h2>
+          <a class="team__league" href="https://dbv.turnier.de/sport/league/team?id=925D6245-1FA1-496D-9810-1439487E5801&amp;team=1229" target="_blank" rel="noopener"><span>U19</span><span><span data-lang="de">Ligaseite</span><span data-lang="en">League page</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
+          <p class="lineup-cap"><span data-lang="de">Aufstellung · v.l.n.r.</span><span data-lang="en">Line-up · left to right</span></p>
+          <ol class="lineup"><li>Vincent Barsnick</li><li>Julius Weißenborn</li><li>Jan Rockenfeller</li><li>Anirudh Chandrasekar</li><li>Elena Fydrich</li></ol>
+        </div>
+      </article>
+
+      <article class="team" id="u15">
+        <div class="team__media">
+          <div class="placeholder"><span data-lang="de">Foto folgt</span><span data-lang="en">Photo coming soon</span></div>
+          <span class="team__num team__num--u" aria-hidden="true">U15</span>
+        </div>
+        <div class="team__body">
+          <h2 class="h2"><span data-lang="de">Jugend U15</span><span data-lang="en">Youth U15</span></h2>
+          <a class="team__league" href="https://dbv.turnier.de/sport/league/team?id=925D6245-1FA1-496D-9810-1439487E5801&amp;team=1230" target="_blank" rel="noopener"><span>U15</span><span><span data-lang="de">Ligaseite</span><span data-lang="en">League page</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M7 17L17 7M9 7h8v8"/></svg></span></a>
+          <p class="muted"><span data-lang="de">Die Aufstellung wird bald aktualisiert.</span><span data-lang="en">The line-up will be updated soon.</span></p>
+        </div>
+      </article>
+    </div>
+
+    <section class="section section--petrol on-dark" aria-labelledby="join-title">
+      <div class="wrap split">
+        <div>
+          <h2 class="h2" id="join-title"><span data-lang="de">Wir suchen<br>Verstärkung</span><span data-lang="en">We’re looking<br>for players</span></h2>
+        </div>
+        <div style="display:grid;gap:24px">
+          <p class="lede"><span data-lang="de">Du hast Ligaerfahrung und suchst eine Mannschaft auf deinem Niveau? Komm ins freie Spiel und sprich uns an, oder schreib uns vorher.</span><span data-lang="en">Got league experience and looking for a team at your level? Come to free play and talk to us, or write to us first.</span></p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <a class="btn btn--orange" href="mailto:vorsitz@bv-aachen.de"><span><span data-lang="de">Schreib uns</span><span data-lang="en">Write to us</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+            <a class="btn" href="training.html"><span><span data-lang="de">Trainingszeiten</span><span data-lang="en">Training times</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M4 12h15M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="foot on-dark">
+    <div class="net" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="foot__grid">
+        <div class="foot__brand">
+          <img src="assets/img/logo-white.png" alt="BVA 09" width="200" height="98">
+          <p><span data-lang="de">BV Aachen 2009 e.V. · Badminton in Burtscheid und Laurensberg.</span><span data-lang="en">BV Aachen 2009 e.V. · Badminton in Burtscheid and Laurensberg.</span></p>
+        </div>
+        <div>
+          <p class="foot__h"><span data-lang="de">Verein</span><span data-lang="en">Club</span></p>
+          <ul>
+            <li><a href="training.html">Training</a></li>
+            <li><a href="teams.html"><span data-lang="de">Mannschaften</span><span data-lang="en">Teams</span></a></li>
+            <li><a href="alemannencup.html">Alemannen Cup</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="foot__h"><span data-lang="de">Kontakt</span><span data-lang="en">Contact</span></p>
+          <ul>
+            <li><a class="mono" href="mailto:vorsitz@bv-aachen.de">vorsitz@</a></li>
+            <li><a class="mono" href="mailto:seniorentraining@bv-aachen.de">seniorentraining@</a></li>
+            <li><a class="mono" href="mailto:jugendwart@bv-aachen.de">jugendwart@</a></li>
+            <li><a class="mono" href="mailto:kassenwart@bv-aachen.de">kassenwart@</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="foot__h"><span data-lang="de">Hallen</span><span data-lang="en">Halls</span></p>
+          <ul>
+            <li>Burtscheid · <span class="mono">Malmedyer Str. 55</span></li>
+            <li>Laurensberg · <span class="mono">Hander Weg 89</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot__legal">
+        <span class="num">© 2026 BV Aachen 2009 e.V.</span>
+        <span><a href="impressum.html"><span data-lang="de">Impressum</span><span data-lang="en">Imprint</span></a> · <a href="datenschutz.html"><span data-lang="de">Datenschutz</span><span data-lang="en">Privacy</span></a></span>
+      </div>
+    </div>
+  </footer>
+</body>
 </html>

@@ -1,281 +1,279 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="de" data-ui-lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="BV Aachen, Badminton, Aachen">
-    <meta name="description" content="">
-    <title>BV Aachen 09</title>
-    <link rel="stylesheet" href="styles/output.css">
-    <link rel="icon" type="image/x-icon" href="./images/icon.png">
-
-    <script src="javascripts/navigation-menu-showhide.js"></script>
-    <!-- used for to get idb library, a CHIPS cookie method for the language switch -->
-    <script src="https://cdn.jsdelivr.net/npm/idb/build/iife/index-min.js"></script>
-    <script src="javascripts/language-toggle.js"></script>
-
-    <link rel="stylesheet" href="styles/navigation-layout.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BV Aachen 2009 e.V. · Badminton in Aachen</title>
+  <meta name="description" content="BV Aachen 2009 e.V.: der größte Badmintonverein Aachens. Freies Spiel, Training und fünf Seniorenmannschaften von der Bezirksklasse bis zur Verbandsliga.">
+  <meta name="theme-color" content="#0b1b2b">
+  <link rel="icon" href="images/icon.png">
+  <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/martian-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/site.css">
+  <script>document.documentElement.classList.add("js")</script>
+  <script src="assets/site.js" defer></script>
 </head>
+<body>
+  <a class="visually-hidden" href="#main">Zum Inhalt springen</a>
 
-<body class="antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900 text-center dark">
-    <nav class="fixed-top flex items-center justify-between flex-wrap bg-gray-800 p-3">
-        <div class="flex items-center flex-shrink-0 text-white mr-6">
-            <div class="flex flex-shrink-0 items-center bg-gray-100 p-1 rounded-md">
-                <img class="h-8 w-auto rounded-md" src="images/Logo.png" alt="BV Aachen">
-            </div>
-        </div>
-        <div class="block md:hidden lg:hidden">
-            <button class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400  hover:border-white" onclick="showhideNavigation(['navigation', 'languageToggle'])">
-                <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <title>Menu</title>
-                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-                </svg>
-            </button>
-        </div>
-        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto md:flex md:items-center md:w-auto">
-            <div id="navigation" class="text-sm lg:flex-grow md:flex-grow" style="display: block;">
-                <a href="./index.html" aria-current="page" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium  lg:inline-block lg:mt-0 md:inline-block md:mt-0">Start</a>
-                <a href="./alemannencup.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium  lg:inline-block lg:mt-0 md:inline-block md:mt-0" style="color: red;">
-                    Alemannen Cup
-                </a>
-                <a href="./teams.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium  lg:inline-block lg:mt-0 md:inline-block md:mt-0">
-                    <span data-lang="en" class="hidden">Teams</span>
-                    <span data-lang="de">Mannschaften</span>
-                </a>
+  <!-- Score bug -->
+  <header class="bug">
+    <div class="bug__score">
+      <a class="bug__crest" href="index.html" aria-label="BV Aachen Startseite"><img src="assets/img/logo-white.png" alt="BVA 09" width="200" height="98"></a>
+      <span class="bug__season num">25/26</span>
+      <a class="bug__live" href="training.html#woche" data-live aria-live="polite"><span class="live-dot"></span><span><b>Training</b><small>Mo–Fr · 18–23 Uhr</small></span></a>
+    </div>
+    <div class="bug__nav">
+      <nav class="nav" aria-label="Hauptnavigation">
+        <a href="index.html" aria-current="page">Start</a>
+        <a href="training.html">Training</a>
+        <a href="teams.html"><span data-lang="de">Mannschaften</span><span data-lang="en">Teams</span></a>
+        <a href="alemannencup.html" class="nav__cup">Alemannen Cup</a>
+        <a href="verein.html"><span data-lang="de">Mitglied werden</span><span data-lang="en">Join</span></a>
+        <a href="kontakt.html"><span data-lang="de">Kontakt</span><span data-lang="en">Contact</span></a>
+        <a href="FAQ.html">FAQ</a>
+      </nav>
+      <button class="lang" type="button" data-toggle-lang aria-label="Sprache wechseln / switch language"><span data-code="de">DE</span><span data-code="en">EN</span></button>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="sheet" aria-label="Menü">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square"><path d="M3 7h18M3 12h18M3 17h12"/></svg>
+      </button>
+    </div>
+  </header>
 
-                <div class="relative inline-block align-top">
-                    <button onclick="toggleDropdown()" class="mt-4 rounded-md px-3 py-2 text-sm font-medium text-white text-left min-w-max lg:mt-0 md:mt-0">
-                        <span data-lang="en" class="hidden">Training ▼</span>
-                        <span data-lang="de">Training ▼</span>
-                    </button>
-                    <div id="trainingDropdown" class="hidden mt-2 space-y-1">
-                        <a href="./training_senior.html" class="block rounded-md px-3 py-2 text-sm font-medium">
-                            <span data-lang="en" class="hidden">Seniors</span>
-                            <span data-lang="de">Senioren</span>
-                        </a>
-                        <a href="./training_kids.html" class="block rounded-md px-3 py-2 text-sm font-medium">
-                            <span data-lang="en" class="hidden">Kids</span>
-                            <span data-lang="de">Kinder</span>
-                        </a>
-                    </div>
-                </div>
-
-                <a href="./verein.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium  lg:inline-block lg:mt-0 md:inline-block md:mt-0">
-                    <span data-lang="en" class="hidden">Become a Member</span>
-                    <span data-lang="de">Mitglied werden</span>
-                </a>
-                <a href="./kontakt.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium  lg:inline-block lg:mt-0 md:inline-block md:mt-0">
-                    <span data-lang="en" class="hidden">Contact</span>
-                    <span data-lang="de">Kontakt</span>
-                </a>
-                <a href="./FAQ.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium  lg:inline-block lg:mt-0 md:inline-block md:mt-0">FAQ</a>
-            </div>
-            <button id="languageToggle" class="ml-4 bg-white text-blue-500 w-8 h-8 rounded-full flex items-center justify-center">
-                <span id="languageIcon">EN</span>
-            </button>
-        </div>
+  <div class="sheet" id="sheet" data-open="false" role="dialog" aria-modal="true" aria-label="Menü">
+    <div class="sheet__top">
+      <a class="bug__crest" href="index.html" aria-label="BV Aachen Startseite"><img src="assets/img/logo-white.png" alt="BVA 09" width="400" height="196"></a>
+      <button class="sheet__close" type="button" aria-label="Menü schließen">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      </button>
+    </div>
+    <nav aria-label="Mobile Navigation">
+      <a href="index.html" aria-current="page"><span>Start</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+      <a href="training.html"><span>Training</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+      <a href="teams.html"><span><span data-lang="de">Mannschaften</span><span data-lang="en">Teams</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+      <a href="alemannencup.html"><span>Alemannen Cup</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+      <a href="verein.html"><span><span data-lang="de">Mitglied werden</span><span data-lang="en">Join</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+      <a href="kontakt.html"><span><span data-lang="de">Kontakt</span><span data-lang="en">Contact</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+      <a href="FAQ.html"><span>FAQ</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
     </nav>
-    <!-- <div id="page-wrapper" class="container mx-auto px-4"> -->
-    <div id="page">
-
-        <div id="content-wrapper">
-            <div class="relative w-full h-auto">
-                <video class="hidden md:block lg:block relative w-full z-10 brightness-50" autoplay loop muted>
-                    <source src="videos/startpage.mp4">
-                </video>
-                <!-- <div class="absolute w-full h-full top-0 left-0 bg-gray-900 opacity-40 z-20"></div> -->
-                <div class="sm:relative md:absolute lg:absolute w-full h-full flex flex-col align-start p-8 top-0 left-0 z-30">
-                    <section class="text-center px-8 mt-1 sm:mt-0 md:mt-1">
-                        <h2 class="text-slate-900 text-4xl tracking-tight font-extrabold sm:text-5xl dark:text-white">
-                            <span data-lang="en" class="hidden">About us</span>
-                            <span data-lang="de">Über uns</span>
-                        </h2>
-                        <figure>
-                            <blockquote>
-                                <p class="mt-6 max-w-3xl mx-auto text-lg dark:text-blue-100">
-                                    <span data-lang="en" class="hidden">The
-                                        <a href="https://bv-aachen.de/"
-                                            class="text-sky-500 font-semibold dark:text-sky-400">BV Aachen 2009 e.V.</a>
-                                        was formed as a splinter group from TSV Alemannia Aachen. Since then, it has
-                                        developed successfully and, with 180 members, is the largest badminton club in
-                                        Aachen and the region. The club offers an attractive program, especially but
-                                        not only for students. In recent years, a large children's and youth department
-                                        has also developed. This season, the club is participating in competitions with five
-                                        senior teams and one youth team in leagues ranging from the Verbandsliga to the Bezirksklasse.
-                                        BV Aachen is a registered, non-profit organization.</span>
-                                    <span data-lang="de"> Der
-                                        <a href="https://bv-aachen.de/"
-                                            class="text-sky-500 font-semibold dark:text-sky-400">BV Aachen 2009 e.V.</a>
-                                        ist als Abspaltung des TSV Alemannia Aachen entstanden. Seit dem hat er sich
-                                        erfolgreich entwickelt und ist mit 180 Mitgliedern der größte Badmintonverein
-                                        Aachens und der Region. Vor allem für Studierende bietet der Verein
-                                        ein attraktives Angebot. In den letzten Jahren hat sich zusätzlich eine große
-                                        Kinder- und Jugendabteilung entwickelt. In dieser Saison nimmt der Verein mit
-                                        fünf Seniorenmannschaften und einem Jugendteam am Spielbetrieb in den Klassen von
-                                        Verbandsliga bis Bezirksklasse teil. Der BV Aachen ist ein
-                                        eingetragener, gemeinnütziger Verein.</span>
-
-                                </p>
-                            </blockquote>
-                        </figure>
-                    </section>
-                </div>
-            </div>
-
-
-
-            <section class="text-center px-8 mt-20 sm:mt-32 md:mt-20">
-                <h2 class="text-slate-900 text-4xl tracking-tight font-extrabold sm:text-5xl dark:text-white">
-                    <span data-lang="en" class="hidden">Board of Directors</span>
-                    <span data-lang="de">Vorstand</span>
-                </h2>
-
-                <div class="grid grid-cols-1 gap-6 lg:gap-8 sm:grid-cols-2 lg:grid-cols-4 mt-6">
-                    <figure class="bg-slate-100 rounded-xl p-8 dark:bg-slate-800">
-                        <img class="w-auto h-24 rounded-full mx-auto" src="images/man1.jpg" alt="" width="384" height="512">
-                        <div class="pt-6 text-center space-y-4">
-
-                            <figcaption class="font-medium">
-                                <div class="text-sky-500 dark:text-sky-400">
-                                    Jochen Abele
-                                </div>
-                                <div class="text-slate-700 dark:text-slate-500">
-                                    <span data-lang="en" class="hidden">Chairman</span>
-                                    <span data-lang="de">Vorsitzender</span>
-                                </div>
-                            </figcaption>
-                            <blockquote>
-                                <p class="text-lg font-medium text-slate-700 dark:text-slate-300">
-                                    <a href="mailto: vorsitz@bv-aachen.de" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                                        vorsitz@bv-aachen.de</a>
-                                </p>
-                            </blockquote>
-                        </div>
-                    </figure>
-
-                    <figure class="bg-slate-100 rounded-xl p-8 dark:bg-slate-800">
-                        <img class="w-auto h-24 rounded-full mx-auto" src="images/felix.jpg" alt="" width="384" height="512">
-                        <div class="pt-6 text-center space-y-4">
-
-                            <figcaption class="font-medium">
-                                <div class="text-sky-500 dark:text-sky-400">
-                                    Felix Flammer
-                                </div>
-                                <div class="text-slate-700 dark:text-slate-500">
-                                    <span data-lang="en" class="hidden">Vice Chairman</span>
-                                    <span data-lang="de">Stellvertretender Vorsitzender</span>
-                                </div>
-                            </figcaption>
-                            <blockquote>
-                                <p class="text-lg font-medium text-slate-700 dark:text-slate-300">
-                                    <a href="mailto: vorsitz@bv-aachen.de" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                                        vorsitz@bv-aachen.de</a>
-                                </p>
-                            </blockquote>
-                        </div>
-                    </figure>
-
-                    <figure class="bg-slate-100 rounded-xl p-8 dark:bg-slate-800">
-                        <img class="w-auto h-24 rounded-full mx-auto" src="images/simon.JPG" alt="" width="384" height="512">
-                        <div class="pt-6 text-center space-y-4">
-                            <blockquote>
-                                <p class="text-lg font-medium text-slate-700 dark:text-slate-300">
-                                    <span data-lang="en" class="hidden">“Someone has to do the job.”</span>
-                                    <span data-lang="de">“Einer muss den Job ja machen.”</span>
-                                </p>
-                            </blockquote>
-                            <figcaption class="font-medium">
-                                <div class="text-sky-500 dark:text-sky-400">
-                                    Simon Vaupel
-                                </div>
-                                <div class="text-slate-700 dark:text-slate-500">
-                                    <span data-lang="en" class="hidden">Treasurer</span>
-                                    <span data-lang="de">Kassenwart</span>
-                                </div>
-                            </figcaption>
-                             <blockquote>
-                                <p class="text-lg font-medium text-slate-700 dark:text-slate-300">
-                                    <a href="mailto: kassenwart@bv-aachen.de" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                                        kassenwart@bv-aachen.de</a>
-                                </p>
-                            </blockquote>
-                        </div>
-                    </figure>
-
-                    <figure class="bg-slate-100 rounded-xl p-8 dark:bg-slate-800">
-                        <img class="w-auto h-24 rounded-full mx-auto" src="images/lina.jpg" alt="" width="384" height="512">
-                        <div class="pt-6 text-center space-y-4">
-                            <blockquote>
-                                <p class="text-lg font-medium text-slate-700 dark:text-slate-300">
-                                    <span data-lang="en" class="hidden">“with heart and commitment for our
-                                        juniors”</span>
-                                    <span data-lang="de">“mit Herz und Engagement für unseren Nachwuchs”</span>
-                                </p>
-                            </blockquote>
-                            <figcaption class="font-medium">
-                                <div class="text-sky-500 dark:text-sky-400">
-                                    Lina Köllmann
-                                </div>
-                                <div class="text-slate-700 dark:text-slate-500">
-                                    <span data-lang="en" class="hidden">Youth welfare officer</span>
-                                    <span data-lang="de">Jugendwartin</span>
-                                </div>
-                            </figcaption>
-                            <blockquote>
-                                <p class="text-lg font-medium text-slate-700 dark:text-slate-300">
-                                    <a href="mailto: jugendwart@bv-aachen.de" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                                        jugendwart@bv-aachen.de</a>
-                                </p>
-                            </blockquote>
-                        </div>
-                    </figure>
-                </div>
-
-            </section>
-
-            <!--
-            <section class="text-center px-8 mt-20 sm:mt-32 md:mt-20">
-                <div class="content-block">
-                    <span data-lang="en" class="hidden">Attached are further information about our</span>
-                    <span data-lang="de">Anbei weitere Informationen zu unserer </span>
-                    <a href="files/Satzung BV Aachen 2009 Stand 2015.pdf" target="_blank" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                        <span data-lang="en" class="hidden">Articles of Association</span>
-                        <span data-lang="de">Satzung</span>
-                    </a>,
-                    <a href="files/Geschaeftsordnung Stand 2015.pdf" target="_blank" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                        <span data-lang="en" class="hidden">Rules of Procedure</span>
-                        <span data-lang="de">Geschäftsordnung</span>
-                    </a>
-                    <span data-lang="en" class="hidden">and</span>
-                    <span data-lang="de"> und </span>
-                    <a href="files/Finanzordnung Stand 2015.pdf" target="_blank" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                        <span data-lang="en" class="hidden">Financial Regulations</span>
-                        <span data-lang="de">Finanzordnung</span>
-                    </a>.
-                </div>
-            </section>
-            -->
-        </div>
+    <div class="sheet__foot">
+      <button class="lang" type="button" data-toggle-lang aria-label="Sprache wechseln / switch language"><span data-code="de">DE</span><span data-code="en">EN</span></button>
+      <span class="sheet__legal"><a href="impressum.html"><span data-lang="de">Impressum</span><span data-lang="en">Imprint</span></a><a href="datenschutz.html"><span data-lang="de">Datenschutz</span><span data-lang="en">Privacy</span></a></span>
     </div>
+  </div>
 
-    <div id="footer-wrapper" class="mt-20">
-        <div id="footer" class="text-center">
-            <div id="adresse">
-                <p>
-                    <a href="./impressum.html" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                        <span data-lang="en" class="hidden">Imprint</span>
-                        <span data-lang="de">Impressum</span>
-                    </a> <b> | </b>
-                    <a href="./datenschutz.html" class="font-medium text-blue-600  dark:text-blue-500 hover:underline">
-                        <span data-lang="en" class="hidden">Privacy Policy</span>
-                        <span data-lang="de">Informationen zum Datenschutz</span>
-                    </a>
-                </p>
+  <div class="stinger" aria-hidden="true"><i></i><i></i><i></i></div>
+
+  <main id="main">
+    <!-- Broadcast feed -->
+    <section class="feed" aria-labelledby="feed-title">
+      <video class="feed__img" autoplay muted loop playsinline preload="auto" poster="assets/video/hero-poster.jpg" aria-hidden="true" data-feed>
+        <source src="assets/video/hero-540.mp4" type="video/mp4" media="(max-width: 760px)">
+        <source src="assets/video/hero-720.mp4" type="video/mp4">
+      </video>
+      <div class="net" aria-hidden="true"></div>
+      <button class="feed__pause" type="button" data-feed-toggle aria-pressed="false">
+        <svg class="i-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/></svg>
+        <svg class="i-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5l11 7-11 7z"/></svg>
+        <span class="i-pause"><span data-lang="de">Video pausieren</span><span data-lang="en">Pause video</span></span>
+        <span class="i-play"><span data-lang="de">Video abspielen</span><span data-lang="en">Play video</span></span>
+      </button>
+
+      <div class="feed__bottom">
+        <div class="wrap feed__row">
+          <div class="l3">
+            <h1 id="feed-title" class="l3__title">BV Aachen</h1>
+            <div class="l3__sub">
+              <span class="a num">2009 e.V.</span>
+              <span class="b">
+                <span data-lang="de">Aachens größter Badmintonverein</span>
+                <span data-lang="en">Aachen’s largest badminton club</span>
+              </span>
             </div>
+            <p class="l3__claim">
+              <span data-lang="de">Reiner Badmintonverein, wettkampforientiert, rund 200 Mitglieder. Fünf Abende pro Woche in zwei Hallen.</span>
+              <span data-lang="en">A pure badminton club, competition-minded, around 200 members. Five evenings a week in two halls.</span>
+            </p>
+          </div>
+
+          <div class="feed__actions">
+            <a class="btn btn--orange" href="training.html">
+              <span><span data-lang="de">Trainingszeiten</span><span data-lang="en">Training times</span></span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn--white" href="verein.html">
+              <span><span data-lang="de">Mitglied werden</span><span data-lang="en">Become a member</span></span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <!-- This week -->
+    <section class="section section--ink on-dark" id="woche" aria-labelledby="woche-title">
+      <div class="wrap">
+        <div class="head">
+          <h2 class="h2" id="woche-title"><span data-lang="de">Diese Woche<br>in der Halle</span><span data-lang="en">This week<br>on court</span></h2>
+          <p class="lede">
+            <span data-lang="de">Beim freien Spiel kannst du einfach vorbeikommen, eine Voranmeldung ist aktuell nicht nötig. Anfänger- und Jugendtraining laufen über eine Warteliste.</span>
+            <span data-lang="en">Free play is walk-in, no sign-up needed right now. Beginner and youth training run via a waiting list.</span>
+          </p>
+        </div>
+        <div class="rundown" id="rundown" aria-live="polite">
+          <noscript><p>Die Trainingszeiten findest du auf der <a href="training.html">Trainingsseite</a>.</p></noscript>
+        </div>
+        <p style="margin-top:28px">
+          <a class="link" href="training.html">
+            <span data-lang="de">Alle Zeiten, Hallen &amp; Ferienregeln</span><span data-lang="en">All times, halls &amp; holiday rules</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section section--tight" aria-labelledby="about-title">
+      <div class="wrap split">
+        <div class="split__media">
+          <img src="assets/img/mixed.jpg" alt="Mixed-Doppel beim Alemannen Cup" width="1800" height="1200" loading="lazy">
+          <div class="l3-mini reveal">
+            <span><span data-lang="de">Seit 2009</span><span data-lang="en">Since 2009</span></span>
+            <span><span data-lang="de">Hervorgegangen aus dem TSV Alemannia Aachen</span><span data-lang="en">Spun off from TSV Alemannia Aachen</span></span>
+          </div>
+        </div>
+        <div class="prose">
+          <h2 class="h2" id="about-title" style="margin-bottom:28px"><span data-lang="de">Über uns</span><span data-lang="en">About us</span></h2>
+          <p class="lede">
+            <span data-lang="de">Der BV Aachen ist ein reiner Badmintonverein mit klar wettkampforientiertem Schwerpunkt im Erwachsenenbereich. Im Mittelpunkt stehen unsere Mannschaften, von der Bezirksklasse bis zur Verbandsliga.</span>
+            <span data-lang="en">BV Aachen is a pure badminton club with a clear competitive focus in the adult section. Our teams are at the centre of it, from Bezirksklasse up to Verbandsliga.</span>
+          </p>
+          <p class="muted" style="margin-top:1em">
+            <span data-lang="de">Mit rund 200 Mitgliedern sind wir der größte Badmintonverein Aachens und der Region. In den letzten Jahren ist außerdem eine große Kinder- und Jugendabteilung entstanden.</span>
+            <span data-lang="en">With around 200 members we are the largest badminton club in Aachen and the region. In recent years a large kids’ and youth section has grown as well.</span>
+          </p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:28px">
+            <a class="btn" href="teams.html">
+              <span><span data-lang="de">Unsere Mannschaften</span><span data-lang="en">Our teams</span></span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn--petrol" href="verein.html">
+              <span><span data-lang="de">Mitglied werden</span><span data-lang="en">Become a member</span></span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cup band -->
+    <section class="band" aria-labelledby="cup-title">
+      <img src="assets/img/cup-crowd.jpg" alt="Gruppenfoto aller Teilnehmenden beim Alemannen Cup 2026" width="2200" height="1467" loading="lazy">
+      <div class="band__inner">
+        <div class="wrap feed__row">
+          <div class="l3-mini reveal" style="gap:4px">
+            <h2 id="cup-title" style="font-size:clamp(1.8rem,5vw,3.6rem);line-height:1">Alemannen Cup 2026</h2>
+            <span class="num">13.–14.06.2026 · Hexenkessel Aachen</span>
+          </div>
+          <div style="display:grid;gap:8px;max-width:420px">
+            <p style="color:#d4dfe8">
+              <span data-lang="de">Rund 300 Spieler:innen aus Deutschland, Belgien und den Niederlanden. Danke an alle Teilnehmenden, Sponsoren und Helfer:innen!</span>
+              <span data-lang="en">Around 300 players from Germany, Belgium and the Netherlands. Thanks to every player, sponsor and volunteer!</span>
+            </p>
+            <a class="btn btn--orange" href="alemannencup.html" style="justify-self:start">
+              <span><span data-lang="de">Ergebnisse &amp; Fotos</span><span data-lang="en">Results &amp; photos</span></span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M4 12h15M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Board -->
+    <section class="section" aria-labelledby="board-title">
+      <div class="wrap">
+        <div class="head">
+          <h2 class="h2" id="board-title"><span data-lang="de">Vorstand</span><span data-lang="en">Board</span></h2>
+          <p class="lede muted">
+            <span data-lang="de">Fragen zu Verein, Beitrag oder Jugend? Schreib direkt der richtigen Person.</span>
+            <span data-lang="en">Questions about the club, fees or youth? Write straight to the right person.</span>
+          </p>
+        </div>
+        <div class="board">
+          <article class="person">
+            <div class="person__img">
+              <img src="assets/img/jochen.jpg" alt="Jochen Abele" width="548" height="544" loading="lazy">
+              <div class="l3-mini reveal"><span>Jochen Abele</span><span><span data-lang="de">Vorsitzender</span><span data-lang="en">Chairman</span></span></div>
+            </div>
+            <a class="person__mail" href="mailto:vorsitz@bv-aachen.de"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M3 5h18v14H3z"/><path d="M3 6l9 7 9-7"/></svg>vorsitz@bv-aachen.de</a>
+          </article>
+          <article class="person">
+            <div class="person__img">
+              <img src="assets/img/felix.jpg" alt="Felix Flammer" width="198" height="216" loading="lazy">
+              <div class="l3-mini reveal"><span>Felix Flammer</span><span><span data-lang="de">Stellv. Vorsitzender</span><span data-lang="en">Vice chairman</span></span></div>
+            </div>
+            <a class="person__mail" href="mailto:vorsitz@bv-aachen.de"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M3 5h18v14H3z"/><path d="M3 6l9 7 9-7"/></svg>vorsitz@bv-aachen.de</a>
+          </article>
+          <article class="person">
+            <div class="person__img">
+              <img src="assets/img/simon.jpg" alt="Simon Vaupel" width="500" height="690" loading="lazy">
+              <div class="l3-mini reveal"><span>Simon Vaupel</span><span><span data-lang="de">Kassenwart</span><span data-lang="en">Treasurer</span></span></div>
+            </div>
+            <a class="person__mail" href="mailto:kassenwart@bv-aachen.de"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M3 5h18v14H3z"/><path d="M3 6l9 7 9-7"/></svg>kassenwart@bv-aachen.de</a>
+            <p class="person__quote"><span data-lang="de">„Einer muss den Job ja machen.“</span><span data-lang="en">“Someone has to do the job.”</span></p>
+          </article>
+          <article class="person">
+            <div class="person__img">
+              <img src="assets/img/lina.jpg" alt="Lina Köllmann" width="600" height="1065" loading="lazy">
+              <div class="l3-mini reveal"><span>Lina Köllmann</span><span><span data-lang="de">Jugendwartin</span><span data-lang="en">Youth officer</span></span></div>
+            </div>
+            <a class="person__mail" href="mailto:jugendwart@bv-aachen.de"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M3 5h18v14H3z"/><path d="M3 6l9 7 9-7"/></svg>jugendwart@bv-aachen.de</a>
+            <p class="person__quote"><span data-lang="de">„Mit Herz und Engagement für unseren Nachwuchs.“</span><span data-lang="en">“With heart and commitment for our juniors.”</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot on-dark">
+    <div class="net" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="foot__grid">
+        <div class="foot__brand">
+          <img src="assets/img/logo-white.png" alt="BVA 09" width="200" height="98">
+          <p><span data-lang="de">BV Aachen 2009 e.V. · Badminton in Burtscheid und Laurensberg.</span><span data-lang="en">BV Aachen 2009 e.V. · Badminton in Burtscheid and Laurensberg.</span></p>
+        </div>
+        <div>
+          <p class="foot__h"><span data-lang="de">Verein</span><span data-lang="en">Club</span></p>
+          <ul>
+            <li><a href="training.html">Training</a></li>
+            <li><a href="teams.html"><span data-lang="de">Mannschaften</span><span data-lang="en">Teams</span></a></li>
+            <li><a href="alemannencup.html">Alemannen Cup</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="foot__h"><span data-lang="de">Kontakt</span><span data-lang="en">Contact</span></p>
+          <ul>
+            <li><a class="mono" href="mailto:vorsitz@bv-aachen.de">vorsitz@</a></li>
+            <li><a class="mono" href="mailto:seniorentraining@bv-aachen.de">seniorentraining@</a></li>
+            <li><a class="mono" href="mailto:jugendwart@bv-aachen.de">jugendwart@</a></li>
+            <li><a class="mono" href="mailto:kassenwart@bv-aachen.de">kassenwart@</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="foot__h"><span data-lang="de">Hallen</span><span data-lang="en">Halls</span></p>
+          <ul>
+            <li>Burtscheid · <span class="mono">Malmedyer Str. 55</span></li>
+            <li>Laurensberg · <span class="mono">Hander Weg 89</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot__legal">
+        <span class="num">© 2026 BV Aachen 2009 e.V.</span>
+        <span><a href="impressum.html"><span data-lang="de">Impressum</span><span data-lang="en">Imprint</span></a> · <a href="datenschutz.html"><span data-lang="de">Datenschutz</span><span data-lang="en">Privacy</span></a></span>
+      </div>
     </div>
-    <!-- </div> -->
+  </footer>
 </body>
-
 </html>

@@ -28,58 +28,47 @@ const updateSeasonInfoColor = () => {
 
 document.addEventListener('DOMContentLoaded', () => {
     const today = new Date();
-    const month = today.getMonth(); // 0: January to 11: December
+    const month = today.getMonth(); // 0: January, 1: February, ..., 11: December
 
-    const setupSeasonToggle = (suffix) => {
-        const columnsMonday1 = document.querySelectorAll(`[data-column="monday1${suffix}"]`);
-        const columnsMonday2 = document.querySelectorAll(`[data-column="monday2${suffix}"]`);
+    const columnsMonday1 = document.querySelectorAll('[data-column="monday1"]');
+    const columnsMonday2 = document.querySelectorAll('[data-column="monday2"]');
 
-        const columnsThursday1 = document.querySelectorAll(`[data-column="thursday1${suffix}"]`);
-        const columnsThursday2 = document.querySelectorAll(`[data-column="thursday2${suffix}"]`);
-
-        const setSummer = () => {
-            columnsMonday1.forEach(element => element.style.display = 'none');
-            columnsThursday1.forEach(element => element.style.display = 'none');
-            columnsMonday2.forEach(element => element.style.display = 'block');
-            columnsThursday2.forEach(element => element.style.display = 'block');
-            document.getElementById(`seasonInfo_Ger${suffix}`).textContent = 'Von 01.04 bis 30.09';
-            document.getElementById(`seasonInfo_Eng${suffix}`).textContent = 'From 01.04 to 30.09';
-        };
-
-        const setWinter = () => {
-            columnsMonday1.forEach(element => element.style.display = 'block');
-            columnsThursday1.forEach(element => element.style.display = 'block');
-            columnsMonday2.forEach(element => element.style.display = 'none');
-            columnsThursday2.forEach(element => element.style.display = 'none');
-            document.getElementById(`seasonInfo_Ger${suffix}`).textContent = 'Von 01.10 bis 31.03';
-            document.getElementById(`seasonInfo_Eng${suffix}`).textContent = 'From 01.10 to 31.03';
-        };
- 
-        document.getElementById(`summerButton${suffix}`).addEventListener('click', () => {
-            setSummer();
-            document.getElementById(`summerButton${suffix}`).classList.add('active');
-            document.getElementById(`winterButton${suffix}`).classList.remove('active');
-        });
-
-        document.getElementById(`winterButton${suffix}`).addEventListener('click', () => {
-            setWinter();
-            document.getElementById(`winterButton${suffix}`).classList.add('active');
-            document.getElementById(`summerButton${suffix}`).classList.remove('active');
-        });
-
-        // Initial setup based on current month
-        if (month >= 3 && month <= 8) {
-            setSummer();
-            document.getElementById(`summerButton${suffix}`).classList.add('active');
-            document.getElementById(`winterButton${suffix}`).classList.remove('active');
-        } else {
-            setWinter();
-            document.getElementById(`winterButton${suffix}`).classList.add('active');
-            document.getElementById(`summerButton${suffix}`).classList.remove('active');
-        }
+    const setSummer = () => {
+        columnsMonday1.forEach(element => element.style.display = 'none');
+        columnsMonday2.forEach(element => element.style.display = 'block');
+        document.getElementById('seasonInfo_Ger').textContent = 'Von 01.04 bis 30.09';
+        document.getElementById('seasonInfo_Eng').textContent = 'From 01.04 to 30.09';
+        updateSeasonInfoColor(); // Update color based on current date
     };
 
-    // Initialize for both suffixes
-    setupSeasonToggle('');
-});
+    const setWinter = () => {
+        columnsMonday1.forEach(element => element.style.display = 'block');
+        columnsMonday2.forEach(element => element.style.display = 'none');
+        document.getElementById('seasonInfo_Ger').textContent = 'Von 01.10 bis 31.03';
+        document.getElementById('seasonInfo_Eng').textContent = 'From 01.10 to 31.03';
+        updateSeasonInfoColor(); // Update color based on current date
+    };
 
+    document.getElementById('summerButton').addEventListener('click', () => {
+        setSummer();
+        document.getElementById('summerButton').classList.add('active');
+        document.getElementById('winterButton').classList.remove('active');
+    });
+
+    document.getElementById('winterButton').addEventListener('click', () => {
+        setWinter();
+        document.getElementById('winterButton').classList.add('active');
+        document.getElementById('summerButton').classList.remove('active');
+    });
+
+    // Initial setup based on current month
+    if (month >= 3 && month <= 8) { // April (3) to September (8)
+        setSummer();
+        document.getElementById('summerButton').classList.add('active');
+        document.getElementById('winterButton').classList.remove('active');
+    } else {
+        setWinter();
+        document.getElementById('winterButton').classList.add('active');
+        document.getElementById('summerButton').classList.remove('active');
+    }
+});
