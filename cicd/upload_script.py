@@ -1,11 +1,12 @@
 import os
 import sys
-from ftplib import FTP
 import subprocess
+import paramiko
 
 SECRET_HOST_NAME = os.getenv('SECRET_HOST_NAME')
 SECRET_PASSWORD = os.getenv('SECRET_PASSWORD')
 SECRET_USER_NAME = os.getenv('SECRET_USER_NAME')
+SECRET_PORT = int(os.getenv('SECRET_PORT') or 22)
 number_deleted_files = 0
 number_inserted_files = 0
 print_line_seperator = "###############################################################"
@@ -33,6 +34,46 @@ uploadable_file_names = [
                           "javascripts",  
                           "styles",
                           "videos"]
+
+
+# Wraps an SFTP session behind the ftplib method names used in this script,
+# since the hoster no longer accepts unencrypted FTP
+class SFTPClient:
+  def __init__(self, host, port, user, password):
+    self.ssh = paramiko.SSHClient()
+    self.ssh.load_system_host_keys()
+    self.ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    self.ssh.connect(host, port=port, username=user, password=password,
+                     look_for_keys=False, allow_agent=False, timeout=30)
+    self.sftp = self.ssh.open_sftp()
+    # paramiko only tracks a working directory after the first chdir
+    self.sftp.chdir('.')
+
+  def cwd(self, path):
+    self.sftp.chdir(path)
+
+  def pwd(self):
+    return self.sftp.getcwd()
+
+  def nlst(self, path='.'):
+    return self.sftp.listdir(path)
+
+  def mkd(self, path):
+    self.sftp.mkdir(path)
+
+  def rmd(self, path):
+    self.sftp.rmdir(path)
+
+  def delete(self, path):
+    self.sftp.remove(path)
+
+  def storbinary(self, command, file):
+    # command has the ftplib form "STOR <remote path>"
+    self.sftp.putfo(file, command.split(' ', 1)[1])
+
+  def quit(self):
+    self.sftp.close()
+    self.ssh.close()
 
 
 def get_current_branch_name():
@@ -269,18 +310,14 @@ def main_script():
   print(print_line_seperator)
 
   try:
-    # create FTP server
+    # connect and login to the SFTP server
     print(print_line_seperator)
-    print("Creating FTP server")
-    ftp = FTP(SECRET_HOST_NAME)
-
-    # login to the server
-    print("Logging in to the FTP server")
-    ftp.login(user=SECRET_USER_NAME, passwd=SECRET_PASSWORD)
+    print("Connecting to the SFTP server")
+    ftp = SFTPClient(SECRET_HOST_NAME, SECRET_PORT, SECRET_USER_NAME, SECRET_PASSWORD)
     print("Login successful")
-    
-    
-    
+
+
+
     if contains_force:
       full_reinstallation(ftp, root_upload_folder)
     else:
@@ -295,12 +332,13 @@ def main_script():
 
     # close the connection
     print(print_line_seperator)
-    print("Closing the FTP server connection")
+    print("Closing the SFTP server connection")
     ftp.quit()
   except Exception as e:
     print(e)
-    print('Error: Unable to connect to the FTP server ')
-    
+    print('Error: SFTP upload failed')
+    sys.exit(1)
+
   print(print_line_seperator)
   print("Script finished")
     
@@ -319,16 +357,12 @@ def manual_test():
   print(print_line_seperator)
   
   try:
-    # create FTP server
+    # connect and login to the SFTP server
     print(print_line_seperator)
-    print("Creating FTP server")
-    ftp = FTP(SECRET_HOST_NAME)
-
-    # login to the server
-    print("Logging in to the FTP server")
-    ftp.login(user=SECRET_USER_NAME, passwd=SECRET_PASSWORD)
+    print("Connecting to the SFTP server")
+    ftp = SFTPClient(SECRET_HOST_NAME, SECRET_PORT, SECRET_USER_NAME, SECRET_PASSWORD)
     print("Login successful")
-    
+
     if contains_force:
       full_reinstallation(ftp, root_upload_folder)
     else:
@@ -337,12 +371,13 @@ def manual_test():
 
     # close the connection
     print(print_line_seperator)
-    print("Closing the FTP server connection")
+    print("Closing the SFTP server connection")
     ftp.quit()
   except Exception as e:
     print(e)
-    print('Error: Unable to connect to the FTP server')
-    
+    print('Error: SFTP upload failed')
+    sys.exit(1)
+
   print(print_line_seperator)
   print("Script finished")
     

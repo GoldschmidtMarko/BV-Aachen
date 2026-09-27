@@ -124,5 +124,6 @@ jobs:
           SECRET_HOST_NAME: ${{ secrets.SECRET_HOST_NAME }}
           SECRET_PASSWORD: ${{ secrets.SECRET_PASSWORD }}
           SECRET_USER_NAME: ${{ secrets.SECRET_USER_NAME }}
+          SECRET_PORT: ${{ secrets.SECRET_PORT }}
         run: |
           python -u cicd/upload_script.py "${{ env.changed_files }}" "${{ env.deleted_files }}" "${{ env.force_flag }}"
