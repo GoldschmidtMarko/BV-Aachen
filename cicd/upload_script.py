@@ -26,6 +26,7 @@ uploadable_file_names = [
                           "tailwind.config.js",
                           "README.md",
                           # folders
+                          "assets",
                           "php",
                           "files",
                           "images", 
