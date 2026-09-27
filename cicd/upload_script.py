@@ -1,5 +1,6 @@
 import os
 import sys
+import socket
 import subprocess
 import paramiko
 
@@ -43,8 +44,11 @@ class SFTPClient:
     self.ssh = paramiko.SSHClient()
     self.ssh.load_system_host_keys()
     self.ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+    # create_connection falls back to IPv4 when IPv6 is unreachable (e.g. on
+    # GitHub runners), paramiko's own connect gives up on the first address
+    sock = socket.create_connection((host, port), timeout=30)
     self.ssh.connect(host, port=port, username=user, password=password,
-                     look_for_keys=False, allow_agent=False, timeout=30)
+                     look_for_keys=False, allow_agent=False, timeout=30, sock=sock)
     self.sftp = self.ssh.open_sftp()
     # paramiko only tracks a working directory after the first chdir
     self.sftp.chdir('.')
