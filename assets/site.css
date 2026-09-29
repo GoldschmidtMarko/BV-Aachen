@@ -405,7 +405,7 @@ html[data-ui-lang="en"] .lang [data-code="en"] { background: var(--ink); color: 
 @media (max-width: 1100px) {
   .bug__season { display: none; }
 }
-@media (max-width: 1020px) {
+@media (max-width: 1320px) {
   .bug .nav { display: none; }
   .menu-btn { display: grid; }
 }
@@ -714,6 +714,8 @@ html[data-ui-lang="en"] .lang [data-code="en"] { background: var(--ink); color: 
   letter-spacing: -0.025em;
   text-transform: uppercase;
 }
+/* Headlines in a half-width column (split layout) need to scale with that column, not the page */
+.h2--half { font-size: clamp(2.1rem, 4.4vw, 3.6rem); }
 .h3 {
   font-stretch: 112%;
   font-weight: 800;
@@ -1162,6 +1164,13 @@ html[data-ui-lang="en"] .lang [data-code="en"] { background: var(--ink); color: 
 }
 .hall address { font-style: normal; line-height: 1.5; }
 .hall .days { display: flex; gap: 6px; flex-wrap: wrap; }
+.map {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border: 0;
+  background: var(--hall-2);
+}
 @media (max-width: 720px) { .halls { grid-template-columns: 1fr; } }
 
 /* ---------- Teams ---------- */
