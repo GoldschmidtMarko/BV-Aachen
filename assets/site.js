@@ -21,7 +21,7 @@
   var KINDS = {
     free: { de: "Freies Spiel", en: "Free play" },
     team: { de: "Mannschaftstraining", en: "Team training" },
-    beginner: { de: "Anfängertraining", en: "Beginner training" },
+    beginner: { de: "Erwachsentraining", en: "Adult training" },
     youth: { de: "Kinder & Jugend", en: "Kids & youth" }
   };
   var STATES = {

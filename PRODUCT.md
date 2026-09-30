@@ -27,7 +27,7 @@ Largest badminton club in Aachen and the region (~200 members), clearly competit
 ## Operating Context
 
 - Two halls: Laurensberg (Anne-Frank-Gymnasium Halle II, Hander Weg 89, 52072) and Burtscheid (Einhard-Gymnasium TH II, Malmedyer Str. 55, 52066).
-- Summer (01.04–30.09) and winter schedules; weekday evenings 18:00–23:00. Session types: Kinder & Jugend Training, Anfänger Training, Mannschaftstraining, Freies Spiel (Senioren).
+- Summer (01.04–30.09) and winter schedules; weekday evenings 18:00–23:00. Session types: Kinder & Jugend Training, Erwachsentraining, Mannschaftstraining, Freies Spiel (Senioren).
 - NRW school holidays: Burtscheid open, Laurensberg closed; both closed over Christmas holidays.
 - Monday team training is for team players only; Thursday beginner session and youth training have waiting lists (youth 9–12 months).
 - Alemannen Cup: June weekend, Hexenkessel, Neuköllner Str. 9, 52068 Aachen; five disciplines, classes Elite/Premium/Standard/Basic/Fun (VL/LL/BL/BK/KL); flyers in DE/EN/NL/FR; results linked externally; photo galleries per year.
