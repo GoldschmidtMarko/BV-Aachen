@@ -1,399 +1,266 @@
 <!DOCTYPE html>
-<html lang="en">
-<!--
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="de" lang="de">
--->
-
+<html lang="de" data-ui-lang="de">
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta name="keywords" content="BV Aachen, Badminton, Aachen">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-
-    <link rel="stylesheet" href="styles/output.css">
-    <script src="javascripts/navigation-menu-showhide.js"></script>
-    <script src="javascripts/showhide-Modal.js"></script>
-    <!-- used for to get idb library, a CHIPS cookie method for the language switch -->
-    <script src="https://cdn.jsdelivr.net/npm/idb/build/iife/index-min.js"></script>
-    <script src="javascripts/language-toggle.js"></script>
-
-    <title>BV Aachen 09</title>
-    <link rel="stylesheet" href="styles/layout.css">
-    <link rel="stylesheet" href="styles/modal.css">
-    <link rel="stylesheet" href="styles/alemannencup.css">
-    <link rel="stylesheet" href="styles/alemannencup-enhanced.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alemannen Cup 2026 · BV Aachen 2009 e.V.</title>
+  <meta name="description" content="Alemannen Cup: internationales Badmintonturnier des BV Aachen im Hexenkessel Aachen mit Spieler:innen aus Deutschland, Belgien und den Niederlanden.">
+  <meta name="theme-color" content="#0b1b2b">
+  <link rel="icon" href="images/icon.png">
+  <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/martian-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/site.css">
+  <script>document.documentElement.classList.add("js")</script>
+  <script src="assets/site.js" defer></script>
 </head>
+<body>
+  <a class="visually-hidden" href="#main">Zum Inhalt springen</a>
 
-<body class="antialiased text-slate-500 dark:text-slate-400 bg-white dark:bg-slate-900 text-justify dark">
-    <nav class="fixed-top flex items-center justify-between flex-wrap bg-gray-800 p-3">
-        <div class="flex items-center flex-shrink-0 text-white mr-6">
-            <div class="flex flex-shrink-0 items-center bg-gray-100 p-1 rounded-md">
-                <img class="h-8 w-auto rounded-md" src="images/Logo.png" alt="BV Aachen">
-            </div>
-        </div>
-        <div class="block md:hidden lg:hidden">
-            <button class="flex items-center px-3 py-2 border rounded text-gray-200 border-gray-400 hover:text-white hover:border-white" onclick="showhideNavigation(['navigation', 'languageToggle'])">
-                <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <title>Menu</title>
-                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-                </svg>
-            </button>
-        </div>
-        <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto md:flex md:items-center md:w-auto text-center">
-            <div id="navigation" class="text-sm lg:flex-grow md:flex-grow" style="display: block;">
-                <a href="./index.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">
-                    Start</a>
-                <a href="./alemannencup.html" aria-current="page" class="block mt-4 rounded-md bg-gray-900 px-3 py-2 text-sm font-medium lg:inline-block lg:mt-0 md:inline-block md:mt-0" style="color: red;">
-                        Alemannen Cup
-                    </a>
-                <a href="./teams.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">
-                    <span data-lang="en" class="hidden">Teams</span>
-                    <span data-lang="de">Mannschaften</span>
-                </a>
-                <a href="./training.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">Training</a>
-                <a href="./verein.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">
-                    <span data-lang="en" class="hidden">Become a Member</span>
-                    <span data-lang="de">Mitglied werden</span>
-                </a>
-                <a href="./kontakt.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">
-                    <span data-lang="en" class="hidden">Contact</span>
-                    <span data-lang="de">Kontakt</span>
-                </a>
-                <a href="./FAQ.html" class="block mt-4 rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white lg:inline-block lg:mt-0 md:inline-block md:mt-0">FAQ</a>
-            </div>
-            <button id="languageToggle" class="ml-4 bg-white text-blue-500 w-8 h-8 rounded-full flex items-center justify-center">
-                <span id="languageIcon">DE</span>
-            </button>
-        </div>
+  <!-- Score bug -->
+  <header class="bug">
+    <div class="bug__score">
+      <a class="bug__crest" href="index.html" aria-label="BV Aachen Startseite"><img src="assets/img/logo-white.png" alt="BVA 09" width="200" height="98"></a>
+      <span class="bug__season num">25/26</span>
+      <a class="bug__live" href="training.html#woche" data-live aria-live="polite"><span class="live-dot"></span><span><b>Training</b><small>Mo–Fr · 18–23 Uhr</small></span></a>
+    </div>
+    <div class="bug__nav">
+      <nav class="nav" aria-label="Hauptnavigation">
+        <a href="index.html">Start</a>
+        <a href="training.html">Training</a>
+        <a href="teams.html"><span data-lang="de">Mannschaften</span><span data-lang="en">Teams</span></a>
+        <a href="alemannencup.html" aria-current="page" class="nav__cup">Alemannen Cup</a>
+        <a href="verein.html"><span data-lang="de">Mitglied werden</span><span data-lang="en">Join</span></a>
+        <a href="kontakt.html"><span data-lang="de">Kontakt</span><span data-lang="en">Contact</span></a>
+        <a href="FAQ.html">FAQ</a>
+      </nav>
+      <button class="lang" type="button" data-toggle-lang aria-label="Sprache wechseln / switch language"><span data-code="de">DE</span><span data-code="en">EN</span></button>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="sheet" aria-label="Menü">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square"><path d="M3 7h18M3 12h18M3 17h12"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="sheet" id="sheet" data-open="false" role="dialog" aria-modal="true" aria-label="Menü">
+    <div class="sheet__top">
+      <a class="bug__crest" href="index.html" aria-label="BV Aachen Startseite"><img src="assets/img/logo-white.png" alt="BVA 09" width="400" height="196"></a>
+      <button class="sheet__close" type="button" aria-label="Menü schließen">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="square"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      </button>
+    </div>
+    <nav aria-label="Mobile Navigation">
+      <a href="index.html"><span>Start</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+      <a href="training.html"><span>Training</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+      <a href="teams.html"><span><span data-lang="de">Mannschaften</span><span data-lang="en">Teams</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+      <a href="alemannencup.html" aria-current="page"><span>Alemannen Cup</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+      <a href="verein.html"><span><span data-lang="de">Mitglied werden</span><span data-lang="en">Join</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+      <a href="kontakt.html"><span><span data-lang="de">Kontakt</span><span data-lang="en">Contact</span></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+      <a href="FAQ.html"><span>FAQ</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
     </nav>
-    <div class="alemannencup-hero">
-        <div class="sponsor-section mx-auto px-4 fade-in bg-black">
-            <div class="flex justify-center items-center flex-wrap gap-8">
-                <div class="logo-style flex-1 flex justify-center">
-                    <div class="regioit-placeholder flex items-center justify-center" style="position:relative; width:calc(2 * 8rem); height:8rem;">
-                        <img src="images/Logo-regio iT-web.png" alt="Logo regio iT" class="max-w-full max-h-32 object-contain" style="position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); height:8rem; width:auto;" />
-                    </div>
-                </div>
-                
-                <div class="flex-2 text-center px-8">
-                    <a href="https://dbv.turnier.de/tournament/1EB702E0-4333-44F8-BBEB-FE5DE2E91269" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-700 transition-colors">
-                        <h1 class="text-4xl md:text-6xl font-extrabold text-current">
-                            Alemannen Cup 2026
-                        </h1>
-                    </a>
-                    <p class="text-xl text-white/90 font-medium">
-                        <span data-lang="en" class="hidden">International Badminton Tournament</span>
-                        <span data-lang="de">Internationales Badminton Turnier</span>
-                    </p>
-                </div>
-                
-                <div class="logo-style flex-1 flex justify-center">
-                    <img src="images/stawag-logo-orange.svg" alt="Logo STAWAG" class="sponsor-logo max-w-full max-h-32 object-contain">
-                </div>
-            </div>
-        </div>
+    <div class="sheet__foot">
+      <button class="lang" type="button" data-toggle-lang aria-label="Sprache wechseln / switch language"><span data-code="de">DE</span><span data-code="en">EN</span></button>
+      <span class="sheet__legal"><a href="impressum.html"><span data-lang="de">Impressum</span><span data-lang="en">Imprint</span></a><a href="datenschutz.html"><span data-lang="de">Datenschutz</span><span data-lang="en">Privacy</span></a></span>
     </div>
+  </div>
 
-    <div class="flex justify-center px-6 mt-6 gap-6 flex-wrap">
-        <!-- Deutsche Ausschreibung -->
-        <a href="files/Al-Cup Ausschreibung 2026 DE.pdf" download target="_blank" rel="noopener noreferrer">
-            <img src="images/AL-PDF-DE.png" alt="Ausschreibung Deutsch" class="w-24 h-24 cursor-pointer hover:opacity-80">
-            <p class="text-center text-sm mt-2">Deutsch</p>
-        </a>
+  <div class="stinger" aria-hidden="true"><i></i><i></i><i></i></div>
 
-         <!-- Englische Ausschreibung -->
-         <a href="files/Al-Cup Ausschreibung 2026 EN.pdf" download target="_blank" rel="noopener noreferrer">
-            <img src="images/AL-PDF-EN.png" alt="Tournament Brochure English" class="w-24 h-24 cursor-pointer hover:opacity-80">
-            <p class="text-center text-sm mt-2">English</p>
-        </a>
+  <main id="main">
+    <header class="masthead masthead--photo">
+      <img src="assets/cup/12.jpg" alt="Gruppenfoto vor der Halle beim Alemannen Cup 2026" width="1600" height="1067">
+      <div class="wrap feed__row">
+        <div>
+          <div class="l3">
+            <h1 class="l3__title l3__title--fit">Alemannen Cup</h1>
+            <div class="l3__sub">
+              <span class="a num">2026</span>
+              <span class="b"><span data-lang="de">Internationales Badmintonturnier</span><span data-lang="en">International badminton tournament</span></span>
+            </div>
+          </div>
+          <p class="lede">
+            <span data-lang="de"><strong>Der Cup 2026 ist vorbei.</strong> Danke an alle Teilnehmenden, Sponsoren und Helfer:innen für ein großartiges Wochenende!</span>
+            <span data-lang="en"><strong>The 2026 cup is over.</strong> Thanks to every player, sponsor and volunteer for a great weekend!</span>
+          </p>
+        </div>
+        <div class="feed__actions">
+          <a class="btn btn--orange" href="https://dbv.turnier.de/sport/winners.aspx?id=1eb702e0-4333-44f8-bbeb-fe5de2e91269" target="_blank" rel="noopener">
+            <span><span data-lang="de">Ergebnisse 2026</span><span data-lang="en">2026 results</span></span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M7 17L17 7M9 7h8v8"/></svg>
+          </a>
+          <a class="btn btn--white" href="#fotos">
+            <span><span data-lang="de">Fotos ansehen</span><span data-lang="en">See photos</span></span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M12 4v15M6 13l6 6 6-6"/></svg>
+          </a>
+        </div>
+      </div>
+    </header>
 
-        <!-- Niederländische Ausschreibung -->
-        <a href="files/Al-Cup Auschreibung 2026 NL.pdf" download target="_blank" rel="noopener noreferrer">
-            <img src="images/AL-PDF-NL.png" alt="Toernooibrochure Nederlands" class="w-24 h-24 cursor-pointer hover:opacity-80">
-            <p class="text-center text-sm mt-2">Nederlands</p>
-        </a>
+    <section class="section section--ink on-dark" style="padding-block:0">
+      <div class="wrap">
+        <div class="rundown facts" style="border:0" aria-label="Eckdaten">
+          <div class="rd-day" style="min-height:0"><span class="rd-day__hall"><span data-lang="de">Termin</span><span data-lang="en">Dates</span></span><span class="rd-day__name num" style="font-family:var(--mono)">13.–14.06.2026</span></div>
+          <div class="rd-day" style="min-height:0"><span class="rd-day__hall"><span data-lang="de">Ort</span><span data-lang="en">Venue</span></span><span class="rd-day__name">Hexenkessel</span></div>
+          <div class="rd-day" style="min-height:0"><span class="rd-day__hall"><span data-lang="de">Disziplinen</span><span data-lang="en">Events</span></span><span class="rd-day__name">HE · DE · HD · DD · MX</span></div>
+          <div class="rd-day" style="min-height:0"><span class="rd-day__hall"><span data-lang="de">Herkunft</span><span data-lang="en">Players from</span></span><span class="rd-day__name">DE · BE · NL</span></div>
+        </div>
+      </div>
+    </section>
 
-        <!-- Französische Ausschreibung -->
-        <a href="files/Al-Cup Ausschreibung 2026 FR.pdf" download target="_blank" rel="noopener noreferrer">
-            <img src="images/AL-PDF-FR.png" alt="Brochure du tournoi Français" class="w-24 h-24 cursor-pointer hover:opacity-80">
-            <p class="text-center text-sm mt-2">Français</p>
-        </a>
+    <section class="section" aria-labelledby="about-cup">
+      <div class="wrap split">
+        <div class="prose">
+          <h2 class="h2" id="about-cup" style="margin-bottom:28px"><span data-lang="de">Der Cup</span><span data-lang="en">The cup</span></h2>
+          <p class="lede">
+            <span data-lang="de">Ein großes, überregionales Turnier, das jedes Jahr viele Spieler:innen aus Deutschland, Belgien und den Niederlanden nach Aachen holt. Im letzten Jahr kamen rund 300 Spieler:innen mit Freund:innen und Familie.</span>
+            <span data-lang="en">A large regional tournament that brings players from Germany, Belgium and the Netherlands to Aachen every year. Last year around 300 players came, with friends and family.</span>
+          </p>
+          <p class="muted" style="margin-top:1em">
+            <span data-lang="de">Fünf Disziplinen (Mixed, Damendoppel, Herrendoppel, Herreneinzel, Dameneinzel) in bis zu fünf Leistungsklassen. Kommt die Elite-Klasse mangels Meldungen nicht zustande, ist Premium die höchste Klasse und nach oben offen.</span>
+            <span data-lang="en">Five events (mixed, women’s doubles, men’s doubles, men’s singles, women’s singles) in up to five classes. If Elite doesn’t fill, Premium becomes the top class and is open upwards.</span>
+          </p>
+          <div class="disc" aria-label="Disziplinen">
+            <span class="plate plate--petrol">Mixed</span>
+            <span class="plate"><span data-lang="de">Damendoppel</span><span data-lang="en">Women’s doubles</span></span>
+            <span class="plate"><span data-lang="de">Herrendoppel</span><span data-lang="en">Men’s doubles</span></span>
+            <span class="plate"><span data-lang="de">Dameneinzel</span><span data-lang="en">Women’s singles</span></span>
+            <span class="plate"><span data-lang="de">Herreneinzel</span><span data-lang="en">Men’s singles</span></span>
+          </div>
+        </div>
+        <table class="classes">
+          <caption class="visually-hidden">Leistungsklassen</caption>
+          <thead><tr><th scope="col"><span data-lang="de">Kürzel</span><span data-lang="en">Code</span></th><th scope="col"><span data-lang="de">Klasse</span><span data-lang="en">Class</span></th><th scope="col"><span data-lang="de">Spielstärke</span><span data-lang="en">Level</span></th></tr></thead>
+          <tbody>
+            <tr><td><span class="code">VL</span></td><td class="cname">Elite</td><td><span data-lang="de">Verbandsliga und höher</span><span data-lang="en">Verbandsliga and higher</span></td></tr>
+            <tr><td><span class="code">LL</span></td><td class="cname">Premium</td><td>max. Landesliga</td></tr>
+            <tr><td><span class="code">BL</span></td><td class="cname">Standard</td><td>max. Bezirksliga</td></tr>
+            <tr><td><span class="code">BK</span></td><td class="cname">Basic</td><td>max. Bezirksklasse</td></tr>
+            <tr><td><span class="code">KL</span></td><td class="cname">Fun</td><td>max. Kreisliga</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section section--ink on-dark" id="fotos" aria-labelledby="fotos-title">
+      <div class="wrap">
+        <div class="head">
+          <h2 class="h2" id="fotos-title"><span data-lang="de">Impressionen 2026</span><span data-lang="en">Impressions 2026</span></h2>
+          <p class="lede"><span data-lang="de">13 Momente vom Wochenende. Antippen zum Vergrößern.</span><span data-lang="en">13 moments from the weekend. Tap to enlarge.</span></p>
+        </div>
+        <div class="gallery">
+          <button type="button" data-full="assets/cup/4.jpg"><img src="assets/cup/4-s.jpg" alt="Sprung zum Smash, Feld 8" loading="lazy" width="640" height="427"></button>
+          <button type="button" data-full="assets/cup/1.jpg"><img src="assets/cup/1-s.jpg" alt="Überkopfschlag vor der Holzwand" loading="lazy" width="640" height="427"></button>
+          <button type="button" data-full="assets/cup/3.jpg"><img src="assets/cup/3-s.jpg" alt="Spieler beim Aufschlag, Hochformat" loading="lazy" width="640" height="960"></button>
+          <button type="button" data-full="assets/cup/2.jpg"><img src="assets/cup/2-s.jpg" alt="Mixed-Paar zwischen den Ballwechseln" loading="lazy" width="640" height="427"></button>
+          <button type="button" data-full="assets/cup/6.jpg"><img src="assets/cup/6-s.jpg" alt="Mixed-Doppel im Ballwechsel" loading="lazy" width="640" height="427"></button>
+          <button type="button" data-full="assets/cup/5.jpg"><img src="assets/cup/5-s.jpg" alt="Turnierleitung am Laptop" loading="lazy" width="640" height="427"></button>
+          <button type="button" data-full="assets/cup/8.jpg"><img src="assets/cup/8-s.jpg" alt="Doppel am Netz" loading="lazy" width="640" height="427"></button>
+          <button type="button" data-full="assets/cup/9.jpg"><img src="assets/cup/9-s.jpg" alt="Lächelnder Spieler, Porträt" loading="lazy" width="640" height="427"></button>
+          <button type="button" data-full="assets/cup/7.jpg"><img src="assets/cup/7-s.jpg" alt="Ballwechsel am Netz, Feld 8" loading="lazy" width="640" height="427"></button>
+          <button type="button" data-full="assets/cup/10.jpg"><img src="assets/cup/10-s.jpg" alt="Zuschauer:innen auf der Bank" loading="lazy" width="640" height="427"></button>
+          <button type="button" data-full="assets/cup/11.jpg"><img src="assets/cup/11-s.jpg" alt="Einzel auf orangem Feld" loading="lazy" width="640" height="427"></button>
+          <button type="button" data-full="assets/cup/13.jpg"><img src="assets/cup/13-s.jpg" alt="Jubelndes Gruppenfoto" loading="lazy" width="640" height="427"></button>
+        </div>
+      </div>
+      <dialog class="lightbox" aria-label="Foto">
+        <img src="assets/cup/4.jpg" alt="Sprung zum Smash, Feld 8">
+        <div class="lightbox__bar">
+          <span class="num" data-count></span>
+          <div class="lightbox__ctrl">
+            <button class="icon-btn" type="button" data-prev aria-label="Vorheriges Foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M15 5l-7 7 7 7"/></svg></button>
+            <button class="icon-btn" type="button" data-next aria-label="Nächstes Foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M9 5l7 7-7 7"/></svg></button>
+            <button class="icon-btn" type="button" data-close aria-label="Schließen"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+          </div>
+        </div>
+      </dialog>
+    </section>
+
+    <section class="section" aria-labelledby="info-title">
+      <div class="wrap">
+        <h2 class="h2" id="info-title" style="margin-bottom:clamp(32px,5vw,56px)"><span data-lang="de">Ausschreibung &amp; Ort</span><span data-lang="en">Invitation &amp; venue</span></h2>
+        <div class="cols">
+          <div class="col">
+            <h3 class="h3"><span data-lang="de">Ausschreibung 2026</span><span data-lang="en">2026 invitation</span></h3>
+            <div class="flyers">
+              <a href="files/Al-Cup%20Ausschreibung%202026%20DE.pdf" target="_blank" rel="noopener"><span class="num">DE</span>Deutsch</a>
+              <a href="files/Al-Cup%20Ausschreibung%202026%20EN.pdf" target="_blank" rel="noopener"><span class="num">EN</span>English</a>
+              <a href="files/Al-Cup%20Auschreibung%202026%20NL.pdf" target="_blank" rel="noopener"><span class="num">NL</span>Nederlands</a>
+              <a href="files/Al-Cup%20Ausschreibung%202026%20FR.pdf" target="_blank" rel="noopener"><span class="num">FR</span>Français</a>
+            </div>
+          </div>
+          <div class="col">
+            <h3 class="h3">Hexenkessel</h3>
+            <address style="font-style:normal"><span class="mono">Neuköllner Str. 9 · 52068 Aachen</span></address>
+            <iframe class="map" title="Karte: Hexenkessel, Neuköllner Str. 9" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2522.3481175385423!2d6.123516177362116!3d50.78765677165854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c0994acbb2f2d5%3A0x8fca3b1ef361728b!2sNeuk%C3%B6llner%20Str.%209%2C%2052068%20Aachen!5e0!3m2!1sde!2sde!4v1720806096531!5m2!1sde!2sde" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+            <a class="link" href="https://maps.google.com/?q=Neuk%C3%B6llner+Str.+9,+52068+Aachen" target="_blank" rel="noopener"><span data-lang="de">In Karten öffnen</span><span data-lang="en">Open in maps</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+          </div>
+          <div class="col">
+            <h3 class="h3"><span data-lang="de">Frühere Jahre</span><span data-lang="en">Previous years</span></h3>
+            <a class="link" href="https://dbv.turnier.de/sport/winners.aspx?id=8E25686D-193F-4971-A464-FD9D6A9AF5CC" target="_blank" rel="noopener"><span data-lang="de">Ergebnisse 2025</span><span data-lang="en">2025 results</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+          </div>
+        </div>
+
+        <div style="margin-top:clamp(56px,8vw,96px);padding-top:24px;border-top:3px solid var(--ink)">
+          <p class="lineup-cap" style="margin-bottom:20px"><span data-lang="de">Mit Unterstützung von</span><span data-lang="en">Supported by</span></p>
+          <div class="sponsors">
+            <img src="assets/img/stawag-logo-orange.svg" alt="STAWAG">
+            <img src="assets/img/Logo-regio iT-web.png" alt="regio iT">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="band" aria-label="Abschluss" style="min-height:clamp(360px,50vh,520px)">
+      <img src="assets/cup/13.jpg" alt="" width="1600" height="1067" loading="lazy">
+      <div class="band__inner">
+        <div class="wrap">
+          <div class="l3-mini reveal">
+            <span><span data-lang="de">Bis zum nächsten Cup!</span><span data-lang="en">See you at the next cup!</span></span>
+            <span><span data-lang="de">Es war großartig mit euch</span><span data-lang="en">We had a great time with you</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="foot on-dark">
+    <div class="net" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="foot__grid">
+        <div class="foot__brand">
+          <img src="assets/img/logo-white.png" alt="BVA 09" width="200" height="98">
+          <p><span data-lang="de">BV Aachen 2009 e.V. · Badminton in Burtscheid und Laurensberg.</span><span data-lang="en">BV Aachen 2009 e.V. · Badminton in Burtscheid and Laurensberg.</span></p>
+        </div>
+        <div>
+          <p class="foot__h"><span data-lang="de">Verein</span><span data-lang="en">Club</span></p>
+          <ul>
+            <li><a href="training.html">Training</a></li>
+            <li><a href="teams.html"><span data-lang="de">Mannschaften</span><span data-lang="en">Teams</span></a></li>
+            <li><a href="alemannencup.html">Alemannen Cup</a></li>
+            <li><a href="FAQ.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="foot__h"><span data-lang="de">Kontakt</span><span data-lang="en">Contact</span></p>
+          <ul>
+            <li><a class="mono" href="mailto:vorsitz@bv-aachen.de">vorsitz@</a></li>
+            <li><a class="mono" href="mailto:seniorentraining@bv-aachen.de">seniorentraining@</a></li>
+            <li><a class="mono" href="mailto:jugendwart@bv-aachen.de">jugendwart@</a></li>
+            <li><a class="mono" href="mailto:kassenwart@bv-aachen.de">kassenwart@</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="foot__h"><span data-lang="de">Hallen</span><span data-lang="en">Halls</span></p>
+          <ul>
+            <li>Burtscheid · <span class="mono">Malmedyer Str. 55</span></li>
+            <li>Laurensberg · <span class="mono">Hander Weg 89</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot__legal">
+        <span class="num">© 2026 BV Aachen 2009 e.V.</span>
+        <span><a href="impressum.html"><span data-lang="de">Impressum</span><span data-lang="en">Imprint</span></a> · <a href="datenschutz.html"><span data-lang="de">Datenschutz</span><span data-lang="en">Privacy</span></a></span>
+      </div>
     </div>
-
-    <div class="max-w-7xl mx-auto px-4">
-
-        <!--
-        <div class="results-banner fade-in-delay-1 mx-auto">
-            <h2 class="text-2xl font-bold mb-2">
-                <span data-lang="de">🏆 Ergebnisse verfügbar!</span>
-                <span data-lang="en" class="hidden">🏆 Results Available!</span>
-            </h2>
-            <p class="text-lg">
-                <span data-lang="de">Die Ergebnisse für den Alemannen Cup 2025 sind <a href="https://dbv.turnier.de/sport/winners.aspx?id=8E25686D-193F-4971-A464-FD9D6A9AF5CC" class="font-bold underline hover:text-green-200 transition-colors" target="_blank" rel="noopener noreferrer">hier</a> zu finden.</span>
-                <span data-lang="en" class="hidden">The results for the Alemannen Cup 2025 can be found <a href="https://dbv.turnier.de/sport/winners.aspx?id=8E25686D-193F-4971-A464-FD9D6A9AF5CC" class="font-bold underline hover:text-green-200 transition-colors" target="_blank" rel="noopener noreferrer">here</a>.</span>
-            </p>
-        </div>
-        -->
-
-        <!-- Registration Banner -->
-        <!--
-        <div class="results-banner fade-in-delay-1 mx-auto">
-            <a href="./register.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-xl text-white font-bold py-2 px-6 rounded-lg transition-colors">
-                <span data-lang="de">13.06.2026 - 14.06.2026</span>
-                <span data-lang="en" class="hidden">June 13, 2026 - June 14, 2026</span>
-            </a>
-            <p class="text-lg mb-6">
-                <a href="./register.html" class="inline-block bg-blue-600 hover:bg-blue-700 text-3xl text-white font-bold py-2 px-6 rounded-lg transition-colors">
-                <span data-lang="de">Melde dich für den Alemannen Cup 2026 an!</span>
-                <span data-lang="en" class="hidden">Register for the Alemannen Cup 2026!</span>
-                </a>
-            </p>
-        </div>
-        -->
-
-        <!-- Thank You Banner -->
-        <div class="results-banner fade-in-delay-1 mx-auto">
-            <div class="text-center">
-                <h2 class="text-3xl font-bold text-white mb-4">
-                    <span data-lang="de">🏆 Der Alemannen Cup 2026 ist vorbei!</span>
-                    <span data-lang="en" class="hidden">🏆 The Alemannen Cup 2026 is Over!</span>
-                </h2>
-                <p class="text-xl text-white/90 mb-4">
-                    <span data-lang="de">Wir danken allen Teilnehmern, Sponsoren und Helfern für einen großartigen Cup!</span>
-                    <span data-lang="en" class="hidden">We thank all participants, sponsors, and volunteers for a wonderful tournament!</span>
-                </p>
-                <a href="https://dbv.turnier.de/sport/winners.aspx?id=1eb702e0-4333-44f8-bbeb-fe5de2e91269" target="_blank" rel="noopener noreferrer" class="inline-block mt-6 p-3 bg-white text-blue-600 hover:bg-blue-50 font-bold py-2 px-6 rounded-lg transition-colors">
-                    <span data-lang="de">Hier geht's zu den Ergebnissen</span>
-                    <span data-lang="en" class="hidden">View Results Here</span>
-                </a>
-            </div>
-        </div>
-
-        <!-- Photo Gallery Section -->
-        <div class="content-card fade-in-delay-2">
-            <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white text-center mb-8">
-                <span data-lang="en" class="hidden">Impressions from the Alemannen Cup 2026</span>
-                <span data-lang="de">Impressionen vom Alemannen Cup 2026</span>
-            </h2>
-
-            <div class="gallery-container" data-modal-images="images/alemancup26/_1.jpg,images/alemancup26/_2.jpg,images/alemancup26/_3.jpg,images/alemancup26/_4.jpg,images/alemancup26/_5.jpg,images/alemancup26/_6.jpg,images/alemancup26/_7.jpg,images/alemancup26/_8.jpg,images/alemancup26/_9.jpg,images/alemancup26/_10.jpg,images/alemancup26/_11.jpg,images/alemancup26/_12.jpg,images/alemancup26/_13.jpg">
-                <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                    <div class="gallery-item">
-                        <img src="images/alemancup26/thumbs/_1.jpg" alt="gallery-photo" onclick="showImage('images/alemancup26/_1.jpg')" />
-                        <div class="gallery-overlay"></div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/alemancup26/thumbs/_2.jpg" alt="gallery-photo" onclick="showImage('images/alemancup26/_2.jpg')" />
-                        <div class="gallery-overlay"></div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/alemancup26/thumbs/_3.jpg" alt="gallery-photo" onclick="showImage('images/alemancup26/_3.jpg')" />
-                        <div class="gallery-overlay"></div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/alemancup26/thumbs/_4.jpg" alt="gallery-photo" onclick="showImage('images/alemancup26/_4.jpg')" />
-                        <div class="gallery-overlay"></div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/alemancup26/thumbs/_5.jpg" alt="gallery-photo" onclick="showImage('images/alemancup26/_5.jpg')" />
-                        <div class="gallery-overlay"></div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/alemancup26/thumbs/_6.jpg" alt="gallery-photo" onclick="showImage('images/alemancup26/_6.jpg')" />
-                        <div class="gallery-overlay"></div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/alemancup26/thumbs/_7.jpg" alt="gallery-photo" onclick="showImage('images/alemancup26/_7.jpg')" />
-                        <div class="gallery-overlay"></div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/alemancup26/thumbs/_8.jpg" alt="gallery-photo" onclick="showImage('images/alemancup26/_8.jpg')" />
-                        <div class="gallery-overlay"></div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/alemancup26/thumbs/_9.jpg" alt="gallery-photo" onclick="showImage('images/alemancup26/_9.jpg')" />
-                        <div class="gallery-overlay"></div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/alemancup26/thumbs/_10.jpg" alt="gallery-photo" onclick="showImage('images/alemancup26/_10.jpg')" />
-                        <div class="gallery-overlay"></div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="images/alemancup26/thumbs/_11.jpg" alt="gallery-photo" onclick="showImage('images/alemancup26/_11.jpg')" />
-                        <div class="gallery-overlay"></div>
-                    </div>
-                    <div class="gallery-item relative" onclick="showImage('images/alemancup26/_12.jpg')">
-                        <div class="absolute z-10 inset-0 flex items-center justify-center pointer-events-none">
-                            <span class="text-3xl text-white font-bold drop-shadow-lg">
-                                <span data-lang="de">Mehr</span>
-                                <span data-lang="en" class="hidden">More</span>
-                            </span>
-                        </div>
-                        <img src="images/alemancup26/thumbs/_12.jpg" alt="gallery-photo" />
-                        <div class="gallery-overlay"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Tournament Description Section -->
-        <div class="content-card fade-in-delay-3">
-            <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white mb-6">
-                <span data-lang="en" class="hidden">The Alemannen Cup</span>
-                <span data-lang="de">Der Alemannen Cup</span>
-            </h2>
-            
-            <div class="text-lg leading-relaxed text-slate-700 dark:text-slate-300 mb-8">
-                <span data-lang="en" class="hidden">
-                    The Alemannen Cup is a large, regional badminton tournament that attracts many athletes from Germany,
-                    Belgium, and the Netherlands to Aachen every year. Last year, around 300 players came with friends and
-                    family to participate in the sporting event.
-                    <br><br>
-                    There are five disciplines (mixed, woman double, men double, men single, woman single) with up to 5
-                    performance classes:
-                </span>
-                <span data-lang="de">
-                    Der Alemannen Cup ist ein großes, überregionales Badmintonturnier, das jährlich viele Sportlerinnen und
-                    Sportler aus Deutschland, Belgien und den Niederlanden nach Aachen lockt. Im letzten Jahr kamen rund 300
-                    Spielerinnen und Spieler mit Freunden und Familie, um an dem sportlichen Event teilzunehmen.
-                    <br><br>
-                    Es gibt fünf Disziplinen (Mixed, Damendoppel, Herrendoppel, Herreneinzel, Dameneinzel) mit bis zu 5
-                    Leistungsklassen:
-                </span>
-            </div>
-
-            <!-- Performance Classes Grid -->
-            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
-                <div class="performance-card">
-                    <div class="flex items-center space-x-3 mb-3">
-                        <div class="level-badge">VL</div>
-                        <div>
-                            <div class="text-lg font-bold text-slate-900 dark:text-white">Elite</div>
-                            <div class="text-sm text-slate-600 dark:text-slate-400">
-                                <span data-lang="en" class="hidden">Verbandsliga and higher</span>
-                                <span data-lang="de">Verbandsliga und höher</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="performance-card">
-                    <div class="flex items-center space-x-3 mb-3">
-                        <div class="level-badge" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">LL</div>
-                        <div>
-                            <div class="text-lg font-bold text-slate-900 dark:text-white">Premium</div>
-                            <div class="text-sm text-slate-600 dark:text-slate-400">max. Landesliga</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="performance-card">
-                    <div class="flex items-center space-x-3 mb-3">
-                        <div class="level-badge" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);">BL</div>
-                        <div>
-                            <div class="text-lg font-bold text-slate-900 dark:text-white">Standard</div>
-                            <div class="text-sm text-slate-600 dark:text-slate-400">max. Bezirksliga</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="performance-card">
-                    <div class="flex items-center space-x-3 mb-3">
-                        <div class="level-badge" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);">BK</div>
-                        <div>
-                            <div class="text-lg font-bold text-slate-900 dark:text-white">Basic</div>
-                            <div class="text-sm text-slate-600 dark:text-slate-400">max. Bezirksklasse</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="performance-card">
-                    <div class="flex items-center space-x-3 mb-3">
-                        <div class="level-badge" style="background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);">KL</div>
-                        <div>
-                            <div class="text-lg font-bold text-slate-900 dark:text-white">Fun</div>
-                            <div class="text-sm text-slate-600 dark:text-slate-400">max. Kreisliga</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="mt-6 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border-l-4 border-blue-500">
-                <p class="text-sm text-blue-800 dark:text-blue-200">
-                    <span data-lang="en" class="hidden">If the Elite class does not come about due to a lack of
-                        registrations, the Premium class is the highest class and is therefore open to higher levels of
-                        play.</span>
-                    <span data-lang="de">Falls die Elite Klasse nicht zustande kommt, ist die Klasse Premium die höchste
-                        Klasse und damit vom Spielniveau nach oben offen.</span>
-                </p>
-            </div>
-        </div>
-        <!-- Location Section -->
-        <div class="location-card fade-in">
-            <div class="text-center">
-                <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white mb-6">
-                    <span data-lang="en" class="hidden">Location</span>
-                    <span data-lang="de">Ort</span>
-                </h2>
-                
-                <div class="mb-6">
-                    <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2">Alemannen Cup</h3>
-                    <div class="text-lg text-slate-700 dark:text-slate-300 space-y-1">
-                        <p>Hexenkessel</p>
-                        <p>Neuköllner Str. 9</p>
-                        <p>52068 Aachen</p>
-                    </div>
-                </div>
-
-                <div class="map-container">
-                    <iframe width="100%" height="450" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2522.3481175385423!2d6.123516177362116!3d50.78765677165854!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c0994acbb2f2d5%3A0x8fca3b1ef361728b!2sNeuk%C3%B6llner%20Str.%209%2C%2052068%20Aachen!5e0!3m2!1sde!2sde!4v1720806096531!5m2!1sde!2sde"
-                        style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
-        </div>
-
-        <!-- Closing Message -->
-        <div class="text-center py-8">
-            <div class="content-card">
-                <h2 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">
-                    <span data-lang="en" class="hidden">See you again at the next Alemannen Cup!</span>
-                    <span data-lang="de">Bis zum nächsten Alemannen Cup!</span>
-                </h2>
-                <p class="text-lg text-slate-600 dark:text-slate-300">
-                    🏸 <span data-lang="en" class="hidden">We had a great time with you!</span>
-                    <span data-lang="de">Es war großartig mit euch!</span> 🏸
-                </p>
-            </div>
-        </div>
-    </div>
-    <br>
-    <div id="footer-wrapper" class="mt-20">
-        <div id="footer" class="text-center">
-            <div id="adresse">
-                <p>
-                    <a href="./impressum.html" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                        <span data-lang="en" class="hidden">Imprint</span>
-                        <span data-lang="de">Impressum</span>
-                    </a> <b> | </b>
-                    <a href="./datenschutz.html" class="font-medium text-blue-600 dark:text-blue-500 hover:underline">
-                        <span data-lang="en" class="hidden">Privacy Policy</span>
-                        <span data-lang="de">Informationen zum Datenschutz</span>
-                    </a>
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal for Image Display -->
-    <div id="imageModal" class="modal">
-        <div class="modal-content">
-            <span class="close-button" onclick="hideModal()">×</span>
-            <button class="modal-arrow modal-left-arrow" onclick="prevImage()"><</button>
-            <img id="modalImage" class="modal-image" src="" alt="modal-image" />
-            <button class="modal-arrow modal-right-arrow" onclick="nextImage()">></button>
-        </div>
-    </div>
+  </footer>
 </body>
-
 </html>
