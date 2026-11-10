@@ -2,7 +2,7 @@ name: Python application
 
 on:
   push:
-  pull_request:
+    branches: [main, dev]
   # Manual re-upload of everything changed since a given commit, e.g. after failed uploads
   workflow_dispatch:
     inputs:
