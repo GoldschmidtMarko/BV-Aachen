@@ -1200,6 +1200,17 @@ html[data-ui-lang="en"] .lang [data-code="en"] { background: var(--ink); color: 
   font-weight: 700;
   font-size: clamp(1.75rem, 3.6vw, 2.75rem);
 }
+.team__photo-badge {
+  position: absolute;
+  right: 0; bottom: 0;
+  padding: 6px 10px;
+  background: var(--ink);
+  color: var(--white);
+  font-family: var(--mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
 .team__num--u { background: var(--petrol); font-size: clamp(1.1rem, 2.2vw, 1.6rem); }
 .team__body { display: grid; gap: 18px; align-content: start; }
 .team__league {
